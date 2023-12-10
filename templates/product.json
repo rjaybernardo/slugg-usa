@@ -66,7 +66,8 @@
             "display_on_card": false,
             "option_style": "buttons",
             "hide_option_labels": true,
-            "enable_color_swatches": false
+            "enable_color_swatches": true,
+            "enable_variant_image": true
           }
         },
         "baf3083e-d14d-435d-bca3-100d6ac490ce": {
@@ -78,6 +79,10 @@
             "show_pickup_availability": false,
             "show_gift_card_recipient": false
           }
+        },
+        "75d78151-c206-49e1-a7c8-67f158a8394a": {
+          "type": "shopify://apps/epa-easy-product-addons/blocks/spice_addons/0099190e-a0cb-49e7-8d26-026c9d26f337",
+          "settings": {}
         },
         "a17e90c4-acc9-4f1d-af84-828ae4cb2289": {
           "type": "description",
@@ -116,6 +121,7 @@
         "quantity_selector",
         "variant_picker",
         "baf3083e-d14d-435d-bca3-100d6ac490ce",
+        "75d78151-c206-49e1-a7c8-67f158a8394a",
         "a17e90c4-acc9-4f1d-af84-828ae4cb2289",
         "dd821fb8-a8d4-4cc7-be01-af94d689d4a0",
         "de4c6c8d-98ab-427e-920f-05f71b84497e"
