@@ -135,9 +135,13 @@
     {% endif %}
 
     {%- render 'meta-tags' -%}
-
+    <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'slick.min.js' | asset_url }}" defer></script>
     {{ content_for_header }}
-
+    <script>
+      window.theme_custom = window.theme_custom || {};
+      theme_custom.template = {{ template.name | json }};
+    </script>
     {% render 'js-bridge' %}
 
     <script>
@@ -195,8 +199,8 @@
     {% endif %}
     <script src="{{ 'alpine-extensions.js' | asset_url }}" defer></script>
     <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
-
     <link rel="stylesheet" href="{{ 'base.bundle.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'slick.min.css' | asset_url }}">
     {% comment %}
       <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
     {% endcomment %}
@@ -368,5 +372,6 @@
       </div>
     </noscript>
     <!-- End Quantcast tag -->
+    <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
   </body>
 </html>

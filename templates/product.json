@@ -270,6 +270,97 @@
         "use_gradient_background": false
       }
     },
+    "products-image-slider": {
+      "type": "image-slider",
+      "blocks": {
+        "template--17029417206002__products-image-slider-column-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Group_48097257.png",
+            "video_link": "",
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--17029417206002__products-image-slider-column-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Group_48097262.png",
+            "video_link": "https://www.youtube.com/watch?v=x321g6BTSE0",
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--17029417206002__products-image-slider-column-3": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Group_48097263.png",
+            "video_link": "",
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "e0eea66c-42f3-40cf-9a56-ec17a5a0692a": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Group_48097262.png",
+            "video_link": "https://www.youtube.com/watch?v=x321g6BTSE0",
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "d14d853c-712e-40fa-8481-8ec28d80fc08": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Group_48097257.png",
+            "video_link": "",
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "template--17029417206002__products-image-slider-column-1",
+        "template--17029417206002__products-image-slider-column-2",
+        "template--17029417206002__products-image-slider-column-3",
+        "e0eea66c-42f3-40cf-9a56-ec17a5a0692a",
+        "d14d853c-712e-40fa-8481-8ec28d80fc08"
+      ],
+      "settings": {
+        "display_on_card": true,
+        "title": "How others have styled Lucy",
+        "sub_text": "<p>Show us how you style your pots by tagging @potsbyslugg</p>",
+        "enable_slider": true,
+        "carousel_dots": false,
+        "carousel_arrows": true,
+        "crop": "",
+        "image_shape": "default",
+        "show_index_on_blocks": false,
+        "index_shape": "star_1",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "blocks": {
@@ -392,6 +483,7 @@
     "product-ratings",
     "video-with-text",
     "products-reviews-widget",
+    "products-image-slider",
     "product-recommendations",
     "faq"
   ]
