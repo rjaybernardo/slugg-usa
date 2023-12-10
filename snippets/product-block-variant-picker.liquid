@@ -21,8 +21,11 @@
 
       <fieldset class="product-variant-picker-block {% if is_color %}-mx-color-fieldset-offset {% endif %} js-enabled">
         {%- unless is_color or option_style == 'buttons' -%}
-          <div class="my-1 lg:flex lg:items-center lg:justify-start">
-            <label class="{{ label_class }} break-words lg:w-1/4 xl:w-1/5 lg:shrink-0 pr-2.5" for="Option{{ option.position }}-{{ section.id }}">
+          <div class="my-1 ">
+            <label
+              class="{{ label_class }}  lg:w-1/4 xl:w-1/5 lg:shrink-0 pr-2.5"
+              for="Option{{ option.position }}-{{ section.id }}"
+            >
               {{ option.name }}
             </label>
             <select
@@ -35,16 +38,22 @@
               {% for value in option.values %}
                 <option
                   value="{{ value | escape }}"
-                  {% if option.selected_value == value %}selected="selected"{% endif %}>
-                    {{ value }}
+                  {% if option.selected_value == value %}
+                    selected="selected"
+                  {% endif %}
+                >
+                  {{ value }}
                 </option>
               {% endfor %}
             </select>
           </div>
         {%- else -%}
-          <div class="my-1 lg:flex lg:items-center lg:justify-start">
-            <legend class="{{ label_class }} lg:w-1/4 xl:w-1/5 lg:shrink-0 pr-2.5">
-              {{ option.name }}{% if is_color %}:<br/><span class="mt-1 inline-block" x-text="options[{{ forloop.index0 }}]"></span>{% endif %}
+          <div class="my-1 ">
+            <legend class="{{ label_class }}">
+              Select {{ option.name -}}
+              {%- if is_color -%}
+                : <span class="mt-1 inline-block" x-text="options[{{ forloop.index0 }}]"></span>
+              {%- endif %}
             </legend>
             <div class="mt-2.5 flex flex-wrap lg:flex-1  gap-2.5">
               {% for value in option.values %}
@@ -63,10 +72,14 @@
                     class="{% if is_color %}color-swatch{% endif %} cursor-pointer absolute top-0 left-0 w-full h-full opacity-0"
                     @change="optionChange()"
                     type="radio"
-                    id="Section-{{ section.id }}-Option{{ option.position }}-{{ value | escape }}" name="Section-{{ section.id }}-options[{{ option.name }}]"
+                    id="Section-{{ section.id }}-Option{{ option.position }}-{{ value | escape }}"
+                    name="Section-{{ section.id }}-options[{{ option.name }}]"
                     value="{{ value | escape }}"
                     data-handle="{{ value | handleize }}"
-                    {% if option.selected_value == value %} checked{% endif %} data-single-option-selector
+                    {% if option.selected_value == value %}
+                      checked
+                    {% endif %}
+                    data-single-option-selector
                   >
                   <label
                     :class="
@@ -79,23 +92,52 @@
                         {% endif %}
                       }
                     "
-                    class="btn after:hidden
+                    class="
+                      btn after:hidden
                       {% if is_color %}p-1 bg-scheme-secondary-background{% endif %}
                       cursor-pointer
                       {% unless variant_label_state %}
                         line-through
                       {% endunless %}
-                      cursor-pointer"
+                      cursor-pointer
+                    "
                     for="Section-{{ section.id }}-Option{{ option.position }}-{{ value | escape }}"
                     title="{{ option.value }}"
-                    >
+                  >
                     {%- if is_color %}
                       {%- unless variant_label_state -%}
-                        <span class="absolute left-0 bottom-0 z-10 h-[var(--input-border-width)] w-full bg-scheme-text top-1/2 -translate-y-1/2 -rotate-45"></span>
+                        <span
+                          class="absolute left-0 bottom-0 z-10 h-[var(--input-border-width)] w-full bg-scheme-text top-1/2 -translate-y-1/2 -rotate-45"
+                        ></span>
                       {%- endunless -%}
-                      <span class="btn after:none block w-8 h-8 bg-cover" style="background-image: url({{ color_image }}); background-color: {{ color_swatch_fallback }};"></span>
+
+                      {%- if block.settings.enable_variant_image -%}
+                        {%- for variant in product.variants -%}
+                          {%- if variant.title contains value and variant.image -%}
+                            {%- assign selected_variant = variant -%}
+                          {%- endif -%}
+                        {%- endfor -%}
+                        {%- if selected_variant.image.src != blank -%}
+                          <div
+                            style="width:80px;height:80px;background-image:url({{ selected_variant.image.src | image_url: 'small' }});border-radius: 100%;"
+                            class="star-set-image"
+                          ></div>
+                        {%- endif -%}
+                      {%- else -%}
+                        <span
+                          class="btn after:none block w-8 h-8 bg-cover"
+                          style="background-image: url({{ color_image }}); background-color: {{ color_swatch_fallback }};"
+                        ></span>
+                      {%- endif -%}
                     {%- endif -%}
-                    <span {% if is_color %}class="sr-only"{% endif %}>{{ value }}</span>
+
+                    <span
+                      {% if is_color %}
+                        class="sr-only"
+                      {% endif %}
+                    >
+                      {{- value -}}
+                    </span>
                   </label>
                 </div>
               {% endfor %}
