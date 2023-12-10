@@ -129,7 +129,89 @@
         "use_gradient_background": false
       }
     },
-    "58fd28b5-9808-42a5-abd7-f7fd9d9a4e18": {
+    "text-column-with-image": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--17029417206002__text-column-with-image-column-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Free_Metro_Shipping.webp",
+            "title": "",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--17029417206002__text-column-with-image-column-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Threes.webp",
+            "title": "",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--17029417206002__text-column-with-image-column-3": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Suitable.webp",
+            "title": "",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "979fd09d-bcc3-4fca-877b-e5b303cfba34": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Built_to_last.webp",
+            "title": "",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "178eb7db-02e8-433f-9f8b-c06bcc361391": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "target_section_color_scheme": "primary",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": true,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17029417206002__text-column-with-image-column-1",
+        "template--17029417206002__text-column-with-image-column-2",
+        "template--17029417206002__text-column-with-image-column-3",
+        "979fd09d-bcc3-4fca-877b-e5b303cfba34",
+        "178eb7db-02e8-433f-9f8b-c06bcc361391"
+      ],
+      "settings": {
+        "display_on_card": true,
+        "slideshow_on_mobile": false,
+        "title": "",
+        "crop": "",
+        "image_shape": "default",
+        "show_index_on_blocks": false,
+        "index_shape": "star_1",
+        "color_scheme": "secondary",
+        "use_gradient_background": false
+      }
+    },
+    "product-ratings": {
       "type": "custom-liquid",
       "settings": {
         "title": "What our customers are saying.",
@@ -138,7 +220,7 @@
         "color_scheme": "primary"
       }
     },
-    "a3a1dbce-0f72-4900-8e47-77bdb297fad6": {
+    "video-with-text": {
       "type": "video-with-text",
       "settings": {
         "display_on_card": true,
@@ -164,7 +246,7 @@
         "use_gradient_background": false
       }
     },
-    "16981229511ecf8a26": {
+    "products-reviews-widget": {
       "type": "apps",
       "blocks": {
         "7f606d80-fef1-4411-944e-419ffd74eb65": {
@@ -216,15 +298,15 @@
         "product_recommendations_heading": "More Sluggs® to discover",
         "max_products": "3",
         "product_tiles_aspect_ratio": "",
-        "image_shape": "",
+        "image_shape": "blob",
         "color_scheme": "secondary",
         "use_gradient_background": false
       }
     },
-    "82e6b1c1-68bb-47c1-9f44-ac0a7909a433": {
+    "faq": {
       "type": "faq",
       "blocks": {
-        "template--17029417206002__82e6b1c1-68bb-47c1-9f44-ac0a7909a433-question-1": {
+        "template--17029417206002__faq-question-1": {
           "type": "question",
           "settings": {
             "icon": "none",
@@ -232,7 +314,7 @@
             "answer": "<p>Designers call it \"the law of three\". Even numbers create symmetry, while odd numbers create a focal point and add interest to a space. The size of each Slugg garden pot has been designed to ensure the scale works in a cluster of three. </p>"
           }
         },
-        "template--17029417206002__82e6b1c1-68bb-47c1-9f44-ac0a7909a433-question-2": {
+        "template--17029417206002__faq-question-2": {
           "type": "question",
           "settings": {
             "icon": "none",
@@ -240,7 +322,7 @@
             "answer": "<p>Sluggs look best grouped together to form a cluster of three pots. However, many of our customers use their Slugg pots individually. You can plant them up (soil inside the pot) or you can simply place your nursery pot inside the empty Slugg pot.</p>"
           }
         },
-        "template--17029417206002__82e6b1c1-68bb-47c1-9f44-ac0a7909a433-question-5": {
+        "template--17029417206002__faq-question-5": {
           "type": "question",
           "settings": {
             "icon": "none",
@@ -248,7 +330,7 @@
             "answer": "<p>Slugg garden pots are made from poly resin. They are lightweight, waterproof and far stronger than traditional concrete planters.</p>"
           }
         },
-        "template--17029417206002__82e6b1c1-68bb-47c1-9f44-ac0a7909a433-question-4": {
+        "template--17029417206002__faq-question-4": {
           "type": "question",
           "settings": {
             "icon": "none",
@@ -256,7 +338,7 @@
             "answer": "<p>Slugg garden pots are sold in sets of three, which makes it super easy to create the perfect pot cluster. They are not available for individual purchase.</p>"
           }
         },
-        "template--17029417206002__82e6b1c1-68bb-47c1-9f44-ac0a7909a433-question-3": {
+        "template--17029417206002__faq-question-3": {
           "type": "question",
           "settings": {
             "icon": "none",
@@ -285,11 +367,11 @@
         }
       },
       "block_order": [
-        "template--17029417206002__82e6b1c1-68bb-47c1-9f44-ac0a7909a433-question-1",
-        "template--17029417206002__82e6b1c1-68bb-47c1-9f44-ac0a7909a433-question-2",
-        "template--17029417206002__82e6b1c1-68bb-47c1-9f44-ac0a7909a433-question-5",
-        "template--17029417206002__82e6b1c1-68bb-47c1-9f44-ac0a7909a433-question-4",
-        "template--17029417206002__82e6b1c1-68bb-47c1-9f44-ac0a7909a433-question-3",
+        "template--17029417206002__faq-question-1",
+        "template--17029417206002__faq-question-2",
+        "template--17029417206002__faq-question-5",
+        "template--17029417206002__faq-question-4",
+        "template--17029417206002__faq-question-3",
         "5b43b6a4-76c1-4e41-a9b8-8e623f21b5ce",
         "555d023b-4e11-4b63-8bcc-5af8b1e55410"
       ],
@@ -306,10 +388,11 @@
   },
   "order": [
     "main",
-    "58fd28b5-9808-42a5-abd7-f7fd9d9a4e18",
-    "a3a1dbce-0f72-4900-8e47-77bdb297fad6",
-    "16981229511ecf8a26",
+    "text-column-with-image",
+    "product-ratings",
+    "video-with-text",
+    "products-reviews-widget",
     "product-recommendations",
-    "82e6b1c1-68bb-47c1-9f44-ac0a7909a433"
+    "faq"
   ]
 }
