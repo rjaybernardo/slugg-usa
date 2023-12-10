@@ -119,7 +119,7 @@
                         {%- endfor -%}
                         {%- if selected_variant.image.src != blank -%}
                           <div
-                            style="width:80px;height:80px;background-image:url({{ selected_variant.image.src | image_url: 'small' }});border-radius: 100%;"
+                            style="width:80px;height:80px;background-image:url({{ selected_variant.image.src | img_url: 'small' }});border-radius: 100%;"
                             class="star-set-image"
                           ></div>
                         {%- endif -%}
