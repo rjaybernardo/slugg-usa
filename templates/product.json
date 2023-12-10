@@ -137,8 +137,8 @@
           "settings": {
             "show_image": true,
             "image": "shopify://shop_images/Free_Metro_Shipping.webp",
-            "title": "",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "title": "FREE metro delivery*",
+            "text": "<p>Actual slugs may be slow. But our super fast and free shipping network isn’t!</p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "same_as_section"
@@ -149,8 +149,8 @@
           "settings": {
             "show_image": true,
             "image": "shopify://shop_images/Threes.webp",
-            "title": "",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "title": "Good things come in threes",
+            "text": "<p>Sluggs® are sold as a set of three garden pots in a box.</p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "same_as_section"
@@ -161,8 +161,8 @@
           "settings": {
             "show_image": true,
             "image": "shopify://shop_images/Suitable.webp",
-            "title": "",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "title": "Suitable for indoors & out",
+            "text": "<p>The entire Slugg® range is suitable for indoor and outside.</p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "same_as_section"
@@ -173,8 +173,8 @@
           "settings": {
             "show_image": true,
             "image": "shopify://shop_images/Built_to_last.webp",
-            "title": "",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "title": "Built to last",
+            "text": "<p>Slugg® garden pots are waterproof, lightweight, and tougher than nails</p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "same_as_section"
