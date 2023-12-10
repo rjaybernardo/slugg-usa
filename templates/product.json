@@ -181,6 +181,20 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "blocks": {
+        "bf6f90da-771b-41ae-9708-ac9e463d0e60": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "target_section_color_scheme": "primary",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": ["bf6f90da-771b-41ae-9708-ac9e463d0e60"],
       "custom_css": [
         "h3 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 50px;}",
         ".price {font-family: \"DM Sans\"; font-weight: 200; font-size: 25px;}"
@@ -188,12 +202,13 @@
       "settings": {
         "show_product_recommendations": true,
         "display_on_card": false,
+        "enable_shop_btn": false,
         "enable_quick_buy": false,
-        "product_recommendations_heading": "You may also like",
+        "product_recommendations_heading": "More Sluggs® to discover",
         "max_products": "3",
         "product_tiles_aspect_ratio": "",
         "image_shape": "",
-        "color_scheme": "primary",
+        "color_scheme": "secondary",
         "use_gradient_background": false
       }
     },
