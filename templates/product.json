@@ -129,6 +129,15 @@
         "use_gradient_background": false
       }
     },
+    "58fd28b5-9808-42a5-abd7-f7fd9d9a4e18": {
+      "type": "custom-liquid",
+      "settings": {
+        "title": "What our customers are saying.",
+        "custom_liquid": "<div class=\"text-center\"><div class=\"product-review-title\">{{ product.metafields.loox.avg_rating }} <span class=\"loox-rating\" data-id=\"{{ product.id }}\" data-rating=\"{{ product.metafields.loox.avg_rating }}\" data-raters=\"{{ product.metafields.loox.num_reviews }}\"></span></div> Based on {{ product.metafields.loox.num_reviews }} Reviews</div>",
+        "full_width": false,
+        "color_scheme": "primary"
+      }
+    },
     "a3a1dbce-0f72-4900-8e47-77bdb297fad6": {
       "type": "video-with-text",
       "settings": {
@@ -297,6 +306,7 @@
   },
   "order": [
     "main",
+    "58fd28b5-9808-42a5-abd7-f7fd9d9a4e18",
     "a3a1dbce-0f72-4900-8e47-77bdb297fad6",
     "16981229511ecf8a26",
     "product-recommendations",
