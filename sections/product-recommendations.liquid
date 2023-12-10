@@ -45,7 +45,8 @@
                       assign shape_id = section.id | append: '-' | append: forloop.index0
                     endif
                   -%}
-                  <li class="{% if layout == 'carousel' %}splide__slide {{ mobile_slide_width }}{% endif %}">
+                  {% comment %} <li class="{% if layout == 'carousel' %}splide__slide {{ mobile_slide_width }}{% endif %}"> {% endcomment %}
+                  <li>
                     {%- liquid
                       if settings.product_tiles_scatter
                         capture class
