@@ -1,5 +1,5 @@
 {%- liquid
-  if settings.desktop_feature_heading_scale > 4
+  if settings.template_heading_size contains '2x'
     assign price_text_size = 'text-base lg:text-lg'
   else
     assign price_text_size = 'text-base'
@@ -10,31 +10,38 @@
   :class="{ 'invisible': !current_variant }"
   {{ block.shopify_attributes }}
 >
-
   <div class="price_text_main">
     <span class="sr-only">{{ 'products.general.regular_price' | t }}</span>
     {%- if product.metafields.custom.set_of_text.value != blank -%}
       <span>{{ product.metafields.custom.set_of_text.value }} </span>
     {%- endif -%}
     <span
-    class="text-scheme-text {{ price_text_size }}"
-    x-html="formatMoney(current_price)"
-    :class="
-      {
-        'invisible': !current_variant
-      }"
-    data-product-price
-  >
-    {{ current_variant.price | money }}
-  </span>
+      class="text-scheme-text {{ price_text_size }}"
+      x-html="formatMoney(current_price)"
+      :class="
+        {
+          'invisible': !current_variant
+        }
+      "
+      data-product-price
+    >
+      {{ product.price | money }}
+    </span>
+
+    {%- if cart.taxes_included -%}
+      <span class="product__tax caption mt-2 text-sm"> ({{ 'products.product.include_taxes' | t }}) </span>
+    {%- endif -%}
+  </div>
 
   {% if product.compare_at_price_max > product.price %}
     <template x-if="current_variant && product.compare_at_price_max && current_variant.compare_at_price > current_variant.price">
       <span class="{{ price_text_size }}">
         <span class="sr-only">{{ 'products.general.sale_price' | t }}</span>
-        <s data-compare-price
+        <s
+          data-compare-price
           class="text-scheme-text"
-          x-html="formatMoney(current_variant.compare_at_price)">
+          x-html="formatMoney(current_variant.compare_at_price)"
+        >
           {% if current_variant.compare_at_price > current_variant.price %}
             {{ current_variant.compare_at_price | money }}
           {% endif %}
@@ -51,35 +58,25 @@
       <span x-html="formatMoney(current_variant.unit_price)">
         {{- current_variant.unit_price | money -}}
       </span>
-      <span aria-hidden="true">
-        /
-      </span>
+      <span aria-hidden="true"> / </span>
       <span class="sr-only">
         {{- 'general.accessibility.unit_price_separator' | t -}}
       </span>
       <span
         x-html="
-          current_variant.unit_price_measurement.reference_value != 1 ? current_variant.unit_price_measurement.reference_value : ''
+                              current_variant.unit_price_measurement.reference_value != 1 ? current_variant.unit_price_measurement.reference_value : ''
         "
       >
         {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
           {{- current_variant.unit_price_measurement.reference_value -}}
         {%- endif -%}
-      </span><!--
-      --><span x-html="current_variant.unit_price_measurement.reference_unit">
+      </span>
+      <!--  -->
+      <span x-html="current_variant.unit_price_measurement.reference_unit">
         {{- current_variant.unit_price_measurement.reference_unit -}}
       </span>
     </div>
   </template>
-
-  {%- if cart.taxes_included -%}
-    <div class="product__tax caption mt-1.5 text-sm">
-      {%- if cart.taxes_included -%}
-        {{ 'products.product.include_taxes' | t }}
-      {%- endif -%}
-    </div>
-  {%- endif -%}
-
 
   {%- if block.settings.show_on_sale_sticker -%}
     {%- if product.compare_at_price_max > product.price -%}
@@ -99,10 +96,8 @@
         rotate: 15,
         width: 120,
         font_size: '1.563rem',
-        color: 'bg-scheme-accent-1 text-scheme-accent-1-overlay'
+        color: 'bg-scheme-accent text-scheme-accent-overlay'
       %}
     {%- endif -%}
   {%- endif -%}
 </div>
-
-

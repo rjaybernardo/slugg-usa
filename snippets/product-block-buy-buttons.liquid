@@ -1,11 +1,4 @@
 <div class="{{ block_base_classes }}" {{ block.shopify_attributes }}>
-  {% liquid
-    assign gift_card_recipient_feature_active = false
-
-    if block.settings.show_gift_card_recipient and product.gift_card?
-      assign gift_card_recipient_feature_active = true
-    endif
-  %}
   {% form 'product',
     product,
     id: product_form_id,
@@ -20,9 +13,7 @@
     </div>
 
     <div class="{% if product.has_only_default_variant %}hidden{% else %}no-js{% endif %}">
-      <label class="{{ label_class }}" for="fallback-selector-{{ section.id }}"
-        >Variant</label
-      >
+      <label class="{{ label_class }}" for="fallback-selector-{{ section.id }}">Variant</label>
       <select
         x-ref="singleVariantSelector"
         name="id"
@@ -48,15 +39,10 @@
 
     {%- liquid
       assign enable_payment_buttons = block.settings.enable_payment_button
-      assign button_text = 'products.product.add_to_cart' | t
-
+      assign button_text = 'products.product.add_to_cart_title' | t
       if template == 'product.preorder'
         assign enable_payment_buttons = false
         assign button_text = 'products.product.preorder' | t
-      endif
-
-      if gift_card_recipient_feature_active == true
-        assign enable_payment_buttons = false
       endif
     -%}
 
@@ -65,17 +51,6 @@
     {% else %}
       {% capture add_to_cart_class %}push-btn-surface w-full{% endcapture %}
     {% endif %}
-
-    {% if gift_card_recipient_feature_active %}
-      <div class="mb-5">
-        {% render 'gift-card-recipient-form', product: product, form: form, section: section %}
-      </div>
-    {% endif %}
-
-    <div
-      class="mb-5 font-secondary bg-scheme-accent-1 text-scheme-accent-1-overlay px-3 py-2 rounded-button text-sm empty:hidden"
-      x-text="cartAddErrorMessage"
-    ></div>
 
     <div
       class=""
@@ -107,29 +82,19 @@
               {%- endif -%}
             </span>
             {%- if block.settings.show_price -%}
-              <span x-show="currentVariantAvailable">&nbsp;&#8211;&nbsp;</span
-              ><span
-                x-show="currentVariantAvailable"
-                x-html="formatMoney(current_price)"
-              >
+              <span x-show="currentVariantAvailable">&nbsp;&#8226;&nbsp;</span
+              ><span x-show="currentVariantAvailable" x-html="formatMoney(current_price)">
                 {{- current_variant.price | money -}}
               </span>
               {% if product.compare_at_price_max > product.price %}
                 <template x-if="current_variant && product.compare_at_price_max && current_variant.compare_at_price > current_variant.price">
-                  <span
-                    x-show="currentVariantAvailable"
-                    class="{{ price_text_size }}"
-                  >
-                    <span class="sr-only">
-                      {{- 'products.general.sale_price' | t -}}
-                    </span>
+                  <span x-show="currentVariantAvailable" class="{{ price_text_size }}">
+                    <span class="sr-only">{{ 'products.general.sale_price' | t }}</span>
                     <s
                       data-compare-price
                       x-html="formatMoney(current_variant.compare_at_price)"
                     >
-                      {% if current_variant.compare_at_price
-                          > current_variant.price
-                      %}
+                      {% if current_variant.compare_at_price > current_variant.price %}
                         {{ current_variant.compare_at_price | money }}
                       {% endif %}
                     </s>
@@ -148,9 +113,7 @@
       {% endif %}
     </div>
 
-    {%- if settings.cart_type == 'page'
-      or settings.open_modal_on_add_to_cart == false
-    -%}
+    {%- if settings.cart_type == 'page' or settings.open_modal_on_add_to_cart == false -%}
       <div
         class="mt-4 mb-8 text-theme-basic rte"
         tabindex="-1"
@@ -167,9 +130,7 @@
         {{ 'products.product.added_to_cart' | t }}!
         {{
           'products.product.add_to_cart_confirm_html'
-          | t:
-            cart_url: routes.cart_url,
-            link_url: routes.all_products_collection_url
+          | t: cart_url: routes.cart_url, link_url: routes.all_products_collection_url
         -}}
         .
       </div>
@@ -179,13 +140,11 @@
   {% if block.settings.show_pickup_availability %}
     {% unless request.design_mode %}
       <script
-        src="{{ 'vendor-store-availability.bundle.min.js' | asset_url }}"
-        type="module"
+        type="lazyload_int"
+        data-src="{{ 'vendor-store-availability.bundle.min.js' | asset_url }}"
+        data-w3-type="module"
       ></script>
-      <script
-        src="{{ 'store-availability.js' | asset_url }}"
-        type="module"
-      ></script>
+      <script type="lazyload_int" data-src="{{ 'store-availability.js' | asset_url }}" data-w3-type="module"></script>
     {% endunless %}
     <template x-if="currentVariantId && currentVariantAvailable && currentVariantAvailabilityClosestLocation">
       <div
@@ -235,7 +194,7 @@
       <div>
         <template data-should-teleport="#right-drawer-slot">
           <div
-            :data-modal-label="$store.modals.rightDrawer.contents === 'availability' && $store.availability.current_variant === currentVariantId? product.title : false"
+            :data-modal-label="$store.modals.rightDrawer.contents === 'availability' && $store.availability.current_variant === currentVariantId? '{{ product.title }}' : false"
             x-show="$store.modals.rightDrawer.contents === 'availability' && $store.availability.current_variant === currentVariantId"
           >
             <div class="h-screen flex flex-col">
@@ -245,27 +204,14 @@
                     <div class="font-heading text-lg">{{ product.title }}</div>
                     <div x-text="currentVariantTitle"></div>
                   </h1>
-                  <button
-                    @click.prevent="$store.modals.close('availability')"
-                    class="block top-0 ml-2.5"
-                  >
-                    <span class="sr-only">
-                      {{- 'general.accessibility.close_modal' | t -}}
-                    </span>
-                    <span class="inline-block w-6 h-6">
-                      {%- render 'icon-close' -%}
-                    </span>
+                  <button @click.prevent="$store.modals.close('availability')" class="block top-0 ml-2.5">
+                    <span class="sr-only">{{ 'general.accessibility.close_modal' | t }}</span>
+                    <span class="inline-block w-6 h-6">{% render 'icon-close' %}</span>
                   </button>
                 </div>
               </div>
-              <ul
-                class="px-section relative overflow-y-auto flex-auto"
-                role="list"
-              >
-                <template
-                  x-for="item in currentVariantAvailabilityList"
-                  :key="item.name"
-                >
+              <ul class="px-section relative overflow-y-auto flex-auto" role="list">
+                <template x-for="item in currentVariantAvailabilityList" :key="item.name">
                   <li class="py-5">
                     <p class="font-heading text-md" x-text="item.name"></p>
                     <div class="flex items-start my-2">
@@ -302,5 +248,5 @@
       </div>
     </div>
   {% endif %}
-  <link rel="stylesheet" href="{{ 'payment-terms.css' | asset_url }}">
+  <link rel="stylesheet" data-href="{{ 'payment-terms.css' | asset_url }}">
 </div>
