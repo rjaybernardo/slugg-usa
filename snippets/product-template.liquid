@@ -111,30 +111,30 @@
           {% elsif product.media.size > 1 %}
             <div class="col-span-6">
               <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 relative">
-                <div class="{% if section.settings.thumbnails_position == 'left' %}{% if section.settings.thumbnail_size == 'standard' %}col-span-2{% else %}col-span-3{% endif %}{% else %}col-span-full{% endif %} hidden lg:block">
-
-                  {%- assign thumbnails_id = 'thumbnails-' | append: section.id -%}
-                  {%- render 'collection-shape-defs',
-                    shape: section.settings.thumbnail_shape,
-                    section_id: thumbnails_id,
-                    item_count: product.media.size
-                  -%}
-
-                  {%- if section.settings.thumbnails_position == 'left' -%}
-                  <div class="thumbnails-container">
-                    <div
-                      id="slideshow-thumbnails-{{ section.id }}"
-                      class="splide splide--thumbnails"
-                      x-data="productThumbnails()"
-                      x-init="mounted()"
-                    >
-                      <div class="splide__track h-full">
-                        <div
-                          class="thumbnails-overflow-indicator-top z-[2] absolute top-0 left-0 right-0 bg-gradient-to-b from-scheme-background to-transparent w-full h-24 pointer-events-none transition-opacity duration-150"
-                          :class="{ 'opacity-0' : firstVisible }"
-                        ></div>
+              <div class="{% if section.settings.thumbnails_position == 'left' %}{% if section.settings.thumbnail_size == 'standard' %}col-span-2{% else %}col-span-3{% endif %}{% else %}col-span-full{% endif %} hidden lg:block">
+                {%- assign thumbnails_id = 'thumbnails-' | append: section.id -%}
+                {%- render 'collection-shape-defs',
+                  shape: section.settings.thumbnail_shape,
+                  section_id: thumbnails_id,
+                  item_count: product.media.size
+                -%}
+                {%- if section.settings.thumbnails_position == 'left' -%}
+                <div class="thumbnails-container">
+                  <div
+                    id="slideshow-thumbnails-{{ section.id }}"
+                    class="splide splide--thumbnails"
+                    x-data="productThumbnails()"
+                    x-init="mounted()"
+                  >
+                    <div class="splide__track h-full">
+                      <div
+                        class="thumbnails-overflow-indicator-top z-[2] absolute top-0 left-0 right-0 bg-gradient-to-b from-scheme-background to-transparent w-full h-24 pointer-events-none transition-opacity duration-150"
+                        :class="{ 'opacity-0' : firstVisible }"
+                      ></div>
                   {%- endif -%}
+                  
                   {% comment %} thumbnails widget {% endcomment %}
+                  <div class="thumbnail-width">
                       <ul class="w-full {% if section.settings.thumbnails_position == 'left' %}splide__list h-full{% else %}grid {% if section.settings.thumbnail_size == 'standard' %}grid-cols-5{% else %}grid-cols-4{% endif %} {% endif %} gap-2.5">
                         {% comment %} theme-check-disable LiquidTag {% endcomment %}
                         {%- assign thumbnail_index = 0 -%}
@@ -163,6 +163,40 @@
                         {% endfor %}
                         {% comment %} theme-check-enable LiquidTag {% endcomment %}
                       </ul>
+                      </div>
+                       {% comment %} arrow buttons {% endcomment %}
+                       <div class="splide__arrows px-section flex items-center justify-end gap-2 mt-4 lg:hidden">
+                        {%- render 'splide-navigation' -%}
+                      </div>
+                      
+                      {%- if section.settings.show_slideshow_arrows_on_desktop -%}
+                      <div class="splide__arrows flex items-center justify-end gap-2 mt-4 hidden lg:block text-right">
+                        <div class="inline-block controls relative z-10 ml-auto {% if settings.button_shadow_direction contains 'top' %}pt-button-shadow{% else %}pb-button-shadow{% endif %}">
+                          <div class="flex gap-2">
+                            <button class="push-btn"
+                              @click="changeMedia('prev')"
+                              @keydown.space="changeMedia('prev')"
+                              @keydown.left.prevent="changeMedia('prev')"
+                              @keydown.enter="changeMedia('prev')">
+                              <span class="sr-only">{{ 'sections.slideshow.previous_slide' | t }}</span>
+                              <span class="push-btn-surface align-bottom p-2">
+                                <span class="block w-5 h-5">{% render 'icon-previous' %}</span>
+                              </span>
+                            </button>
+                            <button class="push-btn"
+                              @click="changeMedia('next')"
+                              @keydown.space="changeMedia('next')"
+                              @keydown.right.prevent="changeMedia('next')"
+                              @keydown.enter="changeMedia('next')">
+                              <span class="sr-only">{{ 'sections.slideshow.next_slide' | t }}</span>
+                              <span class="push-btn-surface align-bottom p-2">
+                                <span class="block w-5 h-5">{% render 'icon-next' %}</span>
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    {%- endif -%}
                   {%- if section.settings.thumbnails_position == 'left' -%}
                       <div
                         class="thumbnails-overflow-indicator-bottom z-[2] absolute bottom-0 left-0 right-0 bg-gradient-to-t from-scheme-background to-transparent w-full h-24 pointer-events-none transition-opacity duration-150"
@@ -291,7 +325,7 @@
                       {%- render 'splide-navigation' -%}
                     </div>
                     {%- if section.settings.show_slideshow_arrows_on_desktop -%}
-                    <div class="splide__arrows flex items-center justify-end gap-2 mt-4 hidden lg:block text-right">
+                    <div class="splide__arrows flex items-center justify-end gap-2 mt-4 hidden lg:hidden text-right">
                       <div class="inline-block controls relative z-10 ml-auto {% if settings.button_shadow_direction contains 'top' %}pt-button-shadow{% else %}pb-button-shadow{% endif %}">
                         <div class="flex gap-2">
                           <button class="push-btn"

@@ -1708,3 +1708,7 @@ input.spice-spa-addon-checkbox-input:checked+span.spice-spa-addon-checkbox-text:
 }
 
 /* collection page css end  */
+
+.thumbnail-width {
+    width: calc(100% - 168px);
+}
