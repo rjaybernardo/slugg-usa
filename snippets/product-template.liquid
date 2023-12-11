@@ -179,7 +179,7 @@
                               @keydown.left.prevent="changeMedia('prev')"
                               @keydown.enter="changeMedia('prev')">
                               <span class="sr-only">{{ 'sections.slideshow.previous_slide' | t }}</span>
-                              <span class="push-btn-surface align-bottom p-2">
+                              <span class="push-btn-surface align-bottom p-2" style="background-color:transparent">
                                 <span class="block w-5 h-5">{% render 'icon-previous' %}</span>
                               </span>
                             </button>
@@ -189,7 +189,7 @@
                               @keydown.right.prevent="changeMedia('next')"
                               @keydown.enter="changeMedia('next')">
                               <span class="sr-only">{{ 'sections.slideshow.next_slide' | t }}</span>
-                              <span class="push-btn-surface align-bottom p-2">
+                              <span class="push-btn-surface align-bottom p-2" style="background-color:transparent">
                                 <span class="block w-5 h-5">{% render 'icon-next' %}</span>
                               </span>
                             </button>

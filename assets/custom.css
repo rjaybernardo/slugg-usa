@@ -1709,6 +1709,17 @@ input.spice-spa-addon-checkbox-input:checked+span.spice-spa-addon-checkbox-text:
 
 /* collection page css end  */
 
+/* product section */
 .thumbnail-width {
     width: calc(100% - 168px);
+}
+
+/* slider-arrow */
+.slider-arrow {
+    width: 42px;
+    height: 42px;
+    background-size: 100%;
+    background-image: url(https://cdn.shopify.com/s/files/1/0567/9487/4049/files/Group_48097255_1.png?v=1690197006);
+    background-color: unset;
+    box-shadow: none;
 }
