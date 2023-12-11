@@ -1723,3 +1723,7 @@ input.spice-spa-addon-checkbox-input:checked+span.spice-spa-addon-checkbox-text:
     background-color: unset;
     box-shadow: none;
 }
+
+.bg-none {
+    background-color: transparent !important;
+}
