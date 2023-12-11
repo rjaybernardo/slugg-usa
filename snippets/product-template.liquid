@@ -134,6 +134,7 @@
                           :class="{ 'opacity-0' : firstVisible }"
                         ></div>
                   {%- endif -%}
+                  {% comment %} thumbnails widget {% endcomment %}
                       <ul class="w-full {% if section.settings.thumbnails_position == 'left' %}splide__list h-full{% else %}grid {% if section.settings.thumbnail_size == 'standard' %}grid-cols-5{% else %}grid-cols-4{% endif %} {% endif %} gap-2.5">
                         {% comment %} theme-check-disable LiquidTag {% endcomment %}
                         {%- assign thumbnail_index = 0 -%}
@@ -186,6 +187,7 @@
                     data-two-slides-visible-on-mobile
                     {% endif %}
                     >
+                    {% comment %} product image {% endcomment %}
                     <div class="splide__track">
                       <ul class="feature-media-list w-full splide__list  lg:relative lg:grid" role="list">
                         {%- assign media_index = 0 -%}
@@ -284,6 +286,7 @@
                         </button>
                       </div>
                     {%- endif -%}
+                    {% comment %} arrow buttons {% endcomment %}
                     <div class="splide__arrows px-section flex items-center justify-end gap-2 mt-4 lg:hidden">
                       {%- render 'splide-navigation' -%}
                     </div>

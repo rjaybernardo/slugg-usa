@@ -198,6 +198,8 @@
       <script src="{{ 'theme-editor-support.js' | asset_url }}" type="module"></script>
     {% endif %}
     <script src="{{ 'alpine-extensions.js' | asset_url }}" defer></script>
+    {% render 'base-css' %}
+
     <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'base.bundle.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'slick.min.css' | asset_url }}">
