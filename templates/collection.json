@@ -59,25 +59,25 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "custom_css": [
-        "h3 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 50px;}",
-        ".price {font-family: \"DM Sans\"; font-weight: 200; font-size: 25px;}"
+        "h3 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 50px;}"
       ],
       "settings": {
         "no_products": 8,
         "display_on_card": false,
         "enable_quick_buy": false,
+        "enable_color_swatch": true,
         "products_per_row_mobile": "1",
         "products_per_row_desktop": 3,
         "enable_filtering": false,
         "enable_sorting": false,
-        "expand_filters": true,
+        "expand_filters": false,
         "show_filter_count": false,
         "enable_color_swatch_filters": false,
         "color_scheme": "secondary",
         "use_gradient_background": false
       }
     },
-    "cfb88c1b-c5a2-4543-8811-52d534581500": {
+    "video-with-text": {
       "type": "video-with-text",
       "disabled": true,
       "settings": {
@@ -279,7 +279,7 @@
     "rich-text",
     "custom-rich-text",
     "product-grid",
-    "cfb88c1b-c5a2-4543-8811-52d534581500",
+    "video-with-text",
     "banner",
     "text-columns-with-images",
     "custom-testimonials"

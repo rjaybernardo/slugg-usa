@@ -1,0 +1,36 @@
+{%- unless product.has_only_default_variant -%}
+  {%- if product.options_with_values.size > 0 -%}
+    <div class="product_option_main">
+      {%- for option in product.options_with_values -%}
+        {%- assign current_variant = product.selected_or_first_available_variant -%}
+        {%- assign current_option = current_variant.options[forloop.index0] -%}
+        {%- assign optionName = option.name | downcase -%}
+        {%- if optionName == 'color' or optionName == 'colour' -%}
+          <div class="option_main">
+            {%- for value in option.values -%}
+              {%- liquid
+                assign product_available = true
+                if product.options.size == 1
+                  assign product_available = product.variants[forloop.index0].available
+                endif
+              -%}
+              {%- for variant in product.variants -%}
+                {%- if variant.title contains value and variant.image -%}
+                  {%- assign selected_variant = variant -%}
+                {%- endif -%}
+              {%- endfor -%}
+              
+              <div class="swatch-view-item{% unless product_available %} swatch-unavailable{% endunless %}{% if current_option ==  value %} active{% endif %}">
+                <input type="radio" value="{{ value }}" name="{{ option.name }}" data-value="{{ value }}" class="variant_common_option"{% if current_option ==  value %} checked{% endif %}>
+                <div class="swatch_img_main">
+                  <div style="width:80px;height:80px;background-image:url({{ selected_variant.image.src | img_url: 'small' }});" class="swatch_img" data-variant-url="{{ selected_variant.url }}" data-variant-id="{{ selected_variant.id }}" data-variant-price="{{ selected_variant.price | money }}" option-data-img="{{ selected_variant.image.src | img_url: 'master' }}"></div>
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+      
+  {%- endif -%}
+{%- endunless -%}
