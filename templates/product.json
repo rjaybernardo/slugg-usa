@@ -53,6 +53,23 @@
             "text_align": "text-left"
           }
         },
+        "0ed69de5-7b48-44b0-b552-f8172952a2e0": {
+          "type": "after_pay",
+          "settings": {
+            "display_on_card": false,
+            "show_price": false,
+            "enable_payment_button": false,
+            "show_pickup_availability": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "ffe2e0d3-a701-4a9c-8d7a-1303a77c530f": {
+          "type": "liquid",
+          "settings": {
+            "display_on_card": false,
+            "liquid": "<div class=\"mb-2.5\">\n      {{ form | payment_terms }}\n    </div>"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -65,7 +82,7 @@
           "settings": {
             "display_on_card": false,
             "option_style": "buttons",
-            "hide_option_labels": true,
+            "hide_option_labels": false,
             "enable_color_swatches": true,
             "enable_variant_image": true
           }
@@ -118,6 +135,8 @@
         "title",
         "32421e16-850d-40a7-a646-186516bdb90d",
         "price",
+        "0ed69de5-7b48-44b0-b552-f8172952a2e0",
+        "ffe2e0d3-a701-4a9c-8d7a-1303a77c530f",
         "quantity_selector",
         "variant_picker",
         "baf3083e-d14d-435d-bca3-100d6ac490ce",

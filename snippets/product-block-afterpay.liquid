@@ -8,6 +8,10 @@
     data-product-form: '',
     x-ref: 'productForm'
   %}
+    <div class="mb-2.5">
+      {{ form | payment_terms }}
+    </div>
+
     <div class="{% if product.has_only_default_variant %}hidden{% else %}no-js{% endif %}">
       <label class="{{ label_class }}" for="fallback-selector-{{ section.id }}">Variant</label>
       <select
@@ -47,67 +51,6 @@
     {% else %}
       {% capture add_to_cart_class %}push-btn-surface w-full{% endcapture %}
     {% endif %}
-
-    <div
-      class=""
-      {% if has_sticky_buy_buttons %}
-        x-intersect:enter="stickyAddToCartShown = false"
-        x-intersect:leave="stickyAddToCartShown = true"
-      {% endif %}
-    >
-      <div class="w-full">
-        <button
-          class="
-            mb-1 add-to-cart-btn {% if product.available %}push-btn theme-button{% else %}btn text-sm lg:text-base after:hidden bg-scheme-secondary-background text-scheme-text{% endif %} theme-button w-full
-            {% unless current_variant.available %}cursor-not-allowed{% endunless %}
-          "
-          type="submit"
-          :class="{ 'cursor-not-allowed': !currentVariantAvailable }"
-          :disabled="!currentVariantAvailable"
-          :aria-label="addToCartText"
-          {% unless current_variant.available %}
-            disabled="disabled"
-          {% endunless %}
-        >
-          <span class="{% if product.available %}{{ add_to_cart_class }}{% endif %}">
-            <span x-text="addToCartText">
-              {%- if current_variant.available -%}
-                {{- button_text -}}
-              {%- else -%}
-                {{- 'products.product.sold_out' | t -}}
-              {%- endif -%}
-            </span>
-            {%- if block.settings.show_price -%}
-              <span x-show="currentVariantAvailable">&nbsp;&#8226;&nbsp;</span
-              ><span x-show="currentVariantAvailable" x-html="formatMoney(current_price)">
-                {{- current_variant.price | money -}}
-              </span>
-              {% if product.compare_at_price_max > product.price %}
-                <template x-if="current_variant && product.compare_at_price_max && current_variant.compare_at_price > current_variant.price">
-                  <span x-show="currentVariantAvailable" class="{{ price_text_size }}">
-                    <span class="sr-only">{{ 'products.general.sale_price' | t }}</span>
-                    <s
-                      data-compare-price
-                      x-html="formatMoney(current_variant.compare_at_price)"
-                    >
-                      {% if current_variant.compare_at_price > current_variant.price %}
-                        {{ current_variant.compare_at_price | money }}
-                      {% endif %}
-                    </s>
-                  </span>
-                </template>
-              {% endif %}
-            {%- endif -%}
-          </span>
-        </button>
-      </div>
-
-      {% if enable_payment_buttons %}
-        <div class="dynamic-payment-buttons mt-5 {% if settings.button_drop_shadow_size > 0 %}{{ settings.button_shadow_direction | replace: '_', ' ' }}{% endif %}">
-          {{ form | payment_button }}
-        </div>
-      {% endif %}
-    </div>
 
     {%- if settings.cart_type == 'page' or settings.open_modal_on_add_to_cart == false -%}
       <div

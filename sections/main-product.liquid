@@ -904,6 +904,54 @@
       ]
     },
     {
+      "type": "after_pay",
+      "name": "after pay block",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "display_on_card",
+          "label": "t:common.settings.display_on_card.label",
+          "default": false,
+          "info": "t:common.settings.display_on_card.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_price",
+          "label": "t:common.blocks.buy_buttons.settings.show_price.label",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_payment_button",
+          "label": "t:common.blocks.buy_buttons.settings.enable_payment_button.label",
+          "info": "t:common.blocks.buy_buttons.settings.enable_payment_button.info",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "t:common.blocks.buy_buttons.settings.header_pickup_availability"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_pickup_availability",
+          "label": "t:common.blocks.buy_buttons.settings.show_pickup_availability.label",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Gift card recipient"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_gift_card_recipient",
+          "default": false,
+          "label": "t:common.blocks.buy_buttons.settings.show_gift_card_recipient.label",
+          "info": "t:common.blocks.buy_buttons.settings.show_gift_card_recipient.info"
+        }
+      ]
+    },
+    {
       "type": "vendor",
       "name": "t:common.blocks.vendor.name",
       "limit": 1,
