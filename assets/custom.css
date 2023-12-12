@@ -1727,3 +1727,11 @@ input.spice-spa-addon-checkbox-input:checked+span.spice-spa-addon-checkbox-text:
 .bg-none {
     background-color: transparent !important;
 }
+
+.variant-text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+}

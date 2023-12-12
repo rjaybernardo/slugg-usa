@@ -133,15 +133,12 @@
 
                     <span
                       {% if is_color %}
-                        class="sr-only"
+                        class="variant-text"
                       {% endif %}
                     >
                       {{- value -}}
                     </span>
                   </label>
-                  <div class="variant-name text-center">
-                    {{ selected_variant.title }}
-                  </div>
                 </div>
               {% endfor %}
             </div>
