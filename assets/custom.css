@@ -1735,3 +1735,7 @@ input.spice-spa-addon-checkbox-input:checked+span.spice-spa-addon-checkbox-text:
     width: 100%;
     margin-top: 5px;
 }
+
+.strong {
+    font-weight: bolder;
+}

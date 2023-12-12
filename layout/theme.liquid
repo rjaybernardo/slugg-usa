@@ -200,9 +200,15 @@
     <script src="{{ 'alpine-extensions.js' | asset_url }}" defer></script>
     {% render 'base-css' %}
 
-    <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
-    <link rel="stylesheet" href="{{ 'base.bundle.css' | asset_url }}">
-    <link rel="stylesheet" href="{{ 'slick.min.css' | asset_url }}">
+    {% comment %}
+      <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
+      <link rel="stylesheet" href="{{ 'base.bundle.css' | asset_url }}">
+      <link rel="stylesheet" href="{{ 'slick.min.css' | asset_url }}">
+    {% endcomment %}
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
+    {{ 'base.bundle.css' | asset_url | stylesheet_tag }}
+    {{ 'slick.min.css' | asset_url | stylesheet_tag }}
+
     {% comment %}
       <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
     {% endcomment %}
