@@ -16,7 +16,7 @@
       <span>{{ product.metafields.custom.set_of_text.value }} </span>
     {%- endif -%}
     <span
-      class="text-scheme-text {{ price_text_size }}"
+      class="text-scheme-text {{ price_text_size }} lg:text-lg"
       x-html="formatMoney(current_price)"
       :class="
         {
@@ -64,7 +64,7 @@
       </span>
       <span
         x-html="
-                              current_variant.unit_price_measurement.reference_value != 1 ? current_variant.unit_price_measurement.reference_value : ''
+                                        current_variant.unit_price_measurement.reference_value != 1 ? current_variant.unit_price_measurement.reference_value : ''
         "
       >
         {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
