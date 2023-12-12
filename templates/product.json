@@ -257,6 +257,7 @@
     },
     "video-with-text": {
       "type": "video-with-text",
+      "disabled": true,
       "settings": {
         "display_on_card": true,
         "video": "shopify://files/videos/Slugg.mov",
