@@ -219,8 +219,10 @@
       {% comment %}theme-check-enable ParserBlockingScriptTag{% endcomment %}
     {% endif %}
     <style>
+      /* Max Width */
       :root {
-        --max-site-width: 1820px;
+        /* --max-site-width: 1820px; */
+        --max-site-width: 1419px;
       }
     </style>
     {% style %}
@@ -308,7 +310,7 @@
     </script>
   </head>
 
-  <body data-color-scheme="primary">
+  <body data-color-scheme="primary" class="template-{{ template.name }}">
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -381,5 +383,20 @@
     </noscript>
     <!-- End Quantcast tag -->
     <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
+    <script>
+      jQuery(document).on('change', '.product_option_main .variant_common_option', function () {
+        $this = jQuery(this);
+        $this.parents('.product_option_main').find('.swatch-view-item').removeClass('active');
+        $this.parent('.swatch-view-item').addClass('active');
+        var dataVariantPrice = $this.parent('.swatch-view-item').find('.swatch_img').attr('data-variant-price');
+        var dataVariantUrl = $this.parent('.swatch-view-item').find('.swatch_img').attr('data-variant-url');
+        var optionDataImg = $this.parent('.swatch-view-item').find('.swatch_img').attr('option-data-img');
+
+        $this.parents('.product_tile_main').find('.hover_img img').attr('src', optionDataImg);
+        $this.parents('.product_tile_main').find('.hover_img img').attr('srcset', optionDataImg);
+        $this.parents('.product_tile_main').find('.product_price').text(dataVariantPrice);
+        $this.parents('.product_tile_main').find('.shop_btn').attr('href', dataVariantUrl);
+      });
+    </script>
   </body>
 </html>
