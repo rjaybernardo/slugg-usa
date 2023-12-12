@@ -1,1 +1,201 @@
-{"sections":{"f4f2f8d1-00a4-468b-b75a-372cf6bd162d":{"type":"rich-text","custom_css":["h2 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 50px;"],"settings":{"title":"Meet the three Sluggs","heading_size":"heading-feature","rich_text":"<h4>It's never been easier to create the perfect three pot cluster.<\/h4>","display_on_card":false,"content_width_desktop":"lg:w-2\/3","button_link":"","button_label":"Shop Now","color_scheme":"primary","use_gradient_background":false}},"product-grid":{"type":"main-collection-product-grid","custom_css":["h3 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 50px;}",".price {font-family: \"DM Sans\"; font-weight: 200; font-size: 25px;}"],"settings":{"no_products":8,"display_on_card":false,"enable_quick_buy":false,"products_per_row_mobile":"1","products_per_row_desktop":3,"enable_filtering":false,"enable_sorting":false,"expand_filters":true,"show_filter_count":false,"enable_color_swatch_filters":false,"color_scheme":"primary","use_gradient_background":false}},"cfb88c1b-c5a2-4543-8811-52d534581500":{"type":"video-with-text","settings":{"display_on_card":true,"video":"shopify:\/\/files\/videos\/Slugg.mov","autoplay":true,"muted":true,"loop":true,"controls":true,"crop":"","video_shape":"default","blob_type":1,"rotate_video":0,"video_position":"right","video_size":"half","disable_media_style":false,"title":"Good things come on threes","heading_size":"heading-feature","richtext":"<h5>Why do garden pots look so good in a cluster of three? Apparently, it's just the way our lovely brains work. Designers call it the \"law of threes\".<\/h5>","text_alignment":"text-center","button_link":"","button_label":"Shop Now","color_scheme":"primary","use_gradient_background":false}},"banner":{"type":"main-collection-banner","disabled":true,"settings":{"display_on_card":false,"show_collection_title":false,"show_collection_description":false,"show_collection_image":false,"collection_image_style":"full","crop":"aspect-w-4 aspect-h-1","linklist":"","color_scheme":"primary","use_gradient_background":false}}},"order":["f4f2f8d1-00a4-468b-b75a-372cf6bd162d","product-grid","cfb88c1b-c5a2-4543-8811-52d534581500","banner"]}
+{
+  "sections": {
+    "rich-text": {
+      "type": "rich-text",
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 50px;"
+      ],
+      "settings": {
+        "title": "Meet the three Sluggs",
+        "heading_size": "heading-feature",
+        "rich_text": "<h4>It's never been easier to create the perfect three pot cluster.</h4>",
+        "display_on_card": false,
+        "content_width_desktop": "lg:w-2/3",
+        "button_link": "",
+        "button_label": "Shop Now",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "custom-rich-text": {
+      "type": "custom-rich-text",
+      "blocks": {
+        "0fd4fd91-ac00-4029-b453-0697a494b215": {
+          "type": "sticker",
+          "settings": {
+            "text": "Free metro\ndelivery!",
+            "shape": "scalloped_circle_1",
+            "width": 150,
+            "sticker_font_size": "1.563rem",
+            "half_image_width_on_mobile": true,
+            "horizontal_position": 91,
+            "vertical_position": 68,
+            "rotate": 24,
+            "show_sticker_on_mobile": false,
+            "show_sticker_on_desktop": true,
+            "rotation_animation": "none",
+            "enable_parallax": false,
+            "parallax_speed": 3,
+            "color": "bg-scheme-background text-scheme-text",
+            "color_scheme": "quaternary"
+          }
+        }
+      },
+      "block_order": ["0fd4fd91-ac00-4029-b453-0697a494b215"],
+      "settings": {
+        "sub_title": "Shop all pots",
+        "title": "Garden pots that are easy to buy, and easy to use.",
+        "heading_size": "heading-base",
+        "rich_text": "",
+        "display_on_card": true,
+        "content_width_desktop": "lg:w-2/3",
+        "button_link": "",
+        "button_label": "Shop Now",
+        "color_scheme": "secondary",
+        "use_gradient_background": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "custom_css": [
+        "h3 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 50px;}",
+        ".price {font-family: \"DM Sans\"; font-weight: 200; font-size: 25px;}"
+      ],
+      "settings": {
+        "no_products": 8,
+        "display_on_card": false,
+        "enable_quick_buy": false,
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 3,
+        "enable_filtering": false,
+        "enable_sorting": false,
+        "expand_filters": true,
+        "show_filter_count": false,
+        "enable_color_swatch_filters": false,
+        "color_scheme": "secondary",
+        "use_gradient_background": false
+      }
+    },
+    "cfb88c1b-c5a2-4543-8811-52d534581500": {
+      "type": "video-with-text",
+      "disabled": true,
+      "settings": {
+        "display_on_card": true,
+        "video": "shopify://files/videos/Slugg.mov",
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "controls": true,
+        "crop": "",
+        "video_shape": "default",
+        "blob_type": 1,
+        "rotate_video": 0,
+        "video_position": "right",
+        "video_size": "half",
+        "disable_media_style": false,
+        "title": "Good things come on threes",
+        "heading_size": "heading-feature",
+        "richtext": "<h5>Why do garden pots look so good in a cluster of three? Apparently, it's just the way our lovely brains work. Designers call it the \"law of threes\".</h5>",
+        "text_alignment": "text-center",
+        "button_link": "",
+        "button_label": "Shop Now",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "display_on_card": false,
+        "show_collection_title": false,
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "collection_image_style": "full",
+        "crop": "aspect-w-4 aspect-h-1",
+        "linklist": "",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "90576655-4223-4659-944b-226034a9b50f": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--17029418156274__90576655-4223-4659-944b-226034a9b50f-column-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Free_Metro_Shipping.webp",
+            "title": "FREE metro delivery*",
+            "text": "<p>Actual slugs may be slow. But our super fast and free shipping network isn’t!</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--17029418156274__90576655-4223-4659-944b-226034a9b50f-column-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Threes.webp",
+            "title": "Good things come in threes",
+            "text": "<p>Sluggs® are sold as a set of three garden pots in a box.</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--17029418156274__90576655-4223-4659-944b-226034a9b50f-column-3": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Suitable.webp",
+            "title": "Suitable for indoors & out",
+            "text": "<p>The entire Slugg® range is suitable for indoor and outside.</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "599d9112-c182-4cd7-8076-c90d3342bcbc": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Built_to_last.webp",
+            "title": "Built to last",
+            "text": "<p>Slugg® garden pots are waterproof, lightweight, and tougher than nails</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "template--17029418156274__90576655-4223-4659-944b-226034a9b50f-column-1",
+        "template--17029418156274__90576655-4223-4659-944b-226034a9b50f-column-2",
+        "template--17029418156274__90576655-4223-4659-944b-226034a9b50f-column-3",
+        "599d9112-c182-4cd7-8076-c90d3342bcbc"
+      ],
+      "settings": {
+        "display_on_card": true,
+        "slideshow_on_mobile": false,
+        "title": "",
+        "crop": "",
+        "image_shape": "default",
+        "show_index_on_blocks": false,
+        "index_shape": "star_1",
+        "color_scheme": "secondary",
+        "use_gradient_background": false
+      }
+    }
+  },
+  "order": [
+    "rich-text",
+    "custom-rich-text",
+    "product-grid",
+    "cfb88c1b-c5a2-4543-8811-52d534581500",
+    "banner",
+    "90576655-4223-4659-944b-226034a9b50f"
+  ]
+}
