@@ -119,10 +119,10 @@
         "use_gradient_background": false
       }
     },
-    "90576655-4223-4659-944b-226034a9b50f": {
+    "text-columns-with-images": {
       "type": "text-columns-with-images",
       "blocks": {
-        "template--17029418156274__90576655-4223-4659-944b-226034a9b50f-column-1": {
+        "template--17029418156274__text-columns-with-images-column-1": {
           "type": "column",
           "settings": {
             "show_image": true,
@@ -134,7 +134,7 @@
             "color_scheme": "same_as_section"
           }
         },
-        "template--17029418156274__90576655-4223-4659-944b-226034a9b50f-column-2": {
+        "template--17029418156274__text-columns-with-images-column-2": {
           "type": "column",
           "settings": {
             "show_image": true,
@@ -146,7 +146,7 @@
             "color_scheme": "same_as_section"
           }
         },
-        "template--17029418156274__90576655-4223-4659-944b-226034a9b50f-column-3": {
+        "template--17029418156274__text-columns-with-images-column-3": {
           "type": "column",
           "settings": {
             "show_image": true,
@@ -172,9 +172,9 @@
         }
       },
       "block_order": [
-        "template--17029418156274__90576655-4223-4659-944b-226034a9b50f-column-1",
-        "template--17029418156274__90576655-4223-4659-944b-226034a9b50f-column-2",
-        "template--17029418156274__90576655-4223-4659-944b-226034a9b50f-column-3",
+        "template--17029418156274__text-columns-with-images-column-1",
+        "template--17029418156274__text-columns-with-images-column-2",
+        "template--17029418156274__text-columns-with-images-column-3",
         "599d9112-c182-4cd7-8076-c90d3342bcbc"
       ],
       "settings": {
@@ -188,6 +188,91 @@
         "color_scheme": "secondary",
         "use_gradient_background": false
       }
+    },
+    "custom-testimonials": {
+      "type": "custom-testimonial",
+      "blocks": {
+        "template--17029418156274__custom-testimonials-column-3": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/CleanShot_2023-07-31_at_10.18.38_2x_d0930bab-59ac-4ac5-aca0-8cd22e92f6b7.webp",
+            "title": "Louise L.",
+            "text": "<p>I love my Slugg pots and the service was amazing. They are such great quality. I'm looking to buy some more to jazz up my inside house next.</p>",
+            "cta_link": "shopify://products/lucy",
+            "cta_text": "Shop Lucy",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--17029418156274__custom-testimonials-column-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Jessica_Lasak_-_Thomas.webp",
+            "title": "Jessica L.",
+            "text": "<p>Amazing, thanks so much! Loving the pots and get lots of compliments.</p>",
+            "cta_link": "shopify://products/thomas",
+            "cta_text": "Shop Thomas",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--17029418156274__custom-testimonials-column-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Rectangle_1046_1.jpg",
+            "title": "Colette B.",
+            "text": "<p>I'm very impressed with the finish quality of the Thomas set. Delivery was fast and well-packaged. Looking forward to when the weather warms up so I can plant and use the remaining two.</p>",
+            "cta_link": "shopify://products/rosie",
+            "cta_text": "Shop Roise",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "6b356432-7cf3-4596-9204-608c4ad1f299": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Lucy_garden_pots.png",
+            "title": "Joanne B.",
+            "text": "<p>Great product and concept!! My cactus look gorgeous in my set of Lucy's. Highly recommend your pots.</p>",
+            "cta_link": "shopify://products/lucy",
+            "cta_text": "Shop Lucy",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "c6a21289-f70e-4dc1-88fc-823b053aaac8": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "target_section_color_scheme": "secondary",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17029418156274__custom-testimonials-column-3",
+        "template--17029418156274__custom-testimonials-column-1",
+        "template--17029418156274__custom-testimonials-column-2",
+        "6b356432-7cf3-4596-9204-608c4ad1f299",
+        "c6a21289-f70e-4dc1-88fc-823b053aaac8"
+      ],
+      "settings": {
+        "display_on_card": true,
+        "review": 5,
+        "title": "Australia's highest rated garden pots with over 900+ 5 Star reviews.",
+        "enable_slider": true,
+        "carousel_dots": false,
+        "carousel_arrows": true,
+        "crop": "aspect-w-3 aspect-h-4",
+        "image_shape": "default",
+        "show_index_on_blocks": false,
+        "index_shape": "star_1",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
     }
   },
   "order": [
@@ -196,6 +281,7 @@
     "product-grid",
     "cfb88c1b-c5a2-4543-8811-52d534581500",
     "banner",
-    "90576655-4223-4659-944b-226034a9b50f"
+    "text-columns-with-images",
+    "custom-testimonials"
   ]
 }
