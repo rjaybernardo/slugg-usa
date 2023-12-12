@@ -205,23 +205,23 @@ jQuery(document).ready(function () {
   theme.custom_stickyCart()
   theme.custom_stickyData()
 })
-jQuery(window).scroll(function () {
-  if (jQuery('body.template-product').length > 0) {
-    if (jQuery('.sticky_cart.product_full_info_sticky').length == 0) {
-      var addToCartOffsetTop =
-        jQuery(
-          '.product-block-container .shopify-product-form .add-to-cart-btn'
-        ).offset().top + 100
-      if (jQuery(this).scrollTop() > addToCartOffsetTop) {
-        jQuery('.sticky_cart').show()
-        jQuery('.sticky_cart').addClass('product_info_sticky')
-      } else {
-        jQuery('.sticky_cart').removeClass('product_info_sticky')
-      }
-      var footerCarthide = jQuery('#shopify-section-footer').offset().top - 400
-      if (jQuery(this).scrollTop() > footerCarthide) {
-        jQuery('.sticky_cart').removeClass('product_info_sticky')
-      }
-    }
-  }
-})
+// jQuery(window).scroll(function () {
+//   if (jQuery('body.template-product').length > 0) {
+//     if (jQuery('.sticky_cart.product_full_info_sticky').length == 0) {
+//       var addToCartOffsetTop =
+//         jQuery(
+//           '.product-block-container .shopify-product-form .add-to-cart-btn'
+//         ).offset().top + 100
+//       if (jQuery(this).scrollTop() > addToCartOffsetTop) {
+//         jQuery('.sticky_cart').show()
+//         jQuery('.sticky_cart').addClass('product_info_sticky')
+//       } else {
+//         jQuery('.sticky_cart').removeClass('product_info_sticky')
+//       }
+//       var footerCarthide = jQuery('#shopify-section-footer').offset().top - 400
+//       if (jQuery(this).scrollTop() > footerCarthide) {
+//         jQuery('.sticky_cart').removeClass('product_info_sticky')
+//       }
+//     }
+//   }
+// })

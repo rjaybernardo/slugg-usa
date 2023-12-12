@@ -4,38 +4,34 @@
     --section-x-padding: 1.25rem;
     --grid-gap: 1.25rem;
     --icon-thickness: {{ settings.icon_thickness }};
-    --header-height: 60px;
+    --header-height: 120px;
 
     --transparent: transparent;
-
     --color-primary-text: {{ settings.color_primary_text.red }}, {{ settings.color_primary_text.green }}, {{ settings.color_primary_text.blue }};
     --color-primary-background: {{ settings.color_primary_background.red }}, {{ settings.color_primary_background.green }}, {{ settings.color_primary_background.blue }};
-    --color-primary-accent-1: {{ settings.color_primary_accent_1.red }}, {{ settings.color_primary_accent_1.green }}, {{ settings.color_primary_accent_1.blue }};
-    --color-primary-accent-2: {{ settings.color_primary_accent_2.red }}, {{ settings.color_primary_accent_2.green }}, {{ settings.color_primary_accent_2.blue }};
+    --color-primary-accent: {{ settings.color_primary_accent.red }}, {{ settings.color_primary_accent.green }}, {{ settings.color_primary_accent.blue }};
+
     --color-primary-card: {{ settings.color_primary_card.red }}, {{ settings.color_primary_card.green }}, {{ settings.color_primary_card.blue }};
     --color-primary-gradient: {{ settings.color_primary_gradient }};
     {%- render 'color-overlay-variables', color_scheme: 'primary' -%}
 
     --color-secondary-text: {{ settings.color_secondary_text.red }}, {{ settings.color_secondary_text.green }}, {{ settings.color_secondary_text.blue }};
     --color-secondary-background: {{ settings.color_secondary_background.red }}, {{ settings.color_secondary_background.green }}, {{ settings.color_secondary_background.blue }};
-    --color-secondary-accent-1: {{ settings.color_secondary_accent_1.red }}, {{ settings.color_secondary_accent_1.green }}, {{ settings.color_secondary_accent_1.blue }};
-    --color-secondary-accent-2: {{ settings.color_secondary_accent_2.red }}, {{ settings.color_secondary_accent_2.green }}, {{ settings.color_secondary_accent_2.blue }};
+    --color-secondary-accent: {{ settings.color_secondary_accent.red }}, {{ settings.color_secondary_accent.green }}, {{ settings.color_secondary_accent.blue }};
     --color-secondary-card: {{ settings.color_secondary_card.red }}, {{ settings.color_secondary_card.green }}, {{ settings.color_secondary_card.blue }};
     --color-secondary-gradient: {{ settings.color_secondary_gradient }};
     {%- render 'color-overlay-variables', color_scheme: 'secondary' -%}
 
     --color-tertiary-text: {{ settings.color_tertiary_text.red }}, {{ settings.color_tertiary_text.green }}, {{ settings.color_tertiary_text.blue }};
     --color-tertiary-background: {{ settings.color_tertiary_background.red }}, {{ settings.color_tertiary_background.green }}, {{ settings.color_tertiary_background.blue }};
-    --color-tertiary-accent-1: {{ settings.color_tertiary_accent_1.red }}, {{ settings.color_tertiary_accent_1.green }}, {{ settings.color_tertiary_accent_1.blue }};
-    --color-tertiary-accent-2: {{ settings.color_tertiary_accent_2.red }}, {{ settings.color_tertiary_accent_2.green }}, {{ settings.color_tertiary_accent_2.blue }};
+    --color-tertiary-accent: {{ settings.color_tertiary_accent.red }}, {{ settings.color_tertiary_accent.green }}, {{ settings.color_tertiary_accent.blue }};
     --color-tertiary-card: {{ settings.color_tertiary_card.red }}, {{ settings.color_tertiary_card.green }}, {{ settings.color_tertiary_card.blue }};
     --color-tertiary-gradient: {{ settings.color_tertiary_gradient }};
     {%- render 'color-overlay-variables', color_scheme: 'tertiary' -%}
 
     --color-quaternary-text: {{ settings.color_quaternary_text.red }}, {{ settings.color_quaternary_text.green }}, {{ settings.color_quaternary_text.blue }};
     --color-quaternary-background: {{ settings.color_quaternary_background.red }}, {{ settings.color_quaternary_background.green }}, {{ settings.color_quaternary_background.blue }};
-    --color-quaternary-accent-1: {{ settings.color_quaternary_accent_1.red }}, {{ settings.color_quaternary_accent_1.green }}, {{ settings.color_quaternary_accent_1.blue }};
-    --color-quaternary-accent-2: {{ settings.color_quaternary_accent_2.red }}, {{ settings.color_quaternary_accent_2.green }}, {{ settings.color_quaternary_accent_2.blue }};
+    --color-quaternary-accent: {{ settings.color_quaternary_accent.red }}, {{ settings.color_quaternary_accent.green }}, {{ settings.color_quaternary_accent.blue }};
     --color-quaternary-card: {{ settings.color_quaternary_card.red }}, {{ settings.color_quaternary_card.green }}, {{ settings.color_quaternary_card.blue }};
     --color-quaternary-gradient: {{ settings.color_quaternary_gradient }};
     {%- render 'color-overlay-variables', color_scheme: 'quaternary' -%}
@@ -45,7 +41,7 @@
     --drop-down-offset: {% if settings.show_border_between_sections %}{{ settings.section_border_thickness | plus: 2 }}px{% else %}2px{% endif %};
     --shape-divider-offset: {% if settings.show_border_between_sections %}{{ settings.section_border_thickness | plus: 2 }}px{% else %}2px{% endif %};
 
-  
+
     --button-border-radius: {{ settings.button_border_radius }};
     --textarea-border-radius: {% if settings.button_border_radius == '9999px' %}1rem{% else %}{{ settings.button_border_radius }}{% endif %};
     --button-border-width: {{ settings.button_border_width }}{% if settings.button_border_width > 0 %}px{% endif %};
@@ -58,10 +54,10 @@
     --button-hover-top-size: {% if settings.button_drop_shadow_size > 0 %}{% if settings.button_shadow_direction contains 'top' %}-{% endif %}{{ settings.button_drop_shadow_size }}px{% else %}-0.25rem{% endif %};
     --button-hover-left-size: var(--button-drop-shadow-left-size);
     --button-shadow-display: {% if settings.button_drop_shadow_size > 0 %}block{% else %}none{% endif %};
-    --sticker-border-radius: {{ settings.sticker_border_radius }};  
+    --sticker-border-radius: {{ settings.sticker_border_radius }};
     --sticker-border-width: {{ settings.sticker_border_width }}{% if settings.sticker_border_width > 0 %}px{% endif %};
     --sticker-shadow-border-width: {% if settings.sticker_show_border_on_shadow %}var(--sticker-border-width){% else %}0{% endif %};
-    --sticker-text-transform: {% if settings.stickers_uppercase %}uppercase{% else %}none{% endif %}; 
+    --sticker-text-transform: {% if settings.stickers_uppercase %}uppercase{% else %}none{% endif %};
     --sticker-drop-shadow-top-size: {% if settings.sticker_shadow_direction contains 'top' %}-{% endif %}{{ settings.sticker_drop_shadow_size }}px;
     --sticker-drop-shadow-left-size: {% if settings.sticker_shadow_direction contains 'left' %}-{% endif %}{% if settings.sticker_shadow_direction == 'bottom' or settings.sticker_shadow_direction == 'top' %}0{% else %}{{ settings.sticker_drop_shadow_size }}px{% endif %};
     --card-border-radius: {{ settings.card_border_radius }};
@@ -83,10 +79,6 @@
     --heading-stroke-thickness: {{ settings.heading_stroke_thickness }}px;
     --product-tiles-text-transform: {% if settings.product_tile_uppercase %}uppercase{% else %}none{% endif %};
     --select-svg: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 12L23.2826 36.0527C23.3724 36.1542 23.4826 36.2354 23.6062 36.291C23.7297 36.3467 23.8636 36.3755 23.999 36.3755C24.1345 36.3755 24.2684 36.3467 24.3919 36.291C24.5154 36.2354 24.6257 36.1542 24.7155 36.0527L46 12' stroke='currentColor' stroke-width='{{ settings.icon_thickness }}' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E%0A");
-    
-    --hover-effect-enlarge-shape: {% if settings.hover_effect_enlarge_shape %}1.1{% else %}1{% endif %};
-    --hover-effect-lift-shape: {% if settings.hover_effect_lift_shape %}-{{ settings.hover_effect_lift_level }}rem{% else %}0{% endif %};
-    --hover-effect-rotate-shape: {% if settings.hover_effect_rotate_shape %}{{ settings.hover_effect_rotate_level }}deg{% else %}0deg{% endif %};
   }
 
 
@@ -94,14 +86,12 @@
   [data-color-scheme="primary"] {
     --color-scheme-text: var(--color-primary-text);
     --color-scheme-background: var(--color-primary-background);
-    --color-scheme-accent-1: var(--color-primary-accent-1);
-    --color-scheme-accent-2: var(--color-primary-accent-2);
+    --color-scheme-accent: var(--color-primary-accent);
     --color-scheme-card: var(--color-primary-card);
     --color-scheme-gradient: var(--color-primary-gradient);
     --color-scheme-text-overlay: var(--color-primary-text-overlay);
     --color-scheme-card-text-overlay: var(--color-primary-card-text-overlay);
-    --color-scheme-accent-1-overlay: var(--color-primary-accent-1-overlay);
-    --color-scheme-accent-2-overlay: var(--color-primary-accent-2-overlay);
+    --color-scheme-accent-overlay: var(--color-primary-accent-overlay);
     --color-scheme-secondary-background: {% if settings.secondary_button_color == 'match_background' %}var(--color-primary-background){% else %}var(--color-primary-card){% endif %};
     --select-svg: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 12L23.2826 36.0527C23.3724 36.1542 23.4826 36.2354 23.6062 36.291C23.7297 36.3467 23.8636 36.3755 23.999 36.3755C24.1345 36.3755 24.2684 36.3467 24.3919 36.291C24.5154 36.2354 24.6257 36.1542 24.7155 36.0527L46 12' stroke='{{ settings.color_primary_text | replace: '#', '%23' }}' stroke-width='{{ settings.icon_thickness }}' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E%0A");
   }
@@ -111,13 +101,11 @@
     --color-scheme-text: var(--color-secondary-text);
     --color-scheme-background: var(--color-secondary-background);
     --color-scheme-gradient: var(--color-secondary-gradient);
-    --color-scheme-accent-1: var(--color-secondary-accent-1);
-    --color-scheme-accent-2: var(--color-secondary-accent-2);
+    --color-scheme-accent: var(--color-secondary-accent);
     --color-scheme-card: var(--color-secondary-card);
     --color-scheme-text-overlay: var(--color-secondary-text-overlay);
     --color-scheme-card-text-overlay: var(--color-secondary-card-text-overlay);
-    --color-scheme-accent-1-overlay: var(--color-secondary-accent-1-overlay);
-    --color-scheme-accent-2-overlay: var(--color-secondary-accent-2-overlay);
+    --color-scheme-accent-overlay: var(--color-secondary-accent-overlay);
     --color-scheme-secondary-background: {% if settings.secondary_button_color == 'match_background' %}var(--color-secondary-background){% else %}var(--color-secondary-card){% endif %};
     --select-svg: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 12L23.2826 36.0527C23.3724 36.1542 23.4826 36.2354 23.6062 36.291C23.7297 36.3467 23.8636 36.3755 23.999 36.3755C24.1345 36.3755 24.2684 36.3467 24.3919 36.291C24.5154 36.2354 24.6257 36.1542 24.7155 36.0527L46 12' stroke='{{ settings.color_secondary_text | replace: '#', '%23' }}' stroke-width='{{ settings.icon_thickness }}' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E%0A");
   }
@@ -126,14 +114,12 @@
   [data-color-scheme="tertiary"] {
     --color-scheme-text: var(--color-tertiary-text);
     --color-scheme-background: var(--color-tertiary-background);
-    --color-scheme-accent-1: var(--color-tertiary-accent-1);
-    --color-scheme-accent-2: var(--color-tertiary-accent-2);
+    --color-scheme-accent: var(--color-tertiary-accent);
     --color-scheme-card: var(--color-tertiary-card);
     --color-scheme-gradient: var(--color-tertiary-gradient);
     --color-scheme-text-overlay: var(--color-tertiary-text-overlay);
     --color-scheme-card-text-overlay: var(--color-tertiary-card-text-overlay);
-    --color-scheme-accent-1-overlay: var(--color-tertiary-accent-1-overlay);
-    --color-scheme-accent-2-overlay: var(--color-tertiary-accent-2-overlay);
+    --color-scheme-accent-overlay: var(--color-tertiary-accent-overlay);
     --color-scheme-secondary-background: {% if settings.secondary_button_color == 'match_background' %}var(--color-tertiary-background){% else %}var(--color-tertiary-card){% endif %};
     --select-svg: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 12L23.2826 36.0527C23.3724 36.1542 23.4826 36.2354 23.6062 36.291C23.7297 36.3467 23.8636 36.3755 23.999 36.3755C24.1345 36.3755 24.2684 36.3467 24.3919 36.291C24.5154 36.2354 24.6257 36.1542 24.7155 36.0527L46 12' stroke='{{ settings.color_tertiary_text | replace: '#', '%23' }}' stroke-width='{{ settings.icon_thickness }}' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E%0A");
   }
@@ -141,14 +127,12 @@
   [data-color-scheme="quaternary"] {
     --color-scheme-text: var(--color-quaternary-text);
     --color-scheme-background: var(--color-quaternary-background);
-    --color-scheme-accent-1: var(--color-quaternary-accent-1);
-    --color-scheme-accent-2: var(--color-quaternary-accent-2);
+    --color-scheme-accent: var(--color-quaternary-accent);
     --color-scheme-card: var(--color-quaternary-card);
     --color-scheme-gradient: var(--color-quaternary-gradient);
     --color-scheme-text-overlay: var(--color-quaternary-text-overlay);
     --color-scheme-card-text-overlay: var(--color-quaternary-card-text-overlay);
-    --color-scheme-accent-1-overlay: var(--color-quaternary-accent-1-overlay);
-    --color-scheme-accent-2-overlay: var(--color-quaternary-accent-2-overlay);
+    --color-scheme-accent-overlay: var(--color-quaternary-accent-overlay);
     --color-scheme-secondary-background: {% if settings.secondary_button_color == 'match_background' %}var(--color-quaternary-background){% else %}var(--color-quaternary-card){% endif %};
     --select-svg: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 12L23.2826 36.0527C23.3724 36.1542 23.4826 36.2354 23.6062 36.291C23.7297 36.3467 23.8636 36.3755 23.999 36.3755C24.1345 36.3755 24.2684 36.3467 24.3919 36.291C24.5154 36.2354 24.6257 36.1542 24.7155 36.0527L46 12' stroke='{{ settings.color_quaternary_text | replace: '#', '%23' }}' stroke-width='{{ settings.icon_thickness }}' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E%0A");
   }
@@ -159,17 +143,17 @@
     --color-scheme-background: 0,0,0;
     --color-scheme-card: 0,0,0;
     --color-scheme-text-overlay: 0,0,0;
-    --color-scheme-accent-1-overlay: 0,0,0;
+    --color-scheme-accent-overlay: 0,0,0;
     --color-border: 255,255,255;
   }
-  
+
   [data-color-scheme="black"] {
     --color-scheme-text: 0,0,0;
     --color-scheme-accent: 0,0,0;
     --color-scheme-background: 255,255,255;
     --color-scheme-card: 255,255,255;
     --color-scheme-text-overlay: 255,255,255;
-    --color-scheme-accent-1-overlay: 255,255,255;
+    --color-scheme-accent-overlay: 255,255,255;
     --color-border: 0,0,0;
   }
 
@@ -192,29 +176,13 @@
   }
   {% endif %}
 
-  {%- capture button_text_color -%}
-    {%- case settings.button_text_color -%}
-        {%- when 'automatic' -%}
-          var(--color-scheme-{{ settings.button_color }}-overlay)
-        {%- when 'background' -%}
-          var(--color-scheme-background)
-        {%- when 'text' -%}
-          var(--color-scheme-text)
-        {%- when 'accent-1' -%}
-          var(--color-scheme-accent-1)
-        {%- when 'accent-2' -%}
-          var(--color-scheme-accent-2)
-        {%- when 'card' -%}
-          var(--color-scheme-card)
-        {%- else -%}
-    {%- endcase -%}
-  {%- endcapture -%}
-
   [data-color-scheme] {
     --color-heading-shadow: var(--{{ settings.heading_drop_shadow_color }});
     --color-heading-stroke: var(--{{ settings.heading_stroke_color }});
     --color-button-background: var(--color-scheme-{{ settings.button_color }});
-    --color-button-text: {{ button_text_color }};
+    --color-button-text: var(--color-scheme-{{ settings.button_color }}-overlay);
+    --color-button-background-hover: var(--color-scheme-{% if settings.button_color == 'text' %}accent{% else %}text{% endif %});
+    --color-button-text-hover: var(--color-scheme-{% if settings.button_color == 'text' %}accent-overlay{% else %}text-overlay{% endif %});
     --color-button-border: var(--color-scheme-text);
     --color-button-shadow: var(--{{ settings.button_shadow_color }});
     --color-card-border: var(--{{ settings.card_border_color }});
@@ -233,7 +201,21 @@
       --color-media-shadow-fill: none;
     {%- endif -%}
     --heading-color: var(--{{ settings.heading_color }});
-    --heading-text-shadow: 
+    --heading-text-effect: calc(var(--heading-stroke-thickness) * 1) calc(var(--heading-stroke-thickness) * 0) 0 rgb(var(--color-heading-stroke)),
+      calc(var(--heading-stroke-thickness) * 0.9239) calc(var(--heading-stroke-thickness) * 0.3827) 0 rgb(var(--color-heading-stroke)),
+      calc(var(--heading-stroke-thickness) * 0.7071) calc(var(--heading-stroke-thickness) * 0.7071) 0 rgb(var(--color-heading-stroke)),
+      calc(var(--heading-stroke-thickness) * 0.3827) calc(var(--heading-stroke-thickness) * 0.9239) 0 rgb(var(--color-heading-stroke)),
+      calc(var(--heading-stroke-thickness) * 0) calc(var(--heading-stroke-thickness) * 1) 0 rgb(var(--color-heading-stroke)),
+      calc(var(--heading-stroke-thickness) * -0.3827) calc(var(--heading-stroke-thickness) * 0.9239) 0 rgb(var(--color-heading-stroke)),
+      calc(var(--heading-stroke-thickness) * -0.7071) calc(var(--heading-stroke-thickness) * 0.7071) 0 rgb(var(--color-heading-stroke)),
+      calc(var(--heading-stroke-thickness) * -0.9239) calc(var(--heading-stroke-thickness) * 0.3827) 0 rgb(var(--color-heading-stroke)),
+      calc(var(--heading-stroke-thickness) * -1) calc(var(--heading-stroke-thickness) * 0) 0 rgb(var(--color-heading-stroke)),
+      calc(var(--heading-stroke-thickness) * -0.9239) calc(var(--heading-stroke-thickness) * -0.3827) 0 rgb(var(--color-heading-stroke)),
+      calc(var(--heading-stroke-thickness) * -0.7071) calc(var(--heading-stroke-thickness) * -0.7071) 0 rgb(var(--color-heading-stroke)),
+      calc(var(--heading-stroke-thickness) * -0.3827) calc(var(--heading-stroke-thickness) * -0.9239) 0 rgb(var(--color-heading-stroke)),
+      calc(var(--heading-stroke-thickness) * 0) calc(var(--heading-stroke-thickness) * -1) 0 rgb(var(--color-heading-stroke)),
+      calc(var(--heading-stroke-thickness) * 0.3827) calc(var(--heading-stroke-thickness) * -0.9239) 0 rgb(var(--color-heading-stroke)),
+      calc(var(--heading-stroke-thickness) * 0.7071) calc(var(--heading-stroke-thickness) * -0.7071) 0 rgb(var(--color-heading-stroke)){% if settings.heading_drop_shadow_style == 'none' %};{% else %},{% endif %}
       {%- if settings.heading_drop_shadow_style == 'full_shadow' -%}
       {%- for i in (1..settings.heading_drop_shadow_size) -%}
       {{ i | divided_by: 100.0 }}em {{ i | divided_by: 100.0 }}em 0 rgb(var(--color-heading-shadow))
@@ -259,6 +241,9 @@
   Typography and spacing sizes
   */
   {%- liquid
+    assign base_heading_size = settings.base_heading_size | split: ":"
+    assign template_heading_size = settings.template_heading_size | split: ":"
+    assign secondary_heading_size = settings.secondary_heading_size | split: ":"
     assign vertical_spacing_between_sections = settings.vertical_spacing_between_sections | split: ":"
   -%}
   :root {
@@ -292,16 +277,16 @@
     --font-size-8xl: calc(var(--font-size-ratio-8xl) * 1rem);
     --font-size-9xl: calc(var(--font-size-ratio-9xl) * 1rem);
 
-    --standard-heading-size: var({% render 'type-scale-variables', scale: settings.mobile_standard_heading_scale %});
-    --feature-heading-size: var({% render 'type-scale-variables', scale: settings.mobile_feature_heading_scale %});
-    --secondary-heading-size: var({% render 'type-scale-variables', scale: settings.mobile_secondary_heading_scale %});
+    --base-heading-size: var(--font-size-{{ base_heading_size[0] }});
+    --template-heading-size: var(--font-size-{{ template_heading_size[0] }});
+    --secondary-heading-size: var(--font-size-{{ secondary_heading_size[0] }});
     --section-vertical-spacing: {{ vertical_spacing_between_sections[0] }};
   }
   @media (min-width: 990px) {
     :root {
-      --standard-heading-size: var({% render 'type-scale-variables', scale: settings.desktop_standard_heading_scale %});
-      --feature-heading-size: var({% render 'type-scale-variables', scale: settings.desktop_feature_heading_scale %});
-      --secondary-heading-size: var({% render 'type-scale-variables', scale: settings.desktop_secondary_heading_scale %});
+      --base-heading-size: var(--font-size-{{ base_heading_size[1] }});
+      --template-heading-size: var(--font-size-{{ template_heading_size[1] }});
+      --secondary-heading-size: var(--font-size-{{ secondary_heading_size[1] }});
       --section-vertical-spacing: {{ vertical_spacing_between_sections[1] }};
       --section-x-padding: 2.5rem;
       --grid-gap: 2.5rem;
@@ -309,38 +294,31 @@
   }
 
 
-  .heading-effects {
+  .heading-base {
+    font-size: var(--base-heading-size);
+    {% if settings.apply_to_base_headings %}
     color: rgb(var(--heading-color));
-    text-shadow: var(--heading-text-shadow);
-    -webkit-text-stroke: var(--heading-stroke-thickness) rgb(var(--color-heading-stroke));
-    text-stroke: var(--heading-stroke-thickness) rgb(var(--color-heading-stroke));
-  }
-  
-  .heading-standard {
-    font-size: var(--standard-heading-size);
-    {% if settings.apply_to_standard_headings %}
-    color: rgb(var(--heading-color));
-    text-shadow: var(--heading-text-shadow);
-    -webkit-text-stroke: var(--heading-stroke-thickness) rgb(var(--color-heading-stroke));
-    text-stroke: var(--heading-stroke-thickness) rgb(var(--color-heading-stroke));
+    text-shadow: var(--heading-text-effect);
   {% endif %}
   }
 
-  .heading-feature {
-    font-size: var(--feature-heading-size);
-    {% if settings.apply_to_feature_headings %}
+  .heading-template {
+    font-size: var(--template-heading-size);
+    {% if settings.apply_to_template_headings %}
     color: rgb(var(--heading-color));
-    text-shadow: var(--heading-text-shadow);
-    -webkit-text-stroke: var(--heading-stroke-thickness) rgb(var(--color-heading-stroke));
-    text-stroke: var(--heading-stroke-thickness) rgb(var(--color-heading-stroke));
+    text-shadow: var(--heading-text-effect);
     {% endif %}
   }
 
   .heading-secondary {
     font-size: var(--secondary-heading-size);
+    {% if settings.apply_to_secondary_headings %}
+    color: rgb(var(--heading-color));
+    text-shadow: var(--heading-text-effect);
+    {% endif %}
   }
 
- 
+
   /*
   Cards
   */
@@ -387,34 +365,4 @@
         -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='7' y='7' width='6' height='6' fill='black'/%3E%3C/svg%3E%0A");
     {%- endcase -%}
   }
-
-
-  /*
-  Custom cursor
-  */
-  {%- if settings.custom_cursor != blank -%}
-    {%- if settings.enable_custom_cursor_default -%}
-    body {
-      cursor: url('{{ settings.custom_cursor | image_url: width: '32x32' }}') {{ settings.cursor_x_position }} {{ settings.cursor_y_position }}, auto;
-      cursor: -webkit-image-set(
-        url('{{ settings.custom_cursor | image_url: width: '32x32' }}') 1x,
-        url('{{ settings.custom_cursor | image_url: width: '64x64' }}') 2x) {{ settings.cursor_x_position }} {{ settings.cursor_y_position }}, auto;
-      cursor: image-set(
-        url('{{ settings.custom_cursor | image_url: width: '32x32' }}') 1x,
-        url('{{ settings.custom_cursor | image_url: width: '64x64' }}') 2x) {{ settings.cursor_x_position }} {{ settings.cursor_y_position }}, auto;
-    }
-    {%- endif -%}
-    {%- if settings.enable_custom_cursor_links -%}
-    button, [role="button"], a {
-        cursor: url('{{ settings.custom_cursor | image_url: width: '32x32' }}') {{ settings.cursor_x_position }} {{ settings.cursor_y_position }}, pointer;
-        cursor: -webkit-image-set(
-        url('{{ settings.custom_cursor | image_url: width: '32x32' }}') 1x,
-        url('{{ settings.custom_cursor | image_url: width: '64x64' }}') 2x) {{ settings.cursor_x_position }} {{ settings.cursor_y_position }}, pointer;
-        cursor: image-set(
-        url('{{ settings.custom_cursor | image_url: width: '32x32' }}') 1x,
-        url('{{ settings.custom_cursor | image_url: width: '64x64' }}') 2x) {{ settings.cursor_x_position }} {{ settings.cursor_y_position }}, pointer;
-    }
-    {%- endif -%}
-  {%- endif -%}
-
 </style>
