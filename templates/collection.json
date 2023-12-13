@@ -9,9 +9,9 @@
       "settings": {
         "title": "Meet the three Sluggs",
         "heading_size": "heading-feature",
-        "rich_text": "<h4>It's never been easier to create the perfect three pot cluster.</h4>",
+        "rich_text": "<h4>It's never been easier to create the perfect three pot cluster.<\/h4>",
         "display_on_card": false,
-        "content_width_desktop": "lg:w-2/3",
+        "content_width_desktop": "lg:w-2\/3",
         "button_link": "",
         "button_label": "Shop Now",
         "color_scheme": "primary",
@@ -42,14 +42,16 @@
           }
         }
       },
-      "block_order": ["0fd4fd91-ac00-4029-b453-0697a494b215"],
+      "block_order": [
+        "0fd4fd91-ac00-4029-b453-0697a494b215"
+      ],
       "settings": {
         "sub_title": "Shop all pots",
         "title": "Garden pots that are easy to buy, and easy to use.",
         "heading_size": "heading-base",
         "rich_text": "",
         "display_on_card": true,
-        "content_width_desktop": "lg:w-2/3",
+        "content_width_desktop": "lg:w-2\/3",
         "button_link": "",
         "button_label": "Shop Now",
         "color_scheme": "secondary",
@@ -82,7 +84,7 @@
       "disabled": true,
       "settings": {
         "display_on_card": true,
-        "video": "shopify://files/videos/Slugg.mov",
+        "video": "shopify:\/\/files\/videos\/Slugg.mov",
         "autoplay": true,
         "muted": true,
         "loop": true,
@@ -96,7 +98,7 @@
         "disable_media_style": false,
         "title": "Good things come on threes",
         "heading_size": "heading-feature",
-        "richtext": "<h5>Why do garden pots look so good in a cluster of three? Apparently, it's just the way our lovely brains work. Designers call it the \"law of threes\".</h5>",
+        "richtext": "<h5>Why do garden pots look so good in a cluster of three? Apparently, it's just the way our lovely brains work. Designers call it the \"law of threes\".<\/h5>",
         "text_alignment": "text-center",
         "button_link": "",
         "button_label": "Shop Now",
@@ -126,9 +128,9 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Free_Metro_Shipping.webp",
+            "image": "shopify:\/\/shop_images\/Free_Metro_Shipping.webp",
             "title": "FREE metro delivery*",
-            "text": "<p>Actual slugs may be slow. But our super fast and free shipping network isn’t!</p>",
+            "text": "<p>Actual slugs may be slow. But our super fast and free shipping network isn’t!<\/p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "same_as_section"
@@ -138,9 +140,9 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Threes.webp",
+            "image": "shopify:\/\/shop_images\/Threes.webp",
             "title": "Good things come in threes",
-            "text": "<p>Sluggs® are sold as a set of three garden pots in a box.</p>",
+            "text": "<p>Sluggs® are sold as a set of three garden pots in a box.<\/p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "same_as_section"
@@ -150,9 +152,9 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Suitable.webp",
+            "image": "shopify:\/\/shop_images\/Suitable.webp",
             "title": "Suitable for indoors & out",
-            "text": "<p>The entire Slugg® range is suitable for indoor and outside.</p>",
+            "text": "<p>The entire Slugg® range is suitable for indoor and outside.<\/p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "same_as_section"
@@ -162,9 +164,9 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Built_to_last.webp",
+            "image": "shopify:\/\/shop_images\/Built_to_last.webp",
             "title": "Built to last",
-            "text": "<p>Slugg® garden pots are waterproof, lightweight, and tougher than nails</p>",
+            "text": "<p>Slugg® garden pots are waterproof, lightweight, and tougher than nails<\/p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "same_as_section"
@@ -196,10 +198,10 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/CleanShot_2023-07-31_at_10.18.38_2x_d0930bab-59ac-4ac5-aca0-8cd22e92f6b7.webp",
-            "title": "Louise L.",
-            "text": "<p>I love my Slugg pots and the service was amazing. They are such great quality. I'm looking to buy some more to jazz up my inside house next.</p>",
-            "cta_link": "shopify://products/lucy",
+            "image": "shopify:\/\/shop_images\/001.jpg",
+            "title": "Leah M.",
+            "text": "<p>The most beautiful pots! So light which makes them easy to move around and having them in a cluster of 3 is perfect. Highly recommended! Love these pots so much.<\/p>",
+            "cta_link": "shopify:\/\/products\/lucy",
             "cta_text": "Shop Lucy",
             "color_scheme": "same_as_section"
           }
@@ -208,11 +210,11 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Jessica_Lasak_-_Thomas.webp",
-            "title": "Jessica L.",
-            "text": "<p>Amazing, thanks so much! Loving the pots and get lots of compliments.</p>",
-            "cta_link": "shopify://products/thomas",
-            "cta_text": "Shop Thomas",
+            "image": "shopify:\/\/shop_images\/003.jpg",
+            "title": "Paul T.",
+            "text": "<p>Super stylish, lightweight and easy to use. A mate of mine referred you guys to me and everyone who comes over loves them.<\/p>",
+            "cta_link": "shopify:\/\/products\/rosie",
+            "cta_text": "Shop Rosie",
             "color_scheme": "same_as_section"
           }
         },
@@ -220,11 +222,11 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Rectangle_1046_1.jpg",
-            "title": "Colette B.",
-            "text": "<p>I'm very impressed with the finish quality of the Thomas set. Delivery was fast and well-packaged. Looking forward to when the weather warms up so I can plant and use the remaining two.</p>",
-            "cta_link": "shopify://products/rosie",
-            "cta_text": "Shop Roise",
+            "image": "shopify:\/\/shop_images\/002.jpg",
+            "title": "Alyce P.",
+            "text": "<p>Absolutely love my new Lucy pots! Such great quality, size and a beautiful, modern design.<\/p>",
+            "cta_link": "shopify:\/\/products\/lucy",
+            "cta_text": "Shop Lucy",
             "color_scheme": "same_as_section"
           }
         },
@@ -232,11 +234,23 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Lucy_garden_pots.png",
-            "title": "Joanne B.",
-            "text": "<p>Great product and concept!! My cactus look gorgeous in my set of Lucy's. Highly recommend your pots.</p>",
-            "cta_link": "shopify://products/lucy",
-            "cta_text": "Shop Lucy",
+            "image": "shopify:\/\/shop_images\/005.jpg",
+            "title": "Sam H.",
+            "text": "<p>Love my Thomas pots. Look so beautiful on the front porch.<\/p>",
+            "cta_link": "shopify:\/\/products\/thomas",
+            "cta_text": "Shop Thomas",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "681c1498-7ff1-4670-a2bb-4ab32b3194ee": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/004.jpg",
+            "title": "Liesel R.",
+            "text": "<p>We love the Rosie trio, fluted profile is so on trend and stunning. These lightweight pots are easy to move around, elevating every space; making it feel new and fresh.<\/p>",
+            "cta_link": "shopify:\/\/products\/rosie",
+            "cta_text": "Shop Rosie",
             "color_scheme": "same_as_section"
           }
         },
@@ -257,6 +271,7 @@
         "template--17029418156274__custom-testimonials-column-1",
         "template--17029418156274__custom-testimonials-column-2",
         "6b356432-7cf3-4596-9204-608c4ad1f299",
+        "681c1498-7ff1-4670-a2bb-4ab32b3194ee",
         "c6a21289-f70e-4dc1-88fc-823b053aaac8"
       ],
       "settings": {
