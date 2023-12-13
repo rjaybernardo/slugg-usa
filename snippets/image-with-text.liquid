@@ -33,16 +33,11 @@
   endcase
 -%}
 
-{%- render 'shape-defs',
-  shape: image_shape,
-  shape_id: section_id,
-  index: index,
-  blob_type: blob_type
--%}
+{%- render 'shape-defs', shape: image_shape, shape_id: section_id, index: index, blob_type: blob_type -%}
 
-<div class="px-section relative z-10 max-w-site mx-auto">
+<div class="relative mx-auto">
   <div class="{% if display_on_card %}card-container{% endif %}">
-    <div class="{% if display_on_card %}card p-5 lg:p-10{% endif %} section-content mx-auto relative z-10 text_alignment">
+    <div class="{% if display_on_card %}card {% endif %} mx-auto relative text_alignment">
       <div class="grid grid-cols-1 lg:grid-cols-12 grid-flow-row-dense gap-10">
         <div class="{{ image_width_desktop }}">
           {%- if image != blank -%}
@@ -57,32 +52,164 @@
               disable_media_style: disable_media_style
             -%}
           {%- else -%}
-           {%- render 'media-image-placeholder', shape_id: section_id, container_id: section_id, shape: image_shape, crop: scrop, is_card: display_on_card, blob_type: blob_type -%}
+            {%- render 'media-image-placeholder',
+              shape_id: section_id,
+              container_id: section_id,
+              shape: image_shape,
+              crop: scrop,
+              is_card: display_on_card,
+              blob_type: blob_type
+            -%}
           {%- endif -%}
         </div>
         <div class="flex items-center {{ text_width_desktop }}">
-          <div class="{{ text_alignment }}">
+          <div class="{{ text_alignment }} image-content-main">
+            {%- if section.settings.review != 0 or section.settings.sub_heading != blank -%}
+              <div class="ratting">
+                {%- if section.settings.review != 0 -%}
+                  <ul class="review_main_ul">
+                    {%- for i in (1..5) -%}
+                      {%- if section.settings.review >= i -%}
+                        <li class="li">
+                          <img
+                            src="https://cdn.shopify.com/s/files/1/0567/9487/4049/files/star_296f0822-619c-4498-b2b9-b0d1685f59da.png?v=1689832427"
+                            class="custom_ratting"
+                          >
+                        </li>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+                {%- if section.settings.sub_heading != blank -%}
+                  <p class="sub_heading">{{ section.settings.sub_heading }}</p>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+
             {% if title != '' %}
-            <h2 class="font-heading  {{ heading_size }} heading-style {{ settings.heading_drop_shadow_style }}">{{ title }}</h2>
+              <h2 class="text-heading heading-effects h1 heading-style {{ settings.heading_drop_shadow_style }}">
+                {{ title }}
+              </h2>
+            {% endif %}
+            {% if richtext != blank %}
+              <div class="description {% if text_alignment contains 'center' %}mx-auto{% elsif text_alignment contains 'right' %}ml-auto{% endif %}">
+                {{ richtext }}
+              </div>
             {% endif %}
 
-            <div class="rte mt-5 max-w-2xl {% if text_alignment contains 'center' %}mx-auto{% elsif text_alignment contains 'right' %}ml-auto{% endif %}">
-              {{ richtext }}
-            </div>
+            {%- capture customBlock -%}
+              {% assign image_icon = section.blocks | where: 'type', 'icon' %}
+              {%- if image_icon.size > 0 -%}
+                <div class="img_icon">
+                  {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                      {%- when 'icon' -%}
+                      {%- assign image = block.settings.image_icon -%}
+                      {%- if image != blank or block.settings.icon_title != blank -%}
+                        {%- assign section_id = section.id -%}
+                        <div class="image_icon_main">
+                          <a href="{% if block.settings.icon_url != blank %}{{ block.settings.icon_url }}{% else %}javascript:void(0){% endif %}">
+                            {%- if image != blank -%}
+                              {%- render 'media-image', media: image, shape_id: section_id -%}
+                            {%- endif -%}
+                            {%- if block.settings.icon_title != blank or block.settings.sub_text != blank -%}
+                              <div class="icon-title-main">
+                                {%- if block.settings.icon_title != blank -%}
+                                <h4 class="icon_title">{{ block.settings.icon_title }}</h4>
+                                {%- endif -%}
+                                {%- if block.settings.sub_text != blank -%}
+                                  <div class="sub_text">
+                                    {{ block.settings.sub_text }}
+                                  </div>
+                                {%- endif -%}
+                              </div>
+                            {%- endif -%}
+                          </a>
+                        </div>
+                      {%- endif -%}
+                    {%- endcase -%}
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+            {%- endcapture -%}
 
-            {%- if button_link != blank and button_label != '' -%}
-            <div class="mt-5">
-              <a href="{{ button_link }}" class="inline-block push-btn">
-                <span class="push-btn-surface">{{ button_label }}</span>
-              </a>
-            </div>
+            {%- if enable_newsletter -%}
+              <div class="newsletter_form_main">
+                {% assign form_id = 'customer-form-' | append: section.id %}
+                {% form 'customer', id: form_id %}
+                  {% if form.posted_successfully? %}
+                    <p class="text-theme-basic" id="Newsletter-success--{{ section.id }}">
+                      {{ 'general.newsletter_form.confirmation' | t }}
+                    </p>
+                  {% endif %}
+                  {% if form.errors %}
+                    <p class="text-theme-basic text-scheme-error" id="Newsletter-error--{{ section.id }}">
+                      {{ form.errors.translated_fields.email | capitalize }}
+                      {{ form.errors.messages.email }}
+                    </p>
+                  {% endif %}
+                  <div class="lg:flex items-center justify-center newsletter-form">
+                    <input type="hidden" name="contact[tags]" value="newsletter">
+                    <label for="NewsletterForm-{{ section.id }}" class="sr-only">
+                      {{ 'general.newsletter_form.newsletter_email' | t }}
+                    </label>
+                    <div class="w-full lg:mr-2 flex-grow">
+                      <input
+                        id="NewsletterForm-{{ section.id }}"
+                        type="email"
+                        name="contact[email]"
+                        class="input-group-field w-full placeholder:text-scheme-text  {% if form.errors %}border-scheme-error{% else %}border-scheme-text{% endif %}"
+                        value="{{ form.email }}"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        autocomplete="email"
+                        {% if form.errors %}
+                          autofocus
+                          aria-invalid="true"
+                          aria-describedby="Newsletter-error--{{ section.id }}"
+                        {% elsif form.posted_successfully? %}
+                          aria-describedby="Newsletter-success--{{ section.id }}"
+                        {% endif %}
+                        placeholder="Email Address"
+                        required
+                      >
+                    </div>
+                    <button
+                      type="submit"
+                      class="push-btn push-btn--pop w-full lg:w-auto mt-2.5 lg:mt-0"
+                      name="commit"
+                      id="Subscribe-{{ section.id }}"
+                    >
+                      <span class="push-btn-surface w-full">Send me the discount!</span>
+                    </button>
+                  </div>
+                {% endform %}
+              </div>
+            {%- endif -%}
+
+            {%- capture customButton -%}
+              {%- if button_link != blank and button_label != '' -%}
+                <div class="">
+                  <a href="{{ button_link }}" class="inline-block push-btn w-full">
+                    <span class="w-full primary-button shop-btn">{{ button_label }}</span>
+                  </a>
+                </div>
+              {%- endif -%}
+            {%- endcapture -%}
+            {%- assign btn_top = section.settings.btn_top -%}
+            {%- if btn_top -%}
+              {{ customButton }}
+              {{ customBlock }}
+            {%- else -%}
+              {{ customBlock }}
+              {{ customButton }}
             {%- endif -%}
           </div>
         </div>
       </div>
     </div>
-    {% if section.settings.display_on_card and settings.card_show_border_on_shadow %}<div class="card-border"></div>{% endif %}
+    {% if section.settings.display_on_card and settings.card_show_border_on_shadow %}
+      <div class="card-border"></div>
+    {% endif %}
   </div>
 </div>
-
-

@@ -1,1 +1,567 @@
-{"sections":{"1650891033bae15b05":{"type":"image-with-text","custom_css":["h2 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 40px;}"],"settings":{"display_on_card":false,"image":"shopify:\/\/shop_images\/Garden_Pots_LA.webp","crop":"aspect-w-1 aspect-h-1","image_shape":"default","blob_type":2,"rotate_image":0,"image_position":"right","image_size":"half","disable_media_style":true,"title":"Give your plants the best home with Slugg®","heading_size":"heading-feature","richtext":"<p>Designer garden pot clusters that are guaranteed to look amazing.<\/p><p>🌱 Sold as a set of three pots in a box.<\/p><p>🌱 Lightweight, waterproof, and built to last.<\/p><p>🌱 Launching in the USA in February 2024.<\/p>","text_alignment":"text-center","button_link":"shopify:\/\/collections\/all-pots","button_label":"View The Range","color_scheme":"primary","use_gradient_background":false}},"1650891358fef95dd4":{"type":"featured-collection","blocks":{"f4eb1851-756b-4c95-a808-f94d9826b354":{"type":"shape_divider","settings":{"target_section":"above","target_section_color_scheme":"primary","style":"large-waves_1200x84","flip_horizontal":false,"enable_animation":false,"animation_direction":""}}},"block_order":["f4eb1851-756b-4c95-a808-f94d9826b354"],"custom_css":["h3 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 50px;}",".price {font-weight: 200; font-size: 25px;}","h2 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 50px;}"],"settings":{"title":"Meet the three Sluggs","subheading":"Three unique styles available in three stunning colours.","collection":"all-pots","enable_shop_btn":false,"no_products":4,"show_view_all":false,"enable_quick_buy":false,"display_on_card":false,"layout":"grid","products_per_row_mobile":"1","products_per_row_desktop":3,"slideshow_focus":"center","mobile_slide_width":"three_fifths","desktop_slide_width":40,"autoscroll_mode":"1","product_tiles_aspect_ratio":"","image_shape":"","color_scheme":"secondary","use_gradient_background":false}},"655f2e1a-fb20-4f1c-8eac-d9cf096b5f19":{"type":"video-with-text","settings":{"display_on_card":false,"video":"shopify:\/\/files\/videos\/Slugg.mov","autoplay":true,"muted":true,"loop":true,"controls":true,"crop":"","video_shape":"default","blob_type":1,"rotate_video":0,"video_position":"right","video_size":"half","disable_media_style":false,"title":"Why are they sold in sets of three?","heading_size":"heading-feature","richtext":"<p>Things look better in threes. Why? Apparently, it's just the way our lovely brains work. Designers call it \"the law of threes\".<\/p>","text_alignment":"text-center","button_link":"shopify:\/\/collections\/all-pots","button_label":"Shop Now","color_scheme":"primary","use_gradient_background":false}},"16508912994a26e8bf":{"type":"rich-text","blocks":{"ed8757f5-acef-407a-ba72-cf027b8107b1":{"type":"shape_divider","settings":{"target_section":"above","target_section_color_scheme":"secondary","style":"large-waves_1200x84","flip_horizontal":false,"enable_animation":false,"animation_direction":""}},"519c7175-a4cd-4b52-9365-3aa4120f0ca5":{"type":"shape_divider","settings":{"target_section":"below","target_section_color_scheme":"primary","style":"large-waves_1200x84","flip_horizontal":false,"enable_animation":false,"animation_direction":""}}},"block_order":["ed8757f5-acef-407a-ba72-cf027b8107b1","519c7175-a4cd-4b52-9365-3aa4120f0ca5"],"disabled":true,"settings":{"title":"Why are they sold in sets of three?","heading_size":"heading-feature","rich_text":"<p>Things look better in threes. Why? Apparently, it's just the way our lovely brains work. Designers call it \"the law of threes\".<\/p>","display_on_card":false,"content_width_desktop":"lg:w-2\/3","button_link":"shopify:\/\/collections\/all-pots","button_label":"Meet The Sluggs","color_scheme":"quaternary","use_gradient_background":false}},"c7f25693-2446-4a61-8431-f88749a9bbdf":{"type":"text-marquee","settings":{"text":"Launching in the USA in February 2024","repeat_text":true,"shape_between_text":"10_point_star","animate_shape_between_text":true,"link":"","font":"font-heading heading-secondary","apply_effects":false,"mobile_text_scale":1,"desktop_text_scale":2,"speed":60,"direction":"","color_scheme":"quaternary","use_gradient_background":false}},"44d86bd3-5b91-4c16-bb2e-75374a97961d":{"type":"text-columns-with-images","blocks":{"template--16827327873266__44d86bd3-5b91-4c16-bb2e-75374a97961d-column-1":{"type":"column","settings":{"show_image":true,"image":"shopify:\/\/shop_images\/Free_Metro_Shipping.webp","title":"FREE metro delivery*","text":"<p>Actual slugs may be slow. But our super fast and free shipping network isn’t!<\/p>","cta_link":"","cta_text":"","color_scheme":"same_as_section"}},"template--16827327873266__44d86bd3-5b91-4c16-bb2e-75374a97961d-column-2":{"type":"column","settings":{"show_image":true,"image":"shopify:\/\/shop_images\/Threes.webp","title":"Good things come in threes","text":"<p>Sluggs® are sold as a set of three garden pots in a box.<\/p>","cta_link":"","cta_text":"","color_scheme":"same_as_section"}},"template--16827327873266__44d86bd3-5b91-4c16-bb2e-75374a97961d-column-3":{"type":"column","settings":{"show_image":true,"image":"shopify:\/\/shop_images\/Suitable.webp","title":"Suitable for indoors & out","text":"<p>The entire Slugg® range is suitable for indoor and outside.<\/p>","cta_link":"","cta_text":"","color_scheme":"same_as_section"}},"f0295d5a-4ce9-49bb-acd3-06a48c29e034":{"type":"column","settings":{"show_image":true,"image":"shopify:\/\/shop_images\/Built_to_last.webp","title":"Built to last","text":"<p>Slugg® garden pots are waterproof, lightweight, and tougher than nails.<\/p>","cta_link":"","cta_text":"","color_scheme":"same_as_section"}}},"block_order":["template--16827327873266__44d86bd3-5b91-4c16-bb2e-75374a97961d-column-1","template--16827327873266__44d86bd3-5b91-4c16-bb2e-75374a97961d-column-2","template--16827327873266__44d86bd3-5b91-4c16-bb2e-75374a97961d-column-3","f0295d5a-4ce9-49bb-acd3-06a48c29e034"],"settings":{"display_on_card":true,"slideshow_on_mobile":true,"title":"","crop":"","image_shape":"default","show_index_on_blocks":false,"index_shape":"star_1","color_scheme":"primary","use_gradient_background":false}},"1698196939a203759b":{"type":"apps","blocks":{"9f82f6d2-315e-44f9-ae54-02270be1ad77":{"type":"shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-gallery-carousel-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e","settings":{"maxWidth":1100,"borderRadius":60,"itemsPerView":5,"imageRatio":"1.25","reviewerNameColor":"#ffffff","starsColor":"#ffffff","arrows_backgroundColor":"#ffffff","arrows_iconColor":"#9a9a9a","shadow":"none","border_active":false,"border_width":2,"border_color":"#000000","productIds":""}}},"block_order":["9f82f6d2-315e-44f9-ae54-02270be1ad77"],"settings":{"apply_vertical_spacing":true,"apply_horizontal_spacing":true,"display_on_card":false,"content_width_desktop":"lg:w-full","color_scheme":"primary","use_gradient_background":false}},"366fce9f-bdd7-486e-a17d-26f62b964c83":{"type":"faq","blocks":{"43b8f7cc-5f65-473c-a5ab-122500d35a31":{"type":"question","settings":{"icon":"none","question":"Why are they sold in sets of three?","answer":"<p>Designers call it \"the law of three\". Even numbers create symmetry, while odd numbers create a focal point and add interest to a space. The size of each Slugg garden pot has been designed to ensure the scale works in a cluster of three. <\/p>"}},"52399396-7e85-4c1f-b944-0510bd6274ae":{"type":"question","settings":{"icon":"none","question":"How do I use them?","answer":"<p>Sluggs look best grouped together to form a cluster of three pots. However, many of our customers use their Slugg pots individually. You can plant them up (soil inside the pot) or you can simply place your nursery pot inside the empty Slugg pot.<\/p>"}},"template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-1":{"type":"question","settings":{"icon":"none","question":"What are the pots made of?","answer":"<p>Slugg garden pots are made from poly resin. They are lightweight, waterproof and far stronger than traditional concrete planters.<\/p>"}},"template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-2":{"type":"question","settings":{"icon":"none","question":"Can I purchase the pots individually?","answer":"<p>Slugg garden pots are sold in sets of three, which makes it super easy to create the perfect pot cluster. They are not available for individual purchase.<\/p>"}},"template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-3":{"type":"question","settings":{"icon":"none","question":"Do they have drainage holes?","answer":"<p>Yes, every Slugg garden pot comes with 2 drainage holes.<\/p>"}},"template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-4":{"type":"question","settings":{"icon":"none","question":"When are you launching in the USA?","answer":"<p>We're super excited to announce that we'll be launching in the USA in February 2024.<\/p>"}}},"block_order":["43b8f7cc-5f65-473c-a5ab-122500d35a31","52399396-7e85-4c1f-b944-0510bd6274ae","template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-1","template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-2","template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-3","template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-4"],"settings":{"display_on_card":true,"heading_text_style":"heading","two_columns_desktop":true,"title":"FAQ's","richtext":"<p>Find the most frequently asked questions below.<\/p>","color_scheme":"primary","use_gradient_background":false}}},"order":["1650891033bae15b05","1650891358fef95dd4","655f2e1a-fb20-4f1c-8eac-d9cf096b5f19","16508912994a26e8bf","c7f25693-2446-4a61-8431-f88749a9bbdf","44d86bd3-5b91-4c16-bb2e-75374a97961d","1698196939a203759b","366fce9f-bdd7-486e-a17d-26f62b964c83"]}
+{
+  "sections": {
+    "5778b91d-d15e-48f3-a5c6-24af94a3faf7": {
+      "type": "custom-Image-with-text",
+      "blocks": {
+        "87f4f66f-a767-40a2-90ce-9fc3ae2f844f": {
+          "type": "icon",
+          "settings": {
+            "image_icon": "shopify://shop_images/Leaf.webp",
+            "icon_title": "Lightweight & handmade",
+            "sub_text": "",
+            "icon_url": ""
+          }
+        },
+        "cceea874-a7f4-4912-bc89-901b91a4275d": {
+          "type": "icon",
+          "settings": {
+            "image_icon": "shopify://shop_images/Globe_East.webp",
+            "icon_title": "Suitable indoors & outside",
+            "sub_text": "",
+            "icon_url": ""
+          }
+        },
+        "b3479737-85e5-4d3c-8761-0aa08b810409": {
+          "type": "icon",
+          "settings": {
+            "image_icon": "shopify://shop_images/Package.webp",
+            "icon_title": "Free metro delivery",
+            "sub_text": "",
+            "icon_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "87f4f66f-a767-40a2-90ce-9fc3ae2f844f",
+        "cceea874-a7f4-4912-bc89-901b91a4275d",
+        "b3479737-85e5-4d3c-8761-0aa08b810409"
+      ],
+      "settings": {
+        "display_on_card": true,
+        "image": "shopify://shop_images/Garden_Pots_LA.webp",
+        "sub_heading": "4.9 based on +1,500 REVIEWS",
+        "review": 5,
+        "crop": "",
+        "image_shape": "default",
+        "blob_type": 1,
+        "rotate_image": 0,
+        "image_position": "right",
+        "image_size": "half",
+        "disable_media_style": false,
+        "title": "Garden pots that are easy to buy, and easy to use.",
+        "heading_size": "heading-template",
+        "richtext": "<p>Designer garden pot clusters that are guaranteed to look amazing.</p>",
+        "text_alignment": "text-left",
+        "button_link": "shopify://collections/all-pots",
+        "button_label": "Shop All Pots",
+        "btn_top": true,
+        "color_scheme": "secondary",
+        "use_gradient_background": false
+      }
+    },
+    "e60020e4-8d5e-427e-9d35-836db57a0dec": {
+      "type": "logo-list",
+      "blocks": {
+        "template--17029417468146__e60020e4-8d5e-427e-9d35-836db57a0dec-logo-1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Frankie.png",
+            "link": ""
+          }
+        },
+        "6accdabc-97e5-411a-9db8-cb3ea2426a13": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "target_section_color_scheme": "secondary",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": true,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17029417468146__e60020e4-8d5e-427e-9d35-836db57a0dec-logo-1",
+        "6accdabc-97e5-411a-9db8-cb3ea2426a13"
+      ],
+      "settings": {
+        "title": "\"There’s a new swish garden pot company in town.\"",
+        "max_width": 240,
+        "color_scheme": "tertiary",
+        "use_gradient_background": false
+      }
+    },
+    "1650891358fef95dd4": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h3 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 50px;}",
+        ".price {font-weight: 200; font-size: 25px;}",
+        "h2 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 50px;}"
+      ],
+      "settings": {
+        "title": "Meet the three Sluggs",
+        "subheading": "Three unique styles available in three stunning colours.",
+        "collection": "all-pots",
+        "enable_shop_btn": false,
+        "no_products": 4,
+        "show_view_all": false,
+        "enable_quick_buy": false,
+        "display_on_card": false,
+        "layout": "grid",
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 3,
+        "slideshow_focus": "center",
+        "mobile_slide_width": "three_fifths",
+        "desktop_slide_width": 40,
+        "autoscroll_mode": "1",
+        "product_tiles_aspect_ratio": "",
+        "image_shape": "",
+        "color_scheme": "secondary",
+        "use_gradient_background": false
+      }
+    },
+    "1650891033bae15b05": {
+      "type": "image-with-text",
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 40px;}"
+      ],
+      "settings": {
+        "display_on_card": false,
+        "image": "shopify://shop_images/Garden_Pots_LA.webp",
+        "crop": "aspect-w-1 aspect-h-1",
+        "image_shape": "default",
+        "blob_type": 2,
+        "rotate_image": 0,
+        "image_position": "right",
+        "image_size": "half",
+        "disable_media_style": true,
+        "title": "Give your plants the best home with Slugg®",
+        "heading_size": "heading-feature",
+        "richtext": "<p>Designer garden pot clusters that are guaranteed to look amazing.</p><p>🌱 Sold as a set of three pots in a box.</p><p>🌱 Lightweight, waterproof, and built to last.</p><p>🌱 Launching in the USA in February 2024.</p>",
+        "text_alignment": "text-center",
+        "button_link": "shopify://collections/all-pots",
+        "button_label": "View The Range",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "655f2e1a-fb20-4f1c-8eac-d9cf096b5f19": {
+      "type": "video-with-text",
+      "disabled": true,
+      "settings": {
+        "display_on_card": false,
+        "video": "shopify://files/videos/Slugg.mov",
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "controls": true,
+        "crop": "",
+        "video_shape": "default",
+        "blob_type": 1,
+        "rotate_video": 0,
+        "video_position": "right",
+        "video_size": "half",
+        "disable_media_style": false,
+        "title": "Why are they sold in sets of three?",
+        "heading_size": "heading-feature",
+        "richtext": "<p>Things look better in threes. Why? Apparently, it's just the way our lovely brains work. Designers call it \"the law of threes\".</p>",
+        "text_alignment": "text-center",
+        "button_link": "shopify://collections/all-pots",
+        "button_label": "Shop Now",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "16508912994a26e8bf": {
+      "type": "rich-text",
+      "blocks": {
+        "ed8757f5-acef-407a-ba72-cf027b8107b1": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "target_section_color_scheme": "secondary",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        },
+        "519c7175-a4cd-4b52-9365-3aa4120f0ca5": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "target_section_color_scheme": "primary",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "ed8757f5-acef-407a-ba72-cf027b8107b1",
+        "519c7175-a4cd-4b52-9365-3aa4120f0ca5"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Why are they sold in sets of three?",
+        "heading_size": "heading-feature",
+        "rich_text": "<p>Things look better in threes. Why? Apparently, it's just the way our lovely brains work. Designers call it \"the law of threes\".</p>",
+        "display_on_card": false,
+        "content_width_desktop": "lg:w-2/3",
+        "button_link": "shopify://collections/all-pots",
+        "button_label": "Meet The Sluggs",
+        "color_scheme": "quaternary",
+        "use_gradient_background": false
+      }
+    },
+    "3a5d3d65-8134-4da7-8340-bc19738b2141": {
+      "type": "image-with-text",
+      "settings": {
+        "display_on_card": true,
+        "crop": "",
+        "image_shape": "default",
+        "blob_type": 1,
+        "rotate_image": 0,
+        "image_position": "right",
+        "image_size": "half",
+        "disable_media_style": false,
+        "title": "Image with text",
+        "heading_size": "heading-feature",
+        "richtext": "",
+        "text_alignment": "text-left",
+        "button_link": "",
+        "button_label": "Shop Now",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "44d86bd3-5b91-4c16-bb2e-75374a97961d": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16827327873266__44d86bd3-5b91-4c16-bb2e-75374a97961d-column-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Free_Metro_Shipping.webp",
+            "title": "FREE metro delivery*",
+            "text": "<p>Actual slugs may be slow. But our super fast and free shipping network isn’t!</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--16827327873266__44d86bd3-5b91-4c16-bb2e-75374a97961d-column-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Threes.webp",
+            "title": "Good things come in threes",
+            "text": "<p>Sluggs® are sold as a set of three garden pots in a box.</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--16827327873266__44d86bd3-5b91-4c16-bb2e-75374a97961d-column-3": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Suitable.webp",
+            "title": "Suitable for indoors & out",
+            "text": "<p>The entire Slugg® range is suitable for indoor and outside.</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "f0295d5a-4ce9-49bb-acd3-06a48c29e034": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Built_to_last.webp",
+            "title": "Built to last",
+            "text": "<p>Slugg® garden pots are waterproof, lightweight, and tougher than nails.</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "template--16827327873266__44d86bd3-5b91-4c16-bb2e-75374a97961d-column-1",
+        "template--16827327873266__44d86bd3-5b91-4c16-bb2e-75374a97961d-column-2",
+        "template--16827327873266__44d86bd3-5b91-4c16-bb2e-75374a97961d-column-3",
+        "f0295d5a-4ce9-49bb-acd3-06a48c29e034"
+      ],
+      "settings": {
+        "display_on_card": true,
+        "slideshow_on_mobile": true,
+        "title": "",
+        "crop": "",
+        "image_shape": "default",
+        "show_index_on_blocks": false,
+        "index_shape": "star_1",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "fbbcdb72-eeaa-4d7f-a52f-0edae3a13dd2": {
+      "type": "custom-testimonial",
+      "blocks": {
+        "template--17029417468146__fbbcdb72-eeaa-4d7f-a52f-0edae3a13dd2-column-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--17029417468146__fbbcdb72-eeaa-4d7f-a52f-0edae3a13dd2-column-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--17029417468146__fbbcdb72-eeaa-4d7f-a52f-0edae3a13dd2-column-3": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "template--17029417468146__fbbcdb72-eeaa-4d7f-a52f-0edae3a13dd2-column-1",
+        "template--17029417468146__fbbcdb72-eeaa-4d7f-a52f-0edae3a13dd2-column-2",
+        "template--17029417468146__fbbcdb72-eeaa-4d7f-a52f-0edae3a13dd2-column-3"
+      ],
+      "settings": {
+        "display_on_card": true,
+        "review": 5,
+        "title": "Australia's highest rated garden pots with over 900+  5 Star reviews.",
+        "enable_slider": true,
+        "carousel_dots": false,
+        "carousel_arrows": true,
+        "crop": "aspect-w-3 aspect-h-4",
+        "image_shape": "default",
+        "show_index_on_blocks": false,
+        "index_shape": "star_1",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "9272982c-6eec-465b-bb5a-401631ebc54c": {
+      "type": "image-slider",
+      "blocks": {
+        "template--17029417468146__9272982c-6eec-465b-bb5a-401631ebc54c-column-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "video_link": "",
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--17029417468146__9272982c-6eec-465b-bb5a-401631ebc54c-column-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "video_link": "",
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--17029417468146__9272982c-6eec-465b-bb5a-401631ebc54c-column-3": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "video_link": "",
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "template--17029417468146__9272982c-6eec-465b-bb5a-401631ebc54c-column-1",
+        "template--17029417468146__9272982c-6eec-465b-bb5a-401631ebc54c-column-2",
+        "template--17029417468146__9272982c-6eec-465b-bb5a-401631ebc54c-column-3"
+      ],
+      "settings": {
+        "display_on_card": true,
+        "title": "",
+        "sub_text": "<p>Show us how you style your pots by tagging @potsbyslugg</p>",
+        "enable_slider": true,
+        "carousel_dots": true,
+        "carousel_arrows": false,
+        "crop": "",
+        "image_shape": "default",
+        "show_index_on_blocks": false,
+        "index_shape": "star_1",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "c7f25693-2446-4a61-8431-f88749a9bbdf": {
+      "type": "text-marquee",
+      "disabled": true,
+      "settings": {
+        "text": "Launching in the USA in February 2024",
+        "repeat_text": true,
+        "shape_between_text": "10_point_star",
+        "animate_shape_between_text": true,
+        "link": "",
+        "font": "font-heading heading-secondary",
+        "apply_effects": false,
+        "mobile_text_scale": 1,
+        "desktop_text_scale": 2,
+        "speed": 60,
+        "direction": "",
+        "color_scheme": "quaternary",
+        "use_gradient_background": false
+      }
+    },
+    "1698196939a203759b": {
+      "type": "apps",
+      "blocks": {
+        "9f82f6d2-315e-44f9-ae54-02270be1ad77": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-gallery-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
+          "settings": {
+            "maxWidth": 1100,
+            "borderRadius": 60,
+            "itemsPerView": 5,
+            "imageRatio": "1.25",
+            "reviewerNameColor": "#ffffff",
+            "starsColor": "#ffffff",
+            "arrows_backgroundColor": "#ffffff",
+            "arrows_iconColor": "#9a9a9a",
+            "shadow": "none",
+            "border_active": false,
+            "border_width": 2,
+            "border_color": "#000000",
+            "productIds": ""
+          }
+        }
+      },
+      "block_order": ["9f82f6d2-315e-44f9-ae54-02270be1ad77"],
+      "settings": {
+        "apply_vertical_spacing": true,
+        "apply_horizontal_spacing": true,
+        "display_on_card": false,
+        "content_width_desktop": "lg:w-full",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "366fce9f-bdd7-486e-a17d-26f62b964c83": {
+      "type": "faq",
+      "blocks": {
+        "43b8f7cc-5f65-473c-a5ab-122500d35a31": {
+          "type": "question",
+          "settings": {
+            "icon": "none",
+            "question": "Why are they sold in sets of three?",
+            "answer": "<p>Designers call it \"the law of three\". Even numbers create symmetry, while odd numbers create a focal point and add interest to a space. The size of each Slugg garden pot has been designed to ensure the scale works in a cluster of three. </p>"
+          }
+        },
+        "52399396-7e85-4c1f-b944-0510bd6274ae": {
+          "type": "question",
+          "settings": {
+            "icon": "none",
+            "question": "How do I use them?",
+            "answer": "<p>Sluggs look best grouped together to form a cluster of three pots. However, many of our customers use their Slugg pots individually. You can plant them up (soil inside the pot) or you can simply place your nursery pot inside the empty Slugg pot.</p>"
+          }
+        },
+        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-1": {
+          "type": "question",
+          "settings": {
+            "icon": "none",
+            "question": "What are the pots made of?",
+            "answer": "<p>Slugg garden pots are made from poly resin. They are lightweight, waterproof and far stronger than traditional concrete planters.</p>"
+          }
+        },
+        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-2": {
+          "type": "question",
+          "settings": {
+            "icon": "none",
+            "question": "Can I purchase the pots individually?",
+            "answer": "<p>Slugg garden pots are sold in sets of three, which makes it super easy to create the perfect pot cluster. They are not available for individual purchase.</p>"
+          }
+        },
+        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-3": {
+          "type": "question",
+          "settings": {
+            "icon": "none",
+            "question": "Do they have drainage holes?",
+            "answer": "<p>Yes, every Slugg garden pot comes with 2 drainage holes.</p>"
+          }
+        },
+        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-4": {
+          "type": "question",
+          "settings": {
+            "icon": "none",
+            "question": "When are you launching in the USA?",
+            "answer": "<p>We're super excited to announce that we'll be launching in the USA in February 2024.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "43b8f7cc-5f65-473c-a5ab-122500d35a31",
+        "52399396-7e85-4c1f-b944-0510bd6274ae",
+        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-1",
+        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-2",
+        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-3",
+        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-4"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_on_card": true,
+        "heading_text_style": "heading",
+        "two_columns_desktop": true,
+        "title": "FAQ's",
+        "richtext": "<p>Find the most frequently asked questions below.</p>",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    }
+  },
+  "order": [
+    "5778b91d-d15e-48f3-a5c6-24af94a3faf7",
+    "e60020e4-8d5e-427e-9d35-836db57a0dec",
+    "1650891358fef95dd4",
+    "1650891033bae15b05",
+    "655f2e1a-fb20-4f1c-8eac-d9cf096b5f19",
+    "16508912994a26e8bf",
+    "3a5d3d65-8134-4da7-8340-bc19738b2141",
+    "44d86bd3-5b91-4c16-bb2e-75374a97961d",
+    "fbbcdb72-eeaa-4d7f-a52f-0edae3a13dd2",
+    "9272982c-6eec-465b-bb5a-401631ebc54c",
+    "c7f25693-2446-4a61-8431-f88749a9bbdf",
+    "1698196939a203759b",
+    "366fce9f-bdd7-486e-a17d-26f62b964c83"
+  ]
+}
