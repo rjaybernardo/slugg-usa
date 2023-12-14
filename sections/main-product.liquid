@@ -2,7 +2,6 @@
   render 'product-template', section: section
   assign current_variant = product.selected_or_first_available_variant
 -%}
-
 <script type="application/ld+json">
   {
     "@context": "http://schema.org/",
@@ -42,32 +41,32 @@
 
 {% schema %}
 {
-  "name": "t:sections.product.name",
+  "name": "Product",
   "settings": [
     {
       "type": "header",
-      "content": "t:common.settings.header_media"
+      "content": "Media"
     },
     {
       "type": "select",
       "id": "crop",
-      "label": "t:common.settings.crop.label",
+      "label": "Crop",
       "options": [
         {
           "value": "",
-          "label": "t:common.options.no_crop.label"
+          "label": "No crop"
         },
         {
           "value": "aspect-w-4 aspect-h-3",
-          "label": "t:common.options.landscape.label"
+          "label": "Landscape"
         },
         {
           "value": "aspect-w-1 aspect-h-1",
-          "label": "t:common.options.square.label"
+          "label": "Square"
         },
         {
           "value": "aspect-w-3 aspect-h-4",
-          "label": "t:common.options.portrait.label"
+          "label": "Portrait"
         }
       ],
       "default": ""
@@ -75,257 +74,257 @@
     {
       "type": "select",
       "id": "image_shape",
-      "label": "t:sections.product.settings.image_shape.label",
+      "label": "Image shape",
       "options": [
         {
           "value": "default",
-          "label": "t:common.options.default.label",
+          "label": "Default",
           "group": "Fit to image"
         },
         {
           "value": "default_ellipse",
-          "label": "t:common.options.ellipse.label",
+          "label": "Ellipse",
           "group": "Fit to image"
         },
         {
           "value": "default_pill",
-          "label": "t:common.options.pill.label",
+          "label": "Pill",
           "group": "Fit to image"
         },
         {
           "value": "default_archway",
-          "label": "t:common.options.archway.label",
+          "label": "Archway",
           "group": "Fit to image"
         },
         {
           "value": "diamond",
-          "label": "t:common.options.diamond.label",
+          "label": "Diamond",
           "group": "Basic"
         },
         {
           "value": "triangle_1",
-          "label": "t:common.options.triangle_1.label",
+          "label": "Triangle 1",
           "group": "Basic"
         },
         {
           "value": "triangle_2",
-          "label": "t:common.options.triangle_2.label",
+          "label": "Triangle 2",
           "group": "Basic"
         },
         {
           "value": "pentagon",
-          "label": "t:common.options.pentagon.label",
+          "label": "Pentagon",
           "group": "Polygons"
         },
         {
           "value": "hexagon",
-          "label": "t:common.options.hexagon.label",
+          "label": "Hexagon",
           "group": "Polygons"
         },
         {
           "value": "heptagon",
-          "label": "t:common.options.heptagon.label",
+          "label": "Heptagon",
           "group": "Polygons"
         },
         {
           "value": "octagon",
-          "label": "t:common.options.octagon.label",
+          "label": "Octagon",
           "group": "Polygons"
         },
         {
           "value": "rounded_pentagon",
-          "label": "t:common.options.rounded_pentagon.label",
+          "label": "Rounded pentagon",
           "group": "Polygons"
         },
         {
           "value": "rounded_hexagon",
-          "label": "t:common.options.rounded_hexagon.label",
+          "label": "Rounded hexagon",
           "group": "Polygons"
         },
         {
           "value": "rounded_heptagon",
-          "label": "t:common.options.rounded_heptagon.label",
+          "label": "Rounded heptagon",
           "group": "Polygons"
         },
         {
           "value": "rounded_octagon",
-          "label": "t:common.options.rounded_octagon.label",
+          "label": "Rounded octagon",
           "group": "Polygons"
         },
         {
           "value": "star_1",
-          "label": "t:common.options.star_1.label",
+          "label": "Star 1",
           "group": "Circular"
         },
         {
           "value": "star_2",
-          "label": "t:common.options.star_2.label",
+          "label": "Star 2",
           "group": "Circular"
         },
         {
           "value": "star_3",
-          "label": "t:common.options.star_3.label",
+          "label": "Star 3",
           "group": "Circular"
         },
         {
           "value": "star_4",
-          "label": "t:common.options.star_4.label",
+          "label": "Star 4",
           "group": "Circular"
         },
         {
           "value": "scalloped_circle_1",
-          "label": "t:common.options.scalloped_circle_1.label",
+          "label": "Scalloped circle 1",
           "group": "Circular"
         },
         {
           "value": "scalloped_circle_2",
-          "label": "t:common.options.scalloped_circle_2.label",
+          "label": "Scalloped circle 2",
           "group": "Circular"
         },
         {
           "value": "scalloped_circle_3",
-          "label": "t:common.options.scalloped_circle_3.label",
+          "label": "Scalloped circle 3",
           "group": "Circular"
         },
         {
           "value": "scalloped_circle_4",
-          "label": "t:common.options.scalloped_circle_4.label",
+          "label": "Scalloped circle 4",
           "group": "Circular"
         },
         {
           "value": "parallelogram",
-          "label": "t:common.options.parallelogram.label",
+          "label": "Parallelogram",
           "group": "Square"
         },
         {
           "value": "scalloped_square",
-          "label": "t:common.options.scalloped.label",
+          "label": "Scalloped",
           "group": "Square"
         },
         {
           "value": "leaf",
-          "label": "t:common.options.leaf.label",
+          "label": "Leaf",
           "group": "Square"
         },
         {
           "value": "clipped_square",
-          "label": "t:common.options.clipped.label",
+          "label": "Clipped",
           "group": "Square"
         },
         {
           "value": "convex_square",
-          "label": "t:common.options.convex.label",
+          "label": "Convex",
           "group": "Square"
         },
         {
           "value": "twisted_square",
-          "label": "t:common.options.twisted.label",
+          "label": "Twisted",
           "group": "Square"
         },
         {
           "value": "trapeze",
-          "label": "t:common.options.trapeze.label",
+          "label": "Trapeze",
           "group": "Square"
         },
         {
           "value": "blob",
-          "label": "t:common.options.blob.label",
+          "label": "Blob",
           "group": "Miscellaneous"
         },
         {
           "value": "zig_zag",
-          "label": "t:common.options.zig_zag.label",
+          "label": "Zig zag",
           "group": "Miscellaneous"
         },
         {
           "value": "zig_zag_tear",
-          "label": "t:common.options.zig_zag_tear.label",
+          "label": "Zig zag tear",
           "group": "Miscellaneous"
         },
         {
           "value": "wave_tear",
-          "label": "t:common.options.wave_tear.label",
+          "label": "Wave tear",
           "group": "Miscellaneous"
         },
         {
           "value": "flower",
-          "label": "t:common.options.flower.label",
+          "label": "Flower",
           "group": "Miscellaneous"
         },
         {
           "value": "concave",
-          "label": "t:common.options.concave.label",
+          "label": "Concave",
           "group": "Miscellaneous"
         },
         {
           "value": "cross",
-          "label": "t:common.options.cross.label",
+          "label": "Cross",
           "group": "Miscellaneous"
         },
         {
           "value": "quatrefoil",
-          "label": "t:common.options.quatrefoil.label",
+          "label": "Quatrefoil",
           "group": "Miscellaneous"
         },
         {
           "value": "wind",
-          "label": "t:common.options.wind.label",
+          "label": "Wind",
           "group": "Miscellaneous"
         },
         {
           "value": "heart",
-          "label": "t:common.options.heart.label",
+          "label": "Heart",
           "group": "Miscellaneous"
         },
         {
           "value": "mirrored_pyramids",
-          "label": "t:common.options.mirrored_pyramids.label",
+          "label": "Mirrored pyramids",
           "group": "Miscellaneous"
         },
         {
           "value": "plus",
-          "label": "t:common.options.plus.label",
+          "label": "Plus",
           "group": "Miscellaneous"
         },
         {
           "value": "double_pill",
-          "label": "t:common.options.double_pill.label",
+          "label": "Double pill",
           "group": "Miscellaneous"
         },
         {
           "value": "triple_pill",
-          "label": "t:common.options.triple_pill.label",
+          "label": "Triple pill",
           "group": "Miscellaneous"
         },
         {
           "value": "crown",
-          "label": "t:common.options.crown.label",
+          "label": "Crown",
           "group": "Miscellaneous"
         },
         {
           "value": "abstract_star",
-          "label": "t:common.options.abstract_star.label",
+          "label": "Abstract star",
           "group": "Miscellaneous"
         }
       ],
-      "info": "t:sections.product.settings.image_shape.info"
+      "info": "Selecting some shapes will crop images. Does not apply to videos or models. [Learn more](https://help.switchthemes.co/)"
     },
     {
       "type": "select",
       "id": "desktop_media_width",
-      "label": "t:common.settings.desktop_media_width.label",
+      "label": "Desktop media width",
       "options": [
         {
           "value": "lg:col-span-6_lg:col-span-6",
-          "label": "t:common.options.one_half.label"
+          "label": "One half"
         },
         {
           "value": "lg:col-span-7_lg:col-span-5",
-          "label": "t:common.options.three_fifths.label"
+          "label": "Three fifths"
         },
         {
           "value": "lg:col-span-8_lg:col-span-4",
-          "label": "t:common.options.two_thirds.label"
+          "label": "Two thirds"
         }
       ],
       "default": "lg:col-span-6_lg:col-span-6"
@@ -333,82 +332,88 @@
     {
       "type": "checkbox",
       "id": "show_slideshow_arrows_on_desktop",
-      "label": "t:sections.product.settings.show_slideshow_arrows_on_desktop.label",
+      "label": "Show slideshow arrows on desktop",
       "default": false
     },
     {
       "type": "checkbox",
       "id": "enable_image_zoom",
-      "label": "t:sections.product.settings.enable_image_zoom.label"
+      "label": "Enable image zoom"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky",
+      "label": "Enable sticky add to cart",
+      "default": true
     },
     {
       "type": "checkbox",
       "id": "enable_video_looping",
-      "label": "t:common.settings.enable_video_looping.label",
+      "label": "Enable video looping",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "autoplay_videos_on_desktop",
-      "label": "t:sections.product.settings.autoplay_videos_on_desktop.label",
+      "label": "Autoplay videos on desktop",
       "default": true
     },
     {
       "type": "radio",
       "id": "media_mobile_width",
-      "label": "t:common.settings.media_mobile_width.label",
+      "label": "Mobile media size",
       "default": "w-full",
       "options": [
         {
           "value": "w-full",
-          "label": "t:common.options.full_width.label"
+          "label": "Full width"
         },
         {
           "value": "w-4/5",
-          "label": "t:common.options.four_fifths.label"
+          "label": "Four fifths"
         }
       ]
     },
     {
       "type": "header",
-      "content": "t:common.settings.header_thumbnails"
+      "content": "Thumbnails"
     },
     {
       "type": "radio",
       "id": "thumbnails_position",
-      "label": "t:common.settings.thumbnails_position.label",
+      "label": "Position",
       "default": "left",
       "options": [
         {
           "value": "left",
-          "label": "t:common.options.left_of_featured_image.label"
+          "label": "Left of featured image"
         },
         {
           "value": "under",
-          "label": "t:common.options.underneath_featured_image.label"
+          "label": "Underneath featured image"
         }
       ]
     },
     {
       "type": "select",
       "id": "thumbnail_crop",
-      "label": "t:common.settings.thumbnail_crop.label",
+      "label": "Crop",
       "options": [
         {
           "value": "",
-          "label": "t:common.options.no_crop.label"
+          "label": "No crop"
         },
         {
           "value": "aspect-w-4 aspect-h-3",
-          "label": "t:common.options.landscape.label"
+          "label": "Landscape"
         },
         {
           "value": "aspect-w-1 aspect-h-1",
-          "label": "t:common.options.square.label"
+          "label": "Square"
         },
         {
           "value": "aspect-w-3 aspect-h-4",
-          "label": "t:common.options.portrait.label"
+          "label": "Portrait"
         }
       ],
       "default": "aspect-w-1 aspect-h-1"
@@ -416,299 +421,293 @@
     {
       "type": "select",
       "id": "thumbnail_shape",
-      "label": "t:common.settings.thumbnail_shape.label",
+      "label": "Shape",
       "options": [
         {
           "value": "default",
-          "label": "t:common.options.default.label",
+          "label": "Default",
           "group": "Fit to image"
         },
         {
           "value": "default_ellipse",
-          "label": "t:common.options.ellipse.label",
+          "label": "Ellipse",
           "group": "Fit to image"
         },
         {
           "value": "default_pill",
-          "label": "t:common.options.pill.label",
+          "label": "Pill",
           "group": "Fit to image"
         },
         {
           "value": "default_archway",
-          "label": "t:common.options.archway.label",
+          "label": "Archway",
           "group": "Fit to image"
         },
         {
           "value": "diamond",
-          "label": "t:common.options.diamond.label",
+          "label": "Diamond",
           "group": "Basic"
         },
         {
           "value": "triangle_1",
-          "label": "t:common.options.triangle_1.label",
+          "label": "Triangle 1",
           "group": "Basic"
         },
         {
           "value": "triangle_2",
-          "label": "t:common.options.triangle_2.label",
+          "label": "Triangle 2",
           "group": "Basic"
         },
         {
           "value": "pentagon",
-          "label": "t:common.options.pentagon.label",
+          "label": "Pentagon",
           "group": "Polygons"
         },
         {
           "value": "hexagon",
-          "label": "t:common.options.hexagon.label",
+          "label": "Hexagon",
           "group": "Polygons"
         },
         {
           "value": "heptagon",
-          "label": "t:common.options.heptagon.label",
+          "label": "Heptagon",
           "group": "Polygons"
         },
         {
           "value": "octagon",
-          "label": "t:common.options.octagon.label",
+          "label": "Octagon",
           "group": "Polygons"
         },
         {
           "value": "rounded_pentagon",
-          "label": "t:common.options.rounded_pentagon.label",
+          "label": "Rounded pentagon",
           "group": "Polygons"
         },
         {
           "value": "rounded_hexagon",
-          "label": "t:common.options.rounded_hexagon.label",
+          "label": "Rounded hexagon",
           "group": "Polygons"
         },
         {
           "value": "rounded_heptagon",
-          "label": "t:common.options.rounded_heptagon.label",
+          "label": "Rounded heptagon",
           "group": "Polygons"
         },
         {
           "value": "rounded_octagon",
-          "label": "t:common.options.rounded_octagon.label",
+          "label": "Rounded octagon",
           "group": "Polygons"
         },
         {
           "value": "star_1",
-          "label": "t:common.options.star_1.label",
+          "label": "Star 1",
           "group": "Circular"
         },
         {
           "value": "star_2",
-          "label": "t:common.options.star_2.label",
+          "label": "Star 2",
           "group": "Circular"
         },
         {
           "value": "star_3",
-          "label": "t:common.options.star_3.label",
+          "label": "Star 3",
           "group": "Circular"
         },
         {
           "value": "star_4",
-          "label": "t:common.options.star_4.label",
+          "label": "Star 4",
           "group": "Circular"
         },
         {
           "value": "scalloped_circle_1",
-          "label": "t:common.options.scalloped_circle_1.label",
+          "label": "Scalloped circle 1",
           "group": "Circular"
         },
         {
           "value": "scalloped_circle_2",
-          "label": "t:common.options.scalloped_circle_2.label",
+          "label": "Scalloped circle 2",
           "group": "Circular"
         },
         {
           "value": "scalloped_circle_3",
-          "label": "t:common.options.scalloped_circle_3.label",
+          "label": "Scalloped circle 3",
           "group": "Circular"
         },
         {
           "value": "scalloped_circle_4",
-          "label": "t:common.options.scalloped_circle_4.label",
+          "label": "Scalloped circle 4",
           "group": "Circular"
         },
         {
           "value": "parallelogram",
-          "label": "t:common.options.parallelogram.label",
+          "label": "Parallelogram",
           "group": "Square"
         },
         {
           "value": "scalloped_square",
-          "label": "t:common.options.scalloped.label",
+          "label": "Scalloped",
           "group": "Square"
         },
         {
           "value": "leaf",
-          "label": "t:common.options.leaf.label",
+          "label": "Leaf",
           "group": "Square"
         },
         {
           "value": "clipped_square",
-          "label": "t:common.options.clipped.label",
+          "label": "Clipped",
           "group": "Square"
         },
         {
           "value": "convex_square",
-          "label": "t:common.options.convex.label",
+          "label": "Convex",
           "group": "Square"
         },
         {
           "value": "twisted_square",
-          "label": "t:common.options.twisted.label",
+          "label": "Twisted",
           "group": "Square"
         },
         {
           "value": "trapeze",
-          "label": "t:common.options.trapeze.label",
+          "label": "Trapeze",
           "group": "Square"
         },
         {
           "value": "blob",
-          "label": "t:common.options.blob.label",
+          "label": "Blob",
           "group": "Miscellaneous"
         },
         {
           "value": "zig_zag",
-          "label": "t:common.options.zig_zag.label",
+          "label": "Zig zag",
           "group": "Miscellaneous"
         },
         {
           "value": "zig_zag_tear",
-          "label": "t:common.options.zig_zag_tear.label",
+          "label": "Zig zag tear",
           "group": "Miscellaneous"
         },
         {
           "value": "wave_tear",
-          "label": "t:common.options.wave_tear.label",
+          "label": "Wave tear",
           "group": "Miscellaneous"
         },
         {
           "value": "flower",
-          "label": "t:common.options.flower.label",
+          "label": "Flower",
           "group": "Miscellaneous"
         },
         {
           "value": "concave",
-          "label": "t:common.options.concave.label",
+          "label": "Concave",
           "group": "Miscellaneous"
         },
         {
           "value": "cross",
-          "label": "t:common.options.cross.label",
+          "label": "Cross",
           "group": "Miscellaneous"
         },
         {
           "value": "quatrefoil",
-          "label": "t:common.options.quatrefoil.label",
+          "label": "Quatrefoil",
           "group": "Miscellaneous"
         },
         {
           "value": "wind",
-          "label": "t:common.options.wind.label",
+          "label": "Wind",
           "group": "Miscellaneous"
         },
         {
           "value": "heart",
-          "label": "t:common.options.heart.label",
+          "label": "Heart",
           "group": "Miscellaneous"
         },
         {
           "value": "mirrored_pyramids",
-          "label": "t:common.options.mirrored_pyramids.label",
+          "label": "Mirrored pyramids",
           "group": "Miscellaneous"
         },
         {
           "value": "plus",
-          "label": "t:common.options.plus.label",
+          "label": "Plus",
           "group": "Miscellaneous"
         },
         {
           "value": "double_pill",
-          "label": "t:common.options.double_pill.label",
+          "label": "Double pill",
           "group": "Miscellaneous"
         },
         {
           "value": "triple_pill",
-          "label": "t:common.options.triple_pill.label",
+          "label": "Triple pill",
           "group": "Miscellaneous"
         },
         {
           "value": "crown",
-          "label": "t:common.options.crown.label",
+          "label": "Crown",
           "group": "Miscellaneous"
         },
         {
           "value": "abstract_star",
-          "label": "t:common.options.abstract_star.label",
+          "label": "Abstract star",
           "group": "Miscellaneous"
         }
       ],
-      "info": "t:common.settings.thumbnail_shape.info"
+      "info": "Selecting some shapes will crop the image. [Learn more](https://help.switchthemes.co/shapes/guides/style-images-with-shapes.html)"
     },
     {
       "type": "checkbox",
       "id": "hide_media_shadow",
-      "label": "t:common.settings.hide_media_shadow.label"
+      "label": "Hide media shadow"
     },
     {
       "type": "radio",
       "id": "thumbnail_size",
-      "label": "t:common.settings.thumbnail_size.label",
+      "label": "Thumbnail size",
       "default": "standard",
       "options": [
         {
           "value": "standard",
-          "label": "t:common.options.standard.label"
+          "label": "Standard"
         },
         {
           "value": "large",
-          "label": "t:common.options.large.label"
+          "label": "Large"
         }
       ]
     },
     {
-      "type": "checkbox",
-      "id": "show_thumbnails_on_mobile",
-      "label": "t:common.settings.show_thumbnails_on_mobile.label",
-      "default": false
-    },
-    {
       "type": "header",
-      "content": "t:common.settings.header_color"
+      "content": "Color"
     },
     {
       "type": "select",
       "id": "color_scheme",
-      "label": "t:common.settings.color_scheme.label",
+      "label": "Color scheme",
       "options": [
         {
           "value": "primary",
-          "label": "t:common.options.primary.label"
+          "label": "Primary"
         },
         {
           "value": "secondary",
-          "label": "t:common.options.secondary.label"
+          "label": "Secondary"
         },
         {
           "value": "tertiary",
-          "label": "t:common.options.tertiary.label"
+          "label": "Tertiary"
         },
         {
           "value": "quaternary",
-          "label": "t:common.options.quaternary.label"
+          "label": "Quaternary"
         }
       ]
     },
     {
       "type": "checkbox",
       "id": "use_gradient_background",
-      "label": "t:common.settings.use_gradient_background.label"
+      "label": "Use gradient for background"
     }
   ],
   "blocks": [
@@ -717,29 +716,29 @@
     },
     {
       "type": "title",
-      "name": "t:common.blocks.title.name",
+      "name": "Title",
       "limit": 1,
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "radio",
           "id": "text_align",
-          "label": "t:common.settings.text_align.label",
+          "label": "Text align",
           "default": "text-left",
           "options": [
             {
               "value": "text-left",
-              "label": "t:common.options.left.label"
+              "label": "Left"
             },
             {
               "value": "text-center",
-              "label": "t:common.options.center.label"
+              "label": "Center"
             }
           ]
         }
@@ -747,34 +746,34 @@
     },
     {
       "type": "price",
-      "name": "t:common.blocks.price.name",
+      "name": "Price",
       "limit": 1,
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "checkbox",
           "id": "show_on_sale_sticker",
-          "label": "t:common.blocks.price.settings.show_on_sale_sticker.label"
+          "label": "Show on sale sticker"
         },
         {
           "type": "radio",
           "id": "text_align",
-          "label": "t:common.settings.text_align.label",
+          "label": "Text align",
           "default": "text-left",
           "options": [
             {
               "value": "text-left",
-              "label": "t:common.options.left.label"
+              "label": "Left"
             },
             {
               "value": "text-center",
-              "label": "t:common.options.center.label"
+              "label": "Center"
             }
           ]
         }
@@ -782,48 +781,48 @@
     },
     {
       "type": "quantity_selector",
-      "name": "t:common.blocks.quantity_selector.name",
+      "name": "Quantity selector",
       "limit": 1,
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "checkbox",
           "id": "show_label",
-          "label": "t:common.blocks.quantity_selector.settings.show_label.label",
+          "label": "Show label",
           "default": false
         }
       ]
     },
     {
       "type": "variant_picker",
-      "name": "t:common.blocks.variant_picker.name",
+      "name": "Variant picker",
       "limit": 1,
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "radio",
           "id": "option_style",
-          "label": "t:common.blocks.variant_picker.settings.option_style.label",
+          "label": "Options style",
           "options": [
             {
               "value": "drop_down",
-              "label": "t:common.blocks.variant_picker.settings.option_style.options.drop_down.label"
+              "label": "Drop down"
             },
             {
               "value": "buttons",
-              "label": "t:common.blocks.variant_picker.settings.option_style.options.button.label"
+              "label": "Button"
             }
           ],
           "default": "drop_down"
@@ -831,21 +830,22 @@
         {
           "type": "checkbox",
           "id": "hide_option_labels",
-          "label": "t:common.blocks.variant_picker.settings.hide_option_labels.label",
+          "label": "Hide option labels",
           "default": true
         },
         {
           "type": "header",
-          "content": "t:common.blocks.variant_picker.settings.header_color_swatches"
+          "content": "Color swatches"
         },
         {
           "type": "paragraph",
-          "content": "t:common.blocks.variant_picker.settings.paragraph_learn_how_to"
+          "content": "[Learn how to set up swatches](https://help.switchthemes.co/)"
         },
         {
           "type": "checkbox",
           "id": "enable_color_swatches",
-          "label": "t:common.blocks.variant_picker.settings.enable_color_swatches.label"
+          "label": "Enable color swatches",
+          "default": true
         },
         {
           "type": "checkbox",
@@ -857,155 +857,117 @@
     },
     {
       "type": "buy_buttons",
-      "name": "t:common.blocks.buy_buttons.name",
+      "name": "Buy buttons",
       "limit": 1,
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "checkbox",
           "id": "show_price",
-          "label": "t:common.blocks.buy_buttons.settings.show_price.label",
+          "label": "Show price in add to cart button",
           "default": false
         },
         {
           "type": "checkbox",
           "id": "enable_payment_button",
-          "label": "t:common.blocks.buy_buttons.settings.enable_payment_button.label",
-          "info": "t:common.blocks.buy_buttons.settings.enable_payment_button.info",
+          "label": "Show dynamic checkout button",
+          "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
           "default": true
         },
         {
           "type": "header",
-          "content": "t:common.blocks.buy_buttons.settings.header_pickup_availability"
+          "content": "Pickup Availability"
         },
         {
           "type": "checkbox",
           "id": "show_pickup_availability",
-          "label": "t:common.blocks.buy_buttons.settings.show_pickup_availability.label",
+          "label": "Show pickup availability [Learn more](https://help.shopify.com/en/manual/sell-in-person/pos-classic/shopify-pos-from-admin/buy-online-pickup-in-store#show-pickup-availability-to-your-customers)",
           "default": true
-        },
-        {
-          "type": "header",
-          "content": "Gift card recipient"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_gift_card_recipient",
-          "default": false,
-          "label": "t:common.blocks.buy_buttons.settings.show_gift_card_recipient.label",
-          "info": "t:common.blocks.buy_buttons.settings.show_gift_card_recipient.info"
-        }
-      ]
-    },
-    {
-      "type": "after_pay",
-      "name": "After Pay",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "checkbox",
-          "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
-          "default": false,
-          "info": "t:common.settings.display_on_card.info"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_price",
-          "label": "t:common.blocks.buy_buttons.settings.show_price.label",
-          "default": false
-        },
-        {
-          "type": "checkbox",
-          "id": "enable_payment_button",
-          "label": "t:common.blocks.buy_buttons.settings.enable_payment_button.label",
-          "info": "t:common.blocks.buy_buttons.settings.enable_payment_button.info",
-          "default": true
-        },
-        {
-          "type": "header",
-          "content": "t:common.blocks.buy_buttons.settings.header_pickup_availability"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_pickup_availability",
-          "label": "t:common.blocks.buy_buttons.settings.show_pickup_availability.label",
-          "default": true
-        },
-        {
-          "type": "header",
-          "content": "Gift card recipient"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_gift_card_recipient",
-          "default": false,
-          "label": "t:common.blocks.buy_buttons.settings.show_gift_card_recipient.label",
-          "info": "t:common.blocks.buy_buttons.settings.show_gift_card_recipient.info"
         }
       ]
     },
     {
       "type": "vendor",
-      "name": "t:common.blocks.vendor.name",
+      "name": "Vendor",
       "limit": 1,
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "radio",
           "id": "text_align",
-          "label": "t:common.settings.text_align.label",
+          "label": "Text align",
           "default": "text-left",
           "options": [
             {
               "value": "text-left",
-              "label": "t:common.options.left.label"
+              "label": "Left"
             },
             {
               "value": "text-center",
-              "label": "t:common.options.center.label"
+              "label": "Center"
             }
           ]
         }
       ]
     },
     {
+      "type": "expected_delivery",
+      "name": "Expected delivery",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "time_countdown",
+          "label": "Time counter",
+          "default": "20, 0, 0",
+          "info": "Hour, Miniute, Second"
+        },
+        {
+          "type": "number",
+          "id": "after_days",
+          "label": "After days",
+          "default": 3,
+          "info": "Expected delivery after '3' days"
+        }
+      ]
+    },
+    {
       "type": "star_rating",
-      "name": "t:common.blocks.star_rating.name",
+      "name": "Star rating",
       "limit": 1,
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "select",
           "id": "type",
-          "label": "t:common.blocks.star_rating.settings.type.label",
+          "label": "Star rating type",
           "default": "native",
           "options": [
             {
               "value": "native",
-              "label": "t:common.blocks.star_rating.settings.type.options.theme.label"
+              "label": "Theme"
             },
             {
               "value": "spr",
-              "label": "t:common.blocks.star_rating.settings.type.options.shopify_product_reviews.label"
+              "label": "Shopify Product Reviews"
             }
           ]
         }
@@ -1013,35 +975,35 @@
     },
     {
       "type": "description",
-      "name": "t:common.blocks.description.name",
+      "name": "Description",
       "limit": 1,
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "checkbox",
           "id": "truncate_description",
-          "label": "t:common.blocks.description.settings.truncate_description.label",
+          "label": "Truncate description",
           "default": false
         },
         {
           "type": "radio",
           "id": "text_align",
-          "label": "t:common.settings.text_align.label",
+          "label": "Text align",
           "default": "text-left",
           "options": [
             {
               "value": "text-left",
-              "label": "t:common.options.left.label"
+              "label": "Left"
             },
             {
               "value": "text-center",
-              "label": "t:common.options.center.label"
+              "label": "Center"
             }
           ]
         }
@@ -1049,256 +1011,256 @@
     },
     {
       "type": "text",
-      "name": "t:common.blocks.text.name",
+      "name": "Text",
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "text",
           "id": "text",
           "default": "Text block",
-          "label": "t:common.blocks.text.settings.text.label"
+          "label": "Text"
         },
         {
           "type": "select",
           "id": "icon",
-          "label": "t:common.settings.icon.label",
+          "label": "Icon",
           "options": [
             {
               "value": "none",
-              "label": "t:common.options.none.label"
+              "label": "None"
             },
             {
               "value": "box",
-              "label": "t:common.options.box.label"
+              "label": "Box"
             },
             {
               "value": "chat-bubble",
-              "label": "t:common.options.chat_bubble.label"
+              "label": "Chat bubble"
             },
             {
               "value": "check-mark",
-              "label": "t:common.options.check_mark.label"
+              "label": "Check mark"
             },
             {
               "value": "coat-hanger",
-              "label": "t:common.options.coat_hanger.label"
+              "label": "Coat hanger"
             },
             {
               "value": "dryer",
-              "label": "t:common.options.dryer.label"
+              "label": "Dryer"
             },
             {
               "value": "eye",
-              "label": "t:common.options.eye.label"
+              "label": "Eye"
             },
             {
               "value": "globe",
-              "label": "t:common.options.globe.label"
+              "label": "Globe"
             },
             {
               "value": "heart",
-              "label": "t:common.options.heart.label"
+              "label": "Heart"
             },
             {
               "value": "iron",
-              "label": "t:common.options.iron.label"
+              "label": "Iron"
             },
             {
               "value": "leaf",
-              "label": "t:common.options.leaf.label"
+              "label": "Leaf"
             },
             {
               "value": "leather",
-              "label": "t:common.options.leather.label"
+              "label": "Leather"
             },
             {
               "value": "like",
-              "label": "t:common.options.like.label"
+              "label": "Like"
             },
             {
               "value": "lock",
-              "label": "t:common.options.lock.label"
+              "label": "Lock"
             },
             {
               "value": "map-pin",
-              "label": "t:common.options.map_pin.label"
+              "label": "Map pin"
             },
             {
               "value": "pants",
-              "label": "t:common.options.pants.label"
+              "label": "Pants"
             },
             {
               "value": "person",
-              "label": "t:common.options.person.label"
+              "label": "Person"
             },
             {
               "value": "plane",
-              "label": "t:common.options.plane.label"
+              "label": "Plane"
             },
             {
               "value": "price-tag",
-              "label": "t:common.options.price_tag.label"
+              "label": "Price tag"
             },
             {
               "value": "question-mark",
-              "label": "t:common.options.question_mark.label"
+              "label": "Question mark"
             },
             {
               "value": "recycle",
-              "label": "t:common.options.recycle.label"
+              "label": "Recycle"
             },
             {
               "value": "return",
-              "label": "t:common.options.return.label"
+              "label": "Return"
             },
             {
               "value": "ruler",
-              "label": "t:common.options.ruler.label"
+              "label": "Ruler"
             },
             {
               "value": "shirt",
-              "label": "t:common.options.shirt.label"
+              "label": "Shirt"
             },
             {
               "value": "shoe",
-              "label": "t:common.options.shoe.label"
+              "label": "Shoe"
             },
             {
               "value": "star",
-              "label": "t:common.options.star.label"
+              "label": "Star"
             },
             {
               "value": "truck",
-              "label": "t:common.options.truck.label"
+              "label": "Truck"
             },
             {
               "value": "washing",
-              "label": "t:common.options.washing.label"
+              "label": "Washing"
             },
             {
               "value": "gluten_free",
-              "label": "t:common.options.gluten_free.label",
+              "label": "Gluten free",
               "group": "Food and health"
             },
             {
               "value": "soy_free",
-              "label": "t:common.options.soy_free.label",
+              "label": "Soy free",
               "group": "Food and health"
             },
             {
               "value": "sugar_free",
-              "label": "t:common.options.sugar_free.label",
+              "label": "Sugar free",
               "group": "Food and health"
             },
             {
               "value": "nut_free",
-              "label": "t:common.options.nut_free.label",
+              "label": "Nut free",
               "group": "Food and health"
             },
             {
               "value": "corn_free",
-              "label": "t:common.options.corn_free.label",
+              "label": "Corn free",
               "group": "Food and health"
             },
             {
               "value": "dairy_free",
-              "label": "t:common.options.dairy_free.label",
+              "label": "Dairy free",
               "group": "Food and health"
             },
             {
               "value": "no_additives",
-              "label": "t:common.options.no_additives.label",
+              "label": "No additives",
               "group": "Food and health"
             },
             {
               "value": "no_artificial_colors",
-              "label": "t:common.options.no_artificial_colors.label",
+              "label": "No artificial colors",
               "group": "Food and health"
             },
             {
               "value": "non_gmo",
-              "label": "t:common.options.non_gmo.label",
+              "label": "Non GMO",
               "group": "Food and health"
             },
             {
               "value": "vegan",
-              "label": "t:common.options.vegan.label",
+              "label": "Vegan",
               "group": "Food and health"
             },
             {
               "value": "halal",
-              "label": "t:common.options.halal.label",
+              "label": "Halal",
               "group": "Food and health"
             },
             {
               "value": "organic",
-              "label": "t:common.options.organic.label",
+              "label": "Organic",
               "group": "Food and health"
             },
             {
               "value": "kosher",
-              "label": "t:common.options.kosher.label",
+              "label": "Kosher",
               "group": "Food and health"
             },
             {
               "value": "keto",
-              "label": "t:common.options.keto.label",
+              "label": "Keto",
               "group": "Food and health"
             },
             {
               "value": "paleo",
-              "label": "t:common.options.paleo.label",
+              "label": "Paleo",
               "group": "Food and health"
             },
             {
               "value": "cruelty_free",
-              "label": "t:common.options.cruelty_free.label",
+              "label": "Cruelty free",
               "group": "Food and health"
             },
             {
               "value": "paraben_free",
-              "label": "t:common.options.paraben_free.label",
+              "label": "Paraben free",
               "group": "Food and health"
             },
             {
               "value": "alcohol_free",
-              "label": "t:common.options.alcohol_free.label",
+              "label": "Alcohol free",
               "group": "Food and health"
             },
             {
               "value": "palm_oil_free",
-              "label": "t:common.options.palm_oil_free.label",
+              "label": "Palm oil free",
               "group": "Food and health"
             },
             {
               "value": "anti_bacterial",
-              "label": "t:common.options.anti_bacterial.label",
+              "label": "Anti bacterial",
               "group": "Food and health"
             },
             {
               "value": "probiotic",
-              "label": "t:common.options.probiotic.label",
+              "label": "Probiotic",
               "group": "Food and health"
             },
             {
               "value": "antioxidants",
-              "label": "t:common.options.antioxidants.label",
+              "label": "Antioxidants",
               "group": "Food and health"
             },
             {
               "value": "low_salt",
-              "label": "t:common.options.low_salt.label",
+              "label": "Low salt",
               "group": "Food and health"
             },
             {
               "value": "low_carb",
-              "label": "t:common.options.low_carb.label",
+              "label": "Low carb",
               "group": "Food and health"
             }
           ],
@@ -1308,250 +1270,250 @@
     },
     {
       "type": "icon_row",
-      "name": "t:common.blocks.icon_row.name",
+      "name": "Icon row",
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "header",
-          "content": "t:common.blocks.icon_row.settings.header_item_1"
+          "content": "Item 1"
         },
         {
           "type": "select",
           "id": "icon_1",
-          "label": "t:common.blocks.icon_row.settings.icon_1.label",
+          "label": "Icon 1",
           "options": [
             {
               "value": "box",
-              "label": "t:common.options.box.label"
+              "label": "Box"
             },
             {
               "value": "chat-bubble",
-              "label": "t:common.options.chat_bubble.label"
+              "label": "Chat bubble"
             },
             {
               "value": "check-mark",
-              "label": "t:common.options.check_mark.label"
+              "label": "Check mark"
             },
             {
               "value": "coat-hanger",
-              "label": "t:common.options.coat_hanger.label"
+              "label": "Coat hanger"
             },
             {
               "value": "dryer",
-              "label": "t:common.options.dryer.label"
+              "label": "Dryer"
             },
             {
               "value": "eye",
-              "label": "t:common.options.eye.label"
+              "label": "Eye"
             },
             {
               "value": "globe",
-              "label": "t:common.options.globe.label"
+              "label": "Globe"
             },
             {
               "value": "heart",
-              "label": "t:common.options.heart.label"
+              "label": "Heart"
             },
             {
               "value": "iron",
-              "label": "t:common.options.iron.label"
+              "label": "Iron"
             },
             {
               "value": "leaf",
-              "label": "t:common.options.leaf.label"
+              "label": "Leaf"
             },
             {
               "value": "leather",
-              "label": "t:common.options.leather.label"
+              "label": "Leather"
             },
             {
               "value": "like",
-              "label": "t:common.options.like.label"
+              "label": "Like"
             },
             {
               "value": "lock",
-              "label": "t:common.options.lock.label"
+              "label": "Lock"
             },
             {
               "value": "map-pin",
-              "label": "t:common.options.map_pin.label"
+              "label": "Map pin"
             },
             {
               "value": "pants",
-              "label": "t:common.options.pants.label"
+              "label": "Pants"
             },
             {
               "value": "person",
-              "label": "t:common.options.person.label"
+              "label": "Person"
             },
             {
               "value": "plane",
-              "label": "t:common.options.plane.label"
+              "label": "Plane"
             },
             {
               "value": "price-tag",
-              "label": "t:common.options.price_tag.label"
+              "label": "Price tag"
             },
             {
               "value": "question-mark",
-              "label": "t:common.options.question_mark.label"
+              "label": "Question mark"
             },
             {
               "value": "recycle",
-              "label": "t:common.options.recycle.label"
+              "label": "Recycle"
             },
             {
               "value": "return",
-              "label": "t:common.options.return.label"
+              "label": "Return"
             },
             {
               "value": "ruler",
-              "label": "t:common.options.ruler.label"
+              "label": "Ruler"
             },
             {
               "value": "shirt",
-              "label": "t:common.options.shirt.label"
+              "label": "Shirt"
             },
             {
               "value": "shoe",
-              "label": "t:common.options.shoe.label"
+              "label": "Shoe"
             },
             {
               "value": "star",
-              "label": "t:common.options.star.label"
+              "label": "Star"
             },
             {
               "value": "truck",
-              "label": "t:common.options.truck.label"
+              "label": "Truck"
             },
             {
               "value": "washing",
-              "label": "t:common.options.washing.label"
+              "label": "Washing"
             },
             {
               "value": "gluten_free",
-              "label": "t:common.options.gluten_free.label",
+              "label": "Gluten free",
               "group": "Food and health"
             },
             {
               "value": "soy_free",
-              "label": "t:common.options.soy_free.label",
+              "label": "Soy free",
               "group": "Food and health"
             },
             {
               "value": "sugar_free",
-              "label": "t:common.options.sugar_free.label",
+              "label": "Sugar free",
               "group": "Food and health"
             },
             {
               "value": "nut_free",
-              "label": "t:common.options.nut_free.label",
+              "label": "Nut free",
               "group": "Food and health"
             },
             {
               "value": "corn_free",
-              "label": "t:common.options.corn_free.label",
+              "label": "Corn free",
               "group": "Food and health"
             },
             {
               "value": "dairy_free",
-              "label": "t:common.options.dairy_free.label",
+              "label": "Dairy free",
               "group": "Food and health"
             },
             {
               "value": "no_additives",
-              "label": "t:common.options.no_additives.label",
+              "label": "No additives",
               "group": "Food and health"
             },
             {
               "value": "no_artificial_colors",
-              "label": "t:common.options.no_artificial_colors.label",
+              "label": "No artificial colors",
               "group": "Food and health"
             },
             {
               "value": "non_gmo",
-              "label": "t:common.options.non_gmo.label",
+              "label": "Non GMO",
               "group": "Food and health"
             },
             {
               "value": "vegan",
-              "label": "t:common.options.vegan.label",
+              "label": "Vegan",
               "group": "Food and health"
             },
             {
               "value": "halal",
-              "label": "t:common.options.halal.label",
+              "label": "Halal",
               "group": "Food and health"
             },
             {
               "value": "organic",
-              "label": "t:common.options.organic.label",
+              "label": "Organic",
               "group": "Food and health"
             },
             {
               "value": "kosher",
-              "label": "t:common.options.kosher.label",
+              "label": "Kosher",
               "group": "Food and health"
             },
             {
               "value": "keto",
-              "label": "t:common.options.keto.label",
+              "label": "Keto",
               "group": "Food and health"
             },
             {
               "value": "paleo",
-              "label": "t:common.options.paleo.label",
+              "label": "Paleo",
               "group": "Food and health"
             },
             {
               "value": "cruelty_free",
-              "label": "t:common.options.cruelty_free.label",
+              "label": "Cruelty free",
               "group": "Food and health"
             },
             {
               "value": "paraben_free",
-              "label": "t:common.options.paraben_free.label",
+              "label": "Paraben free",
               "group": "Food and health"
             },
             {
               "value": "alcohol_free",
-              "label": "t:common.options.alcohol_free.label",
+              "label": "Alcohol free",
               "group": "Food and health"
             },
             {
               "value": "palm_oil_free",
-              "label": "t:common.options.palm_oil_free.label",
+              "label": "Palm oil free",
               "group": "Food and health"
             },
             {
               "value": "anti_bacterial",
-              "label": "t:common.options.anti_bacterial.label",
+              "label": "Anti bacterial",
               "group": "Food and health"
             },
             {
               "value": "probiotic",
-              "label": "t:common.options.probiotic.label",
+              "label": "Probiotic",
               "group": "Food and health"
             },
             {
               "value": "antioxidants",
-              "label": "t:common.options.antioxidants.label",
+              "label": "Antioxidants",
               "group": "Food and health"
             },
             {
               "value": "low_salt",
-              "label": "t:common.options.low_salt.label",
+              "label": "Low salt",
               "group": "Food and health"
             },
             {
               "value": "low_carb",
-              "label": "t:common.options.low_carb.label",
+              "label": "Low carb",
               "group": "Food and health"
             }
           ],
@@ -1560,244 +1522,244 @@
         {
           "type": "text",
           "id": "text_1",
-          "label": "t:common.blocks.icon_row.settings.text_1.label",
+          "label": "Text 1",
           "default": "Row item"
         },
         {
           "type": "header",
-          "content": "t:common.blocks.icon_row.settings.header_item_2"
+          "content": "Item 2"
         },
         {
           "type": "select",
           "id": "icon_2",
-          "label": "t:common.blocks.icon_row.settings.icon_2.label",
+          "label": "Icon 2",
           "options": [
             {
               "value": "box",
-              "label": "t:common.options.box.label"
+              "label": "Box"
             },
             {
               "value": "chat-bubble",
-              "label": "t:common.options.chat_bubble.label"
+              "label": "Chat bubble"
             },
             {
               "value": "check-mark",
-              "label": "t:common.options.check_mark.label"
+              "label": "Check mark"
             },
             {
               "value": "coat-hanger",
-              "label": "t:common.options.coat_hanger.label"
+              "label": "Coat hanger"
             },
             {
               "value": "dryer",
-              "label": "t:common.options.dryer.label"
+              "label": "Dryer"
             },
             {
               "value": "eye",
-              "label": "t:common.options.eye.label"
+              "label": "Eye"
             },
             {
               "value": "globe",
-              "label": "t:common.options.globe.label"
+              "label": "Globe"
             },
             {
               "value": "heart",
-              "label": "t:common.options.heart.label"
+              "label": "Heart"
             },
             {
               "value": "iron",
-              "label": "t:common.options.iron.label"
+              "label": "Iron"
             },
             {
               "value": "leaf",
-              "label": "t:common.options.leaf.label"
+              "label": "Leaf"
             },
             {
               "value": "leather",
-              "label": "t:common.options.leather.label"
+              "label": "Leather"
             },
             {
               "value": "like",
-              "label": "t:common.options.like.label"
+              "label": "Like"
             },
             {
               "value": "lock",
-              "label": "t:common.options.lock.label"
+              "label": "Lock"
             },
             {
               "value": "map-pin",
-              "label": "t:common.options.map_pin.label"
+              "label": "Map pin"
             },
             {
               "value": "pants",
-              "label": "t:common.options.pants.label"
+              "label": "Pants"
             },
             {
               "value": "person",
-              "label": "t:common.options.person.label"
+              "label": "Person"
             },
             {
               "value": "plane",
-              "label": "t:common.options.plane.label"
+              "label": "Plane"
             },
             {
               "value": "price-tag",
-              "label": "t:common.options.price_tag.label"
+              "label": "Price tag"
             },
             {
               "value": "question-mark",
-              "label": "t:common.options.question_mark.label"
+              "label": "Question mark"
             },
             {
               "value": "recycle",
-              "label": "t:common.options.recycle.label"
+              "label": "Recycle"
             },
             {
               "value": "return",
-              "label": "t:common.options.return.label"
+              "label": "Return"
             },
             {
               "value": "ruler",
-              "label": "t:common.options.ruler.label"
+              "label": "Ruler"
             },
             {
               "value": "shirt",
-              "label": "t:common.options.shirt.label"
+              "label": "Shirt"
             },
             {
               "value": "shoe",
-              "label": "t:common.options.shoe.label"
+              "label": "Shoe"
             },
             {
               "value": "star",
-              "label": "t:common.options.star.label"
+              "label": "Star"
             },
             {
               "value": "truck",
-              "label": "t:common.options.truck.label"
+              "label": "Truck"
             },
             {
               "value": "washing",
-              "label": "t:common.options.washing.label"
+              "label": "Washing"
             },
             {
               "value": "gluten_free",
-              "label": "t:common.options.gluten_free.label",
+              "label": "Gluten free",
               "group": "Food and health"
             },
             {
               "value": "soy_free",
-              "label": "t:common.options.soy_free.label",
+              "label": "Soy free",
               "group": "Food and health"
             },
             {
               "value": "sugar_free",
-              "label": "t:common.options.sugar_free.label",
+              "label": "Sugar free",
               "group": "Food and health"
             },
             {
               "value": "nut_free",
-              "label": "t:common.options.nut_free.label",
+              "label": "Nut free",
               "group": "Food and health"
             },
             {
               "value": "corn_free",
-              "label": "t:common.options.corn_free.label",
+              "label": "Corn free",
               "group": "Food and health"
             },
             {
               "value": "dairy_free",
-              "label": "t:common.options.dairy_free.label",
+              "label": "Dairy free",
               "group": "Food and health"
             },
             {
               "value": "no_additives",
-              "label": "t:common.options.no_additives.label",
+              "label": "No additives",
               "group": "Food and health"
             },
             {
               "value": "no_artificial_colors",
-              "label": "t:common.options.no_artificial_colors.label",
+              "label": "No artificial colors",
               "group": "Food and health"
             },
             {
               "value": "non_gmo",
-              "label": "t:common.options.non_gmo.label",
+              "label": "Non GMO",
               "group": "Food and health"
             },
             {
               "value": "vegan",
-              "label": "t:common.options.vegan.label",
+              "label": "Vegan",
               "group": "Food and health"
             },
             {
               "value": "halal",
-              "label": "t:common.options.halal.label",
+              "label": "Halal",
               "group": "Food and health"
             },
             {
               "value": "organic",
-              "label": "t:common.options.organic.label",
+              "label": "Organic",
               "group": "Food and health"
             },
             {
               "value": "kosher",
-              "label": "t:common.options.kosher.label",
+              "label": "Kosher",
               "group": "Food and health"
             },
             {
               "value": "keto",
-              "label": "t:common.options.keto.label",
+              "label": "Keto",
               "group": "Food and health"
             },
             {
               "value": "paleo",
-              "label": "t:common.options.paleo.label",
+              "label": "Paleo",
               "group": "Food and health"
             },
             {
               "value": "cruelty_free",
-              "label": "t:common.options.cruelty_free.label",
+              "label": "Cruelty free",
               "group": "Food and health"
             },
             {
               "value": "paraben_free",
-              "label": "t:common.options.paraben_free.label",
+              "label": "Paraben free",
               "group": "Food and health"
             },
             {
               "value": "alcohol_free",
-              "label": "t:common.options.alcohol_free.label",
+              "label": "Alcohol free",
               "group": "Food and health"
             },
             {
               "value": "palm_oil_free",
-              "label": "t:common.options.palm_oil_free.label",
+              "label": "Palm oil free",
               "group": "Food and health"
             },
             {
               "value": "anti_bacterial",
-              "label": "t:common.options.anti_bacterial.label",
+              "label": "Anti bacterial",
               "group": "Food and health"
             },
             {
               "value": "probiotic",
-              "label": "t:common.options.probiotic.label",
+              "label": "Probiotic",
               "group": "Food and health"
             },
             {
               "value": "antioxidants",
-              "label": "t:common.options.antioxidants.label",
+              "label": "Antioxidants",
               "group": "Food and health"
             },
             {
               "value": "low_salt",
-              "label": "t:common.options.low_salt.label",
+              "label": "Low salt",
               "group": "Food and health"
             },
             {
               "value": "low_carb",
-              "label": "t:common.options.low_carb.label",
+              "label": "Low carb",
               "group": "Food and health"
             }
           ],
@@ -1806,244 +1768,244 @@
         {
           "type": "text",
           "id": "text_2",
-          "label": "t:common.blocks.icon_row.settings.text_2.label",
+          "label": "Text 2",
           "default": "Row item"
         },
         {
           "type": "header",
-          "content": "t:common.blocks.icon_row.settings.header_item_3"
+          "content": "Item 3"
         },
         {
           "type": "select",
           "id": "icon_3",
-          "label": "t:common.blocks.icon_row.settings.icon_3.label",
+          "label": "Icon 3",
           "options": [
             {
               "value": "box",
-              "label": "t:common.options.box.label"
+              "label": "Box"
             },
             {
               "value": "chat-bubble",
-              "label": "t:common.options.chat_bubble.label"
+              "label": "Chat bubble"
             },
             {
               "value": "check-mark",
-              "label": "t:common.options.check_mark.label"
+              "label": "Check mark"
             },
             {
               "value": "coat-hanger",
-              "label": "t:common.options.coat_hanger.label"
+              "label": "Coat hanger"
             },
             {
               "value": "dryer",
-              "label": "t:common.options.dryer.label"
+              "label": "Dryer"
             },
             {
               "value": "eye",
-              "label": "t:common.options.eye.label"
+              "label": "Eye"
             },
             {
               "value": "globe",
-              "label": "t:common.options.globe.label"
+              "label": "Globe"
             },
             {
               "value": "heart",
-              "label": "t:common.options.heart.label"
+              "label": "Heart"
             },
             {
               "value": "iron",
-              "label": "t:common.options.iron.label"
+              "label": "Iron"
             },
             {
               "value": "leaf",
-              "label": "t:common.options.leaf.label"
+              "label": "Leaf"
             },
             {
               "value": "leather",
-              "label": "t:common.options.leather.label"
+              "label": "Leather"
             },
             {
               "value": "like",
-              "label": "t:common.options.like.label"
+              "label": "Like"
             },
             {
               "value": "lock",
-              "label": "t:common.options.lock.label"
+              "label": "Lock"
             },
             {
               "value": "map-pin",
-              "label": "t:common.options.map_pin.label"
+              "label": "Map pin"
             },
             {
               "value": "pants",
-              "label": "t:common.options.pants.label"
+              "label": "Pants"
             },
             {
               "value": "person",
-              "label": "t:common.options.person.label"
+              "label": "Person"
             },
             {
               "value": "plane",
-              "label": "t:common.options.plane.label"
+              "label": "Plane"
             },
             {
               "value": "price-tag",
-              "label": "t:common.options.price_tag.label"
+              "label": "Price tag"
             },
             {
               "value": "question-mark",
-              "label": "t:common.options.question_mark.label"
+              "label": "Question mark"
             },
             {
               "value": "recycle",
-              "label": "t:common.options.recycle.label"
+              "label": "Recycle"
             },
             {
               "value": "return",
-              "label": "t:common.options.return.label"
+              "label": "Return"
             },
             {
               "value": "ruler",
-              "label": "t:common.options.ruler.label"
+              "label": "Ruler"
             },
             {
               "value": "shirt",
-              "label": "t:common.options.shirt.label"
+              "label": "Shirt"
             },
             {
               "value": "shoe",
-              "label": "t:common.options.shoe.label"
+              "label": "Shoe"
             },
             {
               "value": "star",
-              "label": "t:common.options.star.label"
+              "label": "Star"
             },
             {
               "value": "truck",
-              "label": "t:common.options.truck.label"
+              "label": "Truck"
             },
             {
               "value": "washing",
-              "label": "t:common.options.washing.label"
+              "label": "Washing"
             },
             {
               "value": "gluten_free",
-              "label": "t:common.options.gluten_free.label",
+              "label": "Gluten free",
               "group": "Food and health"
             },
             {
               "value": "soy_free",
-              "label": "t:common.options.soy_free.label",
+              "label": "Soy free",
               "group": "Food and health"
             },
             {
               "value": "sugar_free",
-              "label": "t:common.options.sugar_free.label",
+              "label": "Sugar free",
               "group": "Food and health"
             },
             {
               "value": "nut_free",
-              "label": "t:common.options.nut_free.label",
+              "label": "Nut free",
               "group": "Food and health"
             },
             {
               "value": "corn_free",
-              "label": "t:common.options.corn_free.label",
+              "label": "Corn free",
               "group": "Food and health"
             },
             {
               "value": "dairy_free",
-              "label": "t:common.options.dairy_free.label",
+              "label": "Dairy free",
               "group": "Food and health"
             },
             {
               "value": "no_additives",
-              "label": "t:common.options.no_additives.label",
+              "label": "No additives",
               "group": "Food and health"
             },
             {
               "value": "no_artificial_colors",
-              "label": "t:common.options.no_artificial_colors.label",
+              "label": "No artificial colors",
               "group": "Food and health"
             },
             {
               "value": "non_gmo",
-              "label": "t:common.options.non_gmo.label",
+              "label": "Non GMO",
               "group": "Food and health"
             },
             {
               "value": "vegan",
-              "label": "t:common.options.vegan.label",
+              "label": "Vegan",
               "group": "Food and health"
             },
             {
               "value": "halal",
-              "label": "t:common.options.halal.label",
+              "label": "Halal",
               "group": "Food and health"
             },
             {
               "value": "organic",
-              "label": "t:common.options.organic.label",
+              "label": "Organic",
               "group": "Food and health"
             },
             {
               "value": "kosher",
-              "label": "t:common.options.kosher.label",
+              "label": "Kosher",
               "group": "Food and health"
             },
             {
               "value": "keto",
-              "label": "t:common.options.keto.label",
+              "label": "Keto",
               "group": "Food and health"
             },
             {
               "value": "paleo",
-              "label": "t:common.options.paleo.label",
+              "label": "Paleo",
               "group": "Food and health"
             },
             {
               "value": "cruelty_free",
-              "label": "t:common.options.cruelty_free.label",
+              "label": "Cruelty free",
               "group": "Food and health"
             },
             {
               "value": "paraben_free",
-              "label": "t:common.options.paraben_free.label",
+              "label": "Paraben free",
               "group": "Food and health"
             },
             {
               "value": "alcohol_free",
-              "label": "t:common.options.alcohol_free.label",
+              "label": "Alcohol free",
               "group": "Food and health"
             },
             {
               "value": "palm_oil_free",
-              "label": "t:common.options.palm_oil_free.label",
+              "label": "Palm oil free",
               "group": "Food and health"
             },
             {
               "value": "anti_bacterial",
-              "label": "t:common.options.anti_bacterial.label",
+              "label": "Anti bacterial",
               "group": "Food and health"
             },
             {
               "value": "probiotic",
-              "label": "t:common.options.probiotic.label",
+              "label": "Probiotic",
               "group": "Food and health"
             },
             {
               "value": "antioxidants",
-              "label": "t:common.options.antioxidants.label",
+              "label": "Antioxidants",
               "group": "Food and health"
             },
             {
               "value": "low_salt",
-              "label": "t:common.options.low_salt.label",
+              "label": "Low salt",
               "group": "Food and health"
             },
             {
               "value": "low_carb",
-              "label": "t:common.options.low_carb.label",
+              "label": "Low carb",
               "group": "Food and health"
             }
           ],
@@ -2052,244 +2014,244 @@
         {
           "type": "text",
           "id": "text_3",
-          "label": "t:common.blocks.icon_row.settings.text_3.label",
+          "label": "Text 3",
           "default": "Row item"
         },
         {
           "type": "header",
-          "content": "t:common.blocks.icon_row.settings.header_item_4"
+          "content": "Item 4"
         },
         {
           "type": "select",
           "id": "icon_4",
-          "label": "t:common.blocks.icon_row.settings.icon_4.label",
+          "label": "Icon 4",
           "options": [
             {
               "value": "box",
-              "label": "t:common.options.box.label"
+              "label": "Box"
             },
             {
               "value": "chat-bubble",
-              "label": "t:common.options.chat_bubble.label"
+              "label": "Chat bubble"
             },
             {
               "value": "check-mark",
-              "label": "t:common.options.check_mark.label"
+              "label": "Check mark"
             },
             {
               "value": "coat-hanger",
-              "label": "t:common.options.coat_hanger.label"
+              "label": "Coat hanger"
             },
             {
               "value": "dryer",
-              "label": "t:common.options.dryer.label"
+              "label": "Dryer"
             },
             {
               "value": "eye",
-              "label": "t:common.options.eye.label"
+              "label": "Eye"
             },
             {
               "value": "globe",
-              "label": "t:common.options.globe.label"
+              "label": "Globe"
             },
             {
               "value": "heart",
-              "label": "t:common.options.heart.label"
+              "label": "Heart"
             },
             {
               "value": "iron",
-              "label": "t:common.options.iron.label"
+              "label": "Iron"
             },
             {
               "value": "leaf",
-              "label": "t:common.options.leaf.label"
+              "label": "Leaf"
             },
             {
               "value": "leather",
-              "label": "t:common.options.leather.label"
+              "label": "Leather"
             },
             {
               "value": "like",
-              "label": "t:common.options.like.label"
+              "label": "Like"
             },
             {
               "value": "lock",
-              "label": "t:common.options.lock.label"
+              "label": "Lock"
             },
             {
               "value": "map-pin",
-              "label": "t:common.options.map_pin.label"
+              "label": "Map pin"
             },
             {
               "value": "pants",
-              "label": "t:common.options.pants.label"
+              "label": "Pants"
             },
             {
               "value": "person",
-              "label": "t:common.options.person.label"
+              "label": "Person"
             },
             {
               "value": "plane",
-              "label": "t:common.options.plane.label"
+              "label": "Plane"
             },
             {
               "value": "price-tag",
-              "label": "t:common.options.price_tag.label"
+              "label": "Price tag"
             },
             {
               "value": "question-mark",
-              "label": "t:common.options.question_mark.label"
+              "label": "Question mark"
             },
             {
               "value": "recycle",
-              "label": "t:common.options.recycle.label"
+              "label": "Recycle"
             },
             {
               "value": "return",
-              "label": "t:common.options.return.label"
+              "label": "Return"
             },
             {
               "value": "ruler",
-              "label": "t:common.options.ruler.label"
+              "label": "Ruler"
             },
             {
               "value": "shirt",
-              "label": "t:common.options.shirt.label"
+              "label": "Shirt"
             },
             {
               "value": "shoe",
-              "label": "t:common.options.shoe.label"
+              "label": "Shoe"
             },
             {
               "value": "star",
-              "label": "t:common.options.star.label"
+              "label": "Star"
             },
             {
               "value": "truck",
-              "label": "t:common.options.truck.label"
+              "label": "Truck"
             },
             {
               "value": "washing",
-              "label": "t:common.options.washing.label"
+              "label": "Washing"
             },
             {
               "value": "gluten_free",
-              "label": "t:common.options.gluten_free.label",
+              "label": "Gluten free",
               "group": "Food and health"
             },
             {
               "value": "soy_free",
-              "label": "t:common.options.soy_free.label",
+              "label": "Soy free",
               "group": "Food and health"
             },
             {
               "value": "sugar_free",
-              "label": "t:common.options.sugar_free.label",
+              "label": "Sugar free",
               "group": "Food and health"
             },
             {
               "value": "nut_free",
-              "label": "t:common.options.nut_free.label",
+              "label": "Nut free",
               "group": "Food and health"
             },
             {
               "value": "corn_free",
-              "label": "t:common.options.corn_free.label",
+              "label": "Corn free",
               "group": "Food and health"
             },
             {
               "value": "dairy_free",
-              "label": "t:common.options.dairy_free.label",
+              "label": "Dairy free",
               "group": "Food and health"
             },
             {
               "value": "no_additives",
-              "label": "t:common.options.no_additives.label",
+              "label": "No additives",
               "group": "Food and health"
             },
             {
               "value": "no_artificial_colors",
-              "label": "t:common.options.no_artificial_colors.label",
+              "label": "No artificial colors",
               "group": "Food and health"
             },
             {
               "value": "non_gmo",
-              "label": "t:common.options.non_gmo.label",
+              "label": "Non GMO",
               "group": "Food and health"
             },
             {
               "value": "vegan",
-              "label": "t:common.options.vegan.label",
+              "label": "Vegan",
               "group": "Food and health"
             },
             {
               "value": "halal",
-              "label": "t:common.options.halal.label",
+              "label": "Halal",
               "group": "Food and health"
             },
             {
               "value": "organic",
-              "label": "t:common.options.organic.label",
+              "label": "Organic",
               "group": "Food and health"
             },
             {
               "value": "kosher",
-              "label": "t:common.options.kosher.label",
+              "label": "Kosher",
               "group": "Food and health"
             },
             {
               "value": "keto",
-              "label": "t:common.options.keto.label",
+              "label": "Keto",
               "group": "Food and health"
             },
             {
               "value": "paleo",
-              "label": "t:common.options.paleo.label",
+              "label": "Paleo",
               "group": "Food and health"
             },
             {
               "value": "cruelty_free",
-              "label": "t:common.options.cruelty_free.label",
+              "label": "Cruelty free",
               "group": "Food and health"
             },
             {
               "value": "paraben_free",
-              "label": "t:common.options.paraben_free.label",
+              "label": "Paraben free",
               "group": "Food and health"
             },
             {
               "value": "alcohol_free",
-              "label": "t:common.options.alcohol_free.label",
+              "label": "Alcohol free",
               "group": "Food and health"
             },
             {
               "value": "palm_oil_free",
-              "label": "t:common.options.palm_oil_free.label",
+              "label": "Palm oil free",
               "group": "Food and health"
             },
             {
               "value": "anti_bacterial",
-              "label": "t:common.options.anti_bacterial.label",
+              "label": "Anti bacterial",
               "group": "Food and health"
             },
             {
               "value": "probiotic",
-              "label": "t:common.options.probiotic.label",
+              "label": "Probiotic",
               "group": "Food and health"
             },
             {
               "value": "antioxidants",
-              "label": "t:common.options.antioxidants.label",
+              "label": "Antioxidants",
               "group": "Food and health"
             },
             {
               "value": "low_salt",
-              "label": "t:common.options.low_salt.label",
+              "label": "Low salt",
               "group": "Food and health"
             },
             {
               "value": "low_carb",
-              "label": "t:common.options.low_carb.label",
+              "label": "Low carb",
               "group": "Food and health"
             }
           ],
@@ -2298,244 +2260,244 @@
         {
           "type": "text",
           "id": "text_4",
-          "label": "t:common.blocks.icon_row.settings.text_4.label",
+          "label": "Text 4",
           "default": "Row item"
         },
         {
           "type": "header",
-          "content": "t:common.blocks.icon_row.settings.header_item_5"
+          "content": "Item 5"
         },
         {
           "type": "select",
           "id": "icon_5",
-          "label": "t:common.blocks.icon_row.settings.icon_5.label",
+          "label": "Icon 5",
           "options": [
             {
               "value": "box",
-              "label": "t:common.options.box.label"
+              "label": "Box"
             },
             {
               "value": "chat-bubble",
-              "label": "t:common.options.chat_bubble.label"
+              "label": "Chat bubble"
             },
             {
               "value": "check-mark",
-              "label": "t:common.options.check_mark.label"
+              "label": "Check mark"
             },
             {
               "value": "coat-hanger",
-              "label": "t:common.options.coat_hanger.label"
+              "label": "Coat hanger"
             },
             {
               "value": "dryer",
-              "label": "t:common.options.dryer.label"
+              "label": "Dryer"
             },
             {
               "value": "eye",
-              "label": "t:common.options.eye.label"
+              "label": "Eye"
             },
             {
               "value": "globe",
-              "label": "t:common.options.globe.label"
+              "label": "Globe"
             },
             {
               "value": "heart",
-              "label": "t:common.options.heart.label"
+              "label": "Heart"
             },
             {
               "value": "iron",
-              "label": "t:common.options.iron.label"
+              "label": "Iron"
             },
             {
               "value": "leaf",
-              "label": "t:common.options.leaf.label"
+              "label": "Leaf"
             },
             {
               "value": "leather",
-              "label": "t:common.options.leather.label"
+              "label": "Leather"
             },
             {
               "value": "like",
-              "label": "t:common.options.like.label"
+              "label": "Like"
             },
             {
               "value": "lock",
-              "label": "t:common.options.lock.label"
+              "label": "Lock"
             },
             {
               "value": "map-pin",
-              "label": "t:common.options.map_pin.label"
+              "label": "Map pin"
             },
             {
               "value": "pants",
-              "label": "t:common.options.pants.label"
+              "label": "Pants"
             },
             {
               "value": "person",
-              "label": "t:common.options.person.label"
+              "label": "Person"
             },
             {
               "value": "plane",
-              "label": "t:common.options.plane.label"
+              "label": "Plane"
             },
             {
               "value": "price-tag",
-              "label": "t:common.options.price_tag.label"
+              "label": "Price tag"
             },
             {
               "value": "question-mark",
-              "label": "t:common.options.question_mark.label"
+              "label": "Question mark"
             },
             {
               "value": "recycle",
-              "label": "t:common.options.recycle.label"
+              "label": "Recycle"
             },
             {
               "value": "return",
-              "label": "t:common.options.return.label"
+              "label": "Return"
             },
             {
               "value": "ruler",
-              "label": "t:common.options.ruler.label"
+              "label": "Ruler"
             },
             {
               "value": "shirt",
-              "label": "t:common.options.shirt.label"
+              "label": "Shirt"
             },
             {
               "value": "shoe",
-              "label": "t:common.options.shoe.label"
+              "label": "Shoe"
             },
             {
               "value": "star",
-              "label": "t:common.options.star.label"
+              "label": "Star"
             },
             {
               "value": "truck",
-              "label": "t:common.options.truck.label"
+              "label": "Truck"
             },
             {
               "value": "washing",
-              "label": "t:common.options.washing.label"
+              "label": "Washing"
             },
             {
               "value": "gluten_free",
-              "label": "t:common.options.gluten_free.label",
+              "label": "Gluten free",
               "group": "Food and health"
             },
             {
               "value": "soy_free",
-              "label": "t:common.options.soy_free.label",
+              "label": "Soy free",
               "group": "Food and health"
             },
             {
               "value": "sugar_free",
-              "label": "t:common.options.sugar_free.label",
+              "label": "Sugar free",
               "group": "Food and health"
             },
             {
               "value": "nut_free",
-              "label": "t:common.options.nut_free.label",
+              "label": "Nut free",
               "group": "Food and health"
             },
             {
               "value": "corn_free",
-              "label": "t:common.options.corn_free.label",
+              "label": "Corn free",
               "group": "Food and health"
             },
             {
               "value": "dairy_free",
-              "label": "t:common.options.dairy_free.label",
+              "label": "Dairy free",
               "group": "Food and health"
             },
             {
               "value": "no_additives",
-              "label": "t:common.options.no_additives.label",
+              "label": "No additives",
               "group": "Food and health"
             },
             {
               "value": "no_artificial_colors",
-              "label": "t:common.options.no_artificial_colors.label",
+              "label": "No artificial colors",
               "group": "Food and health"
             },
             {
               "value": "non_gmo",
-              "label": "t:common.options.non_gmo.label",
+              "label": "Non GMO",
               "group": "Food and health"
             },
             {
               "value": "vegan",
-              "label": "t:common.options.vegan.label",
+              "label": "Vegan",
               "group": "Food and health"
             },
             {
               "value": "halal",
-              "label": "t:common.options.halal.label",
+              "label": "Halal",
               "group": "Food and health"
             },
             {
               "value": "organic",
-              "label": "t:common.options.organic.label",
+              "label": "Organic",
               "group": "Food and health"
             },
             {
               "value": "kosher",
-              "label": "t:common.options.kosher.label",
+              "label": "Kosher",
               "group": "Food and health"
             },
             {
               "value": "keto",
-              "label": "t:common.options.keto.label",
+              "label": "Keto",
               "group": "Food and health"
             },
             {
               "value": "paleo",
-              "label": "t:common.options.paleo.label",
+              "label": "Paleo",
               "group": "Food and health"
             },
             {
               "value": "cruelty_free",
-              "label": "t:common.options.cruelty_free.label",
+              "label": "Cruelty free",
               "group": "Food and health"
             },
             {
               "value": "paraben_free",
-              "label": "t:common.options.paraben_free.label",
+              "label": "Paraben free",
               "group": "Food and health"
             },
             {
               "value": "alcohol_free",
-              "label": "t:common.options.alcohol_free.label",
+              "label": "Alcohol free",
               "group": "Food and health"
             },
             {
               "value": "palm_oil_free",
-              "label": "t:common.options.palm_oil_free.label",
+              "label": "Palm oil free",
               "group": "Food and health"
             },
             {
               "value": "anti_bacterial",
-              "label": "t:common.options.anti_bacterial.label",
+              "label": "Anti bacterial",
               "group": "Food and health"
             },
             {
               "value": "probiotic",
-              "label": "t:common.options.probiotic.label",
+              "label": "Probiotic",
               "group": "Food and health"
             },
             {
               "value": "antioxidants",
-              "label": "t:common.options.antioxidants.label",
+              "label": "Antioxidants",
               "group": "Food and health"
             },
             {
               "value": "low_salt",
-              "label": "t:common.options.low_salt.label",
+              "label": "Low salt",
               "group": "Food and health"
             },
             {
               "value": "low_carb",
-              "label": "t:common.options.low_carb.label",
+              "label": "Low carb",
               "group": "Food and health"
             }
           ],
@@ -2544,278 +2506,257 @@
         {
           "type": "text",
           "id": "text_5",
-          "label": "t:common.blocks.icon_row.settings.text_5.label",
+          "label": "Text 5",
           "default": "Row item"
         }
       ]
     },
     {
-      "type": "inventory_status",
-      "name": "t:common.blocks.inventory.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "range",
-          "id": "low_inventory_threshold",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "label": "t:common.blocks.inventory.settings.low_inventory_threshold.label",
-          "default": 5
-        },
-        {
-          "id": "show_inventory_quantity",
-          "type": "checkbox",
-          "label": "t:common.blocks.inventory.settings.show_inventory_quantity.label"
-        }
-      ]
-    },
-    {
       "type": "popup",
-      "name": "t:common.blocks.popup.name",
+      "name": "Pop-up",
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "select",
           "id": "icon",
-          "label": "t:common.blocks.popup.settings.icon.label",
+          "label": "Icon",
           "options": [
             {
               "value": "none",
-              "label": "t:common.options.none.label"
+              "label": "None"
             },
             {
               "value": "box",
-              "label": "t:common.options.box.label"
+              "label": "Box"
             },
             {
               "value": "chat-bubble",
-              "label": "t:common.options.chat_bubble.label"
+              "label": "Chat bubble"
             },
             {
               "value": "check-mark",
-              "label": "t:common.options.check_mark.label"
+              "label": "Check mark"
             },
             {
               "value": "coat-hanger",
-              "label": "t:common.options.coat_hanger.label"
+              "label": "Coat hanger"
             },
             {
               "value": "dryer",
-              "label": "t:common.options.dryer.label"
+              "label": "Dryer"
             },
             {
               "value": "eye",
-              "label": "t:common.options.eye.label"
+              "label": "Eye"
             },
             {
               "value": "globe",
-              "label": "t:common.options.globe.label"
+              "label": "Globe"
             },
             {
               "value": "heart",
-              "label": "t:common.options.heart.label"
+              "label": "Heart"
             },
             {
               "value": "iron",
-              "label": "t:common.options.iron.label"
+              "label": "Iron"
             },
             {
               "value": "leaf",
-              "label": "t:common.options.leaf.label"
+              "label": "Leaf"
             },
             {
               "value": "leather",
-              "label": "t:common.options.leather.label"
+              "label": "Leather"
             },
             {
               "value": "like",
-              "label": "t:common.options.like.label"
+              "label": "Like"
             },
             {
               "value": "lock",
-              "label": "t:common.options.lock.label"
+              "label": "Lock"
             },
             {
               "value": "map-pin",
-              "label": "t:common.options.map_pin.label"
+              "label": "Map pin"
             },
             {
               "value": "pants",
-              "label": "t:common.options.pants.label"
+              "label": "Pants"
             },
             {
               "value": "person",
-              "label": "t:common.options.person.label"
+              "label": "Person"
             },
             {
               "value": "plane",
-              "label": "t:common.options.plane.label"
+              "label": "Plane"
             },
             {
               "value": "price-tag",
-              "label": "t:common.options.price_tag.label"
+              "label": "Price tag"
             },
             {
               "value": "question-mark",
-              "label": "t:common.options.question_mark.label"
+              "label": "Question mark"
             },
             {
               "value": "recycle",
-              "label": "t:common.options.recycle.label"
+              "label": "Recycle"
             },
             {
               "value": "return",
-              "label": "t:common.options.return.label"
+              "label": "Return"
             },
             {
               "value": "ruler",
-              "label": "t:common.options.ruler.label"
+              "label": "Ruler"
             },
             {
               "value": "shirt",
-              "label": "t:common.options.shirt.label"
+              "label": "Shirt"
             },
             {
               "value": "shoe",
-              "label": "t:common.options.shoe.label"
+              "label": "Shoe"
             },
             {
               "value": "star",
-              "label": "t:common.options.star.label"
+              "label": "Star"
             },
             {
               "value": "truck",
-              "label": "t:common.options.truck.label"
+              "label": "Truck"
             },
             {
               "value": "washing",
-              "label": "t:common.options.washing.label"
+              "label": "Washing"
             },
             {
               "value": "gluten_free",
-              "label": "t:common.options.gluten_free.label",
+              "label": "Gluten free",
               "group": "Food and health"
             },
             {
               "value": "soy_free",
-              "label": "t:common.options.soy_free.label",
+              "label": "Soy free",
               "group": "Food and health"
             },
             {
               "value": "sugar_free",
-              "label": "t:common.options.sugar_free.label",
+              "label": "Sugar free",
               "group": "Food and health"
             },
             {
               "value": "nut_free",
-              "label": "t:common.options.nut_free.label",
+              "label": "Nut free",
               "group": "Food and health"
             },
             {
               "value": "corn_free",
-              "label": "t:common.options.corn_free.label",
+              "label": "Corn free",
               "group": "Food and health"
             },
             {
               "value": "dairy_free",
-              "label": "t:common.options.dairy_free.label",
+              "label": "Dairy free",
               "group": "Food and health"
             },
             {
               "value": "no_additives",
-              "label": "t:common.options.no_additives.label",
+              "label": "No additives",
               "group": "Food and health"
             },
             {
               "value": "no_artificial_colors",
-              "label": "t:common.options.no_artificial_colors.label",
+              "label": "No artificial colors",
               "group": "Food and health"
             },
             {
               "value": "non_gmo",
-              "label": "t:common.options.non_gmo.label",
+              "label": "Non GMO",
               "group": "Food and health"
             },
             {
               "value": "vegan",
-              "label": "t:common.options.vegan.label",
+              "label": "Vegan",
               "group": "Food and health"
             },
             {
               "value": "halal",
-              "label": "t:common.options.halal.label",
+              "label": "Halal",
               "group": "Food and health"
             },
             {
               "value": "organic",
-              "label": "t:common.options.organic.label",
+              "label": "Organic",
               "group": "Food and health"
             },
             {
               "value": "kosher",
-              "label": "t:common.options.kosher.label",
+              "label": "Kosher",
               "group": "Food and health"
             },
             {
               "value": "keto",
-              "label": "t:common.options.keto.label",
+              "label": "Keto",
               "group": "Food and health"
             },
             {
               "value": "paleo",
-              "label": "t:common.options.paleo.label",
+              "label": "Paleo",
               "group": "Food and health"
             },
             {
               "value": "cruelty_free",
-              "label": "t:common.options.cruelty_free.label",
+              "label": "Cruelty free",
               "group": "Food and health"
             },
             {
               "value": "paraben_free",
-              "label": "t:common.options.paraben_free.label",
+              "label": "Paraben free",
               "group": "Food and health"
             },
             {
               "value": "alcohol_free",
-              "label": "t:common.options.alcohol_free.label",
+              "label": "Alcohol free",
               "group": "Food and health"
             },
             {
               "value": "palm_oil_free",
-              "label": "t:common.options.palm_oil_free.label",
+              "label": "Palm oil free",
               "group": "Food and health"
             },
             {
               "value": "anti_bacterial",
-              "label": "t:common.options.anti_bacterial.label",
+              "label": "Anti bacterial",
               "group": "Food and health"
             },
             {
               "value": "probiotic",
-              "label": "t:common.options.probiotic.label",
+              "label": "Probiotic",
               "group": "Food and health"
             },
             {
               "value": "antioxidants",
-              "label": "t:common.options.antioxidants.label",
+              "label": "Antioxidants",
               "group": "Food and health"
             },
             {
               "value": "low_salt",
-              "label": "t:common.options.low_salt.label",
+              "label": "Low salt",
               "group": "Food and health"
             },
             {
               "value": "low_carb",
-              "label": "t:common.options.low_carb.label",
+              "label": "Low carb",
               "group": "Food and health"
             }
           ],
@@ -2825,280 +2766,280 @@
           "type": "text",
           "id": "text",
           "default": "Pop-up link text",
-          "label": "t:common.blocks.popup.settings.text.label"
+          "label": "Link label"
         },
         {
           "id": "page",
           "type": "page",
-          "label": "t:common.blocks.popup.settings.page.label",
-          "info": "t:common.blocks.popup.settings.page.info"
+          "label": "Page",
+          "info": "Contact form fields will not be displayed in the pop up."
         }
       ]
     },
     {
       "type": "liquid",
-      "name": "t:common.blocks.liquid.name",
+      "name": "Liquid",
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "liquid",
           "id": "liquid",
-          "label": "t:common.blocks.liquid.settings.liquid.label"
+          "label": "Liquid"
         }
       ]
     },
     {
       "type": "collapsible_tab",
-      "name": "t:common.blocks.collapsible_tab.name",
+      "name": "Collapsible tab",
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "select",
           "id": "icon",
-          "label": "t:common.settings.icon.label",
+          "label": "Icon",
           "options": [
             {
               "value": "none",
-              "label": "t:common.options.none.label"
+              "label": "None"
             },
             {
               "value": "box",
-              "label": "t:common.options.box.label"
+              "label": "Box"
             },
             {
               "value": "chat-bubble",
-              "label": "t:common.options.chat_bubble.label"
+              "label": "Chat bubble"
             },
             {
               "value": "check-mark",
-              "label": "t:common.options.check_mark.label"
+              "label": "Check mark"
             },
             {
               "value": "coat-hanger",
-              "label": "t:common.options.coat_hanger.label"
+              "label": "Coat hanger"
             },
             {
               "value": "dryer",
-              "label": "t:common.options.dryer.label"
+              "label": "Dryer"
             },
             {
               "value": "eye",
-              "label": "t:common.options.eye.label"
+              "label": "Eye"
             },
             {
               "value": "globe",
-              "label": "t:common.options.globe.label"
+              "label": "Globe"
             },
             {
               "value": "heart",
-              "label": "t:common.options.heart.label"
+              "label": "Heart"
             },
             {
               "value": "iron",
-              "label": "t:common.options.iron.label"
+              "label": "Iron"
             },
             {
               "value": "leaf",
-              "label": "t:common.options.leaf.label"
+              "label": "Leaf"
             },
             {
               "value": "leather",
-              "label": "t:common.options.leather.label"
+              "label": "Leather"
             },
             {
               "value": "like",
-              "label": "t:common.options.like.label"
+              "label": "Like"
             },
             {
               "value": "lock",
-              "label": "t:common.options.lock.label"
+              "label": "Lock"
             },
             {
               "value": "map-pin",
-              "label": "t:common.options.map_pin.label"
+              "label": "Map pin"
             },
             {
               "value": "pants",
-              "label": "t:common.options.pants.label"
+              "label": "Pants"
             },
             {
               "value": "person",
-              "label": "t:common.options.person.label"
+              "label": "Person"
             },
             {
               "value": "plane",
-              "label": "t:common.options.plane.label"
+              "label": "Plane"
             },
             {
               "value": "price-tag",
-              "label": "t:common.options.price_tag.label"
+              "label": "Price tag"
             },
             {
               "value": "question-mark",
-              "label": "t:common.options.question_mark.label"
+              "label": "Question mark"
             },
             {
               "value": "recycle",
-              "label": "t:common.options.recycle.label"
+              "label": "Recycle"
             },
             {
               "value": "return",
-              "label": "t:common.options.return.label"
+              "label": "Return"
             },
             {
               "value": "ruler",
-              "label": "t:common.options.ruler.label"
+              "label": "Ruler"
             },
             {
               "value": "shirt",
-              "label": "t:common.options.shirt.label"
+              "label": "Shirt"
             },
             {
               "value": "shoe",
-              "label": "t:common.options.shoe.label"
+              "label": "Shoe"
             },
             {
               "value": "star",
-              "label": "t:common.options.star.label"
+              "label": "Star"
             },
             {
               "value": "truck",
-              "label": "t:common.options.truck.label"
+              "label": "Truck"
             },
             {
               "value": "washing",
-              "label": "t:common.options.washing.label"
+              "label": "Washing"
             },
             {
               "value": "gluten_free",
-              "label": "t:common.options.gluten_free.label",
+              "label": "Gluten free",
               "group": "Food and health"
             },
             {
               "value": "soy_free",
-              "label": "t:common.options.soy_free.label",
+              "label": "Soy free",
               "group": "Food and health"
             },
             {
               "value": "sugar_free",
-              "label": "t:common.options.sugar_free.label",
+              "label": "Sugar free",
               "group": "Food and health"
             },
             {
               "value": "nut_free",
-              "label": "t:common.options.nut_free.label",
+              "label": "Nut free",
               "group": "Food and health"
             },
             {
               "value": "corn_free",
-              "label": "t:common.options.corn_free.label",
+              "label": "Corn free",
               "group": "Food and health"
             },
             {
               "value": "dairy_free",
-              "label": "t:common.options.dairy_free.label",
+              "label": "Dairy free",
               "group": "Food and health"
             },
             {
               "value": "no_additives",
-              "label": "t:common.options.no_additives.label",
+              "label": "No additives",
               "group": "Food and health"
             },
             {
               "value": "no_artificial_colors",
-              "label": "t:common.options.no_artificial_colors.label",
+              "label": "No artificial colors",
               "group": "Food and health"
             },
             {
               "value": "non_gmo",
-              "label": "t:common.options.non_gmo.label",
+              "label": "Non GMO",
               "group": "Food and health"
             },
             {
               "value": "vegan",
-              "label": "t:common.options.vegan.label",
+              "label": "Vegan",
               "group": "Food and health"
             },
             {
               "value": "halal",
-              "label": "t:common.options.halal.label",
+              "label": "Halal",
               "group": "Food and health"
             },
             {
               "value": "organic",
-              "label": "t:common.options.organic.label",
+              "label": "Organic",
               "group": "Food and health"
             },
             {
               "value": "kosher",
-              "label": "t:common.options.kosher.label",
+              "label": "Kosher",
               "group": "Food and health"
             },
             {
               "value": "keto",
-              "label": "t:common.options.keto.label",
+              "label": "Keto",
               "group": "Food and health"
             },
             {
               "value": "paleo",
-              "label": "t:common.options.paleo.label",
+              "label": "Paleo",
               "group": "Food and health"
             },
             {
               "value": "cruelty_free",
-              "label": "t:common.options.cruelty_free.label",
+              "label": "Cruelty free",
               "group": "Food and health"
             },
             {
               "value": "paraben_free",
-              "label": "t:common.options.paraben_free.label",
+              "label": "Paraben free",
               "group": "Food and health"
             },
             {
               "value": "alcohol_free",
-              "label": "t:common.options.alcohol_free.label",
+              "label": "Alcohol free",
               "group": "Food and health"
             },
             {
               "value": "palm_oil_free",
-              "label": "t:common.options.palm_oil_free.label",
+              "label": "Palm oil free",
               "group": "Food and health"
             },
             {
               "value": "anti_bacterial",
-              "label": "t:common.options.anti_bacterial.label",
+              "label": "Anti bacterial",
               "group": "Food and health"
             },
             {
               "value": "probiotic",
-              "label": "t:common.options.probiotic.label",
+              "label": "Probiotic",
               "group": "Food and health"
             },
             {
               "value": "antioxidants",
-              "label": "t:common.options.antioxidants.label",
+              "label": "Antioxidants",
               "group": "Food and health"
             },
             {
               "value": "low_salt",
-              "label": "t:common.options.low_salt.label",
+              "label": "Low salt",
               "group": "Food and health"
             },
             {
               "value": "low_carb",
-              "label": "t:common.options.low_carb.label",
+              "label": "Low carb",
               "group": "Food and health"
             }
           ],
@@ -3108,83 +3049,83 @@
           "type": "text",
           "id": "heading",
           "default": "Collapsible tab",
-          "info": "t:common.blocks.collapsible_tab.settings.heading.info",
-          "label": "t:common.blocks.collapsible_tab.settings.heading.label"
+          "info": "Include a heading that explains the content.",
+          "label": "Heading"
         },
         {
           "type": "richtext",
           "id": "content",
-          "label": "t:common.blocks.collapsible_tab.settings.content.label"
+          "label": "Tab content"
         },
         {
           "type": "page",
           "id": "page",
-          "label": "t:common.blocks.collapsible_tab.settings.page.label"
+          "label": "Tab content from page"
         }
       ]
     },
     {
       "type": "share_buttons",
-      "name": "t:common.blocks.share_buttons.name",
+      "name": "Share buttons",
       "limit": 1,
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         }
       ]
     },
     {
       "type": "nutritional_information",
-      "name": "t:common.blocks.nutritional_information.name",
+      "name": "Nutritional information",
       "limit": 1,
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "text",
           "id": "heading",
           "default": "Nutritional information",
-          "label": "t:common.blocks.nutritional_information.settings.heading.label"
+          "label": "Heading"
         },
         {
           "type": "text",
           "id": "right_label",
           "default": "Per 100g",
-          "label": "t:common.blocks.nutritional_information.settings.right_label.label"
+          "label": "Right label"
         },
         {
           "type": "richtext",
           "id": "information",
-          "label": "t:common.blocks.nutritional_information.settings.information.label",
-          "info": "t:common.blocks.nutritional_information.settings.information.info",
+          "label": "Information",
+          "info": "Separate label and value with a comma. Use line breaks to add a new row. Use a hyphen to indent rows. [Learn more](https://help.switchthemes.co/shapes/guides/nutritional-information.html)",
           "default": "<p>Protein, 13g<br/>Total Carbohydrate, 36g<br/>- Dietary Fiber, 11g<br/>- Sugars, 6g<br/>Total Fat, 1g</p>"
         }
       ]
     },
     {
       "type": "horizontal_bar_chart",
-      "name": "t:common.blocks.horizontal_bar_chart.name",
+      "name": "Horizontal bar chart",
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "text",
           "id": "label",
-          "label": "t:common.blocks.horizontal_bar_chart.settings.label.label",
+          "label": "Label",
           "default": "Label"
         },
         {
@@ -3194,38 +3135,38 @@
           "max": 100,
           "step": 1,
           "unit": "%",
-          "label": "t:common.blocks.horizontal_bar_chart.settings.value.label",
+          "label": "Value",
           "default": 50
         },
         {
           "type": "text",
           "id": "value_alt",
-          "label": "t:common.blocks.horizontal_bar_chart.settings.value_alt.label",
-          "info": "t:common.blocks.horizontal_bar_chart.settings.value_alt.info"
+          "label": "Dynamic value",
+          "info": "Override setting above with dynamic sources. [Learn more](https://help.switchthemes.co/shapes/guides/add-bar-charts.html#add-dynamic-sources-to-bar-charts)"
         }
       ]
     },
     {
       "type": "comparative_scale",
-      "name": "t:common.blocks.comparative_scale.name",
+      "name": "Comparative scale",
       "settings": [
         {
           "type": "checkbox",
           "id": "display_on_card",
-          "label": "t:common.settings.display_on_card.label",
+          "label": "Display on card",
           "default": false,
-          "info": "t:common.settings.display_on_card.info"
+          "info": "Adjacent product blocks set to display on card will merge into a single card. [Learn more](https://help.switchthemes.co/shapes/guides/display-product-blocks-on-cards.html)"
         },
         {
           "type": "text",
           "id": "left_label",
-          "label": "t:common.blocks.comparative_scale.settings.left_label.label",
+          "label": "Left label",
           "default": "Label 1"
         },
         {
           "type": "text",
           "id": "right_label",
-          "label": "t:common.blocks.comparative_scale.settings.right_label.label",
+          "label": "Right label",
           "default": "Label 2"
         },
         {
@@ -3235,180 +3176,154 @@
           "max": 100,
           "step": 1,
           "unit": "%",
-          "label": "t:common.blocks.comparative_scale.settings.marker_position.label",
+          "label": "Marker position",
           "default": 50
         },
         {
           "type": "text",
           "id": "marker_position_alt",
-          "label": "t:common.blocks.comparative_scale.settings.marker_position_alt.label",
-          "info": "t:common.blocks.comparative_scale.settings.marker_position_alt.info"
-        }
-      ]
-    },
-    {
-      "type": "complementary",
-      "name": "t:common.blocks.complementary_products.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "paragraph",
-          "content": "t:common.blocks.complementary_products.settings.paragraph_to_select_complementary"
-        },
-        {
-          "type": "text",
-          "id": "block_heading",
-          "default": "Pairs well with",
-          "label": "t:common.blocks.complementary_products.settings.block_heading.label"
-        },
-        {
-          "type": "range",
-          "id": "product_list_limit",
-          "min": 1,
-          "max": 10,
-          "step": 1,
-          "default": 10,
-          "label": "t:common.blocks.complementary_products.settings.product_list_limit.label"
+          "label": "Dynamic marker position",
+          "info": "Override setting above with dynamic sources. [Learn more](https://help.switchthemes.co/shapes/guides/add-comparative-scales.html#add-dynamic-sources-to-comparative-scales)"
         }
       ]
     },
     {
       "type": "background_pattern",
-      "name": "t:common.blocks.background_pattern.name",
+      "name": "Background pattern",
       "settings": [
         {
           "type": "select",
           "id": "type",
-          "label": "t:common.blocks.background_pattern.settings.type.label",
+          "label": "Type",
           "options": [
             {
               "value": "diagonal_lines",
-              "label": "t:common.options.diagonal_lines.label",
+              "label": "Diagonal lines",
               "group": "Lines"
             },
             {
               "value": "grid",
-              "label": "t:common.options.grid_lines.label",
+              "label": "Grid lines",
               "group": "Lines"
             },
             {
               "value": "grid_with_diagonal_lines",
-              "label": "t:common.options.grid_with_diagonal_lines.label",
+              "label": "Grid with diagonal lines",
               "group": "Lines"
             },
             {
               "value": "crosshatch",
-              "label": "t:common.options.crosshatch.label",
+              "label": "Crosshatch",
               "group": "Lines"
             },
             {
               "value": "checkerboard",
-              "label": "t:common.options.checkerboard.label",
+              "label": "Checkerboard",
               "group": "Lines"
             },
             {
               "value": "zig_zag",
-              "label": "t:common.options.zig_zag.label",
+              "label": "Zig Zag",
               "group": "Lines"
             },
             {
               "value": "waves",
-              "label": "t:common.options.waves.label",
+              "label": "Waves",
               "group": "Lines"
             },
             {
               "value": "half_square_triangle",
-              "label": "t:common.options.half-square_triangle.label",
+              "label": "Half-square triangle",
               "group": "Shapes"
             },
             {
               "value": "dots",
-              "label": "t:common.options.dots.label",
+              "label": "Dots",
               "group": "Shapes"
             },
             {
               "value": "triangle",
-              "label": "t:common.options.triangles.label",
+              "label": "Triangles",
               "group": "Shapes"
             },
             {
               "value": "polka_dot",
-              "label": "t:common.options.polka_dot.label",
+              "label": "Polka dot",
               "group": "Shapes"
             },
             {
               "value": "polka_dot_triangles",
-              "label": "t:common.options.polka_dot_triangles.label",
+              "label": "Polka dot triangles",
               "group": "Shapes"
             },
             {
               "value": "plus",
-              "label": "t:common.options.plus.label",
+              "label": "Plus",
               "group": "Shapes"
             },
             {
               "value": "cross",
-              "label": "t:common.options.cross.label",
+              "label": "Cross",
               "group": "Shapes"
             },
             {
               "value": "squares",
-              "label": "t:common.options.squares.label",
+              "label": "Squares",
               "group": "Shapes"
             },
             {
               "value": "diamonds",
-              "label": "t:common.options.diamonds.label",
+              "label": "Diamonds",
               "group": "Shapes"
             },
             {
               "value": "vertical_stripes",
-              "label": "t:common.options.vertical_stripes.label",
+              "label": "Vertical stripes",
               "group": "Stripes"
             },
             {
               "value": "horizontal_stripes",
-              "label": "t:common.blocks.background_pattern.settings.type.options.horizontal_stripes.label",
+              "label": "Horizontal stripes",
               "group": "Stripes"
             },
             {
               "value": "diagonal_stripes",
-              "label": "t:common.options.diagonal_stripes.label",
+              "label": "Diagonal stripes",
               "group": "Stripes"
             },
             {
               "value": "sprinkles",
-              "label": "t:common.blocks.background_pattern.settings.type.options.sprinkles.label",
+              "label": "Sprinkles",
               "group": "Miscellaneous"
             },
             {
               "value": "bubbles",
-              "label": "t:common.blocks.background_pattern.settings.type.options.bubbles.label",
+              "label": "Bubbles",
               "group": "Miscellaneous"
             },
             {
               "value": "squiggle",
-              "label": "t:common.options.squiggle.label",
+              "label": "Squiggle",
               "group": "Miscellaneous"
             },
             {
               "value": "windmill",
-              "label": "t:common.options.windmill.label",
+              "label": "Windmill",
               "group": "Miscellaneous"
             },
             {
               "value": "8bit",
-              "label": "t:common.options.8bit.label",
+              "label": "8bit",
               "group": "Miscellaneous"
             },
             {
               "value": "origami",
-              "label": "t:common.options.origami.label",
+              "label": "Origami",
               "group": "Miscellaneous"
             },
             {
               "value": "3d_cube",
-              "label": "t:common.blocks.background_pattern.settings.type.options.3d_cube.label",
+              "label": "3D Cube",
               "group": "Miscellaneous"
             }
           ]
@@ -3416,32 +3331,28 @@
         {
           "type": "select",
           "id": "color",
-          "label": "t:common.blocks.background_pattern.settings.color.label",
+          "label": "Color",
           "default": "text",
           "options": [
             {
               "value": "text",
-              "label": "t:common.options.text.label"
+              "label": "Text"
             },
             {
-              "value": "accent-1",
-              "label": "t:common.options.accent_1.label"
-            },
-            {
-              "value": "accent-2",
-              "label": "t:common.options.accent_2.label"
+              "value": "accent",
+              "label": "Accent"
             },
             {
               "value": "card",
-              "label": "t:common.options.card.label"
+              "label": "Card"
             },
             {
               "value": "background",
-              "label": "t:common.options.background.label"
+              "label": "Background"
             },
             {
               "value": "gradient",
-              "label": "t:common.options.gradient.label"
+              "label": "Gradient"
             }
           ]
         },
@@ -3451,7 +3362,7 @@
           "min": 6,
           "max": 600,
           "unit": "px",
-          "label": "t:common.blocks.background_pattern.settings.size.label",
+          "label": "Pattern size",
           "step": 6,
           "default": 24
         },
@@ -3462,19 +3373,19 @@
           "max": 100,
           "step": 1,
           "unit": "%",
-          "label": "t:common.settings.opacity.label",
+          "label": "Opacity",
           "default": 100
         },
         {
           "type": "header",
-          "content": "t:common.settings.header_animation"
+          "content": "Animation"
         },
         {
           "type": "checkbox",
           "id": "enable_parallax",
-          "label": "t:common.blocks.background_pattern.settings.enable_parallax.label",
+          "label": "Enable parallax",
           "default": false,
-          "info": "t:common.blocks.background_pattern.settings.enable_parallax.info"
+          "info": "When enabled pattern will scroll slower than the rest of the page."
         },
         {
           "type": "range",
@@ -3482,109 +3393,109 @@
           "min": 1,
           "max": 10,
           "step": 1,
-          "label": "t:common.settings.parallax_speed.label",
+          "label": "Parallax speed",
           "default": 3
         }
       ]
     },
     {
       "type": "background_shape",
-      "name": "t:common.blocks.background_shape.name",
+      "name": "Background shape",
       "settings": [
         {
           "type": "select",
           "id": "shape",
-          "label": "t:common.blocks.background_shape.settings.shape.label",
+          "label": "Shape",
           "default": "square",
           "options": [
             {
               "value": "square",
-              "label": "t:common.blocks.background_shape.settings.shape.options.square.label",
+              "label": "Square",
               "group": "Basic"
             },
             {
               "value": "circle",
-              "label": "t:common.blocks.background_shape.settings.shape.options.circle.label",
+              "label": "Circle",
               "group": "Basic"
             },
             {
               "value": "oval",
-              "label": "t:common.blocks.background_shape.settings.shape.options.oval.label",
+              "label": "Oval",
               "group": "Basic"
             },
             {
               "value": "triangle",
-              "label": "t:common.blocks.background_shape.settings.shape.options.triangle.label",
+              "label": "Triangle",
               "group": "Basic"
             },
             {
               "value": "parallelogram",
-              "label": "t:common.blocks.background_shape.settings.shape.options.parallelogram.label",
+              "label": "Parallelogram",
               "group": "Basic"
             },
             {
               "value": "pentagon",
-              "label": "t:common.options.pentagon.label",
+              "label": "Pentagon",
               "group": "Polygons"
             },
             {
               "value": "hexagon",
-              "label": "t:common.options.hexagon.label",
+              "label": "Hexagon",
               "group": "Polygons"
             },
             {
               "value": "heptagon",
-              "label": "t:common.options.heptagon.label",
+              "label": "Heptagon",
               "group": "Polygons"
             },
             {
               "value": "octagon",
-              "label": "t:common.options.octagon.label",
+              "label": "Octagon",
               "group": "Polygons"
             },
             {
               "value": "star_1",
-              "label": "t:common.options.star_1.label",
+              "label": "Star 1",
               "group": "Circular"
             },
             {
               "value": "star_2",
-              "label": "t:common.options.star_2.label",
+              "label": "Star 2",
               "group": "Circular"
             },
             {
               "value": "star_3",
-              "label": "t:common.options.star_3.label",
+              "label": "Star 3",
               "group": "Circular"
             },
             {
               "value": "star_4",
-              "label": "t:common.options.star_4.label",
+              "label": "Star 4",
               "group": "Circular"
             },
             {
               "value": "scalloped_circle_1",
-              "label": "t:common.options.scalloped_circle_1.label",
+              "label": "Scalloped circle 1",
               "group": "Circular"
             },
             {
               "value": "scalloped_circle_2",
-              "label": "t:common.options.scalloped_circle_2.label",
+              "label": "Scalloped circle 2",
               "group": "Circular"
             },
             {
               "value": "scalloped_circle_3",
-              "label": "t:common.options.scalloped_circle_3.label",
+              "label": "Scalloped circle 3",
               "group": "Circular"
             },
             {
               "value": "scalloped_circle_4",
-              "label": "t:common.options.scalloped_circle_4.label",
+              "label": "Scalloped circle 4",
               "group": "Circular"
             },
             {
               "value": "blob",
-              "label": "t:common.options.blob.label",
+              "label": "Blob",
               "group": "Miscellaneous"
             }
           ]
@@ -3595,9 +3506,9 @@
           "min": 1,
           "max": 10,
           "step": 1,
-          "label": "t:common.blocks.background_shape.settings.blob_type.label",
+          "label": "Blob type",
           "default": 1,
-          "info": "t:common.blocks.background_shape.settings.blob_type.info"
+          "info": "Applies when blob shape is selected above."
         },
         {
           "type": "range",
@@ -3605,7 +3516,7 @@
           "min": 25,
           "max": 300,
           "step": 5,
-          "label": "t:common.blocks.background_shape.settings.size.label",
+          "label": "Size",
           "default": 100
         },
         {
@@ -3615,7 +3526,7 @@
           "max": 100,
           "step": 1,
           "unit": "%",
-          "label": "t:common.settings.opacity.label",
+          "label": "Opacity",
           "default": 100
         },
         {
@@ -3625,12 +3536,12 @@
           "max": 500,
           "step": 5,
           "unit": "px",
-          "label": "t:common.blocks.background_shape.settings.blur.label",
+          "label": "Blur",
           "default": 0
         },
         {
           "type": "header",
-          "content": "t:common.settings.header_position"
+          "content": "Position"
         },
         {
           "type": "range",
@@ -3639,7 +3550,7 @@
           "max": 100,
           "step": 1,
           "unit": "%",
-          "label": "t:common.blocks.background_shape.settings.horizontal_position.label",
+          "label": "Horizontal position",
           "default": 50
         },
         {
@@ -3649,7 +3560,7 @@
           "max": 100,
           "step": 1,
           "unit": "%",
-          "label": "t:common.blocks.background_shape.settings.vertical_position.label",
+          "label": "Vertical position",
           "default": 50
         },
         {
@@ -3659,19 +3570,19 @@
           "max": 90,
           "step": 2,
           "unit": "deg",
-          "label": "t:common.settings.rotate.label",
+          "label": "Rotate",
           "default": 0
         },
         {
           "type": "header",
-          "content": "t:common.settings.header_animation"
+          "content": "Animation"
         },
         {
           "type": "checkbox",
           "id": "enable_parallax",
-          "label": "t:common.blocks.background_shape.settings.enable_parallax.label",
+          "label": "Enable parallax",
           "default": false,
-          "info": "t:common.blocks.background_shape.settings.enable_parallax.info"
+          "info": "When enabled shape will scroll slower than the rest of the page."
         },
         {
           "type": "range",
@@ -3679,247 +3590,243 @@
           "min": 1,
           "max": 10,
           "step": 1,
-          "label": "t:common.settings.parallax_speed.label",
+          "label": "Parallax speed",
           "default": 3
         },
         {
           "type": "header",
-          "content": "t:common.settings.header_color"
+          "content": "Color"
         },
         {
           "type": "select",
           "id": "color",
-          "label": "t:common.blocks.background_shape.settings.color.label",
-          "default": "accent-1",
+          "label": "Color",
+          "default": "accent",
           "options": [
             {
               "value": "text",
-              "label": "t:common.options.text.label"
+              "label": "Text"
             },
             {
-              "value": "accent-1",
-              "label": "t:common.options.accent_1.label"
-            },
-            {
-              "value": "accent-2",
-              "label": "t:common.options.accent_2.label"
+              "value": "accent",
+              "label": "Accent"
             },
             {
               "value": "card",
-              "label": "t:common.options.card.label"
+              "label": "Card"
             },
             {
               "value": "background",
-              "label": "t:common.options.background.label"
+              "label": "Background"
             },
             {
               "value": "gradient",
-              "label": "t:common.options.gradient.label"
+              "label": "Gradient"
             }
           ]
         },
         {
           "type": "select",
           "id": "color_scheme",
-          "label": "t:common.settings.color_scheme.label",
+          "label": "Scheme",
           "default": "same_as_section",
           "options": [
             {
               "value": "same_as_section",
-              "label": "t:common.options.same_as_section.label"
+              "label": "Same as section"
             },
             {
               "value": "primary",
-              "label": "t:common.options.primary.label"
+              "label": "Primary"
             },
             {
               "value": "secondary",
-              "label": "t:common.options.secondary.label"
+              "label": "Secondary"
             },
             {
               "value": "tertiary",
-              "label": "t:common.options.tertiary.label"
+              "label": "Tertiary"
             },
             {
               "value": "quaternary",
-              "label": "t:common.options.quaternary.label"
+              "label": "Quaternary"
             }
           ]
         }
       ]
     },
     {
-      "name": "t:common.blocks.sticker.name",
+      "name": "Sticker",
       "type": "sticker",
       "settings": [
         {
           "type": "textarea",
           "id": "text",
-          "label": "t:common.blocks.sticker.settings.text.label",
+          "label": "Text",
           "default": "Sticker"
         },
         {
           "type": "select",
           "id": "shape",
-          "label": "t:common.blocks.sticker.settings.shape.label",
+          "label": "Shape",
           "options": [
             {
               "value": "fit_to_text",
-              "label": "t:common.blocks.sticker.settings.shape.options.fit_to_text.label"
+              "label": "Fit to text"
             },
             {
               "value": "circle",
-              "label": "t:common.options.circle.label",
+              "label": "Circle",
               "group": "Circular"
             },
             {
               "value": "star_1",
-              "label": "t:common.options.star_1.label",
+              "label": "Star 1",
               "group": "Circular"
             },
             {
               "value": "star_2",
-              "label": "t:common.options.star_2.label",
+              "label": "Star 2",
               "group": "Circular"
             },
             {
               "value": "star_3",
-              "label": "t:common.options.star_3.label",
+              "label": "Star 3",
               "group": "Circular"
             },
             {
               "value": "star_4",
-              "label": "t:common.options.star_4.label",
+              "label": "Star 4",
               "group": "Circular"
             },
             {
               "value": "scalloped_circle_1",
-              "label": "t:common.options.scalloped_circle_1.label",
+              "label": "Scalloped circle 1",
               "group": "Circular"
             },
             {
               "value": "scalloped_circle_2",
-              "label": "t:common.options.scalloped_circle_2.label",
+              "label": "Scalloped circle 2",
               "group": "Circular"
             },
             {
               "value": "scalloped_circle_3",
-              "label": "t:common.options.scalloped_circle_3.label",
+              "label": "Scalloped circle 3",
               "group": "Circular"
             },
             {
               "value": "scalloped_circle_4",
-              "label": "t:common.options.scalloped_circle_4.label",
+              "label": "Scalloped circle 4",
               "group": "Circular"
             },
             {
               "value": "parallelogram",
-              "label": "t:common.options.parallelogram.label",
+              "label": "Parallelogram",
               "group": "Square"
             },
             {
               "value": "scalloped_square",
-              "label": "t:common.options.scalloped.label",
+              "label": "Scalloped",
               "group": "Square"
             },
             {
               "value": "leaf",
-              "label": "t:common.options.leaf.label",
+              "label": "Leaf",
               "group": "Square"
             },
             {
               "value": "clipped_square",
-              "label": "t:common.options.clipped.label",
+              "label": "Clipped",
               "group": "Square"
             },
             {
               "value": "convex_square",
-              "label": "t:common.options.convex.label",
+              "label": "Convex",
               "group": "Square"
             },
             {
               "value": "twisted_square",
-              "label": "t:common.options.twisted.label",
+              "label": "Twisted",
               "group": "Square"
             },
             {
               "value": "trapeze",
-              "label": "t:common.options.trapeze.label",
+              "label": "Trapeze",
               "group": "Square"
             },
             {
               "value": "ellipse",
-              "label": "t:common.options.ellipse.label",
+              "label": "Ellipse",
               "group": "Wide"
             },
             {
               "value": "diamond_wide",
-              "label": "t:common.options.diamond.label",
+              "label": "Diamond",
               "group": "Wide"
             },
             {
               "value": "rounded_diamond_wide",
-              "label": "t:common.options.rounded_diamond.label",
+              "label": "Rounded diamond",
               "group": "Wide"
             },
             {
               "value": "triangle_wide",
-              "label": "t:common.options.triangle.label",
+              "label": "Triangle",
               "group": "Wide"
             },
             {
               "value": "hexagon_wide",
-              "label": "t:common.options.hexagon.label",
+              "label": "Hexagon",
               "group": "Wide"
             },
             {
               "value": "rounded_hexagon",
-              "label": "t:common.options.rounded_hexagon.label",
+              "label": "Rounded hexagon",
               "group": "Wide"
             },
             {
               "value": "uneven_star_wide",
-              "label": "t:common.options.uneven_star.label",
+              "label": "Uneven star",
               "group": "Wide"
             },
             {
               "value": "star_wide",
-              "label": "t:common.options.star.label",
+              "label": "Star",
               "group": "Wide"
             },
             {
               "value": "semicircle",
-              "label": "t:common.options.semicircle.label",
+              "label": "Semicircle",
               "group": "Wide"
             },
             {
               "value": "eye",
-              "label": "t:common.options.eye.label",
+              "label": "Eye",
               "group": "Wide"
             },
             {
               "value": "parallelogram_wide",
-              "label": "t:common.options.parallelogram.label",
+              "label": "Parallelogram",
               "group": "Wide"
             },
             {
               "value": "ribbon",
-              "label": "t:common.options.ribbon.label",
+              "label": "Ribbon",
               "group": "Wide"
             },
             {
               "value": "ticket_stub",
-              "label": "t:common.options.ticket_stub.label",
+              "label": "Ticket stub",
               "group": "Wide"
             },
             {
               "value": "wave_ribbon",
-              "label": "t:common.options.wave_ribbon.label",
+              "label": "Wave ribbon",
               "group": "Wide"
             },
             {
               "value": "zig_zag_ribbon",
-              "label": "t:common.options.zig_zag_ribbon.label",
+              "label": "Zig zag ribbon",
               "group": "Wide"
             }
           ],
@@ -3932,60 +3839,60 @@
           "max": 300,
           "step": 10,
           "unit": "px",
-          "label": "t:common.blocks.sticker.settings.width.label",
+          "label": "Sticker width",
           "default": 150
         },
         {
           "type": "select",
           "id": "sticker_font_size",
-          "label": "t:common.settings.sticker_font_size.label",
+          "label": "Font size",
           "options": [
             {
               "value": "1rem",
-              "label": "t:common.options.extra_small.label"
+              "label": "Extra small"
             },
             {
               "value": "1.25rem",
-              "label": "t:common.options.small.label"
+              "label": "Small"
             },
             {
               "value": "1.563rem",
-              "label": "t:common.options.medium.label"
+              "label": "Medium"
             },
             {
               "value": "1.953rem",
-              "label": "t:common.options.large.label"
+              "label": "Large"
             },
             {
               "value": "2.441rem",
-              "label": "t:common.options.extra_large.label"
+              "label": "Extra large"
             }
           ],
           "default": "1.563rem",
-          "info": "t:common.settings.sticker_font_size.info"
+          "info": "Font size is relative to sticker width."
         },
         {
           "type": "header",
-          "content": "t:common.settings.header_custom_image"
+          "content": "Custom image"
         },
         {
           "type": "paragraph",
-          "content": "t:common.blocks.sticker.settings.paragraph_using_an_image"
+          "content": "Using an image will override shape and text settings above."
         },
         {
           "type": "image_picker",
           "id": "image",
-          "label": "t:common.settings.image.label"
+          "label": "Image"
         },
         {
           "type": "checkbox",
           "id": "half_image_width_on_mobile",
-          "label": "t:common.blocks.sticker.settings.half_image_width_on_mobile.label",
+          "label": "Half image width on mobile",
           "default": true
         },
         {
           "type": "header",
-          "content": "t:common.settings.header_position"
+          "content": "Position"
         },
         {
           "type": "range",
@@ -3994,7 +3901,7 @@
           "max": 100,
           "step": 1,
           "unit": "%",
-          "label": "t:common.blocks.sticker.settings.horizontal_position.label",
+          "label": "Horizontal position",
           "default": 80
         },
         {
@@ -4004,7 +3911,7 @@
           "max": 100,
           "step": 1,
           "unit": "%",
-          "label": "t:common.blocks.sticker.settings.vertical_position.label",
+          "label": "Vertical position",
           "default": 80
         },
         {
@@ -4014,45 +3921,45 @@
           "max": 90,
           "step": 2,
           "unit": "deg",
-          "label": "t:common.settings.rotate.label",
+          "label": "Rotate",
           "default": 0
         },
         {
           "type": "header",
-          "content": "t:common.settings.header_layout"
+          "content": "Layout"
         },
         {
           "type": "checkbox",
           "id": "show_sticker_on_mobile",
-          "label": "t:common.blocks.sticker.settings.show_sticker_on_mobile.label",
+          "label": "Show sticker on mobile",
           "default": true
         },
         {
           "type": "checkbox",
           "id": "show_sticker_on_desktop",
-          "label": "t:common.blocks.sticker.settings.show_sticker_on_desktop.label",
+          "label": "Show sticker on desktop",
           "default": true
         },
         {
           "type": "header",
-          "content": "t:common.settings.header_animation"
+          "content": "Animation"
         },
         {
           "type": "select",
           "id": "rotation_animation",
-          "label": "t:common.blocks.sticker.settings.rotation_animation.label",
+          "label": "Rotation",
           "options": [
             {
               "value": "none",
-              "label": "t:common.blocks.sticker.settings.rotation_animation.options.no_rotation.label"
+              "label": "No rotation"
             },
             {
               "value": "constantly_rotate",
-              "label": "t:common.blocks.sticker.settings.rotation_animation.options.constantly_rotate.label"
+              "label": "Constantly rotate"
             },
             {
               "value": "rotate_when_scrolling",
-              "label": "t:common.blocks.sticker.settings.rotation_animation.options.rotate_only_when_page_is_scrolling.label"
+              "label": "Rotate only when page is scrolling"
             }
           ],
           "default": "none"
@@ -4060,9 +3967,9 @@
         {
           "type": "checkbox",
           "id": "enable_parallax",
-          "label": "t:common.blocks.sticker.settings.enable_parallax.label",
+          "label": "Enable parallax",
           "default": false,
-          "info": "t:common.blocks.sticker.settings.enable_parallax.info"
+          "info": "When enabled stickers will scroll faster than the rest of the page."
         },
         {
           "type": "range",
@@ -4070,186 +3977,182 @@
           "min": 1,
           "max": 10,
           "step": 1,
-          "label": "t:common.settings.parallax_speed.label",
+          "label": "Parallax speed",
           "default": 3
         },
         {
           "type": "header",
-          "content": "t:common.settings.header_color"
+          "content": "Color"
         },
         {
           "type": "select",
           "id": "color",
-          "label": "t:common.settings.color.label",
-          "default": "bg-scheme-accent-1 text-scheme-accent-1-overlay",
+          "label": "Color",
+          "default": "bg-scheme-accent text-scheme-accent-overlay",
           "options": [
             {
               "value": "bg-scheme-text text-scheme-text-overlay",
-              "label": "t:common.options.text.label"
+              "label": "Text"
             },
             {
-              "value": "bg-scheme-accent-1 text-scheme-accent-1-overlay",
-              "label": "t:common.options.accent_1.label"
-            },
-            {
-              "value": "bg-scheme-accent-2 text-scheme-accent-2-overlay",
-              "label": "t:common.options.accent_2.label"
+              "value": "bg-scheme-accent text-scheme-accent-overlay",
+              "label": "Accent"
             },
             {
               "value": "bg-scheme-card text-scheme-text",
-              "label": "t:common.options.card.label"
+              "label": "Card"
             },
             {
               "value": "bg-scheme-background text-scheme-text",
-              "label": "t:common.options.background.label"
+              "label": "Background"
             },
             {
               "value": "bg-scheme-gradient text-scheme-text",
-              "label": "t:common.options.gradient.label"
+              "label": "Gradient"
             }
           ]
         },
         {
           "type": "select",
           "id": "color_scheme",
-          "label": "t:common.settings.color_scheme.label",
+          "label": "Scheme",
           "default": "same_as_section",
           "options": [
             {
               "value": "same_as_section",
-              "label": "t:common.options.same_as_section.label"
+              "label": "Same as section"
             },
             {
               "value": "primary",
-              "label": "t:common.options.primary.label"
+              "label": "Primary"
             },
             {
               "value": "secondary",
-              "label": "t:common.options.secondary.label"
+              "label": "Secondary"
             },
             {
               "value": "tertiary",
-              "label": "t:common.options.tertiary.label"
+              "label": "Tertiary"
             },
             {
               "value": "quaternary",
-              "label": "t:common.options.quaternary.label"
+              "label": "Quaternary"
             }
           ]
         }
       ]
     },
     {
-      "name": "t:common.blocks.shape_divider.name",
+      "name": "Shape divider",
       "type": "shape_divider",
       "limit": 2,
       "settings": [
         {
           "type": "radio",
-          "label": "t:common.blocks.shape_divider.settings.target_section.label",
+          "label": "Target section",
           "id": "target_section",
           "default": "above",
           "options": [
             {
               "value": "above",
-              "label": "t:common.blocks.shape_divider.settings.target_section.options.section_above.label"
+              "label": "Section above"
             },
             {
               "value": "below",
-              "label": "t:common.blocks.shape_divider.settings.target_section.options.section_below.label"
+              "label": "Section below"
             }
           ],
-          "info": "t:common.blocks.shape_divider.settings.target_section.info"
+          "info": "This will be the section that connects to the straight side of the divider. Best to use sections with a solid background color. [Learn more](https://help.switchthemes.co/shapes/style-blocks/shape-divider.html)"
         },
         {
           "type": "select",
-          "label": "t:common.blocks.shape_divider.settings.target_section_color_scheme.label",
+          "label": "Target section color scheme",
           "id": "target_section_color_scheme",
           "default": "secondary",
           "options": [
             {
               "value": "primary",
-              "label": "t:common.options.primary.label"
+              "label": "Primary"
             },
             {
               "value": "secondary",
-              "label": "t:common.options.secondary.label"
+              "label": "Secondary"
             },
             {
               "value": "tertiary",
-              "label": "t:common.options.tertiary.label"
+              "label": "Tertiary"
             },
             {
               "value": "quaternary",
-              "label": "t:common.options.quaternary.label"
+              "label": "Quaternary"
             }
           ],
-          "info": "t:common.blocks.shape_divider.settings.target_section_color_scheme.info"
+          "info": "Select the color scheme of the target section"
         },
         {
           "type": "select",
-          "label": "t:common.blocks.shape_divider.settings.style.label",
+          "label": "Style",
           "id": "style",
           "default": "large-waves_1200x84",
           "options": [
             {
               "value": "large-waves_1200x84",
-              "label": "t:common.blocks.shape_divider.settings.style.options.large_waves.label",
+              "label": "Large waves",
               "group": "Symmetrical"
             },
             {
               "value": "medium-waves_1200x43",
-              "label": "t:common.blocks.shape_divider.settings.style.options.medium_waves.label",
+              "label": "Medium waves",
               "group": "Symmetrical"
             },
             {
               "value": "small-waves_1200x20",
-              "label": "t:common.blocks.shape_divider.settings.style.options.small_waves.label",
+              "label": "Small waves",
               "group": "Symmetrical"
             },
             {
               "value": "large-zig-zag_1200x65",
-              "label": "t:common.blocks.shape_divider.settings.style.options.large_zig_zag.label",
+              "label": "Large zig zag",
               "group": "Symmetrical"
             },
             {
               "value": "medium-zig-zag_1200x37",
-              "label": "t:common.blocks.shape_divider.settings.style.options.medium_zig_zag.label",
+              "label": "Medium zig zag",
               "group": "Symmetrical"
             },
             {
               "value": "small-zig-zag_1200x21",
-              "label": "t:common.blocks.shape_divider.settings.style.options.small_zig_zag.label",
+              "label": "Small zig zag",
               "group": "Symmetrical"
             },
             {
               "value": "waves-1-asymmetrical_1440x261",
-              "label": "t:common.blocks.shape_divider.settings.style.options.waves_1.label",
+              "label": "Waves 1",
               "group": "Asymmetrical"
             },
             {
               "value": "waves-2-asymmetrical_1440x330",
-              "label": "t:common.blocks.shape_divider.settings.style.options.waves_2.label",
+              "label": "Waves 2",
               "group": "Asymmetrical"
             },
             {
               "value": "tilt-1-asymmetrical_1440x101",
-              "label": "t:common.blocks.shape_divider.settings.style.options.tilt_1.label",
+              "label": "Tilt 1",
               "group": "Asymmetrical"
             },
             {
               "value": "tilt-2-asymmetrical_1440x293",
-              "label": "t:common.blocks.shape_divider.settings.style.options.tilt_2.label",
+              "label": "Tilt 2",
               "group": "Asymmetrical"
             },
             {
               "value": "mountains-1-asymmetrical_1440x293",
-              "label": "t:common.blocks.shape_divider.settings.style.options.mountains_1.label",
+              "label": "Mountains 1",
               "group": "Asymmetrical"
             },
             {
               "value": "mountains-2-asymmetrical_1440x325",
-              "label": "t:common.blocks.shape_divider.settings.style.options.mountains_2.label",
+              "label": "Mountains 2",
               "group": "Asymmetrical"
             }
           ]
@@ -4257,30 +4160,30 @@
         {
           "type": "checkbox",
           "id": "flip_horizontal",
-          "label": "t:common.blocks.shape_divider.settings.flip_horizontal.label"
+          "label": "Flip horizontal"
         },
         {
           "type": "header",
-          "content": "t:common.settings.header_animation"
+          "content": "Animation"
         },
         {
           "type": "checkbox",
           "id": "enable_animation",
-          "label": "t:common.blocks.shape_divider.settings.enable_animation.label",
-          "info": "t:common.blocks.shape_divider.settings.enable_animation.info"
+          "label": "Enable animation",
+          "info": "Asymmetrical shape dividers will sway when animated."
         },
         {
           "type": "radio",
           "id": "animation_direction",
-          "label": "t:common.blocks.shape_divider.settings.animation_direction.label",
+          "label": "Direction",
           "options": [
             {
               "value": "",
-              "label": "t:common.options.right_to_left.label"
+              "label": "Right to left"
             },
             {
               "value": "reverse",
-              "label": "t:common.options.left_to_right.label"
+              "label": "Left to right"
             }
           ],
           "default": ""
