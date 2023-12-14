@@ -32,7 +32,7 @@
           }
         },
         "32421e16-850d-40a7-a646-186516bdb90d": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
             "contentSize": 16,
             "pattern": "",
@@ -67,7 +67,7 @@
           "type": "liquid",
           "settings": {
             "display_on_card": false,
-            "liquid": "<div class=\"mb-2.5\">\n      {{ form | payment_terms }}\n    </div>"
+            "liquid": "<div class=\"mb-2.5\">\n      {{ form | payment_terms }}\n    <\/div>"
           }
         },
         "quantity_selector": {
@@ -98,8 +98,9 @@
           }
         },
         "75d78151-c206-49e1-a7c8-67f158a8394a": {
-          "type": "shopify://apps/epa-easy-product-addons/blocks/spice_addons/0099190e-a0cb-49e7-8d26-026c9d26f337",
-          "settings": {}
+          "type": "shopify:\/\/apps\/epa-easy-product-addons\/blocks\/spice_addons\/0099190e-a0cb-49e7-8d26-026c9d26f337",
+          "settings": {
+          }
         },
         "a17e90c4-acc9-4f1d-af84-828ae4cb2289": {
           "type": "description",
@@ -115,7 +116,7 @@
             "display_on_card": false,
             "icon": "price-tag",
             "heading": "Product Information",
-            "content": "<p>Our iconic flawless finish is made from premium poly-resin, it’s perfect for indoors and outdoors. Each Slugg® pot comes with 2 drainage holes. Slugg® garden pots are pre-packaged as a set of three and cannot be purchased individually.</p>",
+            "content": "<p>Our iconic flawless finish is made from premium poly-resin, it’s perfect for indoors and outdoors. Each Slugg® pot comes with 2 drainage holes. Slugg® garden pots are pre-packaged as a set of three and cannot be purchased individually.<\/p>",
             "page": ""
           }
         },
@@ -145,6 +146,9 @@
         "dd821fb8-a8d4-4cc7-be01-af94d689d4a0",
         "de4c6c8d-98ab-427e-920f-05f71b84497e"
       ],
+      "custom_css": [
+        "h1 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 70px;}"
+      ],
       "settings": {
         "crop": "",
         "image_shape": "default",
@@ -171,9 +175,9 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Free_Metro_Shipping.webp",
+            "image": "shopify:\/\/shop_images\/Free_Metro_Shipping.webp",
             "title": "FREE metro delivery*",
-            "text": "<p>Actual slugs may be slow. But our super fast and free shipping network isn’t!</p>",
+            "text": "<p>Actual slugs may be slow. But our super fast and free shipping network isn’t!<\/p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "same_as_section"
@@ -183,9 +187,9 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Threes.webp",
+            "image": "shopify:\/\/shop_images\/Threes.webp",
             "title": "Good things come in threes",
-            "text": "<p>Sluggs® are sold as a set of three garden pots in a box.</p>",
+            "text": "<p>Sluggs® are sold as a set of three garden pots in a box.<\/p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "same_as_section"
@@ -195,9 +199,9 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Suitable.webp",
+            "image": "shopify:\/\/shop_images\/Suitable.webp",
             "title": "Suitable for indoors & out",
-            "text": "<p>The entire Slugg® range is suitable for indoor and outside.</p>",
+            "text": "<p>The entire Slugg® range is suitable for indoor and outside.<\/p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "same_as_section"
@@ -207,9 +211,9 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Built_to_last.webp",
+            "image": "shopify:\/\/shop_images\/Built_to_last.webp",
             "title": "Built to last",
-            "text": "<p>Slugg® garden pots are waterproof, lightweight, and tougher than nails</p>",
+            "text": "<p>Slugg® garden pots are waterproof, lightweight, and tougher than nails<\/p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "same_as_section"
@@ -250,7 +254,7 @@
       "type": "custom-liquid",
       "settings": {
         "title": "What our customers are saying.",
-        "custom_liquid": "<div class=\"text-center\"><div class=\"product-review-title\">{{ product.metafields.loox.avg_rating }} <span class=\"loox-rating\" data-id=\"{{ product.id }}\" data-rating=\"{{ product.metafields.loox.avg_rating }}\" data-raters=\"{{ product.metafields.loox.num_reviews }}\"></span></div> Based on {{ product.metafields.loox.num_reviews }} Reviews</div>",
+        "custom_liquid": "<div class=\"text-center\"><div class=\"product-review-title\">{{ product.metafields.loox.avg_rating }} <span class=\"loox-rating\" data-id=\"{{ product.id }}\" data-rating=\"{{ product.metafields.loox.avg_rating }}\" data-raters=\"{{ product.metafields.loox.num_reviews }}\"><\/span><\/div> Based on {{ product.metafields.loox.num_reviews }} Reviews<\/div>",
         "full_width": false,
         "color_scheme": "primary"
       }
@@ -260,7 +264,7 @@
       "disabled": true,
       "settings": {
         "display_on_card": true,
-        "video": "shopify://files/videos/Slugg.mov",
+        "video": "shopify:\/\/files\/videos\/Slugg.mov",
         "autoplay": true,
         "muted": true,
         "loop": true,
@@ -274,7 +278,7 @@
         "disable_media_style": false,
         "title": "Why are they sold in sets of three?",
         "heading_size": "heading-feature",
-        "richtext": "<p>Things look better in threes. Why? Apparently, it's just the way our lovely brains work. Designers call it \"the law of threes\".<br/><br/></p>",
+        "richtext": "<p>Things look better in threes. Why? Apparently, it's just the way our lovely brains work. Designers call it \"the law of threes\".<br\/><br\/><\/p>",
         "text_alignment": "text-center",
         "button_link": "",
         "button_label": "Shop Now",
@@ -286,7 +290,7 @@
       "type": "apps",
       "blocks": {
         "7f606d80-fef1-4411-944e-419ffd74eb65": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
             "only_photos": false,
             "aggregated": false,
@@ -296,7 +300,9 @@
           }
         }
       },
-      "block_order": ["7f606d80-fef1-4411-944e-419ffd74eb65"],
+      "block_order": [
+        "7f606d80-fef1-4411-944e-419ffd74eb65"
+      ],
       "settings": {
         "apply_vertical_spacing": true,
         "apply_horizontal_spacing": true,
@@ -313,7 +319,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Group_48097257.png",
+            "image": "shopify:\/\/shop_images\/Group_48097257.png",
             "video_link": "",
             "title": "",
             "text": "",
@@ -326,8 +332,8 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Group_48097262.png",
-            "video_link": "https://www.youtube.com/watch?v=x321g6BTSE0",
+            "image": "shopify:\/\/shop_images\/Group_48097262.png",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=x321g6BTSE0",
             "title": "",
             "text": "",
             "cta_link": "",
@@ -339,7 +345,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Group_48097263.png",
+            "image": "shopify:\/\/shop_images\/Group_48097263.png",
             "video_link": "",
             "title": "",
             "text": "",
@@ -352,8 +358,8 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Group_48097262.png",
-            "video_link": "https://www.youtube.com/watch?v=x321g6BTSE0",
+            "image": "shopify:\/\/shop_images\/Group_48097262.png",
+            "video_link": "https:\/\/www.youtube.com\/watch?v=x321g6BTSE0",
             "title": "",
             "text": "",
             "cta_link": "",
@@ -365,7 +371,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/Group_48097257.png",
+            "image": "shopify:\/\/shop_images\/Group_48097257.png",
             "video_link": "",
             "title": "",
             "text": "",
@@ -385,7 +391,7 @@
       "settings": {
         "display_on_card": true,
         "title": "How others have styled Lucy",
-        "sub_text": "<p>Show us how you style your pots by tagging @potsbyslugg</p>",
+        "sub_text": "<p>Show us how you style your pots by tagging @potsbyslugg<\/p>",
         "enable_slider": true,
         "carousel_dots": false,
         "carousel_arrows": true,
@@ -412,7 +418,9 @@
           }
         }
       },
-      "block_order": ["bf6f90da-771b-41ae-9708-ac9e463d0e60"],
+      "block_order": [
+        "bf6f90da-771b-41ae-9708-ac9e463d0e60"
+      ],
       "custom_css": [
         "h3 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 50px;}",
         ".price {font-family: \"DM Sans\"; font-weight: 200; font-size: 25px;}"
@@ -438,7 +446,7 @@
           "settings": {
             "icon": "none",
             "question": "Why are they sold in sets of three?",
-            "answer": "<p>Designers call it \"the law of three\". Even numbers create symmetry, while odd numbers create a focal point and add interest to a space. The size of each Slugg garden pot has been designed to ensure the scale works in a cluster of three. </p>"
+            "answer": "<p>Designers call it \"the law of three\". Even numbers create symmetry, while odd numbers create a focal point and add interest to a space. The size of each Slugg garden pot has been designed to ensure the scale works in a cluster of three. <\/p>"
           }
         },
         "template--17029417206002__faq-question-2": {
@@ -446,7 +454,7 @@
           "settings": {
             "icon": "none",
             "question": "How do I use them?",
-            "answer": "<p>Sluggs look best grouped together to form a cluster of three pots. However, many of our customers use their Slugg pots individually. You can plant them up (soil inside the pot) or you can simply place your nursery pot inside the empty Slugg pot.</p>"
+            "answer": "<p>Sluggs look best grouped together to form a cluster of three pots. However, many of our customers use their Slugg pots individually. You can plant them up (soil inside the pot) or you can simply place your nursery pot inside the empty Slugg pot.<\/p>"
           }
         },
         "template--17029417206002__faq-question-5": {
@@ -454,7 +462,7 @@
           "settings": {
             "icon": "none",
             "question": "What are the pots made of?",
-            "answer": "<p>Slugg garden pots are made from poly resin. They are lightweight, waterproof and far stronger than traditional concrete planters.</p>"
+            "answer": "<p>Slugg garden pots are made from poly resin. They are lightweight, waterproof and far stronger than traditional concrete planters.<\/p>"
           }
         },
         "template--17029417206002__faq-question-4": {
@@ -462,7 +470,7 @@
           "settings": {
             "icon": "none",
             "question": "Can I purchase the pots individually?",
-            "answer": "<p>Slugg garden pots are sold in sets of three, which makes it super easy to create the perfect pot cluster. They are not available for individual purchase.</p>"
+            "answer": "<p>Slugg garden pots are sold in sets of three, which makes it super easy to create the perfect pot cluster. They are not available for individual purchase.<\/p>"
           }
         },
         "template--17029417206002__faq-question-3": {
@@ -470,7 +478,7 @@
           "settings": {
             "icon": "none",
             "question": "Do they have drainage holes?",
-            "answer": "<p>Yes, every Slugg garden pot comes with 2 drainage holes.</p>"
+            "answer": "<p>Yes, every Slugg garden pot comes with 2 drainage holes.<\/p>"
           }
         },
         "5b43b6a4-76c1-4e41-a9b8-8e623f21b5ce": {
@@ -478,7 +486,7 @@
           "settings": {
             "icon": "none",
             "question": "When are you launching in the USA?",
-            "answer": "<p>We're super excited to announce that we'll be launching in the USA in February 2024.</p>"
+            "answer": "<p>We're super excited to announce that we'll be launching in the USA in February 2024.<\/p>"
           }
         },
         "555d023b-4e11-4b63-8bcc-5af8b1e55410": {
@@ -507,7 +515,7 @@
         "heading_text_style": "heading",
         "two_columns_desktop": true,
         "title": "FAQ",
-        "richtext": "<p>Find the most frequently asked questions below.</p>",
+        "richtext": "<p>Find the most frequently asked questions below.<\/p>",
         "color_scheme": "primary",
         "use_gradient_background": false
       }
