@@ -1,43 +1,162 @@
-{%- comment -%}
-  This is a required section for the Shopify Theme Store.
-  It is available in the "Featured Collection" section in the theme editor.
-
-  Theme Store required settings
-  - Collection
-
-  Theme Store optional settings
-  - Heading: title of the featured collection section
-{%- endcomment -%}
-
 {%- liquid
-  assign collection = collections[section.settings.collection]
-  if section.settings.image_shape != ''
-    assign image_shape = section.settings.image_shape
+  assign block_heading_level = 'h2'
+  assign columns = section.blocks | where: 'type', 'column'
+  assign crop = section.settings.crop
+  assign slideshow_on_mobile = section.settings.slideshow_on_mobile
+  assign divisible_by_four = columns.size | modulo: 4
+  assign divisible_by_three = columns.size | modulo: 3
+  if divisible_by_four == 0
+    assign col_span = 'lg:col-span-3'
+  elsif divisible_by_three == 0
+    assign col_span = 'lg:col-span-4'
   else
-    assign image_shape = settings.product_tile_media_shape
+    assign col_span = 'lg:col-span-6'
   endif
+  assign index_id = 'index-' | append: section.id
 -%}
+
+{%- render 'collection-shape-defs',
+  shape: section.settings.image_shape,
+  section_id: section.id,
+  item_count: columns.size
+-%}
+
+{%- render 'static-sticker-defs' with shape: section.settings.index_shape, id: index_id -%}
 <section
-  class="feature-collection-main relative text-scheme-text bg-scheme-background  overflow-hidden {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %} overflow-hidden"
+  class="relative custom-text-colums-with-images text-scheme-text bg-scheme-background  {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %} relative overflow-hidden"
   data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}"
 >
-  <div class="section-content relative z-10 py-section-vertical-spacing {% unless section.settings.layout == 'carousel' %}px-section w-full max-w-site mx-auto{% endunless %}">
+  <div class="section-content relative z-10 py-section-vertical-spacing {% if slideshow_on_mobile %}lg:px-section lg:max-w-site lg:mx-auto{% else %}px-section{% endif %}">
     {% if section.settings.title != '' %}
-      <h2 class="text-center heading-effects h1 heading-style break-words {{ settings.heading_drop_shadow_style }}">
+      {%- assign block_heading_level = 'h3' -%}
+      <h2 class="text-center font-heading heading-effects heading-base heading-style break-words {{ settings.heading_drop_shadow_style }}">
         {{ section.settings.title }}
       </h2>
     {% endif %}
 
-    {% if section.settings.subheading != '' %}
-      <div class="rte mt-5 text-center mx-auto max-w-md">{{ section.settings.subheading }}</div>
-    {%- endif -%}
-
-    {%- render 'featured-collection',
-      item: section,
-      collection: collection,
-      showShopBtn: section.settings.enable_shop_btn,
-      image_shape: image_shape
-    -%}
+    <div
+      {% if slideshow_on_mobile %}
+        id="slideshow-{{ section.id }}"
+      {% endif %}
+      class="{% if slideshow_on_mobile %}splide{% endif %}  {% if section.settings.title != '' %}section-content-top-margin{% endif %}"
+    >
+      <div class="{% if slideshow_on_mobile %}splide__track {% if section.settings.display_on_card %}{% if settings.card_shadow_direction contains 'top' %}pt-card-shadow{% else %}pb-card-shadow{% endif %}{% endif %}{% endif %}">
+        <ul class="{% if slideshow_on_mobile %}splide__list{% endif %} {% if section.settings.title != '' %}section-content-top-margin{% endif %} {% if slideshow_on_mobile %}lg:grid lg:gap-10{% else %}grid grid-cols-1 {% endif %} lg:grid-cols-12 ">
+          {% for block in columns %}
+            <li
+              class="{% if slideshow_on_mobile %}splide__slide w-4/5 lg:w-full{% endif %} relative {{ col_span }} {% if section.settings.display_on_card %}text-scheme-text {% endif %}"
+              {% unless block.settings.color_scheme == 'same_as_section' %}
+                data-color-scheme="{{ block.settings.color_scheme }}"
+              {% endunless %}
+              {{ block.shopify_attributes }}
+            >
+              <div class="{% if section.settings.display_on_card %}card {% endif %} {% if section.settings.text_align == 'align_left' %} text-left {% elsif section.settings.text_align == 'align_center' %} text-center {% elsif section.settings.text_align == 'align_right' %} text-right{% endif %}">
+                {%- if block.settings.show_image -%}
+                  {%- liquid
+                    assign shape_id = section.id
+                    if section.settings.image_shape == 'blob'
+                      assign shape_id = section.id | append: '-' | append: forloop.index0
+                    endif
+                  -%}
+                  {%- if block.settings.image != blank -%}
+                    <div class="relative mb-5 {% if settings.media_shadow_direction contains 'top' %}pt-media-shadow{% else %}pb-media-shadow{% endif %}">
+                      {%- render 'media-image',
+                        media: block.settings.image,
+                        shape_id: shape_id,
+                        shape: section.settings.image_shape,
+                        is_card: section.settings.display_on_card,
+                        crop: crop,
+                        index: forloop.index0
+                      %}
+                    </div>
+                  {%- else -%}
+                    <div class=" mb-5 {% if settings.media_shadow_direction contains 'top' %}pt-media-shadow{% else %}pb-media-shadow{% endif %}">
+                      <div class="relative w-full">
+                        {%- render 'media-image-placeholder',
+                          shape_id: shape_id,
+                          container_id: section.id,
+                          index: forloop.index0,
+                          shape: section.settings.image_shape,
+                          crop: section.settings.crop,
+                          is_card: false
+                        -%}
+                      </div>
+                    </div>
+                  {%- endif -%}
+                {%- endif -%}
+                {% if block.settings.title != '' %}
+                  <{{ block_heading_level }} class="title h2 break-words">
+                    {{- block.settings.title -}}
+                  </{{ block_heading_level }}>
+                {% endif %}
+                <div class="description {% if block.settings.title != '' %}mt-2.5{% endif %}">
+                  {{ block.settings.text }}
+                </div>
+                {% if block.settings.cta_link %}
+                  <div class="relative z-10">
+                    <a href="{{ block.settings.cta_link }}" class="inline-block push-btn">
+                      <span class="read-more-link">{{ block.settings.cta_text }}</span>
+                    </a>
+                  </div>
+                {% endif %}
+              </div>
+              {% if section.settings.display_on_card and settings.card_show_border_on_shadow %}
+                <div class="card-border"></div>
+              {% endif %}
+              {%- if section.settings.show_index_on_blocks -%}
+                {%- liquid
+                  assign text = forloop.index
+                  assign id = 'sticker-' | append: section.id | append: '-' | append: forloop.index
+                  assign shape = section.settings.index_shape
+                -%}
+                {%- render 'static-sticker',
+                  static_id: index_id,
+                  shape: shape,
+                  id: id,
+                  text: text,
+                  vertical_position: 10,
+                  horizontal_position: 10,
+                  rotate: 0,
+                  width: 80,
+                  font_size: '3.563594rem',
+                  color: 'bg-scheme-accent text-scheme-accent-overlay'
+                %}
+              {%- endif -%}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {%- if slideshow_on_mobile -%}
+        <div class="splide__arrows flex justify-between items-center mt-5 px-section lg:hidden">
+          {%- render 'splide-navigation' -%}
+        </div>
+        <script class="slideshow-options" type="application/json">
+          {
+            "mediaQuery": "min",
+            "arrows": true,
+            "pagination": false,
+            "rewind": true,
+            "autoWidth": true,
+            "gap": "2.5rem",
+            "focus": "left",
+            "type": "slide",
+            "autoScroll": {
+              "autoStart": false,
+              "speed": {{ section.settings.autoscroll_mode | plus: 0 | json }}
+            },
+            "padding": {
+              "left": "1.25rem",
+              "right": "1.25rem"
+            },
+            "breakpoints": {
+              "990": {
+                "destroy": "true"
+              }
+            }
+          }
+        </script>
+      {%- endif -%}
+    </div>
   </div>
 
   {%- liquid
@@ -63,55 +182,17 @@
   endfor
 -%}
 
+{%- if slideshow_on_mobile -%}
+  {% unless request.design_mode %}
+    <script src="{{ 'modules-slideshow.bundle.min.js' | asset_url }}" type="module"></script>
+  {% endunless %}
+  {{ 'modules-slideshow.bundle.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+
 {% schema %}
 {
-  "name": "Featured collection",
+  "name": "Custom text with images",
   "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Heading",
-      "default": "Featured collection"
-    },
-    {
-      "id": "subheading",
-      "type": "text",
-      "label": "Subheading",
-      "default": "Use this text to share information about your collection."
-    },
-    {
-      "id": "collection",
-      "type": "collection",
-      "label": "Collection"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_shop_btn",
-      "label": "Show shop button"
-    },
-    {
-      "type": "range",
-      "id": "no_products",
-      "min": 2,
-      "max": 18,
-      "step": 1,
-      "label": "Number of products",
-      "default": 4
-    },
-    {
-      "type": "checkbox",
-      "id": "show_view_all",
-      "label": {
-        "en": "Show 'View all' link"
-      },
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_quick_buy",
-      "label": "Enable quick buy",
-      "info": "If a product only has two variants buttons will be shown. [Learn more](https://help.switchthemes.co/shapes/guides/show-quick-buy.html)"
-    },
     {
       "type": "checkbox",
       "id": "display_on_card",
@@ -119,140 +200,24 @@
       "default": true
     },
     {
-      "type": "radio",
-      "id": "layout",
-      "label": "Layout",
-      "default": "grid",
-      "options": [
-        {
-          "value": "grid",
-          "label": "Grid"
-        },
-        {
-          "value": "carousel",
-          "label": "Carousel"
-        }
-      ]
+      "type": "checkbox",
+      "id": "slideshow_on_mobile",
+      "label": "Slideshow on mobile",
+      "default": false
     },
     {
-      "type": "header",
-      "content": "Grid"
-    },
-    {
-      "type": "paragraph",
-      "content": "These settings only apply when layout is set to grid."
-    },
-    {
-      "type": "radio",
-      "id": "products_per_row_mobile",
-      "label": "Products per row on mobile",
-      "default": "1",
-      "options": [
-        {
-          "value": "1",
-          "label": "1"
-        },
-        {
-          "value": "2",
-          "label": "2"
-        }
-      ]
-    },
-    {
-      "type": "range",
-      "id": "products_per_row_desktop",
-      "min": 2,
-      "max": 5,
-      "step": 1,
-      "label": "Products per row on desktop",
-      "default": 4
-    },
-    {
-      "type": "header",
-      "content": "Carousel"
-    },
-    {
-      "type": "paragraph",
-      "content": "These settings only apply when layout is set to carousel."
-    },
-    {
-      "type": "radio",
-      "id": "slideshow_focus",
-      "label": "Slideshow focus",
-      "options": [
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "left",
-          "label": "Left"
-        }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "radio",
-      "id": "mobile_slide_width",
-      "label": "Mobile slide width",
-      "options": [
-        {
-          "value": "three_fifths",
-          "label": "Three fifths"
-        },
-        {
-          "value": "full_width",
-          "label": "Full width"
-        }
-      ],
-      "default": "three_fifths"
-    },
-    {
-      "type": "range",
-      "id": "desktop_slide_width",
-      "min": 20,
-      "max": 60,
-      "step": 5,
-      "unit": "%",
-      "label": "Desktop slide width",
-      "default": 40
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
     },
     {
       "type": "select",
-      "id": "autoscroll_mode",
-      "label": "Autoscroll mode",
-      "options": [
-        {
-          "value": "1",
-          "label": "Right to left"
-        },
-        {
-          "value": "-1",
-          "label": "Left to right"
-        },
-        {
-          "value": "0",
-          "label": "Disabled"
-        }
-      ],
-      "default": "1"
-    },
-    {
-      "type": "header",
-      "content": "Product grid"
-    },
-    {
-      "type": "select",
-      "id": "product_tiles_aspect_ratio",
-      "label": "Image aspect ratio",
+      "id": "crop",
+      "label": "Crop images",
       "options": [
         {
           "value": "",
-          "label": "Same as theme settings"
-        },
-        {
-          "value": "natural",
-          "label": "Natural"
+          "label": "No crop"
         },
         {
           "value": "aspect-w-4 aspect-h-3",
@@ -272,12 +237,8 @@
     {
       "type": "select",
       "id": "image_shape",
-      "label": "Image shape",
+      "label": "Default image shape",
       "options": [
-        {
-          "value": "",
-          "label": "Same as theme settings"
-        },
         {
           "value": "default",
           "label": "Default",
@@ -512,6 +473,121 @@
       "info": "Selecting some shapes will crop the image. [Learn more](https://help.switchthemes.co/shapes/guides/style-images-with-shapes.html)"
     },
     {
+      "type": "checkbox",
+      "id": "show_index_on_blocks",
+      "label": "Display index on blocks",
+      "default": false,
+      "info": "Shows a number on each block, great for \"how it works\" sections that involve steps."
+    },
+    {
+      "type": "select",
+      "id": "index_shape",
+      "label": "Index shape",
+      "options": [
+        {
+          "value": "circle",
+          "label": "Circle",
+          "group": "Circular"
+        },
+        {
+          "value": "star_1",
+          "label": "Star 1",
+          "group": "Circular"
+        },
+        {
+          "value": "star_2",
+          "label": "Star 2",
+          "group": "Circular"
+        },
+        {
+          "value": "star_3",
+          "label": "Star 3",
+          "group": "Circular"
+        },
+        {
+          "value": "star_4",
+          "label": "Star 4",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_1",
+          "label": "Scalloped circle 1",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_2",
+          "label": "Scalloped circle 2",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_3",
+          "label": "Scalloped circle 3",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_4",
+          "label": "Scalloped circle 4",
+          "group": "Circular"
+        },
+        {
+          "value": "parallelogram",
+          "label": "Parallelogram",
+          "group": "Square"
+        },
+        {
+          "value": "scalloped_square",
+          "label": "Scalloped",
+          "group": "Square"
+        },
+        {
+          "value": "leaf",
+          "label": "Leaf",
+          "group": "Square"
+        },
+        {
+          "value": "clipped_square",
+          "label": "Clipped",
+          "group": "Square"
+        },
+        {
+          "value": "convex_square",
+          "label": "Convex",
+          "group": "Square"
+        },
+        {
+          "value": "twisted_square",
+          "label": "Twisted",
+          "group": "Square"
+        },
+        {
+          "value": "trapeze",
+          "label": "Trapeze",
+          "group": "Square"
+        }
+      ],
+      "default": "star_1"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Text align",
+      "options": [
+        {
+          "value": "align_left",
+          "label": "Left"
+        },
+        {
+          "value": "align_center",
+          "label": "Center"
+        },
+        {
+          "value": "align_right",
+          "label": "Right"
+        }
+      ],
+      "default": "align_left"
+    },
+    {
       "type": "header",
       "content": "Color"
     },
@@ -545,6 +621,81 @@
     }
   ],
   "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_image",
+          "label": "Show image",
+          "default": true
+        },
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>"
+        },
+        {
+          "type": "header",
+          "content": "Call to action"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "Text"
+        },
+        {
+          "type": "header",
+          "content": "Color"
+        },
+        {
+          "type": "select",
+          "id": "color_scheme",
+          "label": "Scheme",
+          "default": "same_as_section",
+          "options": [
+            {
+              "value": "same_as_section",
+              "label": "Same as section"
+            },
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "tertiary",
+              "label": "Tertiary"
+            },
+            {
+              "value": "quaternary",
+              "label": "Quaternary"
+            }
+          ]
+        }
+      ]
+    },
     {
       "type": "background_pattern",
       "name": "Background pattern",
@@ -1551,7 +1702,18 @@
   ],
   "presets": [
     {
-      "name": "Featured collection"
+      "name": "Custom text with images",
+      "blocks": [
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        }
+      ]
     }
   ]
 }

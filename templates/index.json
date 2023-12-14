@@ -38,7 +38,7 @@
       ],
       "settings": {
         "display_on_card": true,
-        "image": "shopify://shop_images/Garden_Pots_LA.webp",
+        "image": "shopify://shop_images/slugg_banner.png",
         "sub_heading": "4.9 based on +1,500 REVIEWS",
         "review": 5,
         "crop": "",
@@ -103,7 +103,7 @@
         "title": "Meet the three Sluggs",
         "subheading": "Three unique styles available in three stunning colours.",
         "collection": "all-pots",
-        "enable_shop_btn": false,
+        "enable_shop_btn": true,
         "no_products": 4,
         "show_view_all": false,
         "enable_quick_buy": false,
@@ -121,63 +121,10 @@
         "use_gradient_background": false
       }
     },
-    "1650891033bae15b05": {
+    "3a5d3d65-8134-4da7-8340-bc19738b2141": {
       "type": "image-with-text",
-      "disabled": true,
-      "custom_css": [
-        "h2 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 40px;}"
-      ],
-      "settings": {
-        "display_on_card": false,
-        "image": "shopify://shop_images/Garden_Pots_LA.webp",
-        "crop": "aspect-w-1 aspect-h-1",
-        "image_shape": "default",
-        "blob_type": 2,
-        "rotate_image": 0,
-        "image_position": "right",
-        "image_size": "half",
-        "disable_media_style": true,
-        "title": "Give your plants the best home with Slugg®",
-        "heading_size": "heading-feature",
-        "richtext": "<p>Designer garden pot clusters that are guaranteed to look amazing.</p><p>🌱 Sold as a set of three pots in a box.</p><p>🌱 Lightweight, waterproof, and built to last.</p><p>🌱 Launching in the USA in February 2024.</p>",
-        "text_alignment": "text-center",
-        "button_link": "shopify://collections/all-pots",
-        "button_label": "View The Range",
-        "color_scheme": "primary",
-        "use_gradient_background": false
-      }
-    },
-    "655f2e1a-fb20-4f1c-8eac-d9cf096b5f19": {
-      "type": "video-with-text",
-      "disabled": true,
-      "settings": {
-        "display_on_card": false,
-        "video": "shopify://files/videos/Slugg.mov",
-        "autoplay": true,
-        "muted": true,
-        "loop": true,
-        "controls": true,
-        "crop": "",
-        "video_shape": "default",
-        "blob_type": 1,
-        "rotate_video": 0,
-        "video_position": "right",
-        "video_size": "half",
-        "disable_media_style": false,
-        "title": "Why are they sold in sets of three?",
-        "heading_size": "heading-feature",
-        "richtext": "<p>Things look better in threes. Why? Apparently, it's just the way our lovely brains work. Designers call it \"the law of threes\".</p>",
-        "text_alignment": "text-center",
-        "button_link": "shopify://collections/all-pots",
-        "button_label": "Shop Now",
-        "color_scheme": "primary",
-        "use_gradient_background": false
-      }
-    },
-    "16508912994a26e8bf": {
-      "type": "rich-text",
       "blocks": {
-        "ed8757f5-acef-407a-ba72-cf027b8107b1": {
+        "d4f625f1-6977-43c5-9de7-ef89f7e381e1": {
           "type": "shape_divider",
           "settings": {
             "target_section": "above",
@@ -188,53 +135,67 @@
             "animation_direction": ""
           }
         },
-        "519c7175-a4cd-4b52-9365-3aa4120f0ca5": {
-          "type": "shape_divider",
+        "9c5410c7-d7d5-43d2-af4d-df0a5af08ca4": {
+          "type": "icon",
           "settings": {
-            "target_section": "below",
-            "target_section_color_scheme": "primary",
-            "style": "large-waves_1200x84",
-            "flip_horizontal": false,
-            "enable_animation": false,
-            "animation_direction": ""
+            "image_icon": "shopify://shop_images/Leaf_1.png",
+            "icon_title": "Weather Resistant",
+            "sub_text": "<p>Sluggs® are suitable for both inside and outside.</p>",
+            "icon_url": ""
+          }
+        },
+        "3c6c4feb-f5b4-48a4-92ed-b37e10a9bc6d": {
+          "type": "icon",
+          "settings": {
+            "image_icon": "shopify://shop_images/CirclesThree.png",
+            "icon_title": "Modular by Design",
+            "sub_text": "<p>A set of three so now YOU can create the perfect pot cluster!</p>",
+            "icon_url": ""
+          }
+        },
+        "bd863a3f-a0a1-45a9-bf78-68039bd058bb": {
+          "type": "icon",
+          "settings": {
+            "image_icon": "shopify://shop_images/Coins.png",
+            "icon_title": "Sign Up for 5% Off",
+            "sub_text": "<p>Join the Slugg® community and save 5%  today!</p>",
+            "icon_url": ""
+          }
+        },
+        "5eeb779c-6c99-47c3-83db-4d2699428661": {
+          "type": "icon",
+          "settings": {
+            "image_icon": "shopify://shop_images/Star.png",
+            "icon_title": "Highly Rated",
+            "sub_text": "<p>4.9/5 by 900+ verified and happy customers.</p>",
+            "icon_url": ""
           }
         }
       },
       "block_order": [
-        "ed8757f5-acef-407a-ba72-cf027b8107b1",
-        "519c7175-a4cd-4b52-9365-3aa4120f0ca5"
+        "d4f625f1-6977-43c5-9de7-ef89f7e381e1",
+        "9c5410c7-d7d5-43d2-af4d-df0a5af08ca4",
+        "3c6c4feb-f5b4-48a4-92ed-b37e10a9bc6d",
+        "bd863a3f-a0a1-45a9-bf78-68039bd058bb",
+        "5eeb779c-6c99-47c3-83db-4d2699428661"
       ],
-      "disabled": true,
       "settings": {
-        "title": "Why are they sold in sets of three?",
-        "heading_size": "heading-feature",
-        "rich_text": "<p>Things look better in threes. Why? Apparently, it's just the way our lovely brains work. Designers call it \"the law of threes\".</p>",
         "display_on_card": false,
-        "content_width_desktop": "lg:w-2/3",
-        "button_link": "shopify://collections/all-pots",
-        "button_label": "Meet The Sluggs",
-        "color_scheme": "quaternary",
-        "use_gradient_background": false
-      }
-    },
-    "3a5d3d65-8134-4da7-8340-bc19738b2141": {
-      "type": "image-with-text",
-      "settings": {
-        "display_on_card": true,
-        "crop": "",
-        "image_shape": "default",
+        "image": "shopify://shop_images/SLUGGDAY2-73.jpg",
+        "crop": "aspect-w-1 aspect-h-1",
+        "image_shape": "default_archway",
         "blob_type": 1,
         "rotate_image": 0,
-        "image_position": "right",
+        "image_position": "left",
         "image_size": "half",
         "disable_media_style": false,
-        "title": "Image with text",
-        "heading_size": "heading-feature",
+        "title": "We’re overhauling the garden pot industry.",
+        "heading_size": "heading-template",
         "richtext": "",
         "text_alignment": "text-left",
-        "button_link": "",
-        "button_label": "Shop Now",
-        "color_scheme": "primary",
+        "button_link": "shopify://collections/all-pots",
+        "button_label": "Shop All Pots",
+        "color_scheme": "tertiary",
         "use_gradient_background": false
       }
     },
@@ -304,7 +265,7 @@
         "image_shape": "default",
         "show_index_on_blocks": false,
         "index_shape": "star_1",
-        "color_scheme": "primary",
+        "color_scheme": "secondary",
         "use_gradient_background": false
       }
     },
@@ -315,10 +276,11 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "title": "",
-            "text": "",
-            "cta_link": "",
-            "cta_text": "",
+            "image": "shopify://shop_images/001.jpg",
+            "title": "Leah M.",
+            "text": "<p>Most beautiful pots! So light which makes them easy to move around and having them in a cluster of 3 is perfect. Highly recommended! Love these pots so much.</p>",
+            "cta_link": "shopify://products/lucy",
+            "cta_text": "Shop Lucy",
             "color_scheme": "same_as_section"
           }
         },
@@ -326,10 +288,11 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "title": "",
-            "text": "",
-            "cta_link": "",
-            "cta_text": "",
+            "image": "shopify://shop_images/003.jpg",
+            "title": "Paul T.",
+            "text": "<p>Super stylish, lighweight and easy to use. A mate of mine referred you guys to me and everyone who comes over loves them.</p>",
+            "cta_link": "shopify://products/rosie",
+            "cta_text": "Shop Rosie",
             "color_scheme": "same_as_section"
           }
         },
@@ -337,18 +300,57 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "title": "",
-            "text": "",
-            "cta_link": "",
-            "cta_text": "",
+            "image": "shopify://shop_images/002.jpg",
+            "title": "Sam H.",
+            "text": "<p>Love my Thomas pots. Look so beautiful on the front porch.</p>",
+            "cta_link": "shopify://products/thomas",
+            "cta_text": "Shop Thomas",
             "color_scheme": "same_as_section"
+          }
+        },
+        "c8d7de8e-f646-4550-bff9-f4d5c491ce81": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/005.jpg",
+            "title": "Sam H.",
+            "text": "<p>Love my Thomas pots. Look so beautiful on the front porch.</p>",
+            "cta_link": "shopify://products/thomas",
+            "cta_text": "Shop Thomas",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "f77a7e01-4296-45d3-90a4-cb080803d3a5": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/004.jpg",
+            "title": "Liesel R.",
+            "text": "<p>We love the Rosie trio, the fluted profile is so on trend and stunning. These lightweight pots are easy to move around, elevating every space; making it feel new and fresh.</p>",
+            "cta_link": "shopify://products/rosie",
+            "cta_text": "Shop Rosie",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "7789a221-c39b-45b3-b3e4-3935748b8046": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "target_section_color_scheme": "secondary",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
           }
         }
       },
       "block_order": [
         "template--17029417468146__fbbcdb72-eeaa-4d7f-a52f-0edae3a13dd2-column-1",
         "template--17029417468146__fbbcdb72-eeaa-4d7f-a52f-0edae3a13dd2-column-2",
-        "template--17029417468146__fbbcdb72-eeaa-4d7f-a52f-0edae3a13dd2-column-3"
+        "template--17029417468146__fbbcdb72-eeaa-4d7f-a52f-0edae3a13dd2-column-3",
+        "c8d7de8e-f646-4550-bff9-f4d5c491ce81",
+        "f77a7e01-4296-45d3-90a4-cb080803d3a5",
+        "7789a221-c39b-45b3-b3e4-3935748b8046"
       ],
       "settings": {
         "display_on_card": true,
@@ -365,91 +367,11 @@
         "use_gradient_background": false
       }
     },
-    "9272982c-6eec-465b-bb5a-401631ebc54c": {
-      "type": "image-slider",
-      "blocks": {
-        "template--17029417468146__9272982c-6eec-465b-bb5a-401631ebc54c-column-1": {
-          "type": "column",
-          "settings": {
-            "show_image": true,
-            "video_link": "",
-            "title": "",
-            "text": "",
-            "cta_link": "",
-            "cta_text": "",
-            "color_scheme": "same_as_section"
-          }
-        },
-        "template--17029417468146__9272982c-6eec-465b-bb5a-401631ebc54c-column-2": {
-          "type": "column",
-          "settings": {
-            "show_image": true,
-            "video_link": "",
-            "title": "",
-            "text": "",
-            "cta_link": "",
-            "cta_text": "",
-            "color_scheme": "same_as_section"
-          }
-        },
-        "template--17029417468146__9272982c-6eec-465b-bb5a-401631ebc54c-column-3": {
-          "type": "column",
-          "settings": {
-            "show_image": true,
-            "video_link": "",
-            "title": "",
-            "text": "",
-            "cta_link": "",
-            "cta_text": "",
-            "color_scheme": "same_as_section"
-          }
-        }
-      },
-      "block_order": [
-        "template--17029417468146__9272982c-6eec-465b-bb5a-401631ebc54c-column-1",
-        "template--17029417468146__9272982c-6eec-465b-bb5a-401631ebc54c-column-2",
-        "template--17029417468146__9272982c-6eec-465b-bb5a-401631ebc54c-column-3"
-      ],
-      "settings": {
-        "display_on_card": true,
-        "title": "",
-        "sub_text": "<p>Show us how you style your pots by tagging @potsbyslugg</p>",
-        "enable_slider": true,
-        "carousel_dots": true,
-        "carousel_arrows": false,
-        "crop": "",
-        "image_shape": "default",
-        "show_index_on_blocks": false,
-        "index_shape": "star_1",
-        "color_scheme": "primary",
-        "use_gradient_background": false
-      }
-    },
-    "c7f25693-2446-4a61-8431-f88749a9bbdf": {
-      "type": "text-marquee",
-      "disabled": true,
-      "settings": {
-        "text": "Launching in the USA in February 2024",
-        "repeat_text": true,
-        "shape_between_text": "10_point_star",
-        "animate_shape_between_text": true,
-        "link": "",
-        "font": "font-heading heading-secondary",
-        "apply_effects": false,
-        "mobile_text_scale": 1,
-        "desktop_text_scale": 2,
-        "speed": 60,
-        "direction": "",
-        "color_scheme": "quaternary",
-        "use_gradient_background": false
-      }
-    },
     "1698196939a203759b": {
       "type": "apps",
       "blocks": {
         "9f82f6d2-315e-44f9-ae54-02270be1ad77": {
           "type": "shopify://apps/loox-reviews/blocks/loox-gallery-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "disabled": true,
           "settings": {
             "maxWidth": 1100,
             "borderRadius": 60,
@@ -468,6 +390,7 @@
         }
       },
       "block_order": ["9f82f6d2-315e-44f9-ae54-02270be1ad77"],
+      "disabled": true,
       "settings": {
         "apply_vertical_spacing": true,
         "apply_horizontal_spacing": true,
@@ -477,73 +400,87 @@
         "use_gradient_background": false
       }
     },
-    "366fce9f-bdd7-486e-a17d-26f62b964c83": {
-      "type": "faq",
+    "9e35f55f-050c-4dcc-a01f-b43ec8ded31f": {
+      "type": "custom-text-columns-with-images",
       "blocks": {
-        "43b8f7cc-5f65-473c-a5ab-122500d35a31": {
-          "type": "question",
+        "template--17029417468146__9e35f55f-050c-4dcc-a01f-b43ec8ded31f-column-1": {
+          "type": "column",
           "settings": {
-            "icon": "none",
-            "question": "Why are they sold in sets of three?",
-            "answer": "<p>Designers call it \"the law of three\". Even numbers create symmetry, while odd numbers create a focal point and add interest to a space. The size of each Slugg garden pot has been designed to ensure the scale works in a cluster of three. </p>"
+            "show_image": true,
+            "image": "shopify://shop_images/Rectangle_1037.png",
+            "title": "There’s a new garden pot in town",
+            "text": "<p>Committed to designing beautiful products that save the planet.</p>",
+            "cta_link": "shopify://pages/about-us",
+            "cta_text": "READ MORE about US",
+            "color_scheme": "same_as_section"
           }
         },
-        "52399396-7e85-4c1f-b944-0510bd6274ae": {
-          "type": "question",
+        "template--17029417468146__9e35f55f-050c-4dcc-a01f-b43ec8ded31f-column-2": {
+          "type": "column",
           "settings": {
-            "icon": "none",
-            "question": "How do I use them?",
-            "answer": "<p>Sluggs look best grouped together to form a cluster of three pots. However, many of our customers use their Slugg pots individually. You can plant them up (soil inside the pot) or you can simply place your nursery pot inside the empty Slugg pot.</p>"
+            "show_image": true,
+            "image": "shopify://shop_images/Rectangle_1038.png",
+            "title": "Need help picking plants?",
+            "text": "<p>Your Sluggs® will look best paired with some beautiful plants!</p>",
+            "cta_link": "shopify://blogs/plant-guides",
+            "cta_text": "CHECK OUT OUR PLANT GUIDE",
+            "color_scheme": "same_as_section"
           }
         },
-        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-1": {
-          "type": "question",
+        "2bd12464-0bb0-4815-bf92-5eeb8e7ba7eb": {
+          "type": "shape_divider",
           "settings": {
-            "icon": "none",
-            "question": "What are the pots made of?",
-            "answer": "<p>Slugg garden pots are made from poly resin. They are lightweight, waterproof and far stronger than traditional concrete planters.</p>"
-          }
-        },
-        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-2": {
-          "type": "question",
-          "settings": {
-            "icon": "none",
-            "question": "Can I purchase the pots individually?",
-            "answer": "<p>Slugg garden pots are sold in sets of three, which makes it super easy to create the perfect pot cluster. They are not available for individual purchase.</p>"
-          }
-        },
-        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-3": {
-          "type": "question",
-          "settings": {
-            "icon": "none",
-            "question": "Do they have drainage holes?",
-            "answer": "<p>Yes, every Slugg garden pot comes with 2 drainage holes.</p>"
-          }
-        },
-        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-4": {
-          "type": "question",
-          "settings": {
-            "icon": "none",
-            "question": "When are you launching in the USA?",
-            "answer": "<p>We're super excited to announce that we'll be launching in the USA in February 2024.</p>"
+            "target_section": "above",
+            "target_section_color_scheme": "primary",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": true,
+            "enable_animation": false,
+            "animation_direction": ""
           }
         }
       },
       "block_order": [
-        "43b8f7cc-5f65-473c-a5ab-122500d35a31",
-        "52399396-7e85-4c1f-b944-0510bd6274ae",
-        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-1",
-        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-2",
-        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-3",
-        "template--16827327873266__366fce9f-bdd7-486e-a17d-26f62b964c83-question-4"
+        "template--17029417468146__9e35f55f-050c-4dcc-a01f-b43ec8ded31f-column-1",
+        "template--17029417468146__9e35f55f-050c-4dcc-a01f-b43ec8ded31f-column-2",
+        "2bd12464-0bb0-4815-bf92-5eeb8e7ba7eb"
       ],
-      "disabled": true,
       "settings": {
         "display_on_card": true,
-        "heading_text_style": "heading",
-        "two_columns_desktop": true,
-        "title": "FAQ's",
-        "richtext": "<p>Find the most frequently asked questions below.</p>",
+        "slideshow_on_mobile": true,
+        "title": "",
+        "crop": "",
+        "image_shape": "default",
+        "show_index_on_blocks": false,
+        "index_shape": "star_1",
+        "text_align": "align_left",
+        "color_scheme": "secondary",
+        "use_gradient_background": false
+      }
+    },
+    "662a038b-0ca8-4aeb-b529-f3c92a241c34": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h3 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 50px;}",
+        ".price {font-family: \"DM Sans\"; font-weight: 200; font-size: 25px;}"
+      ],
+      "settings": {
+        "title": "Meet the Four Sluggs®",
+        "subheading": "",
+        "collection": "all-pots",
+        "enable_shop_btn": true,
+        "no_products": 3,
+        "show_view_all": false,
+        "enable_quick_buy": false,
+        "display_on_card": true,
+        "layout": "grid",
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 3,
+        "slideshow_focus": "center",
+        "mobile_slide_width": "three_fifths",
+        "desktop_slide_width": 40,
+        "autoscroll_mode": "1",
+        "product_tiles_aspect_ratio": "",
+        "image_shape": "",
         "color_scheme": "primary",
         "use_gradient_background": false
       }
@@ -553,15 +490,11 @@
     "5778b91d-d15e-48f3-a5c6-24af94a3faf7",
     "e60020e4-8d5e-427e-9d35-836db57a0dec",
     "1650891358fef95dd4",
-    "1650891033bae15b05",
-    "655f2e1a-fb20-4f1c-8eac-d9cf096b5f19",
-    "16508912994a26e8bf",
     "3a5d3d65-8134-4da7-8340-bc19738b2141",
     "44d86bd3-5b91-4c16-bb2e-75374a97961d",
     "fbbcdb72-eeaa-4d7f-a52f-0edae3a13dd2",
-    "9272982c-6eec-465b-bb5a-401631ebc54c",
-    "c7f25693-2446-4a61-8431-f88749a9bbdf",
     "1698196939a203759b",
-    "366fce9f-bdd7-486e-a17d-26f62b964c83"
+    "9e35f55f-050c-4dcc-a01f-b43ec8ded31f",
+    "662a038b-0ca8-4aeb-b529-f3c92a241c34"
   ]
 }

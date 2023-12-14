@@ -19,87 +19,24 @@
     when 'full_width'
       assign mobile_slide_width = 'w-full'
   endcase
-
-  assign products_count = 0
-  for product in collection.products limit: item.settings.no_products
-    assign products_count = products_count | plus: 1
-  endfor
-
-  if products_count == 1
-    assign layout = 'grid'
-  endif
-
-  assign desktop_slides_width = item.settings.desktop_slide_width | times: products_count
 -%}
 
-{%- render 'collection-shape-defs',
-  shape: image_shape,
-  section_id: item.id,
-  item_count: item.settings.no_products
--%}
+{%- render 'collection-shape-defs', shape: image_shape, section_id: item.id, item_count: item.settings.no_products -%}
 
 {%- capture view_all_button -%}
 <a href="{{ collection.url }}" class="inline-block push-btn">
   <span class="push-btn-surface">{{ 'collections.general.all_of_collection' | t: collection: collection.title }}</span>
 </a>
 {%- endcapture -%}
-<div {% if layout == 'carousel' %}id="slideshow-{{ section.id }}-{{ index }}"{% endif %} class="{% if item.settings.title != '' %}section-content-top-margin{% endif %} {% if layout == 'carousel' %}splide{% endif %}">
+<div
+  {% if layout == 'carousel' %}
+    id="slideshow-{{ section.id }}-{{ index }}"
+  {% endif %}
+  class="item-wraper {% if item.settings.title != '' %}section-content-top-margin{% endif %} {% if layout == 'carousel' %}splide{% endif %}"
+>
   <div class="{% if layout == 'carousel' %}splide__track {% if settings.product_tiles_scatter %}splide__track--overflow-visible{% endif %} {% if item.settings.display_on_card %}{% if settings.card_shadow_direction contains 'top' %}pt-card-shadow{% else %}pb-card-shadow{% endif %}{% endif %}{% endif %}">
     <ul class="{% if layout == 'carousel' %}splide__list{% endif %} {% if layout == 'grid' %}grid gap-theme {% if mobile_grid_cols == '2' %}grid-cols-2{% else %}grid-cols-1{% endif %} {{ desktop_grid_cols }}{% endif %} {% if settings.product_tiles_scatter %}py-4{% endif %}">
-    {%- for product in collection.products limit: item.settings.no_products -%}
-      <li class="{% if layout == 'carousel' %}splide__slide {{ mobile_slide_width }}{% endif %}">
-        {%- liquid
-          if settings.product_tiles_scatter
-            if layout == 'carousel'
-              capture class
-                cycle '-translate-y-4 ', 'translate-y-4 '
-              endcapture
-              capture scatter_position
-                cycle 'up', 'down'
-              endcapture
-            else
-              capture class
-                case item.settings.products_per_row_mobile
-                  when '2'
-                  cycle 'max-lg:-translate-y-4 ', 'max-lg:translate-y-4 '
-                endcase
-                case item.settings.products_per_row_desktop
-                  when 3
-                    cycle 'lg:translate-y-4 ', 'lg:-translate-y-4 ', 'lg:translate-y-4 '
-                  when 2 or 4
-                    cycle 'lg:-translate-y-4 ', 'lg:translate-y-4 '
-                  when 5
-                    cycle 'lg:translate-y-4 ', 'lg:-translate-y-4 ', 'lg:translate-y-4 ', 'lg:-translate-y-4 ', 'lg:translate-y-4 '
-                endcase
-              endcapture
-            endif
-          endif
-          capture odd_even
-            cycle 'odd', 'even'
-          endcapture
-
-          assign shape_id = item.id
-          if image_shape == 'blob'
-            assign shape_id = item.id | append: '-' | append: forloop.index0
-          endif
-        -%}
-        {%- render 'product-tile'
-          product: product,
-          crop: item.settings.product_tiles_aspect_ratio,
-          shape: image_shape,
-          shape_id: shape_id,
-          display_on_card: item.settings.display_on_card,
-          class: class,
-          odd_even: odd_even,
-          index: forloop.index0,
-          products_per_row_mobile: section.settings.products_per_row_mobile,
-          enable_quick_buy: section.settings.enable_quick_buy,
-          scatter_position: scatter_position
-        -%}
-      </li>
-    {%- else -%}
-      {% for i in (1..item.settings.no_products) %}
-
+      {%- for product in collection.products limit: item.settings.no_products -%}
         <li class="{% if layout == 'carousel' %}splide__slide {{ mobile_slide_width }}{% endif %}">
           {%- liquid
             if settings.product_tiles_scatter
@@ -111,12 +48,12 @@
                 capture class
                   case item.settings.products_per_row_mobile
                     when '2'
-                    cycle 'max-lg:-translate-y-4 ', 'max-lg:translate-y-4 '
+                      cycle 'max-lg:-translate-y-4 ', 'max-lg:translate-y-4 '
                   endcase
                   case item.settings.products_per_row_desktop
                     when 3
                       cycle 'lg:translate-y-4 ', 'lg:-translate-y-4 ', 'lg:translate-y-4 '
-                    when 2 or 4
+                    when 2, 4
                       cycle 'lg:-translate-y-4 ', 'lg:translate-y-4 '
                     when 5
                       cycle 'lg:translate-y-4 ', 'lg:-translate-y-4 ', 'lg:translate-y-4 ', 'lg:-translate-y-4 ', 'lg:translate-y-4 '
@@ -127,74 +64,149 @@
             capture odd_even
               cycle 'odd', 'even'
             endcapture
+
             assign shape_id = item.id
             if image_shape == 'blob'
               assign shape_id = item.id | append: '-' | append: forloop.index0
             endif
           -%}
-          {%- render 'product-tile'
-            product: blank,
+          {%- render 'product-tile',
+            product: product,
             crop: item.settings.product_tiles_aspect_ratio,
-            shape: section.settings.image_shape,
+            shape: image_shape,
             shape_id: shape_id,
             display_on_card: item.settings.display_on_card,
             class: class,
             odd_even: odd_even,
-            index: forloop.index0
+            index: forloop.index0,
+            products_per_row_mobile: section.settings.products_per_row_mobile,
+            enable_quick_buy: section.settings.enable_quick_buy,
+            showShopBtn: showShopBtn
           -%}
+
+          <center class="product-review-main">
+            <div
+              class="loox-rating"
+              data-id="{{ product.id }}"
+              data-rating="{{ product.metafields.loox.avg_rating }}"
+              data-raters="{{ product.metafields.loox.num_reviews }}"
+            ></div>
+            {%- if product.metafields.loox.avg_rating != blank or product.metafields.loox.num_reviews != blank -%}
+              <span>
+                {%- if product.metafields.loox.avg_rating != blank -%}
+                  {{ product.metafields.loox.avg_rating }}
+                {%- endif -%}
+                {%- if product.metafields.loox.num_reviews != blank -%}
+                  ({{ product.metafields.loox.num_reviews }})
+                {%- endif -%}
+              </span>
+            {%- endif -%}
+          </center>
+
+          {%- if product.metafields.custom.sub_title.value -%}
+            <p class="sub_title">{{ product.metafields.custom.sub_title.value }}</p>
+          {%- endif -%}
+
+          {%- if showShopBtn -%}
+            <a href="{{ product.url }}" class="shop_btn primary-button"> Shop {{ product.title }} </a>
+          {%- endif -%}
         </li>
+      {%- else -%}
+        {% for i in (1..item.settings.no_products) %}
+          <li class="{% if layout == 'carousel' %}splide__slide {{ mobile_slide_width }}{% endif %}">
+            {%- liquid
+              if settings.product_tiles_scatter
+                if layout == 'carousel'
+                  capture class
+                    cycle '-translate-y-4 ', 'translate-y-4 '
+                  endcapture
+                else
+                  capture class
+                    case item.settings.products_per_row_mobile
+                      when '2'
+                        cycle 'max-lg:-translate-y-4 ', 'max-lg:translate-y-4 '
+                    endcase
+                    case item.settings.products_per_row_desktop
+                      when 3
+                        cycle 'lg:translate-y-4 ', 'lg:-translate-y-4 ', 'lg:translate-y-4 '
+                      when 2, 4
+                        cycle 'lg:-translate-y-4 ', 'lg:translate-y-4 '
+                      when 5
+                        cycle 'lg:translate-y-4 ', 'lg:-translate-y-4 ', 'lg:translate-y-4 ', 'lg:-translate-y-4 ', 'lg:translate-y-4 '
+                    endcase
+                  endcapture
+                endif
+              endif
+              capture odd_even
+                cycle 'odd', 'even'
+              endcapture
+              assign shape_id = item.id
+              if image_shape == 'blob'
+                assign shape_id = item.id | append: '-' | append: forloop.index0
+              endif
+            -%}
+            {%- render 'product-tile',
+              product: blank,
+              crop: item.settings.product_tiles_aspect_ratio,
+              shape: section.settings.image_shape,
+              shape_id: shape_id,
+              display_on_card: item.settings.display_on_card,
+              class: class,
+              odd_even: odd_even,
+              index: forloop.index0
+            -%}
+          </li>
+        {%- endfor -%}
       {%- endfor -%}
-    {%- endfor -%}
     </ul>
   </div>
   {%- if layout == 'carousel' -%}
-  <div class="splide__arrows flex justify-between items-center mt-5 px-section">
-    {%- if collection != blank -%}
-      <div>
-        {%- if collection.all_products_count > item.settings.no_products and item.settings.show_view_all -%}
-          {{ view_all_button }}
-        {%- endif -%}
-      </div>
-    {%- endif -%}
-    {%- render 'splide-navigation' %}
-  </div>
-  <script class="slideshow-options" type="application/json">
-    {
-      "mediaQuery": "min",
-      "arrows": true,
-      "pagination": false,
-      "rewind": true,
-      "autoWidth": true,
-      "gap": "1.25rem",
-      "focus": {{ item.settings.slideshow_focus | json }},
-      "type": "loop",
-      "autoScroll": {
-        "autoStart": {% if item.settings.autoscroll_mode == '0' or item.settings.autoscroll_mode == blank %}false{% else %}true{% endif %},
-        "speed": {% if item.settings.autoscroll_mode == blank %}0{% else %}{{ item.settings.autoscroll_mode | plus: 0 | json }}{% endif %}
-      },
-      "padding": {
-        "left": "1.25rem",
-        "right": "1.25rem"
-      },
-      "breakpoints": {
-        "990": {
-          {% if desktop_slides_width <= 100 %}"type": "slide",{% endif %}
-          "gap": "2.5rem",
-          "padding": {
-            "left": "2.5rem",
-            "right": "2.5rem"
+    <div class="splide__arrows flex justify-between items-center mt-5 px-section">
+      {%- if collection != blank -%}
+        <div>
+          {%- if collection.all_products_count > item.settings.no_products and item.settings.show_view_all -%}
+            {{ view_all_button }}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      {%- render 'splide-navigation' %}
+    </div>
+    <script class="slideshow-options" type="application/json">
+      {
+        "mediaQuery": "min",
+        "arrows": true,
+        "pagination": false,
+        "rewind": true,
+        "autoWidth": true,
+        "gap": "1.25rem",
+        "focus": {{ item.settings.slideshow_focus | json }},
+        "type": "loop",
+        "autoScroll": {
+          "autoStart": {% if item.settings.autoscroll_mode == '0' or item.settings.autoscroll_mode == blank %}false{% else %}true{% endif %},
+          "speed": {% if item.settings.autoscroll_mode == blank %}0{% else %}{{ item.settings.autoscroll_mode | plus: 0 | json }}{% endif %}
+        },
+        "padding": {
+          "left": "1.25rem",
+          "right": "1.25rem"
+        },
+        "breakpoints": {
+          "990": {
+            "gap": "2.5rem",
+            "padding": {
+              "left": "2.5rem",
+              "right": "2.5rem"
+            }
           }
         }
       }
-    }
-  </script>
-  <style>
-    @media (min-width: 990px) {
-      #slideshow-{{ section.id }}-{{ index }} .splide__slide {
-        width: {{ item.settings.desktop_slide_width }}%;
+    </script>
+    <style>
+      @media (min-width: 990px) {
+        #slideshow-{{ section.id }}-{{ index }} .splide__slide {
+          width: {{ item.settings.desktop_slide_width }}%;
+        }
       }
-    }
-  </style>
+    </style>
   {%- endif -%}
 </div>
 
@@ -207,16 +219,23 @@
 {%- endif -%}
 
 {%- if layout == 'carousel' -%}
-{% unless request.design_mode %}
-  <script src="{{ 'modules-slideshow.bundle.min.js' | asset_url }}" type="module"></script>
-{% endunless %}
-{{ 'modules-slideshow.bundle.css' | asset_url | stylesheet_tag }}
+  {% unless request.design_mode %}
+    <script
+      type="lazyload_int"
+      data-src="{{ 'modules-slideshow.bundle.min.js' | asset_url }}"
+      data-w3-type="module"
+    ></script>
+  {% endunless %}
+  <link rel="stylesheet" data-href="{{ 'modules-slideshow.bundle.css' | asset_url }}">
 {%- endif -%}
 
-
 {%- if section.settings.enable_quick_buy -%}
-{%- unless request.design_mode -%}
-<script src="{{ 'vendor-product.bundle.min.js' | asset_url }}" type="module"></script>
-<script src="{{ 'product-quick-buy.js' | asset_url }}" type="module"></script>
-{%- endunless -%}
+  {%- unless request.design_mode -%}
+    <script
+      type="lazyload_int"
+      data-src="{{ 'vendor-product.bundle.min.js' | asset_url }}"
+      data-w3-type="module"
+    ></script>
+    <script type="lazyload_int" data-src="{{ 'product-quick-buy.js' | asset_url }}" data-w3-type="module"></script>
+  {%- endunless -%}
 {%- endif -%}
