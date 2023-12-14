@@ -94,6 +94,29 @@
     },
     "1650891358fef95dd4": {
       "type": "featured-collection",
+      "blocks": {
+        "2a3fea2d-f7f3-4be8-a9f1-73ce3954c1c3": {
+          "type": "sticker",
+          "settings": {
+            "text": "Free metro delivery!*",
+            "shape": "scalloped_circle_1",
+            "width": 140,
+            "sticker_font_size": "1.563rem",
+            "half_image_width_on_mobile": true,
+            "horizontal_position": 20,
+            "vertical_position": 0,
+            "rotate": -20,
+            "show_sticker_on_mobile": false,
+            "show_sticker_on_desktop": true,
+            "rotation_animation": "none",
+            "enable_parallax": false,
+            "parallax_speed": 2,
+            "color": "bg-scheme-background text-scheme-text",
+            "color_scheme": "quaternary"
+          }
+        }
+      },
+      "block_order": ["2a3fea2d-f7f3-4be8-a9f1-73ce3954c1c3"],
       "custom_css": [
         "h3 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 50px;}",
         ".price {font-weight: 200; font-size: 25px;}",
