@@ -285,7 +285,7 @@
     ]
   },
   {
-    "name": "t:settings_schema.typography.name",
+    "name": "Typography",
     "settings": [
       {
         "type": "range",
@@ -294,7 +294,7 @@
         "max": 22,
         "step": 1,
         "unit": "px",
-        "label": "t:settings_schema.typography.settings.base_font_size.label",
+        "label": "Base font size",
         "default": 16
       },
       {
@@ -303,169 +303,126 @@
         "min": 1,
         "max": 2,
         "step": 0.1,
-        "label": "t:settings_schema.typography.settings.base_line_height.label",
+        "label": "Line height",
         "default": 1.2
       },
-      {
-        "type": "header",
-        "content": "t:settings_schema.typography.settings.header_headings"
-      },
+      { "type": "header", "content": "Headings" },
       {
         "type": "font_picker",
         "id": "type_heading_font",
-        "label": "t:settings_schema.typography.settings.type_heading_font.label",
+        "label": "Font",
         "default": "crimson_text_n6"
       },
-      {
-        "type": "checkbox",
-        "id": "heading_uppercase",
-        "label": "t:settings_schema.typography.settings.heading_uppercase.label"
-      },
+      { "type": "checkbox", "id": "heading_uppercase", "label": "Uppercase" },
       {
         "type": "range",
         "id": "heading_letterspacing",
         "min": -50,
         "max": 200,
         "step": 25,
-        "label": "t:settings_schema.typography.settings.heading_letterspacing.label",
+        "label": "Letterspacing",
         "default": 0
       },
       {
         "type": "range",
         "id": "heading_line_height",
-        "min": 1,
+        "min": 1.0,
         "max": 1.5,
         "step": 0.1,
-        "label": "t:settings_schema.typography.settings.heading_line_height.label",
+        "label": "Heading line height",
         "default": 1.1
       },
       {
-        "type": "header",
-        "content": "t:settings_schema.typography.settings.header_standard_headings"
-      },
-      {
-        "type": "paragraph",
-        "content": "t:settings_schema.typography.settings.paragraph_used_for_section"
-      },
-      {
-        "type": "range",
-        "id": "mobile_standard_heading_scale",
-        "min": -2,
-        "max": 5,
-        "step": 1,
-        "label": "t:settings_schema.typography.settings.mobile_standard_heading_scale.label",
-        "default": 0
-      },
-      {
-        "type": "range",
-        "id": "desktop_standard_heading_scale",
-        "min": -2,
-        "max": 7,
-        "step": 1,
-        "label": "t:settings_schema.typography.settings.desktop_standard_heading_scale.label",
-        "default": 0
-      },
-      {
-        "type": "header",
-        "content": "t:settings_schema.typography.settings.header_feature_headings"
-      },
-      {
-        "type": "paragraph",
-        "content": "t:settings_schema.typography.settings.paragraph_used_for_product"
-      },
-      {
-        "type": "range",
-        "id": "mobile_feature_heading_scale",
-        "min": -2,
-        "max": 7,
-        "step": 1,
-        "label": "t:settings_schema.typography.settings.mobile_feature_heading_scale.label",
-        "default": 0
-      },
-      {
-        "type": "range",
-        "id": "desktop_feature_heading_scale",
-        "min": -2,
-        "max": 11,
-        "step": 1,
-        "label": "t:settings_schema.typography.settings.desktop_feature_heading_scale.label",
-        "default": 0
-      },
-      {
-        "type": "header",
-        "content": "t:settings_schema.typography.settings.header_secondary_headings"
-      },
-      {
-        "type": "paragraph",
-        "content": "t:settings_schema.typography.settings.paragraph_used_for_blog"
-      },
-      {
-        "type": "range",
-        "id": "mobile_secondary_heading_scale",
-        "min": -2,
-        "max": 4,
-        "step": 1,
-        "label": "t:settings_schema.typography.settings.mobile_secondary_heading_scale.label",
-        "default": 0
-      },
-      {
-        "type": "range",
-        "id": "desktop_secondary_heading_scale",
-        "min": -2,
-        "max": 7,
-        "step": 1,
-        "label": "t:settings_schema.typography.settings.desktop_secondary_heading_scale.label",
-        "default": 0
-      },
-      {
-        "type": "header",
-        "content": "t:settings_schema.typography.settings.header_main"
-      },
-      {
-        "type": "font_picker",
-        "id": "type_main_font",
-        "label": "t:settings_schema.typography.settings.type_main_font.label",
-        "default": "karla_n4"
-      },
-      {
-        "type": "header",
-        "content": "t:settings_schema.typography.settings.header_extras"
+        "type": "select",
+        "id": "base_heading_size",
+        "label": "Base size",
+        "options": [
+          { "value": "sm:sm", "label": "S" },
+          { "value": "base:base", "label": "M" },
+          { "value": "lg:lg", "label": "L" },
+          { "value": "xl:xl", "label": "XL" },
+          { "value": "2xl:2xl", "label": "2XL" },
+          { "value": "2xl:3xl", "label": "2XL / desktop 3XL" },
+          { "value": "2xl:4xl", "label": "2XL / desktop 4XL" },
+          { "value": "2xl:5xl", "label": "2XL / desktop 5XL" },
+          { "value": "2xl:6xl", "label": "2XL / desktop 6XL" },
+          { "value": "2xl:7xl", "label": "2XL / desktop 7XL" }
+        ],
+        "default": "lg:lg",
+        "info": "Used for section titles and main section headings"
       },
       {
         "type": "select",
-        "id": "header_font",
-        "label": "t:settings_schema.typography.settings.header_font.label",
+        "id": "template_heading_size",
+        "label": "Template size",
         "options": [
-          {
-            "value": "font-main",
-            "label": "t:settings_schema.typography.settings.header_font.options.body.label"
-          },
-          {
-            "value": "font-heading",
-            "label": "t:settings_schema.typography.settings.header_font.options.heading.label"
-          }
+          { "value": "sm:sm", "label": "S" },
+          { "value": "base:base", "label": "M" },
+          { "value": "lg:lg", "label": "L" },
+          { "value": "xl:xl", "label": "XL" },
+          { "value": "2xl:2xl", "label": "2XL" },
+          { "value": "2xl:3xl", "label": "2XL / desktop 3XL" },
+          { "value": "2xl:4xl", "label": "2XL / desktop 4XL" },
+          { "value": "2xl:5xl", "label": "2XL / desktop 5XL" },
+          { "value": "2xl:6xl", "label": "2XL / desktop 6XL" },
+          { "value": "2xl:7xl", "label": "2XL / desktop 7XL" },
+          { "value": "2xl:8xl", "label": "2XL / desktop 8XL" },
+          { "value": "2xl:9xl", "label": "2XL / desktop 9XL" }
+        ],
+        "default": "2xl:3xl",
+        "info": "Used for product, collection, article and page templates"
+      },
+      {
+        "type": "select",
+        "id": "secondary_heading_size",
+        "label": "Secondary size",
+        "options": [
+          { "value": "sm:sm", "label": "S" },
+          { "value": "base:base", "label": "M" },
+          { "value": "lg:lg", "label": "L" },
+          { "value": "xl:xl", "label": "XL" },
+          { "value": "2xl:2xl", "label": "2XL" }
+        ],
+        "default": "base:base",
+        "info": "Used for blog post grid, text columns with images and other secondary headings"
+      },
+      { "type": "header", "content": "Main" },
+      {
+        "type": "font_picker",
+        "id": "type_main_font",
+        "label": "Font",
+        "default": "karla_n4"
+      },
+      { "type": "header", "content": "Extras" },
+      {
+        "type": "select",
+        "id": "header_font",
+        "label": "Header font",
+        "options": [
+          { "value": "font-main", "label": "Body" },
+          { "value": "font-heading", "label": "Heading" }
         ],
         "default": "font-main"
       },
       {
         "type": "checkbox",
         "id": "header_uppercase",
-        "label": "t:settings_schema.typography.settings.header_uppercase.label"
+        "label": "Uppercase header"
       },
       {
         "type": "checkbox",
         "id": "product_tile_uppercase",
-        "label": "t:settings_schema.typography.settings.product_tile_uppercase.label"
+        "label": "Uppercase product tiles"
       },
       {
         "type": "checkbox",
         "id": "button_uppercase",
-        "label": "t:settings_schema.typography.settings.button_uppercase.label"
+        "label": "Uppercase buttons"
       },
       {
         "type": "checkbox",
         "id": "stickers_uppercase",
-        "label": "t:settings_schema.typography.settings.stickers_uppercase.label"
+        "label": "Uppercase stickers"
       }
     ]
   },
