@@ -306,14 +306,21 @@
         "label": "Line height",
         "default": 1.2
       },
-      { "type": "header", "content": "Headings" },
+      {
+        "type": "header",
+        "content": "Headings"
+      },
       {
         "type": "font_picker",
         "id": "type_heading_font",
         "label": "Font",
         "default": "crimson_text_n6"
       },
-      { "type": "checkbox", "id": "heading_uppercase", "label": "Uppercase" },
+      {
+        "type": "checkbox",
+        "id": "heading_uppercase",
+        "label": "Uppercase"
+      },
       {
         "type": "range",
         "id": "heading_letterspacing",
@@ -337,16 +344,46 @@
         "id": "base_heading_size",
         "label": "Base size",
         "options": [
-          { "value": "sm:sm", "label": "S" },
-          { "value": "base:base", "label": "M" },
-          { "value": "lg:lg", "label": "L" },
-          { "value": "xl:xl", "label": "XL" },
-          { "value": "2xl:2xl", "label": "2XL" },
-          { "value": "2xl:3xl", "label": "2XL / desktop 3XL" },
-          { "value": "2xl:4xl", "label": "2XL / desktop 4XL" },
-          { "value": "2xl:5xl", "label": "2XL / desktop 5XL" },
-          { "value": "2xl:6xl", "label": "2XL / desktop 6XL" },
-          { "value": "2xl:7xl", "label": "2XL / desktop 7XL" }
+          {
+            "value": "sm:sm",
+            "label": "S"
+          },
+          {
+            "value": "base:base",
+            "label": "M"
+          },
+          {
+            "value": "lg:lg",
+            "label": "L"
+          },
+          {
+            "value": "xl:xl",
+            "label": "XL"
+          },
+          {
+            "value": "2xl:2xl",
+            "label": "2XL"
+          },
+          {
+            "value": "2xl:3xl",
+            "label": "2XL / desktop 3XL"
+          },
+          {
+            "value": "2xl:4xl",
+            "label": "2XL / desktop 4XL"
+          },
+          {
+            "value": "2xl:5xl",
+            "label": "2XL / desktop 5XL"
+          },
+          {
+            "value": "2xl:6xl",
+            "label": "2XL / desktop 6XL"
+          },
+          {
+            "value": "2xl:7xl",
+            "label": "2XL / desktop 7XL"
+          }
         ],
         "default": "lg:lg",
         "info": "Used for section titles and main section headings"
@@ -356,18 +393,54 @@
         "id": "template_heading_size",
         "label": "Template size",
         "options": [
-          { "value": "sm:sm", "label": "S" },
-          { "value": "base:base", "label": "M" },
-          { "value": "lg:lg", "label": "L" },
-          { "value": "xl:xl", "label": "XL" },
-          { "value": "2xl:2xl", "label": "2XL" },
-          { "value": "2xl:3xl", "label": "2XL / desktop 3XL" },
-          { "value": "2xl:4xl", "label": "2XL / desktop 4XL" },
-          { "value": "2xl:5xl", "label": "2XL / desktop 5XL" },
-          { "value": "2xl:6xl", "label": "2XL / desktop 6XL" },
-          { "value": "2xl:7xl", "label": "2XL / desktop 7XL" },
-          { "value": "2xl:8xl", "label": "2XL / desktop 8XL" },
-          { "value": "2xl:9xl", "label": "2XL / desktop 9XL" }
+          {
+            "value": "sm:sm",
+            "label": "S"
+          },
+          {
+            "value": "base:base",
+            "label": "M"
+          },
+          {
+            "value": "lg:lg",
+            "label": "L"
+          },
+          {
+            "value": "xl:xl",
+            "label": "XL"
+          },
+          {
+            "value": "2xl:2xl",
+            "label": "2XL"
+          },
+          {
+            "value": "2xl:3xl",
+            "label": "2XL / desktop 3XL"
+          },
+          {
+            "value": "2xl:4xl",
+            "label": "2XL / desktop 4XL"
+          },
+          {
+            "value": "2xl:5xl",
+            "label": "2XL / desktop 5XL"
+          },
+          {
+            "value": "2xl:6xl",
+            "label": "2XL / desktop 6XL"
+          },
+          {
+            "value": "2xl:7xl",
+            "label": "2XL / desktop 7XL"
+          },
+          {
+            "value": "2xl:8xl",
+            "label": "2XL / desktop 8XL"
+          },
+          {
+            "value": "2xl:9xl",
+            "label": "2XL / desktop 9XL"
+          }
         ],
         "default": "2xl:3xl",
         "info": "Used for product, collection, article and page templates"
@@ -377,30 +450,57 @@
         "id": "secondary_heading_size",
         "label": "Secondary size",
         "options": [
-          { "value": "sm:sm", "label": "S" },
-          { "value": "base:base", "label": "M" },
-          { "value": "lg:lg", "label": "L" },
-          { "value": "xl:xl", "label": "XL" },
-          { "value": "2xl:2xl", "label": "2XL" }
+          {
+            "value": "sm:sm",
+            "label": "S"
+          },
+          {
+            "value": "base:base",
+            "label": "M"
+          },
+          {
+            "value": "lg:lg",
+            "label": "L"
+          },
+          {
+            "value": "xl:xl",
+            "label": "XL"
+          },
+          {
+            "value": "2xl:2xl",
+            "label": "2XL"
+          }
         ],
         "default": "base:base",
         "info": "Used for blog post grid, text columns with images and other secondary headings"
       },
-      { "type": "header", "content": "Main" },
+      {
+        "type": "header",
+        "content": "Main"
+      },
       {
         "type": "font_picker",
         "id": "type_main_font",
         "label": "Font",
         "default": "karla_n4"
       },
-      { "type": "header", "content": "Extras" },
+      {
+        "type": "header",
+        "content": "Extras"
+      },
       {
         "type": "select",
         "id": "header_font",
         "label": "Header font",
         "options": [
-          { "value": "font-main", "label": "Body" },
-          { "value": "font-heading", "label": "Heading" }
+          {
+            "value": "font-main",
+            "label": "Body"
+          },
+          {
+            "value": "font-heading",
+            "label": "Heading"
+          }
         ],
         "default": "font-main"
       },
