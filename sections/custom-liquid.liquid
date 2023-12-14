@@ -1,13 +1,19 @@
-
-
-<section class="text-scheme-text bg-scheme-background relative overflow-hidden {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %} " data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}" >
-
+<section
+  class="custom_liquid_main text-scheme-text bg-scheme-background relative overflow-hidden {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %} "
+  data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}"
+>
   <div class="section-content {% unless section.settings.full_width %}px-section max-w-site mx-auto py-section-vertical-spacing {% endunless %}">
     {% if section.settings.title != '' %}
-      <h2 class="text-center font-heading  heading-standard heading-style break-words {{ settings.heading_drop_shadow_style }}">{{ section.settings.title }}</h2>
+      <h2 class="text-center title font-heading heading-effects heading-base heading-style break-words {{ settings.heading_drop_shadow_style }}">
+        {{ section.settings.title }}
+      </h2>
     {% endif %}
 
-    <div {% if section.settings.title != '' %}class="mt-10"{% endif %}>
+    <div
+      {% if section.settings.title != '' %}
+        class="flex justify-center flex-col items-center"
+      {% endif %}
+    >
       {{ section.settings.custom_liquid }}
     </div>
   </div>
@@ -25,8 +31,8 @@
 </section>
 
 {%- liquid
-  assign stickers = section.blocks | where: "type", "sticker"
-  assign shape_dividers = section.blocks | where: "type", "shape_divider"
+  assign stickers = section.blocks | where: 'type', 'sticker'
+  assign shape_dividers = section.blocks | where: 'type', 'shape_divider'
   for sticker in stickers
     render 'block-sticker' with block: sticker, section: section
   endfor
@@ -37,45 +43,45 @@
 
 {% schema %}
 {
-  "name": "t:sections.custom_liquid.name",
+  "name": "Custom liquid",
   "settings": [
     {
       "type": "text",
       "id": "title",
-      "label": "t:sections.custom_liquid.settings.title.label",
+      "label": "Heading",
       "default": "Custom liquid"
     },
     {
       "id": "custom_liquid",
       "type": "liquid",
-      "label": "t:sections.custom_liquid.settings.custom_liquid.label",
-      "info": "t:sections.custom_liquid.settings.custom_liquid.info"
+      "label": "Liquid",
+      "info": "Add app snippets or other Liquid code to create advanced customizations."
     },
     {
       "type": "checkbox",
       "id": "full_width",
-      "label": "t:sections.custom_liquid.settings.full_width.label"
+      "label": "Full width"
     },
     {
       "type": "header",
-      "content": "t:common.settings.header_color"
+      "content": "Color"
     },
     {
       "type": "select",
       "id": "color_scheme",
-      "label": "t:sections.custom_liquid.settings.color_scheme.label",
+      "label": "Color scheme",
       "options": [
         {
           "value": "primary",
-          "label": "t:common.options.primary.label"
+          "label": "Primary"
         },
         {
           "value": "secondary",
-          "label": "t:common.options.secondary.label"
+          "label": "Secondary"
         },
         {
           "value": "tertiary",
-          "label": "t:common.options.tertiary.label"
+          "label": "Tertiary"
         }
       ],
       "default": "primary"
@@ -83,7 +89,7 @@
   ],
   "presets": [
     {
-      "name": "t:sections.custom_liquid.name"
+      "name": "Custom liquid"
     }
   ]
 }
