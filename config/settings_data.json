@@ -150,6 +150,8 @@
         "settings": {
           "logo_max_width": 160,
           "main_linklist": "main-menu",
+          "mobile_linklist": "",
+          "sub_text": "<p>Fast, free metro delivery  |  100% Carbon Neutral<\/p>",
           "show_all_navigation_links": false,
           "showcase_second_level_links": false,
           "showcase_first_level_collections": true,
@@ -174,10 +176,12 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "home_page_only": true,
+          "show_announcement_bar": true,
+          "home_page_only": false,
           "display": "static",
+          "text": "<p><strong>Order by December 12th (WA) and 17th (NSW\/VIC\/QLD\/SA) for Christmas Delivery! <\/strong><\/p>",
           "link": "",
-          "color_scheme": "secondary",
+          "color_scheme": "quaternary",
           "use_gradient_background": false,
           "repeat_text": true,
           "shape_between_text": "10_point_star",
