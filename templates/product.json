@@ -53,16 +53,6 @@
             "text_align": "text-left"
           }
         },
-        "0ed69de5-7b48-44b0-b552-f8172952a2e0": {
-          "type": "after_pay",
-          "settings": {
-            "display_on_card": false,
-            "show_price": false,
-            "enable_payment_button": false,
-            "show_pickup_availability": false,
-            "show_gift_card_recipient": false
-          }
-        },
         "ffe2e0d3-a701-4a9c-8d7a-1303a77c530f": {
           "type": "liquid",
           "settings": {
@@ -93,8 +83,7 @@
             "display_on_card": false,
             "show_price": true,
             "enable_payment_button": false,
-            "show_pickup_availability": false,
-            "show_gift_card_recipient": false
+            "show_pickup_availability": false
           }
         },
         "75d78151-c206-49e1-a7c8-67f158a8394a": {
@@ -136,7 +125,6 @@
         "title",
         "32421e16-850d-40a7-a646-186516bdb90d",
         "price",
-        "0ed69de5-7b48-44b0-b552-f8172952a2e0",
         "ffe2e0d3-a701-4a9c-8d7a-1303a77c530f",
         "quantity_selector",
         "variant_picker",
@@ -163,7 +151,6 @@
         "thumbnail_shape": "blob",
         "hide_media_shadow": true,
         "thumbnail_size": "standard",
-        "show_thumbnails_on_mobile": false,
         "color_scheme": "primary",
         "use_gradient_background": false
       }
@@ -428,8 +415,8 @@
       "settings": {
         "show_product_recommendations": true,
         "display_on_card": false,
-        "enable_shop_btn": false,
         "enable_quick_buy": false,
+        "enable_shop_btn": false,
         "product_recommendations_heading": "More Sluggs® to discover",
         "max_products": "3",
         "product_tiles_aspect_ratio": "",
@@ -444,7 +431,6 @@
         "template--17029417206002__faq-question-1": {
           "type": "question",
           "settings": {
-            "icon": "none",
             "question": "Why are they sold in sets of three?",
             "answer": "<p>Designers call it \"the law of three\". Even numbers create symmetry, while odd numbers create a focal point and add interest to a space. The size of each Slugg garden pot has been designed to ensure the scale works in a cluster of three. <\/p>"
           }
@@ -452,7 +438,6 @@
         "template--17029417206002__faq-question-2": {
           "type": "question",
           "settings": {
-            "icon": "none",
             "question": "How do I use them?",
             "answer": "<p>Sluggs look best grouped together to form a cluster of three pots. However, many of our customers use their Slugg pots individually. You can plant them up (soil inside the pot) or you can simply place your nursery pot inside the empty Slugg pot.<\/p>"
           }
@@ -460,7 +445,6 @@
         "template--17029417206002__faq-question-5": {
           "type": "question",
           "settings": {
-            "icon": "none",
             "question": "What are the pots made of?",
             "answer": "<p>Slugg garden pots are made from poly resin. They are lightweight, waterproof and far stronger than traditional concrete planters.<\/p>"
           }
@@ -468,7 +452,6 @@
         "template--17029417206002__faq-question-4": {
           "type": "question",
           "settings": {
-            "icon": "none",
             "question": "Can I purchase the pots individually?",
             "answer": "<p>Slugg garden pots are sold in sets of three, which makes it super easy to create the perfect pot cluster. They are not available for individual purchase.<\/p>"
           }
@@ -476,7 +459,6 @@
         "template--17029417206002__faq-question-3": {
           "type": "question",
           "settings": {
-            "icon": "none",
             "question": "Do they have drainage holes?",
             "answer": "<p>Yes, every Slugg garden pot comes with 2 drainage holes.<\/p>"
           }
@@ -484,7 +466,6 @@
         "5b43b6a4-76c1-4e41-a9b8-8e623f21b5ce": {
           "type": "question",
           "settings": {
-            "icon": "none",
             "question": "When are you launching in the USA?",
             "answer": "<p>We're super excited to announce that we'll be launching in the USA in February 2024.<\/p>"
           }
