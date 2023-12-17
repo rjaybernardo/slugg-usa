@@ -4,8 +4,14 @@
     <li class="lg:col-span-2">
       <a href="{{ product.url }}">
         {%- if product.featured_media -%}
-          <div class="{% unless crop == '' or crop == blank %}object-wrapper {{ crop }}{% endunless %}">
-            {{ product.featured_media | image_url: width: 700 | image_tag: class: 'media-style' }}
+          <div class="{% unless crop == '' or crop == blank %}image-wrapper {{ crop }}{% endunless %}">
+            <img
+              class="media-style"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+              data-class="LazyLoad"
+              data-src="{{ product.featured_media | image_url: width: 700 }}"
+              alt=""
+            >
           </div>
         {%- endif -%}
         <div class="mt-2 text-center">
@@ -18,7 +24,9 @@
 <div class="mt-5 text-center">
   {%- if collection.all_products_count > 6 -%}
     <a href="{{ collection.url }}" class="inline-block push-btn">
-      <span class="push-btn-surface">{{ 'collections.general.all_of_collection' | t: collection: collection.title }}</span>
+      <span class="push-btn-surface">
+        {{- 'collections.general.all_of_collection' | t: collection: collection.title -}}
+      </span>
     </a>
   {%- endif -%}
 </div>

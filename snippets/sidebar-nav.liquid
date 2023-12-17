@@ -5,16 +5,142 @@
     x-show="$store.modals.leftDrawer.contents === 'nav'"
     class="sidebar-nav py-5 px-section {% if settings.enable_sidebar_nav_animation %} sidebar-nav--enable-transitions {% endif %}"
   >
-    <div class="relative flex items-center justify-between pb-5">
+    <div class="hidden relative flex items-center justify-between pb-5">
       <h2 class="sr-only" class="" tabindex="-1">
         {{ section.settings.main_linklist.title }}
       </h2>
-      <button @click.prevent="$store.modals.close('nav')" class="block top-0">
+      <button @click.prevent="$store.modals.close('nav')" class="block top-0 close-btn-mobile-menu">
         <span class="sr-only">{{ 'general.accessibility.close_modal' | t }}</span>
         <span class="inline-block w-5 h-5">{% render 'icon-close' %}</span>
       </button>
     </div>
-    <ul class="mt-5">
+
+    {% assign product_blocks = section.blocks | where: 'type', 'mobile_product' %}
+    {%- if product_blocks.size > 0 -%}
+      <ul class="product_item_mobile_main">
+        {%- for block in product_blocks -%}
+          <li class="product_item">
+            {%- assign product = block.settings.product -%}
+            {%- if product.featured_image != blank -%}
+              <div class="left">
+                <a href="{{ product.url }}">
+                  {% render 'custom-image', image: product.featured_image, class: 'mobile_product_img' %}
+                </a>
+              </div>
+            {%- endif -%}
+            <div class="right">
+              <h3 class="mobile-menu-product-title h6">
+                <a href="{{ product.url }}">
+                  {{ product.title }}
+                </a>
+              </h3>
+              {%- if product.metafields.custom.sub_title.value != blank -%}
+                <div class="sub_title">
+                  {{ product.metafields.custom.sub_title.value }}
+                </div>
+              {%- endif -%}
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    {%- if section.settings.mobile_linklist != blank -%}
+      <ul class="mobile_menu">
+        {% for link in section.settings.mobile_linklist.links %}
+          {% comment %}
+            First level
+          {% endcomment %}
+          {% assign showcase_link_tiles = '' %}
+          <li class="text-lg lg:text-xl" style="--first-delay-tap: {% increment first_delay_tap %};">
+            {% if link.links.size > 0 %}
+              <div x-data="{expanded: {% if forloop.first and section.settings.auto_expand %}true{% else %}false{% endif %}}">
+                <button
+                  class="w-full flex flex-row justify-between items-center font-heading py-2.5 text-left"
+                  @click="expanded = ! expanded"
+                  :aria-expanded="expanded"
+                >
+                  <span>{{ link.title }}</span>
+                  <div class="ml-auto">
+                    <span class="w-3 h-3 block" :class="{'rotate-180': expanded}">
+                      {%- render 'icon-chevron-down' -%}
+                    </span>
+                  </div>
+                </button>
+                <div x-show="expanded" x-collapse>
+                  <ul class="pb-5 text-base font-main">
+                    {% for link in link.links %}
+                      {% comment %}
+                        Second level
+                      {% endcomment %}
+                      {%- liquid
+                        assign showcase_link = false
+                        if section.settings.showcase_second_level_links
+                          if link.type == 'collection_link' or link.type == 'product_link'
+                            if link.links.size == 0
+                              assign showcase_link = true
+                            endif
+                          endif
+                        endif
+                      -%}
+
+                      {% unless showcase_link %}
+                        <li class="my-3 text-base" style="--second-delay-tap: {% increment second_delay_tap %};">
+                          {% if link.links.size > 0 %}
+                            <div
+                              x-data="{ expanded: false }"
+                            >
+                              <button
+                                class="w-full flex flex-row justify-between items-center {{ base_font_class }}"
+                                @click="expanded = ! expanded"
+                                :aria-expanded="expanded"
+                              >
+                                <span>{{ link.title }}</span>
+                                <div class="ml-auto">
+                                  <span class="w-3 h-3 block" :class="{'rotate-180': expanded}">
+                                    {%- render 'icon-chevron-down' -%}
+                                  </span>
+                                </div>
+                              </button>
+                              <ul x-show="expanded" x-collapse>
+                                {% for link in link.links %}
+                                  {% comment %}
+                                    Third level
+                                  {% endcomment %}
+                                  <li
+                                    class="my-3 pl-5 text-base"
+                                    style="--third-delay-tap: {% increment third_delay_tap %};"
+                                  >
+                                    <a href="{{ link.url }}">
+                                      {{ link.title }}
+                                    </a>
+                                  </li>
+                                {% endfor %}
+                              </ul>
+                            </div>
+                          {% else %}
+                            <a class="" href="{{ link.url }}">
+                              {{ link.title }}
+                            </a>
+                          {% endif %}
+                        </li>
+                      {%- endunless -%}
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            {% else %}
+              <a class="block" href="{{ link.url }}">
+                {{ link.title }}
+              </a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {%- endif -%}
+
+    {% comment %}
+      <ul class="mt-5 qwerty">
       {% for link in section.settings.main_linklist.links %}
         {% comment %}
           First level
@@ -78,8 +204,7 @@
                                   Third level
                                 {% endcomment %}
                                 <li
-                                  class="mt-3 pl-5 text-base"
-                                  style="--third-delay-tap: {% increment third_delay_tap %};"
+                                  class="my-3 pl-5 text-base" style="--third-delay-tap: {% increment third_delay_tap %};"
                                 >
                                   <a href="{{ link.url }}">
                                     {{ link.title }}
@@ -107,7 +232,7 @@
                 </ul>
                 {% if showcase_link_tiles != '' %}
                   <ul class="mb-5 nav-item grid gap-5 grid-cols-2">
-                    {{ showcase_link_tiles }}
+                    {{ showcase_link_tiles | replace: '<img src="', '<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="' | replace: 'class="media-style"', 'class="media-style lazy2"' | replace: 'srcset="', 'data-srcset="' }}
                   </ul>
                 {% endif %}
               </div>
@@ -119,67 +244,98 @@
         {% endif %}
         </li>
       {% endfor %}
-    </ul>
+      </ul>
+    {% endcomment %}
 
+    {%- if section.settings.sidebar_show_footer_menu
+      or section.settings.sidebar_show_social_icons
+      or section.blocks.size > 0
+      or section.settings.sub_text != blank
+    -%}
+      <div class="mobile-shop-btn-main space-y-5">
+        {%- if section.settings.sidebar_show_footer_menu -%}
+          <nav aria-label="Secondary">
+            <ul class="space-y-1.5">
+              {%- for link in linklists.footer.links -%}
+                <li>
+                  <a class="inline-block py-1" href="{{ link.url }}">
+                    {{ link.title }}
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </nav>
+        {%- endif -%}
 
-    <div class="mt-5 space-y-5">
-      {%- if section.settings.sidebar_show_footer_menu -%}
-      <nav aria-label="Secondary">
-        <ul class="space-y-1.5">
-          {%- for link in linklists['footer'].links -%}
-            <li>
-              <a class="inline-block py-1" href="{{ link.url }}">
-                {{ link.title }}
-              </a>
-            </li>
-          {%- endfor -%}
-        </ul>
-      </nav>
-      {%- endif -%}
-
-
-      {% if shop.customer_accounts_enabled %}
-        <ul class="space-y-1.5">
-          {% if customer %}
-            <li>
-              <a href="{{ routes.account_url }}">{{ 'layout.customer.account' | t }}</a>
-            </li>
-            <li>
-              {{ 'layout.customer.log_out' | t | customer_logout_link }}
-            </li>
-          {% else %}
-            <li>
-              {{ 'layout.customer.log_in' | t | customer_login_link }}
-            </li>
-            <li>
-              {{ 'layout.customer.create_account' | t | customer_register_link }}
-            </li>
+        {% comment %}
+          {% if shop.customer_accounts_enabled %}
+            <ul class="space-y-1.5">
+              {% if customer %}
+                <li>
+                  <a href="{{ routes.account_url }}">{{ 'layout.customer.account' | t }}</a>
+                </li>
+                <li>
+                  {{ 'layout.customer.log_out' | t | customer_logout_link }}
+                </li>
+              {% else %}
+                <li>
+                  {{ 'layout.customer.log_in' | t | customer_login_link }}
+                </li>
+                <li>
+                  {{ 'layout.customer.create_account' | t | customer_register_link }}
+                </li>
+              {% endif %}
+            </ul>
           {% endif %}
-        </ul>
-      {% endif %}
 
-      {%- if section.settings.header_show_search -%}
-      <form class="relative mt-10 max-w-2xl mx-auto block" action="/search" method="get" role="search">
-        <label for="Search" class="visually-hidden">
-          {{ 'general.search.placeholder' | t }}
-        </label>
-        <input type="search"
-              name="q"
-              id="Search"
-              class="pr-12 placeholder-current input w-full"
-              value="{{ search.terms | escape }}"
-              placeholder="{{ 'general.search.placeholder' | t }}">
-        <button class="absolute right-2 top-1/2 transform -translate-y-1/2 p-1" type="submit" class="button">
-          <span class="inline-block w-5 h-5">{% render 'icon-search' %}</span>
-          <span class="visually-hidden">{{ 'general.search.submit' | t }}</span>
-        </button>
-      </form>
-      {%- endif -%}
+          {%- if section.settings.header_show_search -%}
+          <form class="relative mt-10 max-w-2xl mx-auto block" action="/search" method="get" role="search">
+            <label for="Search" class="visually-hidden">
+              {{ 'general.search.placeholder' | t }}
+            </label>
+            <input type="search"
+                  name="q"
+                  id="Search"
+                  class="pr-12 placeholder-current input w-full"
+                  value="{{ search.terms | escape }}"
+                  placeholder="{{ 'general.search.placeholder' | t }}">
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 p-1" type="submit" class="button">
+              <span class="inline-block w-5 h-5">{% render 'icon-search' %}</span>
+              <span class="visually-hidden">{{ 'general.search.submit' | t }}</span>
+            </button>
+          </form>
+          {%- endif -%}
+        {% endcomment %}
+        {%- if section.settings.sidebar_show_social_icons -%}
+          {%- render 'social-icons', list_class: 'justify-start' -%}
+        {%- endif -%}
 
-      {%- if section.settings.sidebar_show_social_icons -%}
-      {%- render 'social-icons', list_class: 'justify-start' -%}
-      {%- endif -%}
-    </div>
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'feature_desktop_link' -%}
+              {%- liquid
+                assign feature_desktop_link_position = block.settings.position
+                assign hide_button_shadow = false
+                if block.settings.hide_button_shadow
+                  assign hide_button_shadow = true
+                endif
+                assign has_feature_desktop_button = true
+              -%}
+              <a
+                href="{{ block.settings.button_link }}"
+                class="push-btn push-btn--pop inline-block w-full {% if block.settings.hide_button_shadow %}push-btn--no-shadow{% endif %}"
+              >
+                <span class="primary-button w-full menu-shop-btn">{{ block.settings.button_label }}</span>
+              </a>
+          {%- endcase -%}
+        {%- endfor -%}
 
+        {%- if section.settings.sub_text != blank -%}
+          <div class="sub_text w3_bg">
+            {{ section.settings.sub_text }}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
   </div>
 </template>

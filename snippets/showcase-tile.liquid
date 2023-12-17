@@ -1,12 +1,23 @@
 <div>
   <a href="{{ object.url }}">
     {%- if object.featured_image != blank -%}
-      <div class="{% unless crop == '' or crop == blank %}object-wrapper {{ crop }}{% endunless %}">
-        {{ object.featured_image | image_url: width: 700 | image_tag: class: 'media-style' }}
+      <div class="{% unless crop == '' or crop == blank %}image-wrapper {{ crop }}{% endunless %}">
+        <img
+          class="media-style"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+          data-class="LazyLoad"
+          data-src="{{ object.featured_image | image_url: width: 700 }}"
+          alt=""
+        >
       </div>
     {%- endif -%}
-    <div class="mt-2 text-center">
+    <div class="title text-center">
       {{ object.title }}
     </div>
+    {%- if object.metafields.custom.sub_title.value != blank -%}
+      <div class="sub_title">
+        {{ object.metafields.custom.sub_title.value }}
+      </div>
+    {%- endif -%}
   </a>
 </div>
