@@ -323,8 +323,17 @@
     <!-- End Google Tag Manager (noscript) -->
     {% comment %}theme-check-disable MissingTemplate{% endcomment %}
     <a class="skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
-    {%- sections 'header-group' -%}
-    {% render 'header-group-support' %}
+
+    {% comment %}
+      {%- sections 'header-group' -%}
+      {% render 'header-group-support' %}
+    {% endcomment %}
+
+    {% liquid
+      section 'announcement-bar'
+      section 'header'
+    %}
+
     <main id="MainContent" class="overflow-hidden">
       {{ content_for_layout }}
     </main>
