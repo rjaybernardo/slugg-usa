@@ -87,11 +87,11 @@
     "product_tile_metafield_badge": "badge",
     "metafield_badge_shape": "scalloped_circle_1",
     "currency_code_enabled": true,
-    "predictive_search_enabled": false,
-    "search_products": false,
-    "search_collections": false,
-    "search_articles": false,
-    "search_pages": false,
+    "predictive_search_enabled": true,
+    "search_products": true,
+    "search_collections": true,
+    "search_articles": true,
+    "search_pages": true,
     "sharing_display": "icons",
     "share_facebook": false,
     "share_twitter": false,
@@ -101,7 +101,7 @@
     "social_facebook_link": "https:\/\/www.facebook.com\/potsbyslugg",
     "social_tiktok_link": "https:\/\/www.tiktok.com\/@potsbyslugg",
     "social_email_link": "info@slugg.co",
-    "cart_icon": "cart",
+    "cart_icon": "bag",
     "checkout_logo_image": "shopify:\/\/shop_images\/SluggLogo_RGB.png",
     "checkout_accent_color": "#513c29",
     "checkout_button_color": "#d4f871",
@@ -147,28 +147,76 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "ab65d352-8a4f-45c6-949a-60300bd60989": {
+            "type": "feature_desktop_link",
+            "settings": {
+              "button_link": "shopify:\/\/collections\/all-pots",
+              "button_label": "Shop All Pots",
+              "position": "left_of_cart",
+              "hide_button_shadow": false
+            }
+          },
+          "95eda89d-7328-4f64-ab44-86c8682c4f9d": {
+            "type": "menu",
+            "settings": {
+              "menu_text": "shop pots",
+              "title": "Meet the three Sluggs®",
+              "description": "<p>Your Slugg® garden pots are sold as a set of three so now YOU can create the perfect pot cluster!<\/p>",
+              "btn_title": "Shop All Pots",
+              "button_link": "shopify:\/\/collections\/all-pots",
+              "sub_text": "<p>Fast, free metro delivery  |  100% Carbon Neutral<\/p>"
+            }
+          },
+          "3a7da657-dc34-4836-a951-40003ba3c69a": {
+            "type": "mobile_product",
+            "settings": {
+              "product": "lucy"
+            }
+          },
+          "9c21e7a0-48d9-4ce2-99ba-4fd26bd8cc90": {
+            "type": "mobile_product",
+            "settings": {
+              "product": "rosie"
+            }
+          },
+          "fe940b04-0099-4b62-890f-83f81bab8b1e": {
+            "type": "mobile_product",
+            "settings": {
+              "product": "thomas"
+            }
+          }
+        },
+        "block_order": [
+          "ab65d352-8a4f-45c6-949a-60300bd60989",
+          "95eda89d-7328-4f64-ab44-86c8682c4f9d",
+          "3a7da657-dc34-4836-a951-40003ba3c69a",
+          "9c21e7a0-48d9-4ce2-99ba-4fd26bd8cc90",
+          "fe940b04-0099-4b62-890f-83f81bab8b1e"
+        ],
         "settings": {
-          "logo_max_width": 160,
+          "logo": "shopify:\/\/shop_images\/Slugg-Logo.png",
+          "logo_max_width": 120,
           "main_linklist": "main-menu",
           "mobile_linklist": "",
           "sub_text": "<p>Fast, free metro delivery  |  100% Carbon Neutral<\/p>",
-          "show_all_navigation_links": false,
-          "showcase_second_level_links": false,
+          "show_all_navigation_links": true,
+          "showcase_second_level_links": true,
           "showcase_first_level_collections": true,
-          "show_collection_images": false,
+          "show_collection_images": true,
           "crop": "",
-          "header_layout": "navigation_left_logo_center",
+          "header_layout": "logo_left_navigation_center",
           "header_show_search": true,
-          "sticky_header": false,
-          "show_icons": false,
-          "enable_overlay_on_homepage": true,
+          "sticky_header": true,
+          "show_icons": true,
+          "enable_overlay_on_homepage": false,
           "enable_overlay_on_collection_pages": true,
           "enable_overlay_on_product_pages": true,
-          "overlay_text_color": "text-white",
+          "overlay_text_color": "same_as_section",
           "overlay_show_separator_border": false,
-          "color_scheme": "tertiary",
-          "use_gradient_background": false,
-          "dropdown_bg": "accent",
+          "color_scheme": "primary",
+          "use_gradient_background": true,
+          "dropdown_bg": "card",
           "sidebar_show_footer_menu": false,
           "sidebar_show_social_icons": false
         }
