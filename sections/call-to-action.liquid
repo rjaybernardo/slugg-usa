@@ -1,56 +1,90 @@
-
 {%- unless section.settings.home_page_only and template != 'index' -%}
   {%- render 'static-sticker-defs', shape: section.settings.shape, id: section.id -%}
   {% unless request.design_mode %}
     {%- if section.settings.animate_in -%}
-    <script src="{{ 'call-to-action-sticker.js' | asset_url }}" type="module"></script>
+      <script src="{{ 'call-to-action-sticker.js' | asset_url }}" type="module"></script>
     {%- endif -%}
   {% endunless %}
 
   <div
     {% if section.settings.animate_in %}
-    x-data="CallToActionSticker()"
-    x-init="mounted()"
-    x-cloak
-    :class="show ? '' : 'translate-y-full'"
+      x-data="CallToActionSticker()"
+      x-init="mounted()"
+      x-cloak
+      :class="show ? '' : 'translate-y-full'"
     {% endif %}
-    class="z-30 origin-top-left transition-transform ease-in-out duration-500 fixed p-5 lg:p-10 {% unless section.settings.show_sticker_on_mobile %}hidden lg:block{% endunless %}" id="sticker-{{ section.id }}" data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}">
+    class="z-30 origin-top-left transition-transform ease-in-out duration-500 fixed p-5 lg:p-10 {% unless section.settings.show_sticker_on_mobile %}hidden lg:block{% endunless %}"
+    id="sticker-{{ section.id }}"
+    data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}"
+  >
     {% if section.settings.url != blank %}
-    <a href="{{ section.settings.url }}" class="block transition-transform ease-in-out duration-200 hover:scale-110">
+      <a href="{{ section.settings.url }}" class="block transition-transform ease-in-out duration-200 hover:scale-110">
     {% endif %}
 
     <div class="sticker-rotate-container">
-    {%- if section.settings.image != blank -%}
-      <div class="sticker-image rotate-anim">
-      {{ section.settings.image | image_url: width: 2000 | image_tag: class: 'max-w-none' }}
-      </div>
-    {%- else -%}
-    {%- if section.settings.shape == 'fit_to_text' -%}
-      <div class="sticker-default {{ section.settings.color }} whitespace-nowrap">
-        {{ section.settings.text }}
-      </div>
+      {%- if section.settings.image != blank -%}
+        <div class="sticker-image rotate-anim">
+          {{ section.settings.image | image_url: width: 2000 | image_tag: class: 'max-w-none' }}
+        </div>
       {%- else -%}
-      <div class="sticker-container relative rotate-anim">
-        <svg class="sticker-svg relative max-w-none" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <foreignObject clip-path="url(#clip-{{ section.id }})" width="100%" height="100%">
-            <div id="sticker-foreignObject-{{ section.id }}" class="aspect-w-1 aspect-h-1 p-4 break-words sticker-text top-0 left-0 right-0 bottom-0 w-full h-full flex items-center justify-center text-center leading-none {{ section.settings.color }}">
-              {{ section.settings.text | newline_to_br }}
+        {%- if section.settings.shape == 'fit_to_text' -%}
+          <div class="sticker-default {{ section.settings.color }} whitespace-nowrap">
+            {{ section.settings.text }}
+          </div>
+        {%- else -%}
+          <div class="sticker-container relative rotate-anim">
+            <div class="absolute inset-0 {{ section.settings.color }}" style="clip-path: url(#clip-{{ section.id }})">
+              <div
+                id="sticker-text-{{ section.id }}"
+                class="sticker-text absolute inset-0 flex items-center justify-center text-center"
+              >
+                <div>{{ section.settings.text | newline_to_br }}</div>
+              </div>
             </div>
-          </foreignObject>
-          <use style="fill: none;" href="#outline-{{ section.id }}" />
-        </svg>
-        {%- if settings.sticker_drop_shadow_size > 0 -%}
-        <svg class="sticker-svg sticker-drop-shadow relative max-w-none" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <use class="sticker-drop-shadow-path"  href="#outline-{{ section.id }}" />
-        </svg>
+            <svg
+              class="sticker-width-container relative max-w-none {{ section.settings.color | split: ' ' | last }}"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <use class="sticker-svg fill-transparent" href="#outline-{{ section.id }}" />
+            </svg>
+            {%- if settings.sticker_drop_shadow_size > 0 -%}
+              {%- if settings.sticker_shadow_color == 'color-scheme-gradient' -%}
+                <div class="sticker-svg sticker-drop-shadow relative max-w-none inset-0">
+                  <div
+                    class="aspect-w-1 aspect-h-1 w-full h-full bg-scheme-gradient absolute"
+                    style="clip-path: url(#clip-{{ section.id }})"
+                  ></div>
+                </div>
+                <svg
+                  class="sticker-svg sticker-drop-shadow relative max-w-none inset-0"
+                  viewBox="0 0 200 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  {% if settings.sticker_show_border_on_shadow %}
+                  <use class="sticker-drop-shadow-border-only"  href="#outline-{{ section.id }}" />
+                  {% endif %}
+                </svg>
+              {%- else -%}
+                <svg
+                  class="sticker-svg sticker-drop-shadow relative max-w-none inset-0"
+                  viewBox="0 0 200 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <use class="sticker-drop-shadow-path"  href="#outline-{{ section.id }}" />
+                </svg>
+              {%- endif -%}
+            {%- endif -%}
+          </div>
         {%- endif -%}
-      </div>
       {%- endif -%}
-    {%- endif -%}
     </div>
 
     {% if section.settings.url != blank %}
-    </a>
+      </a>
     {% endif %}
   </div>
 {%- endunless -%}
@@ -70,9 +104,15 @@
     width: {{ section.settings.width }}px;
   }
 
-  #sticker-foreignObject-{{ section.id }},
+  #sticker-text-{{ section.id }} {
+    padding: calc(2rem * {{ section.settings.width }} / 300);
+  }
+
+  #sticker-text-{{ section.id }},
   #sticker-{{ section.id }} .sticker-default  {
-    font-size: {{ section.settings.sticker_font_size }};
+    --adjusted-sticker-font-size: calc({{ block.settings.sticker_font_size }} * 1.5);
+    font-size: calc(var(--adjusted-sticker-font-size) * {{ block.settings.width }} / 300);
+    line-height: 1;
   }
 
   {% if section.settings.animate_rotation %}

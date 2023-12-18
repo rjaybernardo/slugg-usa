@@ -1739,3 +1739,82 @@ input.spice-spa-addon-checkbox-input:checked+span.spice-spa-addon-checkbox-text:
 .strong {
     font-weight: bolder;
 }
+
+/* shapes update css */
+.fill-transparent {
+    fill: transparent;
+}
+
+.stroke-none {
+    stroke: none;
+}
+
+.shadow {
+    --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.media-image-container [class*='aspect-w-'] img,
+.media-image-container [class*='aspect-w-'] video,
+.media-style-container [class*='aspect-w-'] .media-style {
+    position: absolute;
+    inset: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+
+/*
+  Media drop shadow
+  */
+.media-drop-shadow-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: var(--media-drop-shadow-top-size);
+    left: var(--media-drop-shadow-left-size);
+    z-index: -1;
+}
+
+.media-drop-shadow-stroke,
+.media-drop-shadow-border,
+.media-drop-shadow {
+    top: unset;
+    left: unset;
+}
+
+
+.media-drop-shadow-border,
+.media-drop-shadow-stroke {
+    z-index: unset;
+}
+
+
+.media-style-placeholder svg {
+    width: unset;
+    height: unset;
+}
+
+.media-style-placeholder--wide svg {
+    width: unset;
+    height: unset;
+}
+
+.media-thumbnail .media-shape-container .media-svg:first-child {
+    transition: unset;
+}
+
+
+.media-thumbnail:hover .media-shape-container .media-svg:first-child {
+    transform: unset;
+}
+
+.media-thumbnail .media-image-container {
+    transition: transform 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.media-thumbnail:hover .media-image-container {
+    transform: translate(var(--media-drop-shadow-left-size),
+            var(--media-drop-shadow-top-size));
+}
