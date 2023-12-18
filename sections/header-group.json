@@ -4,13 +4,12 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
-      "custom_css": [
-        "{font-family: \"Cooper BT\"; font-weight: 200; font-size: 20px;}"
-      ],
+      "custom_css": [],
       "settings": {
+        "show_announcement_bar": true,
         "home_page_only": false,
-        "display": "marquee",
-        "text": "Slugg is coming to the US! Launching February 2024.",
+        "display": "static",
+        "text": "<p><strong>Slugg is coming to the US! Launching February 2024.</strong></p>",
         "link": "",
         "color_scheme": "quaternary",
         "use_gradient_background": false,
