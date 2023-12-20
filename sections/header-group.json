@@ -4,12 +4,14 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
-      "custom_css": [],
+      "custom_css": [
+
+      ],
       "settings": {
         "show_announcement_bar": true,
         "home_page_only": false,
         "display": "static",
-        "text": "<p><strong>Slugg is coming to the US! Launching February 2024.</strong></p>",
+        "text": "<p><strong>Slugg is coming to the US! Launching February 2024.<\/strong><\/p>",
         "link": "",
         "color_scheme": "quaternary",
         "use_gradient_background": false,
@@ -26,16 +28,18 @@
         "0648816c-06bc-4003-897a-d47f823efff1": {
           "type": "feature_desktop_link",
           "settings": {
-            "button_link": "shopify://collections/all-pots",
+            "button_link": "shopify:\/\/collections\/all-pots",
             "button_label": "Meet the Sluggs",
             "position": "right_of_cart",
             "hide_button_shadow": false
           }
         }
       },
-      "block_order": ["0648816c-06bc-4003-897a-d47f823efff1"],
+      "block_order": [
+        "0648816c-06bc-4003-897a-d47f823efff1"
+      ],
       "settings": {
-        "logo": "shopify://shop_images/SluggLogo_RGB.png",
+        "logo": "shopify:\/\/shop_images\/SluggLogo_RGB.png",
         "logo_max_width": 160,
         "main_linklist": "main-menu",
         "show_all_navigation_links": false,
@@ -51,10 +55,7 @@
         "enable_overlay_on_collection_pages": false,
         "enable_overlay_on_product_pages": false,
         "overlay_text_color": "same_as_section",
-        "transparent_when_overlaid_and_stuck": false,
         "overlay_show_separator_border": false,
-        "overlay_first_section_padding_top_desktop": 5,
-        "overlay_first_section_padding_top_mobile": 3,
         "color_scheme": "primary",
         "use_gradient_background": false,
         "dropdown_bg": "accent-1",
@@ -63,5 +64,8 @@
       }
     }
   },
-  "order": ["announcement-bar", "header"]
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
 }

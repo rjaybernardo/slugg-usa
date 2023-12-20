@@ -4,8 +4,8 @@
     "theme_name": "Shapes",
     "theme_version": "2.1.1",
     "theme_author": "Switch Themes",
-    "theme_documentation_url": "https://help.switchthemes.co/shapes/",
-    "theme_support_url": "https://help.switchthemes.co/"
+    "theme_documentation_url": "https:\/\/help.switchthemes.co\/shapes\/",
+    "theme_support_url": "https:\/\/help.switchthemes.co\/"
   },
   {
     "name": "t:settings_schema.colors.name",
@@ -366,23 +366,23 @@
           },
           {
             "value": "2xl:3xl",
-            "label": "2XL / desktop 3XL"
+            "label": "2XL \/ desktop 3XL"
           },
           {
             "value": "2xl:4xl",
-            "label": "2XL / desktop 4XL"
+            "label": "2XL \/ desktop 4XL"
           },
           {
             "value": "2xl:5xl",
-            "label": "2XL / desktop 5XL"
+            "label": "2XL \/ desktop 5XL"
           },
           {
             "value": "2xl:6xl",
-            "label": "2XL / desktop 6XL"
+            "label": "2XL \/ desktop 6XL"
           },
           {
             "value": "2xl:7xl",
-            "label": "2XL / desktop 7XL"
+            "label": "2XL \/ desktop 7XL"
           }
         ],
         "default": "lg:lg",
@@ -415,31 +415,31 @@
           },
           {
             "value": "2xl:3xl",
-            "label": "2XL / desktop 3XL"
+            "label": "2XL \/ desktop 3XL"
           },
           {
             "value": "2xl:4xl",
-            "label": "2XL / desktop 4XL"
+            "label": "2XL \/ desktop 4XL"
           },
           {
             "value": "2xl:5xl",
-            "label": "2XL / desktop 5XL"
+            "label": "2XL \/ desktop 5XL"
           },
           {
             "value": "2xl:6xl",
-            "label": "2XL / desktop 6XL"
+            "label": "2XL \/ desktop 6XL"
           },
           {
             "value": "2xl:7xl",
-            "label": "2XL / desktop 7XL"
+            "label": "2XL \/ desktop 7XL"
           },
           {
             "value": "2xl:8xl",
-            "label": "2XL / desktop 8XL"
+            "label": "2XL \/ desktop 8XL"
           },
           {
             "value": "2xl:9xl",
-            "label": "2XL / desktop 9XL"
+            "label": "2XL \/ desktop 9XL"
           }
         ],
         "default": "2xl:3xl",
