@@ -129,8 +129,8 @@
           "settings": {
             "show_image": true,
             "image": "shopify:\/\/shop_images\/Free_Metro_Shipping.webp",
-            "title": "FREE metro delivery*",
-            "text": "<p>Actual slugs may be slow. But our super fast and free shipping network isn’t!<\/p>",
+            "title": "Super fast delivery*",
+            "text": "<p>Actual slugs may be slow. But our super fast shipping network isn’t!<\/p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "same_as_section"

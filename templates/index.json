@@ -25,7 +25,7 @@
           "type": "icon",
           "settings": {
             "image_icon": "shopify:\/\/shop_images\/Package.webp",
-            "icon_title": "Free metro delivery",
+            "icon_title": "Three pots in a box",
             "sub_text": "",
             "icon_url": ""
           }
@@ -39,7 +39,7 @@
       "settings": {
         "display_on_card": true,
         "image": "shopify:\/\/shop_images\/slugg_banner.png",
-        "sub_heading": "4.9 based on +1,500 REVIEWS",
+        "sub_heading": "4.9 based on 900+ REVIEWS",
         "review": 5,
         "crop": "",
         "image_shape": "default",
@@ -98,7 +98,7 @@
         "2a3fea2d-f7f3-4be8-a9f1-73ce3954c1c3": {
           "type": "sticker",
           "settings": {
-            "text": "Free metro delivery!*",
+            "text": "Launching March 2024",
             "shape": "scalloped_circle_1",
             "width": 140,
             "sticker_font_size": "1.563rem",
@@ -181,8 +181,8 @@
           "type": "icon",
           "settings": {
             "image_icon": "shopify:\/\/shop_images\/Coins.png",
-            "icon_title": "Sign Up for 5% Off",
-            "sub_text": "<p>Join the Slugg® community and save 5%  today!<\/p>",
+            "icon_title": "Sign Up for FREE Delivery",
+            "sub_text": "<p>Join the Slugg® community receive FREE delivery*<\/p>",
             "icon_url": ""
           }
         },
@@ -231,8 +231,8 @@
           "settings": {
             "show_image": true,
             "image": "shopify:\/\/shop_images\/Free_Metro_Shipping.webp",
-            "title": "FREE metro delivery*",
-            "text": "<p>Actual slugs may be slow. But our super fast and free shipping network isn’t!<\/p>",
+            "title": "Super Fast Delivery",
+            "text": "<p>Actual slugs may be slow. But our super fast shipping network isn’t!<\/p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "same_as_section"
@@ -436,7 +436,7 @@
             "image": "shopify:\/\/shop_images\/Rectangle_1037.png",
             "title": "There’s a new garden pot in town",
             "text": "<p>Committed to designing beautiful products that save the planet.<\/p>",
-            "cta_link": "shopify:\/\/pages\/about-us",
+            "cta_link": "shopify:\/\/pages\/slugg-story",
             "cta_text": "READ MORE about US",
             "color_scheme": "same_as_section"
           }
@@ -490,7 +490,7 @@
         ".price {font-family: \"DM Sans\"; font-weight: 200; font-size: 25px;}"
       ],
       "settings": {
-        "title": "Meet the Four Sluggs®",
+        "title": "Meet the Three Sluggs®",
         "subheading": "",
         "collection": "all-pots",
         "enable_shop_btn": true,

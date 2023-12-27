@@ -165,7 +165,7 @@
               "description": "<p>Your Slugg® garden pots are sold as a set of three so now YOU can create the perfect pot cluster!<\/p>",
               "btn_title": "Shop All Pots",
               "button_link": "shopify:\/\/collections\/all-pots",
-              "sub_text": "<p>Fast, free metro delivery  |  100% Carbon Neutral<\/p>"
+              "sub_text": "<p>Lightweight | Waterproof | Sold as a set of three<\/p>"
             }
           },
           "3a7da657-dc34-4836-a951-40003ba3c69a": {
@@ -227,7 +227,7 @@
           "show_announcement_bar": true,
           "home_page_only": false,
           "display": "static",
-          "text": "<p>Orders placed from Thursday, December 21st, will be processed and dispatched in the week starting January 8th, 2024.<\/p>",
+          "text": "<p>Slugg® is launching in the USA in March 2024!<\/p>",
           "link": "",
           "color_scheme": "quaternary",
           "use_gradient_background": false,
