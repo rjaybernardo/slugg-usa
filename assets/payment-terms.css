@@ -1,3 +1,1 @@
-[data-color-scheme] {
-  --payment-terms-background-color: rgb(var(--color-scheme-background));
-}
+[data-color-scheme]{--payment-terms-background-color:rgb(var(--color-scheme-background));}
