@@ -5,6 +5,13 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "846a2bb0-8c3c-4116-8ade-8d4be89a058a": {
+          "type": "tagline_and_social_links",
+          "settings": {
+            "tagline": "<p>Slugg is coming to the US in March 2024!!<\/p>",
+            "show_social_icons": true
+          }
+        },
         "menus-0": {
           "type": "menus",
           "settings": {
@@ -12,26 +19,19 @@
             "linklist_1": "main-menu",
             "linklist_2": "footer"
           }
-        },
-        "846a2bb0-8c3c-4116-8ade-8d4be89a058a": {
-          "type": "tagline_and_social_links",
-          "settings": {
-            "tagline": "<h5>Slugg is coming to the US in March 2024!!<\/h5>",
-            "show_social_icons": true
-          }
         }
       },
       "block_order": [
-        "menus-0",
-        "846a2bb0-8c3c-4116-8ade-8d4be89a058a"
+        "846a2bb0-8c3c-4116-8ade-8d4be89a058a",
+        "menus-0"
       ],
       "settings": {
         "logo": "shopify:\/\/shop_images\/SluggLogo_RGB.png",
-        "logo_max_width": 130,
+        "logo_max_width": 200,
         "show_payment_icons": true,
         "show_country_selector": true,
         "show_locale_selector": false,
-        "color_scheme": "quaternary",
+        "color_scheme": "secondary",
         "use_gradient_background": false
       }
     }
