@@ -239,13 +239,13 @@
       }
     </script>
     <script src="{{ 'utils.js' | asset_url }}" defer></script>
-    <script src="{{ 'global.bundle.min.js' | asset_url }}" type="module"></script>
-    <script src="{{ 'cart-count.js' | asset_url }}" type="module"></script>
+    <script src="{{ 'global.bundle.min.js' | asset_url }}" type="module" defer></script>
+    <script src="{{ 'cart-count.js' | asset_url }}" type="module" defer></script>
     {% if template == 'cart' or settings.cart_type == 'modal' %}
-      <script src="{{ 'cart-items.js' | asset_url }}" type="module"></script>
-      <script src="{{ 'cart-footer.js' | asset_url }}" type="module"></script>
+      <script src="{{ 'cart-items.js' | asset_url }}" type="module" defer></script>
+      <script src="{{ 'cart-footer.js' | asset_url }}" type="module" defer></script>
       {% if settings.cart_notes_enable %}
-        <script src="{{ 'cart-note.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'cart-note.js' | asset_url }}" type="module" defer></script>
       {% endif %}
     {% endif %}
     {% if request.design_mode %}
@@ -289,9 +289,19 @@
     {% endcomment %}
 
     <!-- Stylesheets -->
-    {{ 'custom.css' | asset_url | stylesheet_tag }}
+     <!-- Load other CSS files asynchronously -->
+  <link rel="preload" href="{{ 'custom.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ 'custom.css' | asset_url }}"></noscript>
+
+  <link rel="preload" href="{{ 'base.bundle.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ 'base.bundle.css' | asset_url }}"></noscript>
+
+  <link rel="preload" href="{{ 'slick.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ 'slick.min.css' | asset_url }}"></noscript>
+
+    {% comment %} {{ 'custom.css' | asset_url | stylesheet_tag }}
     {{ 'base.bundle.css' | asset_url | stylesheet_tag }}
-    {{ 'slick.min.css' | asset_url | stylesheet_tag }}
+    {{ 'slick.min.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
     {% comment %}
       <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
