@@ -38,7 +38,7 @@
       ],
       "settings": {
         "display_on_card": true,
-        "image": "shopify:\/\/shop_images\/slugg_banner.png",
+        "image": "shopify:\/\/shop_images\/optimized-banner-image.jpg",
         "sub_heading": "4.9 based on 900+ REVIEWS",
         "review": 5,
         "crop": "",
@@ -65,7 +65,7 @@
         "template--17029417468146__e60020e4-8d5e-427e-9d35-836db57a0dec-logo-1": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frankie.png",
+            "image": "shopify:\/\/shop_images\/optimized-frankie-logo.png",
             "link": ""
           }
         },
@@ -205,7 +205,7 @@
       ],
       "settings": {
         "display_on_card": false,
-        "image": "shopify:\/\/shop_images\/SLUGGDAY2-73.jpg",
+        "image": "shopify:\/\/shop_images\/optimized-slugg-day-image.jpg",
         "crop": "aspect-w-1 aspect-h-1",
         "image_shape": "default_archway",
         "blob_type": 1,
@@ -230,7 +230,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Free_Metro_Shipping.webp",
+            "image": "shopify:\/\/shop_images\/optimized-free-metro-shipping-icon.png",
             "title": "Super Fast Delivery",
             "text": "<p>Actual slugs may be slow. But our super fast shipping network isn’t!<\/p>",
             "cta_link": "",
@@ -242,7 +242,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Threes.webp",
+            "image": "shopify:\/\/shop_images\/optimized-threes-icon.png",
             "title": "Good things come in threes",
             "text": "<p>Sluggs® are sold as a set of three garden pots in a box.<\/p>",
             "cta_link": "",
@@ -254,7 +254,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Suitable.webp",
+            "image": "shopify:\/\/shop_images\/optimized-suitable-icon.png",
             "title": "Suitable for indoors & out",
             "text": "<p>The entire Slugg® range is suitable for indoor and outside.<\/p>",
             "cta_link": "",
@@ -266,7 +266,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Built_to_last.webp",
+            "image": "shopify:\/\/shop_images\/optimized-built-to-last-icon.png",
             "title": "Built to last",
             "text": "<p>Slugg® garden pots are waterproof, lightweight, and tougher than nails.<\/p>",
             "cta_link": "",
@@ -300,7 +300,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/001.jpg",
+            "image": "shopify:\/\/shop_images\/optimized-slider-image.jpg",
             "title": "Leah M.",
             "text": "<p>Most beautiful pots! So light which makes them easy to move around and having them in a cluster of 3 is perfect. Highly recommended! Love these pots so much.<\/p>",
             "cta_link": "shopify:\/\/products\/lucy",
@@ -312,7 +312,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/003.jpg",
+            "image": "shopify:\/\/shop_images\/optimized-slider-image-02.jpg",
             "title": "Paul T.",
             "text": "<p>Super stylish, lighweight and easy to use. A mate of mine referred you guys to me and everyone who comes over loves them.<\/p>",
             "cta_link": "shopify:\/\/products\/rosie",
@@ -324,7 +324,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/002.jpg",
+            "image": "shopify:\/\/shop_images\/optimized-slider-image-03.jpg",
             "title": "Sam H.",
             "text": "<p>Love my Thomas pots. Look so beautiful on the front porch.<\/p>",
             "cta_link": "shopify:\/\/products\/thomas",
