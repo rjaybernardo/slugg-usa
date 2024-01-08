@@ -84,10 +84,9 @@
             showShopBtn: showShopBtn
           -%}
 
-          <div class="product-review-main">
-            
+          <center class="product-review-main">
             <div
-              class="loox-rating "
+              class="loox-rating"
               data-id="{{ product.id }}"
               data-rating="{{ product.metafields.loox.avg_rating }}"
               data-raters="{{ product.metafields.loox.num_reviews }}"
@@ -102,7 +101,7 @@
                 {%- endif -%}
               </span>
             {%- endif -%}
-          </div>
+          </center>
 
           {%- if product.metafields.custom.sub_title.value -%}
             <p class="sub_title">{{ product.metafields.custom.sub_title.value }}</p>

@@ -79,7 +79,7 @@
                       enable_quick_buy: section.settings.enable_quick_buy
                     -%}
 
-                    <div class="product-review-main ">
+                    <center class="product-review-main">
                       <div
                         class="loox-rating"
                         data-id="{{ product.id }}"
@@ -98,7 +98,7 @@
                           {%- endif -%}
                         </span>
                       {%- endif -%}
-                    </div>
+                    </center>
 
                     {%- if product.metafields.custom.sub_title.value -%}
                       <p class="sub_title">{{ product.metafields.custom.sub_title.value }}</p>

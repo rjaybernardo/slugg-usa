@@ -38,7 +38,7 @@
       ],
       "settings": {
         "display_on_card": true,
-        "image": "shopify:\/\/shop_images\/optimized-banner-image.jpg",
+        "image": "shopify:\/\/shop_images\/slugg-kitchen-decor-white-plant-pots-modern-lifestyle.jpg",
         "sub_heading": "4.9 based on 900+ REVIEWS",
         "review": 5,
         "crop": "",
@@ -205,7 +205,7 @@
       ],
       "settings": {
         "display_on_card": false,
-        "image": "shopify:\/\/shop_images\/optimized-slugg-day-image.jpg",
+        "image": "shopify:\/\/shop_images\/slugg-unique-plant-pots-creative-presentation.jpg",
         "crop": "aspect-w-1 aspect-h-1",
         "image_shape": "default_archway",
         "blob_type": 1,
@@ -300,7 +300,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/optimized-slider-image.jpg",
+            "image": "shopify:\/\/shop_images\/slugg-pots-elegant-white-plant-pots-outdoor-lounge-area.jpg",
             "title": "Leah M.",
             "text": "<p>Most beautiful pots! So light which makes them easy to move around and having them in a cluster of 3 is perfect. Highly recommended! Love these pots so much.<\/p>",
             "cta_link": "shopify:\/\/products\/lucy",
@@ -325,7 +325,7 @@
           "settings": {
             "show_image": true,
             "image": "shopify:\/\/shop_images\/optimized-slider-image-03.jpg",
-            "title": "Sam H.",
+            "title": "Alyce P.",
             "text": "<p>Love my Thomas pots. Look so beautiful on the front porch.<\/p>",
             "cta_link": "shopify:\/\/products\/thomas",
             "cta_text": "Shop Thomas",
