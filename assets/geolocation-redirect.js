@@ -1,7 +1,5 @@
 $(document).ready(() => {
-    const geolocationEnabled = {{ settings.enable_geolocation_redirect | json }};
-
-    if (geolocationEnabled) {
+    if (window.geolocationEnabled) {
         $.ajax({
             url: 'https://ipapi.co/json/',
             type: 'GET',

@@ -11,10 +11,6 @@
     "name": "Geolocation Redirect",
     "settings": [
       {
-        "type": "header",
-        "content": "Geolocation Redirect"
-      },
-      {
         "type": "checkbox",
         "id": "enable_geolocation_redirect",
         "label": "Enable Geolocation Redirect",
