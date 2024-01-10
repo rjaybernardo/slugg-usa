@@ -80,7 +80,6 @@
         },
         "baf3083e-d14d-435d-bca3-100d6ac490ce": {
           "type": "buy_buttons",
-          "disabled": true,
           "settings": {
             "display_on_card": false,
             "show_price": true,
