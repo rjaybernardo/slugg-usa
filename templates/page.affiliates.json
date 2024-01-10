@@ -1,0 +1,166 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "display_on_card": true,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "c0d2c9a5-745b-49d1-8ac3-61b4afae85ec": {
+      "type": "rich-text",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "title": "Join our affiliate network today.",
+        "heading_size": "heading-feature",
+        "rich_text": "<p>We LOVE our customers, and they love us.  So why not share the love around and make a bit of money while you do it.  Here's how it works:<\/p><ol><li>Sign up using the form below.<\/li><li>You'll be given your own unique code to share with your friends. <\/li><li>They'll get $25 off their order, and we'll pay you $25 when they order.<\/li><\/ol>",
+        "display_on_card": false,
+        "content_width_desktop": "lg:w-2\/3",
+        "button_link": "",
+        "button_label": "Shop Now",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "17048515649298f158": {
+      "type": "apps",
+      "blocks": {
+        "073533da-85d8-4992-9fc4-365adf136292": {
+          "type": "shopify:\/\/apps\/snowball-affiliate-marketing\/blocks\/affiliate-sign-up\/6e5feda3-ec24-4171-ae41-64028b660bc7",
+          "settings": {
+            "form_id": "f157b212-d78d-4194-8c06-71f65e432331"
+          }
+        }
+      },
+      "block_order": [
+        "073533da-85d8-4992-9fc4-365adf136292"
+      ],
+      "settings": {
+        "apply_vertical_spacing": false,
+        "apply_horizontal_spacing": false,
+        "display_on_card": false,
+        "content_width_desktop": "lg:w-full",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "80e916c7-12a4-4075-bb9e-64c00bee099f": {
+      "type": "faq",
+      "blocks": {
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-1": {
+          "type": "question",
+          "settings": {
+            "question": "Will I be paid cash or gift cards?",
+            "answer": "<p>You will receive a payment of $25 anytime a person purchases via your affiliate link.<\/p>"
+          }
+        },
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-2": {
+          "type": "question",
+          "settings": {
+            "question": "What are the terms & conditions?",
+            "answer": "<p>Head to our <a href=\"\/policies\/terms-of-service\" title=\"Terms of Service\">T&C's page<\/a> to view a complete list of any terms and conditions relating to our Affiliate Program.<\/p>"
+          }
+        },
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-3": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+          }
+        },
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-4": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+          }
+        },
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-5": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+          }
+        },
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-6": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+          }
+        },
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-7": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+          }
+        },
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-8": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-1",
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-2",
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-3",
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-4",
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-5",
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-6",
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-7",
+        "template--17183633735922__80e916c7-12a4-4075-bb9e-64c00bee099f-question-8"
+      ],
+      "settings": {
+        "display_on_card": true,
+        "heading_text_style": "heading",
+        "two_columns_desktop": true,
+        "title": "Affiliate Program FAQ's",
+        "richtext": "",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "170485158056a8fa4c": {
+      "type": "apps",
+      "blocks": {
+        "cd9f23c1-cb44-4a14-a99d-c82187231b25": {
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-agg-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": true,
+            "hide_thumbnails": false,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 12,
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "cd9f23c1-cb44-4a14-a99d-c82187231b25"
+      ],
+      "settings": {
+        "apply_vertical_spacing": true,
+        "apply_horizontal_spacing": true,
+        "display_on_card": false,
+        "content_width_desktop": "lg:w-full",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c0d2c9a5-745b-49d1-8ac3-61b4afae85ec",
+    "17048515649298f158",
+    "80e916c7-12a4-4075-bb9e-64c00bee099f",
+    "170485158056a8fa4c"
+  ]
+}
