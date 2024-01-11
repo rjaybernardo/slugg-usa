@@ -148,7 +148,7 @@ jQuery(document).ready(function($) {
             },
             dataType: 'json',
             success: function() { 
-                // Update cart UI, but do not reset store.cart_count
+                // Update cart UI
             },
             error: function() {
                 // Handle error
@@ -157,9 +157,10 @@ jQuery(document).ready(function($) {
     });
 
     $('#add-to-cart-btn').click(function() {
-        // Dispatch an event to reset all add-on states
-        document.dispatchEvent(new CustomEvent('reset-addons'));
-        // Additional logic for the main add to cart button...
-        // Ensure this does not reset store.cart_count
+        // Dispatch an event to reset all add-on states after a delay
+        setTimeout(function() {
+            document.dispatchEvent(new CustomEvent('reset-addons'));
+        }, 3000); // 3 seconds delay
     });
 });
+
