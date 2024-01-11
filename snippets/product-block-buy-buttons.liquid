@@ -57,6 +57,7 @@
     >
       <div class="w-full">
         <button
+        id="add-to-cart-btn"
           class="
             mb-1 add-to-cart-btn {% if product.available %}push-btn theme-button{% else %}btn text-sm lg:text-base after:hidden bg-scheme-secondary-background text-scheme-text{% endif %} theme-button w-full
             {% unless current_variant.available %}cursor-not-allowed{% endunless %}

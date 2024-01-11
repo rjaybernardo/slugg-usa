@@ -131,7 +131,7 @@
   })
 
 // Add to cart Addon
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
     document.addEventListener('add-to-cart', function(event) {
         var productId = event.detail.productId;
         var added = event.detail.added;
@@ -148,14 +148,18 @@ jQuery(document).ready(function() {
             },
             dataType: 'json',
             success: function() { 
-                // console.log(added ? 'Product added to cart' : 'Product removed from cart');
-                // Update cart UI
-                // You might need additional code here to update the cart display
+                // Update cart UI, but do not reset store.cart_count
             },
             error: function() {
-                // console.log('Could not update the cart');
                 // Handle error
             }
         });
+    });
+
+    $('#add-to-cart-btn').click(function() {
+        // Dispatch an event to reset all add-on states
+        document.dispatchEvent(new CustomEvent('reset-addons'));
+        // Additional logic for the main add to cart button...
+        // Ensure this does not reset store.cart_count
     });
 });
