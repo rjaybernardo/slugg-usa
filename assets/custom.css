@@ -1779,3 +1779,7 @@ input.spice-spa-addon-checkbox-input:checked+span.spice-spa-addon-checkbox-text:
     gap:8px;
 }
 
+/* add to cart button BG color */
+#add-to-cart-btn span{
+background-color: #D4F871;
+}
