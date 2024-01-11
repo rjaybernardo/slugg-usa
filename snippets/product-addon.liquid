@@ -1,0 +1,12 @@
+{% if product %}
+    <div class="product-addon">
+        <img src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.title | escape }}">
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.price | money_with_currency }}</p>
+        <label>
+            <input type="checkbox" class="product-addon-checkbox" data-product-id="{{ product.variants.first.id }}" name="add_to_cart"> Add to Cart
+        </label>
+    </div>
+{% else %}
+    <p>Product not found.</p>
+{% endif %}

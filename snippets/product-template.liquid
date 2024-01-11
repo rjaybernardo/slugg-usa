@@ -484,6 +484,9 @@
                     block: block,
                     block_base_classes: block_base_classes,
                   %}
+                  {% when 'product_addon' %} 
+                    {% assign product = all_products[block.settings.product_id] %}
+                    {% render 'product-addon', product: product %}
                 {% when 'buy_buttons' %}
                   {% 
                     render 'product-block-buy-buttons',
