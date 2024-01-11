@@ -1,12 +1,18 @@
 {% if product %}
-    <div class="product-addon">
-        <img src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.title | escape }}">
-        <h3>{{ product.title }}</h3>
+    <div class="product-addon" x-data="{ addedToCart: false }">
+      <div class="product-addon-content">
+        <!-- Using image_url filter to generate an image URL with specified dimensions -->
+        <img src="{{ product.featured_image | image_url: width: 62, height: 62 }}" alt="{{ product.title | escape }}">
+        <p>{{ product.title }}</p>
         <p>{{ product.price | money_with_currency }}</p>
-        <label>
-            <input type="checkbox" class="product-addon-checkbox" data-product-id="{{ product.variants.first.id }}" name="add_to_cart"> Add to Cart
-        </label>
+      </div>
+      <button
+        x-text="addedToCart ? '- Remove' : '+ Add'"
+        x-bind:class="{'added': addedToCart, 'not-added': !addedToCart}"
+        @click="addedToCart = !addedToCart; $dispatch('add-to-cart', { productId: {{ product.variants.first.id | json }}, added: addedToCart })"
+      ></button>
     </div>
-{% else %}
+  {% else %}
     <p>Product not found.</p>
-{% endif %}
+  {% endif %}
+  

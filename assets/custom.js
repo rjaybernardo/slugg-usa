@@ -132,9 +132,10 @@
 
 // Add to cart Addon
 jQuery(document).ready(function() {
-    jQuery('.product-addon-checkbox').change(function() {
-        var productId = jQuery(this).data('product-id');
-        var quantity = jQuery(this).is(':checked') ? 1 : 0;
+    document.addEventListener('add-to-cart', function(event) {
+        var productId = event.detail.productId;
+        var added = event.detail.added;
+        var quantity = added ? 1 : 0;
 
         jQuery.ajax({
             type: 'POST',
@@ -147,11 +148,12 @@ jQuery(document).ready(function() {
             },
             dataType: 'json',
             success: function() { 
-                console.log('Product added to cart');
+                // console.log(added ? 'Product added to cart' : 'Product removed from cart');
                 // Update cart UI
+                // You might need additional code here to update the cart display
             },
             error: function() {
-                console.log('Could not add product to cart');
+                // console.log('Could not update the cart');
                 // Handle error
             }
         });
