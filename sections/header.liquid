@@ -109,7 +109,7 @@
 -%}
 {% capture navigation %}
   <nav role="navigation">
-    <ul  x-ref="navigation" class="navigation-menu flex flex-wrap -mx-3.5 {% if layout contains 'navigation_left' %}justify-start{% else %}justify-center{% endif %} items-center navigation-text-size {% if uppercase %}uppercase{% endif %} ">
+    <ul  x-ref="navigation" class="navigation-menu flex flex-nowrap -mx-3.5 {% if layout contains 'navigation_left' %}justify-start{% else %}justify-center{% endif %} items-center navigation-text-size {% if uppercase %}uppercase{% endif %} ">
       {%- if has_feature_desktop_button and feature_desktop_link_position == 'first_item_in_navigation' %}
       <li class="inline-block no-js-focus-wrapper h-full flex items-center relative z-10 px-2.5">
         <div class="{% unless hide_button_shadow %}{% if settings.button_shadow_direction contains 'top' %}pt-button-shadow{% else %}pb-button-shadow{% endif %}{% endunless %}">
@@ -295,9 +295,18 @@
           {% endif %}
         </li>
       {% endfor %}
+      <li>
+        <select id="country-selector" name="countries" >
+          <option value="" disabled selected>United States</option>
+          <option value="USA">United States</option>
+          <option value="Australia">Australia</option>
+        </select>
+      </li>
     </ul>
   </nav>
+
 {% endcapture %}
+
 {%- liquid
   assign search_resources = ''
   if settings.search_products
