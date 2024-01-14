@@ -87,6 +87,28 @@
             "show_pickup_availability": false
           }
         },
+        "liquid_yMVnhL": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "display_on_card": false,
+            "liquid": "<h3 class=\"addon\">Add to your order<\/h3>\n<style>\nh3.addon{\nfont-family: inherit;\n    font-size: var(--sg-addon-heading-fontsize);\n    font-weight: 600;\n    margin-top: 10px;\n    margin-bottom: 15px;\n}\n<\/style>"
+          }
+        },
+        "product_addon_fyKkbz": {
+          "type": "product_addon",
+          "disabled": true,
+          "settings": {
+            "product_id": "drainage-kit"
+          }
+        },
+        "product_addon_mBMEqw": {
+          "type": "product_addon",
+          "disabled": true,
+          "settings": {
+            "product_id": "pot-trays"
+          }
+        },
         "75d78151-c206-49e1-a7c8-67f158a8394a": {
           "type": "shopify:\/\/apps\/epa-easy-product-addons\/blocks\/spice_addons\/0099190e-a0cb-49e7-8d26-026c9d26f337",
           "disabled": true,
@@ -132,6 +154,9 @@
         "quantity_selector",
         "variant_picker",
         "baf3083e-d14d-435d-bca3-100d6ac490ce",
+        "liquid_yMVnhL",
+        "product_addon_fyKkbz",
+        "product_addon_mBMEqw",
         "75d78151-c206-49e1-a7c8-67f158a8394a",
         "a17e90c4-acc9-4f1d-af84-828ae4cb2289",
         "dd821fb8-a8d4-4cc7-be01-af94d689d4a0",

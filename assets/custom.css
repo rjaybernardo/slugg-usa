@@ -1783,8 +1783,3 @@ input.spice-spa-addon-checkbox-input:checked+span.spice-spa-addon-checkbox-text:
 #add-to-cart-btn span{
 background-color: #D4F871;
 }
-
-/* location dropdown select */
-#country-selector{
-    padding: 0.75rem 1.2rem;
-}

@@ -290,8 +290,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {% endcomment %}
 
     <!-- Stylesheets -->
-    {{ 'base.bundle.css' | asset_url | stylesheet_tag }}
     {{ 'custom.css' | asset_url | stylesheet_tag }}
+    {{ 'base.bundle.css' | asset_url | stylesheet_tag }}
     {{ 'slick.min.css' | asset_url | stylesheet_tag }}
 
     {% comment %}
