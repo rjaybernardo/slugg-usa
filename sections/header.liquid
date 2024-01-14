@@ -298,16 +298,13 @@
       <li x-data="{
         selectedCountry: '',
         redirectToCountrySite() {
-            if (this.selectedCountry === 'USA') {
-                window.location.href = 'https://www.slugg.co';
-            } else if (this.selectedCountry === 'Australia') {
+            if (this.selectedCountry === 'Australia') {
                 window.location.href = 'https://www.slugg.com.au';
             }
         }
     }">
         <select id="country-selector" name="countries" x-model="selectedCountry" x-on:change="redirectToCountrySite()">
             <option value="" disabled selected>United States</option>
-            <option value="USA">United States</option>
             <option value="Australia">Australia</option>
         </select>
     </li>
