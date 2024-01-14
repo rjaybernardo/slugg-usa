@@ -295,7 +295,8 @@
           {% endif %}
         </li>
       {% endfor %}
-      <li x-data="{
+   {% if settings.enable_country_selector %}
+    <li x-data="{
         selectedCountry: '',
         redirectToCountrySite() {
             if (this.selectedCountry === 'Australia') {
@@ -308,6 +309,8 @@
             <option value="Australia">Australia</option>
         </select>
     </li>
+{% endif %}
+
     </ul>
   </nav>
 {% endcapture %}
