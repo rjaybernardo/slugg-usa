@@ -4,14 +4,14 @@
       "type": "main-blog",
       "settings": {
         "display_on_card": true,
-        "show_blog_title": false,
-        "show_tags": true,
+        "show_blog_title": true,
+        "show_tags": false,
         "crop": "aspect-w-4 aspect-h-3",
-        "image_shape": "default",
+        "image_shape": "default_pill",
         "blog_show_author": false,
         "blog_show_date": false,
         "show_post_excerpt": false,
-        "color_scheme": "primary",
+        "color_scheme": "secondary",
         "use_gradient_background": false
       }
     }

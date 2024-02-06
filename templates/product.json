@@ -80,6 +80,7 @@
         },
         "baf3083e-d14d-435d-bca3-100d6ac490ce": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "display_on_card": false,
             "show_price": true,
@@ -496,7 +497,7 @@
           "type": "question",
           "settings": {
             "question": "When are you launching in the USA?",
-            "answer": "<p>We're super excited to announce that we'll be launching in the USA in March 2024.<\/p>"
+            "answer": "<p>We're super excited to announce that we'll be launching in the USA in 1st April 2024.<\/p>"
           }
         },
         "555d023b-4e11-4b63-8bcc-5af8b1e55410": {

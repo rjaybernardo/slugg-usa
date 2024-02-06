@@ -217,7 +217,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {% endif %}
 
     {%- render 'meta-tags' -%}
- <script src="https://code.jquery.com/jquery-3.6.3.min.js" defer></script>
+    <script src="{{ 'jquery.min.js' | asset_url }}" async="async"></script>
     <script src="{{ 'header.js' | asset_url }}" defer></script>
     <script src="{{ 'slick.min.js' | asset_url }}" defer></script>
     {{ content_for_header }}
@@ -280,7 +280,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <script src="{{ 'free-shipping-bar.js' | asset_url }}" type="module"></script>
       <script src="{{ 'theme-editor-support.js' | asset_url }}" type="module"></script>
     {% endif %}
-        <script type="lazyload_int" data-src="{{ 'alpine-extensions.js' | asset_url }}"></script>
+    <script src="{{ 'alpine-extensions.js' | asset_url }}" defer></script>
     {% render 'base-css' %}
 
     {% comment %}
@@ -477,7 +477,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </noscript>
     <!-- End Quantcast tag -->
     <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
-
     <script>
       jQuery(document).on('change', '.product_option_main .variant_common_option', function () {
         $this = jQuery(this);
