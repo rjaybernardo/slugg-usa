@@ -10,21 +10,20 @@
   {
     "name": "General Settings",
     "settings": [
-        {
-            "type": "checkbox",
-            "id": "enable_country_selector",
-            "label": "Enable Country Selector",
-            "default": false
-        },
-        {
-          "type": "checkbox",
-          "id": "enable_geolocation_redirect",
-          "label": "Enable Geolocation Redirect",
-          "default": false
-        }
+      {
+        "type": "checkbox",
+        "id": "enable_country_selector",
+        "label": "Enable Country Selector",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_geolocation_redirect",
+        "label": "Enable Geolocation Redirect",
+        "default": false
+      }
     ]
-},
- 
+  },
   {
     "name": "t:settings_schema.colors.name",
     "settings": [

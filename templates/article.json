@@ -24,11 +24,12 @@
         "use_gradient_background": false
       }
     },
-    "rich_text_UxwKhA": {
-      "type": "rich-text",
+    "custom_rich_text_PzJiDg": {
+      "type": "custom-rich-text",
       "settings": {
+        "sub_title": "",
         "title": "",
-        "heading_size": "heading-standard",
+        "heading_size": "heading-base",
         "rich_text": "",
         "display_on_card": true,
         "content_width_desktop": "lg:w-2\/3",
@@ -42,6 +43,6 @@
   "order": [
     "featured-image",
     "main",
-    "rich_text_UxwKhA"
+    "custom_rich_text_PzJiDg"
   ]
 }

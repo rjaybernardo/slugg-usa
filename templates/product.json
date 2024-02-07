@@ -270,7 +270,7 @@
     "product-ratings": {
       "type": "custom-liquid",
       "settings": {
-        "title": "What our customers are saying.",
+        "title": "What our Australian customers are saying.",
         "custom_liquid": "<div class=\"text-center\"><div class=\"product-review-title\">{{ product.metafields.loox.avg_rating }} <span class=\"loox-rating\" data-id=\"{{ product.id }}\" data-rating=\"{{ product.metafields.loox.avg_rating }}\" data-raters=\"{{ product.metafields.loox.num_reviews }}\"><\/span><\/div> Based on {{ product.metafields.loox.num_reviews }} Reviews<\/div>",
         "full_width": false,
         "color_scheme": "primary"

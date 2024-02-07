@@ -10,7 +10,7 @@
         "image_shape": "default_pill",
         "blog_show_author": false,
         "blog_show_date": false,
-        "show_post_excerpt": false,
+        "show_post_excerpt": true,
         "color_scheme": "secondary",
         "use_gradient_background": false
       }
