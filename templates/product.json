@@ -313,7 +313,8 @@
             "aggregated": false,
             "limit": 20,
             "hide_thumbnails": false,
-            "maxwidth": 1080
+            "maxwidth": 1080,
+            "is_sample": true
           }
         }
       },
@@ -446,7 +447,7 @@
         "show_product_recommendations": true,
         "display_on_card": false,
         "enable_quick_buy": false,
-        "enable_shop_btn": false,
+        "enable_shop_btn": true,
         "product_recommendations_heading": "More Sluggs® to discover",
         "max_products": "3",
         "product_tiles_aspect_ratio": "",
