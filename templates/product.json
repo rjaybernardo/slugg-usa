@@ -80,12 +80,18 @@
         },
         "baf3083e-d14d-435d-bca3-100d6ac490ce": {
           "type": "buy_buttons",
-          "disabled": true,
           "settings": {
             "display_on_card": false,
             "show_price": true,
             "enable_payment_button": false,
             "show_pickup_availability": false
+          }
+        },
+        "liquid_RjqAkN": {
+          "type": "liquid",
+          "settings": {
+            "display_on_card": false,
+            "liquid": "<a class=\"klaviyo-bis-trigger text-center block underline\" href=\"#\">Notify Me When Available<\/a>"
           }
         },
         "liquid_yMVnhL": {
@@ -155,6 +161,7 @@
         "quantity_selector",
         "variant_picker",
         "baf3083e-d14d-435d-bca3-100d6ac490ce",
+        "liquid_RjqAkN",
         "liquid_yMVnhL",
         "product_addon_fyKkbz",
         "product_addon_mBMEqw",
