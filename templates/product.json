@@ -91,7 +91,7 @@
           "type": "liquid",
           "settings": {
             "display_on_card": false,
-            "liquid": "<a class=\"klaviyo-bis-trigger text-center block underline\" href=\"#\">Notify Me When Available<\/a>"
+            "liquid": "<a class=\"klaviyo-bis-trigger block text-center underline\" href=\"#\">Notify Me When Available<\/a>"
           }
         },
         "liquid_yMVnhL": {
