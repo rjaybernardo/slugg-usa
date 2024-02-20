@@ -91,12 +91,11 @@
           "type": "liquid",
           "settings": {
             "display_on_card": false,
-            "liquid": "<a class=\"klaviyo-bis-trigger block text-center underline\" href=\"#\">Notify Me When Available<\/a>"
+            "liquid": "{% if product.selected_or_first_available_variant.available == false %}<div>\n  <a class=\"klaviyo-bis-trigger text-center underline container\" href=\"#\" >Notify Me When Available<\/a>\n<\/div>\n{% endif %}"
           }
         },
         "liquid_yMVnhL": {
           "type": "liquid",
-          "disabled": true,
           "settings": {
             "display_on_card": false,
             "liquid": "<h3 class=\"addon\">Add to your order<\/h3>\n<style>\nh3.addon{\nfont-family: inherit;\n    font-size: var(--sg-addon-heading-fontsize);\n    font-weight: 600;\n    margin-top: 10px;\n    margin-bottom: 15px;\n}\n<\/style>"
@@ -104,14 +103,12 @@
         },
         "product_addon_fyKkbz": {
           "type": "product_addon",
-          "disabled": true,
           "settings": {
             "product_id": "drainage-kit"
           }
         },
         "product_addon_mBMEqw": {
           "type": "product_addon",
-          "disabled": true,
           "settings": {
             "product_id": "pot-trays"
           }

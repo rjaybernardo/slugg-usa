@@ -1077,7 +1077,7 @@ footer .footer-logo-image img {
 }
 
 .product-slider-main .product-content .product-block-variant-picker .variant-input .btn span {
-    margin-top: 5px
+    margin-top: 0px;
 }
 
 .product-slider-main .product-content .product-block-variant-picker .variant-input .color-swatch:checked+label span {

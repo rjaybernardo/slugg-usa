@@ -1,7 +1,7 @@
 {% if product %}
     <div class="product-addon" x-data="productAddon({{ product.variants.first.id | json }})">
       <div class="product-addon-content">
-        <img src="{{ product.featured_image | image_url: width: 62, height: 62 }}" alt="{{ product.title | escape }}">
+        <img src="{{ product.featured_image | image_url: width: 62, height: 62 }}"  width="62" height="62"  alt="{{ product.title | escape }}">
         <p>{{ product.title }}</p>
         <p>{{ product.price | money_with_currency }}</p>
       </div>
