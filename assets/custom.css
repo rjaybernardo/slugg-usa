@@ -1816,3 +1816,14 @@ background-color: #D4F871;
 .modal-image-container:hover .modal-text {
     opacity: 1;
 }
+@media(max-width:900px){
+    .modal{
+        padding: 0 10%;
+    }
+    .modal-container{
+        flex-direction: column;
+    }
+    .modal-image-container img{
+       
+    }
+}
