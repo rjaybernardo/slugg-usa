@@ -87,6 +87,14 @@
             "show_pickup_availability": false
           }
         },
+        "a17e90c4-acc9-4f1d-af84-828ae4cb2289": {
+          "type": "description",
+          "settings": {
+            "display_on_card": false,
+            "truncate_description": false,
+            "text_align": "text-left"
+          }
+        },
         "liquid_RjqAkN": {
           "type": "liquid",
           "settings": {
@@ -117,14 +125,6 @@
           "type": "shopify:\/\/apps\/epa-easy-product-addons\/blocks\/spice_addons\/0099190e-a0cb-49e7-8d26-026c9d26f337",
           "disabled": true,
           "settings": {
-          }
-        },
-        "a17e90c4-acc9-4f1d-af84-828ae4cb2289": {
-          "type": "description",
-          "settings": {
-            "display_on_card": false,
-            "truncate_description": false,
-            "text_align": "text-left"
           }
         },
         "dd821fb8-a8d4-4cc7-be01-af94d689d4a0": {
@@ -158,12 +158,12 @@
         "quantity_selector",
         "variant_picker",
         "baf3083e-d14d-435d-bca3-100d6ac490ce",
+        "a17e90c4-acc9-4f1d-af84-828ae4cb2289",
         "liquid_RjqAkN",
         "liquid_yMVnhL",
         "product_addon_fyKkbz",
         "product_addon_mBMEqw",
         "75d78151-c206-49e1-a7c8-67f158a8394a",
-        "a17e90c4-acc9-4f1d-af84-828ae4cb2289",
         "dd821fb8-a8d4-4cc7-be01-af94d689d4a0",
         "de4c6c8d-98ab-427e-920f-05f71b84497e"
       ],
