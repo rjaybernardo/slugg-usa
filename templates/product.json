@@ -87,8 +87,16 @@
             "show_pickup_availability": false
           }
         },
+        "back_on_stock_4nRYnL": {
+          "type": "back_on_stock",
+          "settings": {
+            "enable_notify_me": true,
+            "notify_me_text": "Notify Me When Available"
+          }
+        },
         "liquid_RjqAkN": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "display_on_card": false,
             "liquid": "{% if product.selected_or_first_available_variant.available == false %}<div>\n  <a class=\"klaviyo-bis-trigger text-center underline container\" href=\"#\" >Notify Me When Available<\/a>\n<\/div>\n{% endif %}"
@@ -158,6 +166,7 @@
         "quantity_selector",
         "variant_picker",
         "baf3083e-d14d-435d-bca3-100d6ac490ce",
+        "back_on_stock_4nRYnL",
         "liquid_RjqAkN",
         "a17e90c4-acc9-4f1d-af84-828ae4cb2289",
         "liquid_yMVnhL",
