@@ -2,6 +2,7 @@
   <div  x-cloak x-data="{ openModal: false }" class="product-addon">
     <div class="product-addon-content">
       <!-- Image trigger for modal -->
+      <div class="modal-image-container">
       <img
         src="{{ product.featured_image | image_url: width: 62, height: 62 }}"
         width="62"
@@ -10,7 +11,8 @@
         @click="openModal = true"
         style="cursor: pointer;"
       >
-      <p>{{ product.title }}</p>
+      <div class="modal-text"  @click="openModal = true">Quick View</div>
+      </div>      <p>{{ product.title }}</p>
       <p>{{ product.price | money_with_currency }}</p>
     </div>
     <button
