@@ -102,14 +102,6 @@
             "liquid": "{% if product.selected_or_first_available_variant.available == false %}<div>\n  <a class=\"klaviyo-bis-trigger text-center underline container\" href=\"#\" >Notify Me When Available<\/a>\n<\/div>\n{% endif %}"
           }
         },
-        "a17e90c4-acc9-4f1d-af84-828ae4cb2289": {
-          "type": "description",
-          "settings": {
-            "display_on_card": false,
-            "truncate_description": false,
-            "text_align": "text-left"
-          }
-        },
         "liquid_yMVnhL": {
           "type": "liquid",
           "settings": {
@@ -127,6 +119,14 @@
           "type": "product_addon",
           "settings": {
             "product_id": "pot-trays"
+          }
+        },
+        "a17e90c4-acc9-4f1d-af84-828ae4cb2289": {
+          "type": "description",
+          "settings": {
+            "display_on_card": false,
+            "truncate_description": false,
+            "text_align": "text-left"
           }
         },
         "75d78151-c206-49e1-a7c8-67f158a8394a": {
@@ -168,10 +168,10 @@
         "baf3083e-d14d-435d-bca3-100d6ac490ce",
         "back_on_stock_4nRYnL",
         "liquid_RjqAkN",
-        "a17e90c4-acc9-4f1d-af84-828ae4cb2289",
         "liquid_yMVnhL",
         "product_addon_fyKkbz",
         "product_addon_mBMEqw",
+        "a17e90c4-acc9-4f1d-af84-828ae4cb2289",
         "75d78151-c206-49e1-a7c8-67f158a8394a",
         "dd821fb8-a8d4-4cc7-be01-af94d689d4a0",
         "de4c6c8d-98ab-427e-920f-05f71b84497e"
