@@ -3357,7 +3357,7 @@ body {
 }
 
 .section-content {
-    position: static;
+    position: relative;
     z-index: 10;
 }
 

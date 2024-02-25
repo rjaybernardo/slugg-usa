@@ -1823,7 +1823,15 @@ background-color: #D4F871;
     .modal-container{
         flex-direction: column;
     }
-    .modal-image-container img{
-       
+   
+}
+
+/* Padding Top */
+.pt{
+    padding-top: 8rem;
+}
+@media(max-width:900px){
+    .pt{
+        padding-top: 6rem;
     }
 }
