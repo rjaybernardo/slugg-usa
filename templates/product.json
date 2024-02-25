@@ -87,8 +87,8 @@
             "show_pickup_availability": false
           }
         },
-        "back_on_stock_4nRYnL": {
-          "type": "back_on_stock",
+        "back_in_stock_wY7rHw": {
+          "type": "back_in_stock",
           "settings": {
             "enable_notify_me": true,
             "notify_me_text": "Notify Me When Available"
@@ -166,7 +166,7 @@
         "quantity_selector",
         "variant_picker",
         "baf3083e-d14d-435d-bca3-100d6ac490ce",
-        "back_on_stock_4nRYnL",
+        "back_in_stock_wY7rHw",
         "liquid_RjqAkN",
         "liquid_yMVnhL",
         "product_addon_fyKkbz",
