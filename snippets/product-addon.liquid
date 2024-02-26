@@ -71,7 +71,10 @@
                     x-show="!showFullDescription"
                   >
                     {{ product.description | truncate: 150, '...' }}
-                    <a @click="showFullDescription = true" class="text-theme-basic underline">View full details</a>
+                    <a @click="showFullDescription = true" class="underline block my-3" style="font-size: 16px;
+                    line-height: 22px;
+                    font-weight: 500;
+                    color: #783e2b; cursor:pointer;">View full details</a>
                   </div>
                 {% endif %}
 
@@ -79,7 +82,10 @@
                 <div x-show="showFullDescription">
                   {{ product.description }}
                   {% if description_length > 150 %}
-                    <a @click="showFullDescription = false" class="text-theme-basic underline">Less details</a>
+                    <a @click="showFullDescription = false" class="underline block my-3" style="font-size: 16px;
+                    line-height: 22px;
+                    font-weight: 500;
+                    color: #783e2b; cursor:pointer;">Less details</a>
                   {% endif %}
                 </div>
 
