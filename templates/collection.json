@@ -46,8 +46,8 @@
         "0fd4fd91-ac00-4029-b453-0697a494b215"
       ],
       "custom_css": [
-        ".section-content{padding-top:8rem;}",
-        "@media(max-width:900px){.section-content{padding-top:6rem;}}"
+        ".section-content {padding-top: 6rem;}",
+        "@media (max-width: 900px) {.section-content {padding-top: 4rem; }}"
       ],
       "settings": {
         "sub_title": "Shop all pots",
