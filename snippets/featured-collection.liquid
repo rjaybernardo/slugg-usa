@@ -84,7 +84,8 @@
             showShopBtn: showShopBtn
           -%}
 
-          {% comment %} <div class="product-review-main">
+          {% if section.settings.show_product_rating %}
+           <div class="product-review-main">
             <div
               class="loox-rating"
               data-id="{{ product.id }}"
@@ -101,9 +102,12 @@
                 {%- endif -%}
               </span>
             {%- endif -%}
-          </div> {% endcomment %}
+          </div> 
+        {% endif %}
 
-          <div class="product-price-main my-3">$329</div>
+          {% if section.settings.show_product_price %}
+            <div class="product-price-main my-3">{{ product.price | money }}</div>
+          {% endif %}
           
           {%- if product.metafields.custom.sub_title.value -%}
             <p class="sub_title">{{ product.metafields.custom.sub_title.value }}</p>
