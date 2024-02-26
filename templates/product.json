@@ -80,6 +80,7 @@
         },
         "baf3083e-d14d-435d-bca3-100d6ac490ce": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "display_on_card": false,
             "show_price": true,
@@ -89,21 +90,15 @@
         },
         "back_in_stock_wY7rHw": {
           "type": "back_in_stock",
+          "disabled": true,
           "settings": {
             "enable_notify_me": true,
             "notify_me_text": "Notify Me When Available"
           }
         },
-        "liquid_RjqAkN": {
-          "type": "liquid",
-          "disabled": true,
-          "settings": {
-            "display_on_card": false,
-            "liquid": "{% if product.selected_or_first_available_variant.available == false %}<div>\n  <a class=\"klaviyo-bis-trigger text-center underline container\" href=\"#\" >Notify Me When Available<\/a>\n<\/div>\n{% endif %}"
-          }
-        },
         "liquid_yMVnhL": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "display_on_card": false,
             "liquid": "<h3 class=\"addon\">Add to your order<\/h3>\n<style>\nh3.addon{\nfont-family: inherit;\n    font-size: var(--sg-addon-heading-fontsize);\n    font-weight: 600;\n    margin-top: 10px;\n    margin-bottom: 15px;\n}\n<\/style>"
@@ -111,12 +106,14 @@
         },
         "product_addon_fyKkbz": {
           "type": "product_addon",
+          "disabled": true,
           "settings": {
             "product_id": "drainage-kit"
           }
         },
         "product_addon_mBMEqw": {
           "type": "product_addon",
+          "disabled": true,
           "settings": {
             "product_id": "pot-trays"
           }
@@ -155,6 +152,14 @@
             "content": "",
             "page": ""
           }
+        },
+        "liquid_RjqAkN": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "display_on_card": false,
+            "liquid": "{% if product.selected_or_first_available_variant.available == false %}<div>\n  <a class=\"klaviyo-bis-trigger text-center underline container\" href=\"#\" >Notify Me When Available<\/a>\n<\/div>\n{% endif %}"
+          }
         }
       },
       "block_order": [
@@ -167,14 +172,14 @@
         "variant_picker",
         "baf3083e-d14d-435d-bca3-100d6ac490ce",
         "back_in_stock_wY7rHw",
-        "liquid_RjqAkN",
         "liquid_yMVnhL",
         "product_addon_fyKkbz",
         "product_addon_mBMEqw",
         "a17e90c4-acc9-4f1d-af84-828ae4cb2289",
         "75d78151-c206-49e1-a7c8-67f158a8394a",
         "dd821fb8-a8d4-4cc7-be01-af94d689d4a0",
-        "de4c6c8d-98ab-427e-920f-05f71b84497e"
+        "de4c6c8d-98ab-427e-920f-05f71b84497e",
+        "liquid_RjqAkN"
       ],
       "custom_css": [
         "h1 {font-family: \"Cooper BT\"; font-weight: 200; font-size: 70px; color: #783e2b;}"
