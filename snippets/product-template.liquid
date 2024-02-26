@@ -623,7 +623,9 @@
                   </div>
                   {%- when 'back_in_stock' -%}
 <div class="container text-center">
+  {% if product.selected_or_first_available_variant.available == false %}
   <a class="klaviyo-bis-trigger text-center underline container" href="#" >Join the wait list</a>
+{% endif %}
 </div>
               {% endcase %}
               {%- liquid
