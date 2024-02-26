@@ -1,18 +1,19 @@
 {% if product %}
-  <div  x-cloak x-data="{ openModal: false }" class="product-addon">
+  <div x-cloak x-data="{ openModal: false }" class="product-addon">
     <div class="product-addon-content">
       <!-- Image trigger for modal -->
       <div class="modal-image-container">
-      <img
-        src="{{ product.featured_image | image_url: width: 62, height: 62 }}"
-        width="62"
-        height="62"
-        alt="{{ product.title | escape }}"
-        @click="openModal = true"
-        style="cursor: pointer;"
-      >
-      <div class="modal-text"  @click="openModal = true">Quick View</div>
-      </div>      <p>{{ product.title }}</p>
+        <img
+          src="{{ product.featured_image | image_url: width: 62, height: 62 }}"
+          width="62"
+          height="62"
+          alt="{{ product.title | escape }}"
+          @click="openModal = true"
+          style="cursor: pointer;"
+        >
+        <div class="modal-text" @click="openModal = true">Quick View</div>
+      </div>
+      <p>{{ product.title }}</p>
       <p>{{ product.price | money_with_currency }}</p>
     </div>
     <button
@@ -39,28 +40,55 @@
           class="modal-inner"
           style=" background: white; padding: 20px; border-radius: 5px; max-width: 800px; width: auto; margin: auto; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"
         >
-        <div style="display: flex; justify-content:flex-end">
-          <button @click="openModal = false" style="cursor: pointer;border:none ">&times;</button>
-        </div>
+          <div style="display: flex; justify-content:flex-end">
+            <button @click="openModal = false" style="cursor: pointer;border:none ">&times;</button>
+          </div>
           <div class="modal-container" style="display: flex;">
             <div style="flex:1;display:flex; justify-content: center;">
-            <div style="width: fit-content;">
-              <img
-              src="{{ product.featured_image | image_url: width: 300, height: 300 }}"
-              width="300"
-              height="300"
-              alt="{{ product.title | escape }}"
-              >
+              <div style="width: fit-content;">
+                <img
+                  src="{{ product.featured_image | image_url: width: 300, height: 300 }}"
+                  width="300"
+                  height="300"
+                  alt="{{ product.title | escape }}"
+                >
               </div>
             </div>
             <div style="flex:1; justify-content:center;">
               <!-- Close button -->
-             
+
               <h2>{{ product.title }}</h2>
               <p>{{ product.price | money_with_currency }}</p>
-              <div class="rte my-3 text-theme-basic {{ block.settings.text_align }}">
-                {{ product.description }}
+              <div
+                x-data="{ showFullDescription: false }"
+                class="rte my-3 text-theme-basic my-5 {{ block.settings.text_align }}"
+              >
+                <!-- Determine if description length exceeds 150 characters -->
+                {% assign description_length = product.description | size %}
+                {% if description_length > 150 %}
+                  <!-- Truncated Description -->
+                  <div
+                    x-show="!showFullDescription"
+                  >
+                    {{ product.description | truncate: 150, '...' }}
+                    <a @click="showFullDescription = true" class="text-theme-basic underline">View full details</a>
+                  </div>
+                {% endif %}
+
+                <!-- Full Description -->
+                <div x-show="showFullDescription">
+                  {{ product.description }}
+                  {% if description_length > 150 %}
+                    <a @click="showFullDescription = false" class="text-theme-basic underline">Less details</a>
+                  {% endif %}
+                </div>
+
+                <!-- If description is under 150 characters, just show it without 'Show more' button -->
+                {% if description_length <= 150 %}
+                  {{ product.description }}
+                {% endif %}
               </div>
+
               <div
                 x-data="productAddon({{ product.variants.first.id | json }})"
                 style="display: flex; justify-content:flex-end"
