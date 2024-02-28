@@ -77,7 +77,7 @@
         </div>
       {%- endif -%}
       <div class="product-tile mt-5 text-center break-words">
-        {%- if product.featured_media -%}
+        <!-- {%- if product.featured_media -%}
           <a href="{{ product.url | within: collection }}" class="absolute top-0 left-0 w-full h-full z-10 block" title="{{ product.title }}">
             <div class="relative {% unless display_on_card %}{% if settings.media_shadow_direction contains 'top' %}pt-media-shadow{% else %}pb-media-shadow{% endif %}{% endunless %}">
               {%- render 'product-tile-media-image',
@@ -94,7 +94,7 @@
               -%}
             </div>
             <span class="visually-hidden">{{ product.title }}</span>
-          </a>
+          </a> -->
         {%- endif -%}
         <h3 class="font-body product-title h3">{{ product.title | escape }}</h3>
         {%- if settings.product_tiles_show_vendor -%}

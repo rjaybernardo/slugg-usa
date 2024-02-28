@@ -32,6 +32,7 @@
 {%- if shape contains 'default' or shape == '' or shape == blank -%}
   <div class="media-{{ media_id }} media-style-container {% if settings.media_drop_shadow_size == 0 %}media-no-shadow{% endif %} {% if disable_media_style %}media-style-none{% endif %} {% if is_card %}media-style-is-card{% endif %} {{ shape | split: '_' | last }}">
     <div class="{{ crop_class }} media-content ">
+      <a href="{{ product.url | within: collection }}" title="{{ product.title }}">
       <div
         class="{{ media_style_class }} relative overflow-hidden z-0"
       >
@@ -84,6 +85,7 @@
           {%- endfor -%}
         {%- endif -%}
       </div>
+      </a>
     </div>
     {%- if settings.media_drop_shadow_size > 0 and is_card == false and settings.media_show_border_on_shadow -%}
       <div class="media-drop-shadow-container">
