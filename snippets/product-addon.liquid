@@ -135,10 +135,10 @@
                 style="display: flex; justify-content:flex-end"
               >
                 <div style="display: flex; justify-content:flex-end">
+                  <!-- Inside the modal, adjust the button as follows: -->
                   <button
                     @click="addToCart()"
-                    x-text="'Add to Cart'"
-                    x-show="!addedToCart"
+                    x-text="addedToCart ? 'Added to Cart' : 'Add to Cart'"
                     class="primary-button shop-btn"
                   ></button>
                 </div>
