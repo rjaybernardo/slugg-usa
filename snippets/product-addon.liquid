@@ -1,5 +1,28 @@
 {% if product %}
-  <div x-cloak x-data="{ openModal: false }" class="product-addon">
+  <div
+    x-cloak
+    x-data="
+      {
+        openModal: false,
+        addedToCart: false,
+        productId: {{ product.variants.first.id | json }},
+        toggleAddToCart() {
+          this.addedToCart = !this.addedToCart;
+          this.$dispatch('add-to-cart', { productId: this.productId, added: this.addedToCart });
+        },
+        addToCart() {
+          if (!this.addedToCart) {
+            console.log('Processing to add the product to cart for product ID:', this.productId);
+            this.addedToCart = true;
+            this.$dispatch('add-to-cart', { productId: this.productId, added: true });
+          } else {
+            console.log('Product already added to the cart.');
+          }
+        }
+      }
+    "
+    class="product-addon"
+  >
     <div class="product-addon-content">
       <!-- Image trigger for modal -->
       <div class="modal-image-container">
@@ -17,7 +40,6 @@
       <p>{{ product.price | money_with_currency }}</p>
     </div>
     <button
-      x-data="productAddon({{ product.variants.first.id | json }})"
       x-text="addedToCart ? '- Remove' : '+ Add'"
       :class="{'added': addedToCart, 'not-added': !addedToCart}"
       @click="toggleAddToCart()"
@@ -71,10 +93,17 @@
                     x-show="!showFullDescription"
                   >
                     {{ product.description | truncate: 150, '...' }}
-                    <a @click="showFullDescription = true" class="underline block my-3" style="font-size: 16px;
-                    line-height: 22px;
-                    font-weight: 500;
-                    color: #783e2b; cursor:pointer;">View full details</a>
+                    <a
+                      @click="showFullDescription = true"
+                      class="underline block my-3"
+                      style="
+                        font-size: 16px;
+                        line-height: 22px;
+                        font-weight: 500;
+                        color: #783e2b; cursor:pointer;
+                      "
+                      >View full details</a
+                    >
                   </div>
                 {% endif %}
 
@@ -82,10 +111,17 @@
                 <div x-show="showFullDescription">
                   {{ product.description }}
                   {% if description_length > 150 %}
-                    <a @click="showFullDescription = false" class="underline block my-3" style="font-size: 16px;
-                    line-height: 22px;
-                    font-weight: 500;
-                    color: #783e2b; cursor:pointer;">Less details</a>
+                    <a
+                      @click="showFullDescription = false"
+                      class="underline block my-3"
+                      style="
+                        font-size: 16px;
+                        line-height: 22px;
+                        font-weight: 500;
+                        color: #783e2b; cursor:pointer;
+                      "
+                      >Less details</a
+                    >
                   {% endif %}
                 </div>
 
@@ -96,15 +132,16 @@
               </div>
 
               <div
-                x-data="productAddon({{ product.variants.first.id | json }})"
                 style="display: flex; justify-content:flex-end"
               >
-                <button
-                  @click="addToCart()"
-                  x-text="addedToCart ? 'Added to Cart' : 'Add to Cart'"
-                  :class="{'added': addedToCart, 'not-added': !addedToCart}"
-                  class="primary-button shop-btn"
-                ></button>
+                <div style="display: flex; justify-content:flex-end">
+                  <button
+                    @click="addToCart()"
+                    x-text="'Add to Cart'"
+                    x-show="!addedToCart"
+                    class="primary-button shop-btn"
+                  ></button>
+                </div>
               </div>
             </div>
           </div>
