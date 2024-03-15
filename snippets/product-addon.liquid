@@ -140,6 +140,7 @@
                     @click="addToCart()"
                     x-text="addedToCart ? 'Added to Cart' : 'Add to Cart'"
                     class="primary-button shop-btn"
+                    :class="{'disabled-button': addedToCart}"
                   ></button>
                 </div>
               </div>
