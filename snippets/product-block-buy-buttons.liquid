@@ -73,13 +73,11 @@
         >
           <span class="{% if product.available %}{{ add_to_cart_class }}{% endif %}">
             <span x-text="addToCartText">
-              <span x-text="addToCartText">
                 {%- if current_variant.available -%}
                   {{- button_text -}}
                 {%- else -%}
                   {{- 'products.product.sold_out' | t -}}
                 {%- endif -%}
-              </span>
             </span>
             {%- if block.settings.show_price -%}
               <span x-show="currentVariantAvailable">&nbsp;&#8226;&nbsp;</span
