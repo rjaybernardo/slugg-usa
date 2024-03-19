@@ -39,11 +39,15 @@
       <p>{{ product.title }}</p>
       <p>{{ product.price | money_with_currency }}</p>
     </div>
-    <button
+    <div x-data="{ mainProductAdded: false }"
+    @buy-clicked.window="mainProductAdded = true">
+      <button
+      @click="if (!mainProductAdded) { console.log('Please add the main product first.'); return; } addToCart()"
       x-text="addedToCart ? '- Remove' : '+ Add'"
-      :class="{'added': addedToCart, 'not-added': !addedToCart}"
-      @click="toggleAddToCart()"
-    ></button>
+      ></button>
+    </div>
+    
+  
 
     <!-- Modal -->
     <div

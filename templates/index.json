@@ -127,6 +127,8 @@
         "title": "Meet the three Sluggs",
         "subheading": "Three unique styles available in three stunning colours.",
         "collection": "all-pots",
+        "show_product_rating": false,
+        "show_product_price": true,
         "enable_shop_btn": true,
         "no_products": 4,
         "show_view_all": false,
@@ -164,7 +166,7 @@
           "settings": {
             "image_icon": "shopify:\/\/shop_images\/Leaf_1.png",
             "icon_title": "Weather Resistant",
-            "sub_text": "<p>Sluggs® are suitable for both inside and outside.<\/p>",
+            "sub_text": "<p>Slugg® plant pots are suitable for both inside and outside.<\/p>",
             "icon_url": ""
           }
         },
@@ -268,7 +270,7 @@
             "show_image": true,
             "image": "shopify:\/\/shop_images\/optimized-built-to-last-icon.png",
             "title": "Built to last",
-            "text": "<p>Slugg® garden pots are waterproof, lightweight, and tougher than nails.<\/p>",
+            "text": "<p>Slugg® plant pots are waterproof, lightweight, and tougher than nails.<\/p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "same_as_section"
@@ -302,7 +304,7 @@
             "show_image": true,
             "image": "shopify:\/\/shop_images\/slugg-pots-elegant-white-plant-pots-outdoor-lounge-area.jpg",
             "title": "Leah M.",
-            "text": "<p>Most beautiful pots! So light which makes them easy to move around and having them in a cluster of 3 is perfect. Highly recommended! Love these pots so much.<\/p>",
+            "text": "<p>Most beautiful plant pots! So light which makes them easy to move around and having them in a cluster of 3 is perfect. Highly recommended! Love these pots so much.<\/p>",
             "cta_link": "shopify:\/\/products\/lucy",
             "cta_text": "Shop Lucy",
             "color_scheme": "same_as_section"
@@ -326,7 +328,7 @@
             "show_image": true,
             "image": "shopify:\/\/shop_images\/optimized-slider-image-03.jpg",
             "title": "Alyce P.",
-            "text": "<p>Love my Thomas pots. Look so beautiful on the front porch.<\/p>",
+            "text": "<p>Love my Thomas pots. My planters Look so beautiful at my front door.<\/p>",
             "cta_link": "shopify:\/\/products\/thomas",
             "cta_text": "Shop Thomas",
             "color_scheme": "same_as_section"
@@ -350,7 +352,7 @@
             "show_image": true,
             "image": "shopify:\/\/shop_images\/004.jpg",
             "title": "Liesel R.",
-            "text": "<p>We love the Rosie trio, the fluted profile is so on trend and stunning. These lightweight pots are easy to move around, elevating every space; making it feel new and fresh.<\/p>",
+            "text": "<p>We love the Rosie trio, the fluted profile is so on trend and stunning. These lightweight planter pots are easy to move around, elevating every space; making it feel new and fresh.<\/p>",
             "cta_link": "shopify:\/\/products\/rosie",
             "cta_text": "Shop Rosie",
             "color_scheme": "same_as_section"
@@ -447,7 +449,7 @@
             "show_image": true,
             "image": "shopify:\/\/shop_images\/woman-reading-indoor-plants-grey-pots-slugg.jpg",
             "title": "Need help picking plants?",
-            "text": "<p>Your Sluggs® will look best paired with some beautiful plants!<\/p>",
+            "text": "<p>Your Slugg® garden planters will look best paired with some beautiful plants!<\/p>",
             "cta_link": "shopify:\/\/blogs\/plant-guides",
             "cta_text": "CHECK OUT OUR PLANT GUIDE",
             "color_scheme": "same_as_section"
@@ -493,6 +495,8 @@
         "title": "Meet the Three Sluggs®",
         "subheading": "",
         "collection": "all-pots",
+        "show_product_rating": false,
+        "show_product_price": true,
         "enable_shop_btn": true,
         "no_products": 3,
         "show_view_all": false,

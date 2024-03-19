@@ -57,7 +57,7 @@
     >
       <div class="w-full">
         <button
-        id="add-to-cart-btn"
+          id="add-to-cart-btn"
           class="
             mb-1 add-to-cart-btn {% if product.available %}push-btn theme-button{% else %}btn text-sm lg:text-base after:hidden bg-scheme-secondary-background text-scheme-text{% endif %} theme-button w-full
             {% unless current_variant.available %}cursor-not-allowed{% endunless %}
@@ -69,14 +69,17 @@
           {% unless current_variant.available %}
             disabled="disabled"
           {% endunless %}
+          @click="$dispatch('buy-clicked')"
         >
           <span class="{% if product.available %}{{ add_to_cart_class }}{% endif %}">
             <span x-text="addToCartText">
-              {%- if current_variant.available -%}
-                {{- button_text -}}
-              {%- else -%}
-                {{- 'products.product.sold_out' | t -}}
-              {%- endif -%}
+              <span x-text="addToCartText">
+                {%- if current_variant.available -%}
+                  {{- button_text -}}
+                {%- else -%}
+                  {{- 'products.product.sold_out' | t -}}
+                {%- endif -%}
+              </span>
             </span>
             {%- if block.settings.show_price -%}
               <span x-show="currentVariantAvailable">&nbsp;&#8226;&nbsp;</span

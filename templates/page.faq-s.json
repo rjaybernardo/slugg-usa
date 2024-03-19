@@ -23,7 +23,7 @@
           "type": "question",
           "settings": {
             "question": "Who is Slugg?",
-            "answer": "<p>Slugg is the worlds first garden pot cluster company, started by an award winning Australian landscape design. We sell garden pots in sets of three.  Each size has been carefully considered so the pots look stunning when grouped together.  Or you can use them separately. Keen to learn more? Read the <a href=\"\/pages\/slugg-story\" title=\"Slugg Story\">full story<\/a> of Slugg.<\/p>"
+            "answer": "<p>Slugg is the worlds first garden pot cluster company. We sell garden pots in sets of three.  Each size has been carefully considered so the pots look stunning when grouped together.  Or you can use them separately. Keen to learn more? Read the <a href=\"\/pages\/slugg-story\" title=\"Slugg Story\">full story<\/a> of Slugg.<\/p>"
           }
         },
         "template--16928247742706__fdd38978-b27a-4e91-a9db-b3800f989400-question-2": {
@@ -198,6 +198,8 @@
         "title": "Meet the three Sluggs",
         "subheading": "Good things come in threes",
         "collection": "all-pots",
+        "show_product_rating": false,
+        "show_product_price": true,
         "enable_shop_btn": true,
         "no_products": 3,
         "show_view_all": false,
