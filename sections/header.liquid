@@ -695,13 +695,13 @@
     }
   </style>
 {% endif %}
-{%- if enable_overlay -%}
-  {% comment %} <style>
-    /* #MainContent .shopify-section:first-child > section:not(.full-bleed-section) {
-      /* padding-top: var(--header-height); */
-    } */
-  </style> {% endcomment %}
-{%- endif -%}
+{% comment %} {%- if enable_overlay -%}
+  <style>
+    #MainContent .shopify-section:first-child > section:not(.full-bleed-section) {
+      padding-top: var(--header-height);
+    }
+  </style>
+{%- endif -%} {% endcomment %}
 {%- if predictive_search_enabled and request.design_mode == false -%}
   <script type="lazyload_int" data-src="{{ 'modules-predictive-search.bundle.min.js' | asset_url }}" data-w3-type="module"></script>
 {%- endif -%}
