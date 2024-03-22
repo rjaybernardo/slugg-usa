@@ -2009,6 +2009,11 @@ input.spice-spa-addon-checkbox-input:checked
   border: 1px solid #783e2b;
   border-radius: 8px;
 }
+
+.product-addon:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
 .product-addon p,
 .product-addon h3 {
   font-size: 16px;
@@ -2029,7 +2034,10 @@ input.spice-spa-addon-checkbox-input:checked
   align-items: center;
   gap: 8px;
 }
-
+.addon-text{
+  display: flex;
+  gap: 8px;
+}
 /* add to cart button BG color */
 #add-to-cart-btn span {
   background-color: #d4f871;
@@ -2060,10 +2068,10 @@ input.spice-spa-addon-checkbox-input:checked
   color: #f8f8f8;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   cursor: pointer;
 }
-.modal-image-container:hover .modal-text {
+.product-addon:hover .modal-text {
   opacity: 1;
 }
 .disabled-button {
@@ -2072,6 +2080,9 @@ input.spice-spa-addon-checkbox-input:checked
 }
 
 @media (max-width: 900px) {
+  .addon-text{
+    flex-direction: column;
+  }
   .modal {
     padding: 0 10%;
   }

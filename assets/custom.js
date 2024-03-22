@@ -131,36 +131,31 @@
   })
 
 // Add to cart Addon
-jQuery(document).ready(function($) {
-    document.addEventListener('add-to-cart', function(event) {
-        var productId = event.detail.productId;
-        var added = event.detail.added;
-        var quantity = added ? 1 : 0;
+jQuery(document).ready(function ($) {
+  document.addEventListener('add-to-cart', function (event) {
+    var productId = event.detail.productId
+    var added = event.detail.added
+    var quantity = added ? 1 : 0
 
-        jQuery.ajax({
-            type: 'POST',
-            url: '/cart/add.js',
-            data: {
-                items: [{
-                    id: productId,
-                    quantity: quantity
-                }]
-            },
-            dataType: 'json',
-            success: function() { 
-                // Update cart UI
-            },
-            error: function() {
-                // Handle error
-            }
-        });
-    });
-
-    $('#add-to-cart-btn').click(function() {
-        // Dispatch an event to reset all add-on states after a delay
-        setTimeout(function() {
-            document.dispatchEvent(new CustomEvent('reset-addons'));
-        }, 3000); // 3 seconds delay
-    });
-});
+    jQuery.ajax({
+      type: 'POST',
+      url: '/cart/add.js',
+      data: {
+        items: [
+          {
+            id: productId,
+            quantity: quantity,
+          },
+        ],
+      },
+      dataType: 'json',
+      success: function () {
+        // Update cart UI
+      },
+      error: function () {
+        // Handle error
+      },
+    })
+  })
+})
 
